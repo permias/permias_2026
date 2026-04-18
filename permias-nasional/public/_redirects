@@ -1,0 +1,2 @@
+# Netlify / compatible hosts: SPA fallback (copied to dist root on build)
+/*    /index.html   200

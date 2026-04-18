@@ -1,0 +1,24 @@
+# Dependencies (never commit — tens of thousands of files)
+node_modules/
+
+# Build output (regenerate with `npm run build`)
+permias-nasional/dist/
+dist/
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vite
+*.local

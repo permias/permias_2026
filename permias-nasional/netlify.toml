@@ -1,0 +1,5 @@
+# Single-page app: send all routes to index.html (React Router)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

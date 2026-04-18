@@ -1,0 +1,13 @@
+{
+  "name": "pernas-website-workspace",
+  "private": true,
+  "workspaces": [
+    "permias-nasional"
+  ],
+  "scripts": {
+    "dev": "npm -w permias-nasional run dev",
+    "build": "npm -w permias-nasional run build",
+    "preview": "npm -w permias-nasional run preview",
+    "lint": "npm -w permias-nasional run lint"
+  }
+}
