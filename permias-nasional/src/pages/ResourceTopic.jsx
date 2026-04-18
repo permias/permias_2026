@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { resourceSections } from '../data/resources.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo } from '../components/Seo.jsx';
+import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { ResourceSectionBody } from '../components/resources/ResourceSectionBody.jsx';
 import { Input } from '../components/ui/Input.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
@@ -38,7 +38,7 @@ export function ResourceTopic() {
   return (
     <>
       <Seo
-        title={`${section?.title[lang] ?? section?.title.en ?? 'Resources'} | PERMIAS Nasional`}
+        title={pageTabTitle(section?.title[lang] ?? section?.title.en ?? 'Resources')}
         description={t('resources.sub')}
         path={`/resources/${topicId}`}
       />

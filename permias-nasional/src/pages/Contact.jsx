@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo } from '../components/Seo.jsx';
+import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Input } from '../components/ui/Input.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
@@ -54,7 +54,7 @@ export function Contact() {
 
   return (
     <>
-      <Seo title="Contact | PERMIAS Nasional" description="Reach the PERMIAS Nasional board for partnerships, media, and chapter support." path="/contact" />
+      <Seo title={pageTabTitle('Contact')} description="Reach the PERMIAS Nasional board for partnerships, media, and chapter support." path="/contact" />
       <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
           <ScrollReveal>

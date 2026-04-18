@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Seo } from '../components/Seo.jsx';
+import { Seo, DEFAULT_TAB_TITLE } from '../components/Seo.jsx';
 import { Hero } from '../components/sections/Hero.jsx';
 import { Stats } from '../components/sections/Stats.jsx';
 import { WhatIsPermias } from '../components/sections/WhatIsPermias.jsx';
@@ -31,7 +31,7 @@ export function Home() {
   return (
     <>
       <Seo
-        title="PERMIAS Nasional | Indonesian Students Across America"
+        title={DEFAULT_TAB_TITLE}
         description="Join the Indonesian student community across the United States—chapters, scholarships, visas, and national programs."
         path="/"
       />

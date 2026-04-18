@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { posts } from '../data/posts.js';
 import { formatDate } from '../utils/formatDate.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo } from '../components/Seo.jsx';
+import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { Badge } from '../components/ui/Badge.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Card } from '../components/ui/Card.jsx';
@@ -37,7 +37,7 @@ export function Events() {
 
   return (
     <>
-      <Seo title="Events & Posts | PERMIAS Nasional" description="National events, announcements, and opportunities." path="/events" />
+      <Seo title={pageTabTitle('Events & Posts')} description="National events, announcements, and opportunities." path="/events" />
       <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
           <ScrollReveal>

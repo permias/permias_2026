@@ -1,6 +1,6 @@
 import { partners } from '../data/partners.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo } from '../components/Seo.jsx';
+import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { Card } from '../components/ui/Card.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
@@ -10,7 +10,7 @@ export function Partners() {
 
   return (
     <>
-      <Seo title="Partners | PERMIAS Nasional" description="Government, cultural, academic, and community partners of PERMIAS Nasional." path="/partners" />
+      <Seo title={pageTabTitle('Partners')} description="Government, cultural, academic, and community partners of PERMIAS Nasional." path="/partners" />
       <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
           <ScrollReveal>

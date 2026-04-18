@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { teamDepartments } from '../data/team.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo } from '../components/Seo.jsx';
+import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { cn } from '../utils/cn.js';
 
@@ -12,7 +12,7 @@ export function Team() {
 
   return (
     <>
-      <Seo title="National Team | PERMIAS Nasional" description="Meet the PERMIAS Nasional volunteer leadership." path="/team" />
+      <Seo title={pageTabTitle('National Team')} description="Meet the PERMIAS Nasional volunteer leadership." path="/team" />
       <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
           <ScrollReveal>

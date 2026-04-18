@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { milestones } from '../data/about.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo } from '../components/Seo.jsx';
+import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 
 function MilestoneCard({ m, index, lang }) {
@@ -55,7 +55,7 @@ export function About() {
 
   return (
     <>
-      <Seo title="About PERMIAS | PERMIAS Nasional" description="History, mission, vision, and leadership structure of PERMIAS Nasional." path="/about" />
+      <Seo title={pageTabTitle('About PERMIAS')} description="History, mission, vision, and leadership structure of PERMIAS Nasional." path="/about" />
       <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
           <ScrollReveal>

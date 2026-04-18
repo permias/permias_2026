@@ -1,6 +1,19 @@
 import { Helmet } from 'react-helmet-async';
 import { SITE_ORIGIN } from '../utils/site.js';
 
+/** Default `<title>` for the home page (matches browser tab pattern). */
+export const DEFAULT_TAB_TITLE = 'PERMIAS Nasional | Indonesia';
+
+/**
+ * Build a tab title: `Page | PERMIAS Nasional | Indonesia`.
+ * Call with no args (or empty) for the home default.
+ */
+export function pageTabTitle(pageLabel) {
+  const label = typeof pageLabel === 'string' ? pageLabel.trim() : '';
+  if (!label) return DEFAULT_TAB_TITLE;
+  return `${label} | PERMIAS Nasional | Indonesia`;
+}
+
 export function Seo({ title, description, path }) {
   const url = `${SITE_ORIGIN}${path === '/' ? '' : path}`;
   const ogImage = `${SITE_ORIGIN}/og-image.svg`;

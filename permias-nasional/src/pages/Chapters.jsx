@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { chapters, chaptersByStateId, REGIONS } from '../data/chapters.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo } from '../components/Seo.jsx';
+import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { USMap } from '../components/chapters/USMap.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Card } from '../components/ui/Card.jsx';
@@ -45,7 +45,7 @@ export function Chapters() {
   return (
     <>
       <Seo
-        title="Find a Chapter | PERMIAS Nasional"
+        title={pageTabTitle('Find a Chapter')}
         description="Interactive map and directory of PERMIAS chapters across the United States."
         path="/chapters"
       />
