@@ -1,6 +1,10 @@
 # PERMAS / PERMIAS Nasional — website
 
+New Permias website — Spring 2026 (04.17.2026). Credits: PnP team.
+
 React + Vite + Tailwind site. The app lives in [`permias-nasional/`](./permias-nasional/).
+
+**Repository:** [github.com/permias/permias_2026](https://github.com/permias/permias_2026)
 
 ## Why GitHub said “lots of files”
 
@@ -10,23 +14,13 @@ If you **drag a folder into GitHub in the browser**, there is a **low file limit
 
 ### First-time setup (command line)
 
-From this folder (`PERNAS_new_website_preston`):
+From this folder:
 
 ```bash
-git init
-git add .
-git commit -m "Initial commit"
+git clone https://github.com/permias/permias_2026.git
+cd permias_2026
+npm install
 ```
-
-Create an empty repository on GitHub (no README if you already have one locally), then:
-
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git branch -M main
-git push -u origin main
-```
-
-After that, you only `git add`, `git commit`, and `git push` when you change code.
 
 ### Install and run locally
 
