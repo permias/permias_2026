@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext.jsx';
 import { useTheme } from '../../context/ThemeContext.jsx';
@@ -295,153 +296,161 @@ export function Navbar() {
         </div>
       </Modal>
 
-      <div
-        className={cn(
-          'fixed inset-0 z-[60] bg-black/40 transition-opacity lg:hidden',
-          drawer ? 'opacity-100' : 'pointer-events-none opacity-0',
-        )}
-        aria-hidden={!drawer}
-        onClick={() => setDrawer(false)}
-      />
-      <aside
-        className={cn(
-          'fixed right-0 top-0 z-[70] flex h-full w-[min(100%,360px)] flex-col bg-white shadow-2xl transition-transform duration-300 dark:bg-surface-card lg:hidden',
-          drawer ? 'translate-x-0' : 'translate-x-full',
-        )}
-        aria-label="Mobile navigation"
-      >
-        <div className="flex items-center justify-between border-b border-brand-charcoal/10 p-4 dark:border-white/10">
-          <img
-            src={brand.logoHorizontal}
-            alt="PERMIAS Nasional"
-            className="h-8 w-auto max-w-[200px] object-contain"
-            width={200}
-            height={44}
-            decoding="async"
-          />
-          <button
-            type="button"
-            className="rounded-full p-2"
-            aria-label={t('nav.closeMenu')}
-            onClick={() => setDrawer(false)}
-          >
-            <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-              <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
-            </svg>
-          </button>
-        </div>
-        <nav className="flex flex-1 flex-col gap-6 overflow-y-auto p-4 text-center" aria-label="Mobile primary">
-          <div>
-            <NavLink
-              to="/"
-              end
+      {/* Portal: drawer was inside <header z-50>, so z-60/70 could not sit above fixed chat (sibling z-52). Mount to body for global stacking. */}
+      {typeof document !== 'undefined' &&
+        createPortal(
+          <>
+            <div
+              className={cn(
+                'fixed inset-0 z-[100] bg-black/40 transition-opacity lg:hidden',
+                drawer ? 'opacity-100' : 'pointer-events-none opacity-0',
+              )}
+              aria-hidden={!drawer}
               onClick={() => setDrawer(false)}
-              className={({ isActive }) =>
-                cn(
-                  'block rounded-xl px-4 py-3 text-base font-semibold',
-                  isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
-                )
-              }
+            />
+            <aside
+              className={cn(
+                'fixed right-0 top-0 z-[110] flex h-full w-[min(100%,360px)] flex-col bg-white shadow-2xl transition-transform duration-300 dark:bg-surface-card lg:hidden',
+                drawer ? 'translate-x-0' : 'translate-x-full',
+              )}
+              aria-label="Mobile navigation"
+              aria-hidden={!drawer}
             >
-              {t('nav.home')}
-            </NavLink>
-          </div>
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-red">{t('nav.about')}</p>
-            <ul className="mt-2 space-y-1">
-              {navAboutLinks.map((item) => (
-                <li key={item.to}>
-                  <Link
-                    to={item.to}
-                    className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-brand-charcoal hover:bg-brand-red/10 hover:text-brand-red dark:text-white"
+              <div className="flex items-center justify-between border-b border-brand-charcoal/10 p-4 dark:border-white/10">
+                <img
+                  src={brand.logoHorizontal}
+                  alt="PERMIAS Nasional"
+                  className="h-8 w-auto max-w-[200px] object-contain"
+                  width={200}
+                  height={44}
+                  decoding="async"
+                />
+                <button
+                  type="button"
+                  className="rounded-full p-2"
+                  aria-label={t('nav.closeMenu')}
+                  onClick={() => setDrawer(false)}
+                >
+                  <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                    <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
+                  </svg>
+                </button>
+              </div>
+              <nav className="flex flex-1 flex-col gap-6 overflow-y-auto p-4 text-center" aria-label="Mobile primary">
+                <div>
+                  <NavLink
+                    to="/"
+                    end
                     onClick={() => setDrawer(false)}
+                    className={({ isActive }) =>
+                      cn(
+                        'block rounded-xl px-4 py-3 text-base font-semibold',
+                        isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
+                      )
+                    }
                   >
-                    {t(item.key)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-red">{t('nav.resources')}</p>
-            <ul className="mt-2 space-y-1">
-              {navResourceLinks.map((item) => (
-                <li key={item.to}>
-                  <Link
-                    to={item.to}
-                    className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-brand-charcoal hover:bg-brand-red/10 hover:text-brand-red dark:text-white"
+                    {t('nav.home')}
+                  </NavLink>
+                </div>
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-red">{t('nav.about')}</p>
+                  <ul className="mt-2 space-y-1">
+                    {navAboutLinks.map((item) => (
+                      <li key={item.to}>
+                        <Link
+                          to={item.to}
+                          className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-brand-charcoal hover:bg-brand-red/10 hover:text-brand-red dark:text-white"
+                          onClick={() => setDrawer(false)}
+                        >
+                          {t(item.key)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-brand-red">{t('nav.resources')}</p>
+                  <ul className="mt-2 space-y-1">
+                    {navResourceLinks.map((item) => (
+                      <li key={item.to}>
+                        <Link
+                          to={item.to}
+                          className="block rounded-xl px-4 py-2.5 text-sm font-semibold text-brand-charcoal hover:bg-brand-red/10 hover:text-brand-red dark:text-white"
+                          onClick={() => setDrawer(false)}
+                        >
+                          {t(item.key)}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="space-y-1 border-t border-brand-charcoal/10 pt-4 dark:border-white/10">
+                  <NavLink
+                    to="/events"
                     onClick={() => setDrawer(false)}
+                    className={({ isActive }) =>
+                      cn(
+                        'block rounded-xl px-4 py-3 text-base font-semibold',
+                        isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
+                      )
+                    }
                   >
-                    {t(item.key)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="space-y-1 border-t border-brand-charcoal/10 pt-4 dark:border-white/10">
-            <NavLink
-              to="/events"
-              onClick={() => setDrawer(false)}
-              className={({ isActive }) =>
-                cn(
-                  'block rounded-xl px-4 py-3 text-base font-semibold',
-                  isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
-                )
-              }
-            >
-              {t('nav.events')}
-            </NavLink>
-            <NavLink
-              to="/chapters"
-              onClick={() => setDrawer(false)}
-              className={({ isActive }) =>
-                cn(
-                  'block rounded-xl px-4 py-3 text-base font-semibold',
-                  isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
-                )
-              }
-            >
-              {t('nav.chapters')}
-            </NavLink>
-            <NavLink
-              to="/team"
-              onClick={() => setDrawer(false)}
-              className={({ isActive }) =>
-                cn(
-                  'block rounded-xl px-4 py-3 text-base font-semibold',
-                  isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
-                )
-              }
-            >
-              {t('nav.team')}
-            </NavLink>
-            <NavLink
-              to="/partners"
-              onClick={() => setDrawer(false)}
-              className={({ isActive }) =>
-                cn(
-                  'block rounded-xl px-4 py-3 text-base font-semibold',
-                  isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
-                )
-              }
-            >
-              {t('nav.partners')}
-            </NavLink>
-            <NavLink
-              to="/contact"
-              onClick={() => setDrawer(false)}
-              className={({ isActive }) =>
-                cn(
-                  'block rounded-xl px-4 py-3 text-base font-semibold',
-                  isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
-                )
-              }
-            >
-              {t('nav.contact')}
-            </NavLink>
-          </div>
-        </nav>
-      </aside>
+                    {t('nav.events')}
+                  </NavLink>
+                  <NavLink
+                    to="/chapters"
+                    onClick={() => setDrawer(false)}
+                    className={({ isActive }) =>
+                      cn(
+                        'block rounded-xl px-4 py-3 text-base font-semibold',
+                        isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
+                      )
+                    }
+                  >
+                    {t('nav.chapters')}
+                  </NavLink>
+                  <NavLink
+                    to="/team"
+                    onClick={() => setDrawer(false)}
+                    className={({ isActive }) =>
+                      cn(
+                        'block rounded-xl px-4 py-3 text-base font-semibold',
+                        isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
+                      )
+                    }
+                  >
+                    {t('nav.team')}
+                  </NavLink>
+                  <NavLink
+                    to="/partners"
+                    onClick={() => setDrawer(false)}
+                    className={({ isActive }) =>
+                      cn(
+                        'block rounded-xl px-4 py-3 text-base font-semibold',
+                        isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
+                      )
+                    }
+                  >
+                    {t('nav.partners')}
+                  </NavLink>
+                  <NavLink
+                    to="/contact"
+                    onClick={() => setDrawer(false)}
+                    className={({ isActive }) =>
+                      cn(
+                        'block rounded-xl px-4 py-3 text-base font-semibold',
+                        isActive ? 'bg-brand-red/10 text-brand-red' : 'text-brand-charcoal dark:text-white',
+                      )
+                    }
+                  >
+                    {t('nav.contact')}
+                  </NavLink>
+                </div>
+              </nav>
+            </aside>
+          </>,
+          document.body,
+        )}
     </>
   );
 }

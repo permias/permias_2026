@@ -282,12 +282,17 @@ export const phrases = {
   'badge.opportunity': { en: 'Opportunity', id: 'Peluang' },
   'chat.open': { en: 'Open assistant', id: 'Buka asisten' },
   'chat.title': { en: 'PERMIAS Assistant', id: 'Asisten PERMIAS' },
+  'chat.intro': {
+    en: 'This is an AI assistant—replies are generated automatically and may be incomplete or imprecise. For general guidance only, not legal, immigration, or tax advice. Always confirm important decisions with your DSO, school, or a qualified professional.',
+    id: 'Asisten berbasis kecerdasan buatan—jawaban dibuat otomatis dan bisa kurang lengkap. Hanya untuk panduan umum, bukan nasihat hukum, imigrasi, atau pajak. Pastikan keputusan penting dengan DSO, sekolah, atau profesional yang berwenang.',
+  },
   'chat.todo': {
-    en: 'TODO: Connect this drawer to Anthropic Claude via POST /api/chat.',
-    id: 'TODO: Hubungkan ke Claude lewat POST /api/chat.',
+    en: "We couldn't reach the assistant. Check your connection, or that the chat API is running.",
+    id: 'Tidak dapat menghubungi asisten. Periksa koneksi atau pastikan API chat berjalan.',
   },
   'chat.placeholder': { en: 'Ask about visas, scholarships, or chapters…', id: 'Tanya visa, beasiswa, atau chapter…' },
   'chat.send': { en: 'Send', id: 'Kirim' },
+  'chat.thinking': { en: 'Thinking…', id: 'Memproses…' },
   'backtop': { en: 'Back to top', id: 'Kembali ke atas' },
   'faq.q1': { en: 'Who can join PERMIAS?', id: 'Siapa yang bisa bergabung PERMIAS?' },
   'faq.a1': {
