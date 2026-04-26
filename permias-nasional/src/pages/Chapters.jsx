@@ -79,7 +79,8 @@ export function Chapters() {
 
           <aside
             className={cn(
-              'fixed inset-y-0 right-0 z-40 w-full max-w-sm transform border-l border-brand-charcoal/10 bg-white shadow-2xl transition-transform duration-300 dark:border-white/10 dark:bg-surface-card lg:static lg:z-0 lg:max-w-none lg:translate-x-0 lg:border lg:shadow-none',
+              // above sticky header (z-50), back-to-top (z-[55]), chat (z-[60]) on mobile; static in flow on lg
+              'fixed inset-y-0 right-0 z-[100] w-full max-w-sm transform border-l border-brand-charcoal/10 bg-white shadow-2xl transition-transform duration-300 dark:border-white/10 dark:bg-surface-card lg:static lg:z-0 lg:max-w-none lg:translate-x-0 lg:border lg:shadow-none',
               selectedStateId ? 'translate-x-0' : 'translate-x-full lg:translate-x-0',
             )}
             aria-label={t('chapters.sidebar.title')}
@@ -136,7 +137,7 @@ export function Chapters() {
           <button
             type="button"
             aria-label="Close chapter list"
-            className="fixed inset-0 z-30 bg-black/40 lg:hidden"
+            className="fixed inset-0 z-[90] bg-black/40 lg:hidden"
             onClick={() => setSelectedState('')}
           />
         )}

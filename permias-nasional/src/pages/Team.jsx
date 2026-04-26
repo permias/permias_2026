@@ -54,6 +54,9 @@ export function Team() {
                   <div>
                     <h3 className="font-display text-lg font-bold">{mem.name}</h3>
                     <p className="text-sm font-semibold text-brand-red">{mem.role}</p>
+                    {mem.education && (
+                      <p className="text-sm text-brand-charcoal/60 dark:text-white/60">{mem.education}</p>
+                    )}
                   </div>
                 </div>
                 {mem.bio && (
