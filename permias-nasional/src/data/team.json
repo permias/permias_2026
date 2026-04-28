@@ -1,0 +1,144 @@
+[
+  {
+    "id": "executive",
+    "titleKey": "team.dept.executive",
+    "members": [
+      {
+        "name": "Axel Hutapea",
+        "role": "President",
+        "education": "Georgetown University: B.A. Political Science",
+        "linkedin": "https://www.linkedin.com/",
+        "bio": "Leads national strategy and chapter coordination.",
+        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=AH"
+      },
+      {
+        "name": "Kelly Soegiantoro",
+        "role": "Vice President",
+        "education": "University of Texas, Austin: B.S. Finance",
+        "linkedin": "https://www.linkedin.com/",
+        "bio": "Supports presidents council and internal operations.",
+        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=KS"
+      }
+    ]
+  },
+  {
+    "id": "academics",
+    "titleKey": "team.dept.academics",
+    "members": [
+      {
+        "name": "Bima Sakti",
+        "role": "Director of Academics",
+        "education": "Institut Teknologi Sepuluh Nopember, B.S. Electrical Engineering",
+        "linkedin": null,
+        "bio": "Scholarships, study skills, and faculty partnerships.",
+        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=BS"
+      },
+      {
+        "name": "Clarissa Wijaya",
+        "role": "Academic Programs Lead",
+        "education": "University of Indonesia, B.A. Education",
+        "linkedin": null,
+        "bio": "Workshops and peer tutoring networks.",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=CW"
+      }
+    ]
+  },
+  {
+    "id": "orgdev",
+    "titleKey": "team.dept.orgdev",
+    "members": [
+     {
+        "name": "Jason Laksmana",
+        "role": "Co-Director for Organizational Development",
+        "education": "Ohio State University: B.S. Accounting",
+        "linkedin": null,
+        "bio": "Documentation, meetings, and chapter onboarding.",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=RP"
+      },
+      {
+        "name": "Siti Rahma",
+        "role": "Chapter Success Manager",
+        "education": "Padjadjaran University, B.A. Psychology",
+        "linkedin": null,
+        "bio": "Onboarding playbooks and regional meetups.",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=SR"
+      }
+    ]
+  },
+  {
+    "id": "prodev",
+    "titleKey": "team.dept.prodev",
+    "members": [
+      {
+        "name": "Jane Manalu",
+        "role": "Director of Professional Development",
+        "education": "New York University: B.S. Computer Engineering and Minor in Management",
+        "linkedin": null,
+        "bio": "Career treks, employer relations, and alumni.",
+        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=NK"
+      },
+      {
+        "name": "Irmma Dharmawan",
+        "role": "Professional Development Officer",
+        "education": "",
+        "linkedin": null,
+        "bio": "Sponsors and hiring partner programs.",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=EP"
+      },
+      {
+        "name": "Mario Andika Raharja",
+        "role": "Professional Development Officer",
+        "education": "University of Washington, Bothell: B.B.A. Accounting",
+        "linkedin": null,
+        "bio": "Sponsors and hiring partner programs.",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=EP"
+      },
+      {
+        "name": "William Luky",
+        "role": "Industry Partnerships Lead",
+        "education": "Reformed Theological Seminary: M.Div. Theology",
+        "linkedin": null,
+        "bio": "Sponsors and hiring partner programs.",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=EP"
+      }
+    ]
+  },
+  {
+    "id": "pubpromo",
+    "titleKey": "team.dept.pubpromo",
+    "members": [
+      {
+        "name": "Taryne Aktemah",
+        "role": "Director of Publications & Promotions",
+        "education": "University of California, San Diego: B.A. Communications",
+        "linkedin": null,
+        "bio": "Brand, campaigns, and creative direction.",
+        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=MP"
+      },
+      {
+        "name": "Madelaine Lourdes Nugroho",
+        "role": "Publications & Promotions Officer",
+        "education": "Santa Monica Collega: Communications",
+        "linkedin": null,
+        "bio": "Content calendar and chapter spotlights.",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=JL"
+      },
+      {
+        "name": "Patrick Roland Wijaya",
+        "role": "Publications & Promotions Officer",
+        "education": "University of Washington, Seattle: B.S. Computer Science",
+        "linkedin": null,
+        "bio": "Content calendar and chapter spotlights.",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=JL"
+      },
+      {
+        "name": "Preston Susanto",
+        "role": "Publications & Promotions Officer",
+        "education": "Diablo Valley College: Electrical Engineering and Computer Science",
+        "linkedin": null,
+        "bio": "Content calendar and chapter spotlights.",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=JL"
+      }
+    ]
+  }
+]

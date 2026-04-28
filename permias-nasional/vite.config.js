@@ -49,15 +49,6 @@ function apiPlugin() {
           sendJson(res, 200, { ok: true, message: 'Received' });
           return;
         }
-        if (req.method === 'POST' && url === '/api/chat') {
-          await readJsonBody(req);
-          sendJson(res, 501, {
-            ok: false,
-            error:
-              'TODO: Connect to Anthropic Claude at /api/chat in production. UI is ready.',
-          });
-          return;
-        }
         next();
       });
     },
@@ -67,4 +58,13 @@ function apiPlugin() {
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), apiPlugin()],
+  server: {
+    // Proxy to Flask chat API in dev: run `python app.py` in permias_2026/flask (port 5001)
+    proxy: {
+      '/api/chat': {
+        target: 'http://127.0.0.1:5001',
+        changeOrigin: true,
+      },
+    },
+  },
 });

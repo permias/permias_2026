@@ -1,5 +1,6 @@
 # Dependencies (never commit — tens of thousands of files)
 node_modules/
+**/.venv/
 
 # Build output (regenerate with `npm run build`)
 permias-nasional/dist/
