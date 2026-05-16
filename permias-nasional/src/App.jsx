@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/layout/Layout.jsx';
 import { Home } from './pages/Home.jsx';
 import { Chapters } from './pages/Chapters.jsx';
+import { RegisterChapter } from './pages/RegisterChapter.jsx';
 import { ResourcesIndex } from './pages/ResourcesIndex.jsx';
 import { ResourceTopic } from './pages/ResourceTopic.jsx';
 import { Events } from './pages/Events.jsx';
@@ -17,6 +18,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/chapters" element={<Chapters />} />
+          <Route path="/chapters/register" element={<RegisterChapter />} />
           <Route path="/about/chapters" element={<Chapters />} />
           <Route path="/resources" element={<ResourcesIndex />} />
           <Route path="/resources/:topicId" element={<ResourceTopic />} />

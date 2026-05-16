@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { milestones } from '../data/about.js';
+import { teamDepartments } from '../data/team.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
@@ -42,9 +43,24 @@ function MilestoneCard({ m, index, lang }) {
   );
 }
 
+function OrgNode({ children, className = '' }) {
+  return (
+    <div
+      className={`rounded-xl border-2 border-brand-red/40 bg-brand-red/10 px-4 py-3 text-center text-sm font-bold text-brand-charcoal dark:text-white ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
+function OrgConnector({ className = '' }) {
+  return <div className={`w-0.5 bg-brand-red ${className}`} aria-hidden />;
+}
+
 export function About() {
   const { lang, t } = useLanguage();
   const location = useLocation();
+  const directorates = teamDepartments.filter((d) => d.id !== 'executive');
 
   useEffect(() => {
     if (location.pathname !== '/about/sejarah') return;
@@ -95,28 +111,22 @@ export function About() {
 
         <ScrollReveal staggerIndex={1}>
           <h2 className="font-display text-2xl font-bold">{t('about.chart.title')}</h2>
-          <div className="mt-6 overflow-x-auto rounded-2xl border border-brand-charcoal/10 bg-white p-8 dark:border-white/10 dark:bg-surface-card">
-            <svg viewBox="0 0 800 220" className="mx-auto min-w-[640px] text-sm font-semibold text-brand-charcoal dark:text-white">
-              <rect x="320" y="10" width="160" height="56" rx="12" fill="#CE1126" fillOpacity="0.15" stroke="#CE1126" strokeWidth="2" />
-              <text x="400" y="44" textAnchor="middle" fill="currentColor">
-                President
-              </text>
-              <line x1="400" y1="66" x2="400" y2="90" stroke="#CE1126" strokeWidth="2" />
-              <rect x="320" y="90" width="160" height="56" rx="12" fill="#CE1126" fillOpacity="0.08" stroke="#CE1126" />
-              <text x="400" y="124" textAnchor="middle" fill="currentColor">
-                Vice President
-              </text>
-              <line x1="400" y1="146" x2="200" y2="170" stroke="#CE1126" strokeWidth="2" />
-              <line x1="400" y1="146" x2="600" y2="170" stroke="#CE1126" strokeWidth="2" />
-              <rect x="80" y="170" width="240" height="44" rx="10" fill="none" stroke="currentColor" opacity="0.35" />
-              <text x="200" y="197" textAnchor="middle" fill="currentColor" style={{ fontSize: 11 }}>
-                Directorate pods
-              </text>
-              <rect x="480" y="170" width="240" height="44" rx="10" fill="none" stroke="currentColor" opacity="0.35" />
-              <text x="600" y="197" textAnchor="middle" fill="currentColor" style={{ fontSize: 11 }}>
-                Chapter council
-              </text>
-            </svg>
+          <div className="mt-6 overflow-x-auto rounded-2xl border border-brand-charcoal/10 bg-white p-6 sm:p-8 dark:border-white/10 dark:bg-surface-card">
+            <div className="mx-auto flex min-w-[min(100%,720px)] max-w-4xl flex-col items-center">
+              <OrgNode className="min-w-[11rem] border-brand-red bg-brand-red/15">{t('about.chart.president')}</OrgNode>
+              <OrgConnector className="h-6" />
+              <OrgNode className="min-w-[11rem]">{t('about.chart.vicePresident')}</OrgNode>
+              <OrgConnector className="h-6" />
+              <div className="w-full max-w-5xl border-t-2 border-brand-red pt-6">
+                <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+                  {directorates.map((dept) => (
+                    <li key={dept.id}>
+                      <OrgNode className="h-full w-full text-xs leading-snug sm:text-sm">{t(dept.titleKey)}</OrgNode>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </ScrollReveal>
       </section>

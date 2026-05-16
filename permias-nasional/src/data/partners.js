@@ -29,7 +29,7 @@ export const partners = [
     name: 'KJRI Los Angeles',
     initials: 'LA',
     description: 'Indonesian Consulate General serving the western United States.',
-    website: 'https://www.kjrila.org',
+    website: 'https://kemlu.go.id/losangeles/',
     type: 'Government',
   },
   {
@@ -37,7 +37,7 @@ export const partners = [
     name: 'KJRI New York',
     initials: 'NY',
     description: 'Consulate General covering parts of the U.S. East Coast.',
-    website: 'https://kemlu.go.id/newyork',
+    website: 'https://kjrinewyork.org/',
     type: 'Government',
   },
   {
@@ -45,7 +45,7 @@ export const partners = [
     name: 'KJRI Houston',
     initials: 'H',
     description: 'Consulate General for the southern United States.',
-    website: 'https://kemlu.go.id/houston',
+    website: 'https://kemlu.go.id/houston/',
     type: 'Government',
   },
   {
@@ -53,7 +53,7 @@ export const partners = [
     name: 'KJRI San Francisco',
     initials: 'SF',
     description: 'Consulate General for the Pacific Northwest and Bay Area region.',
-    website: 'https://kemlu.go.id/sanfrancisco',
+    website: 'https://kemlu.go.id/sanfrancisco/id',
     type: 'Government',
   },
   {
@@ -61,7 +61,7 @@ export const partners = [
     name: 'KBRI Washington DC',
     initials: 'DC',
     description: 'Embassy of the Republic of Indonesia in the United States.',
-    website: 'https://kemlu.go.id/washington',
+    website: 'https://www.embassyofindonesia.org',
     type: 'Government',
   },
   {
@@ -77,7 +77,7 @@ export const partners = [
     name: 'PPI Dunia',
     initials: 'PD',
     description: 'Global union of Indonesian student associations—coordination and congresses.',
-    website: 'https://ppidunia.org',
+    website: 'https://ppi.id/',
     type: 'Community',
   },
   {
@@ -89,25 +89,17 @@ export const partners = [
     type: 'Community',
   },
   {
-    id: 'himsar',
-    name: 'HIMSAR',
-    initials: 'HI',
-    description: 'Example Indonesian student association network partner.',
-    website: 'https://example.org/himsar',
-    type: 'Community',
-  },
-  {
     id: 'itb-na',
     name: 'ITB North America',
     initials: 'IT',
     description: 'Alumni and student chapter collaboration across major U.S. cities.',
-    website: 'https://www.itb.ac.id',
+    website: 'https://www.iaitb.or.id/',
     type: 'Community',
   },
 ];
 
 export const marqueeItems = [
-  ...partners.map((p) => ({ label: p.name, initials: p.initials })),
+  ...partners.map((p) => ({ label: p.name, initials: p.initials, href: p.website })),
   { label: 'UIUC Indonesian Student Association', initials: 'UI' },
   { label: 'MIT Indonesian Students Club', initials: 'MI' },
   { label: 'Berkeley Indonesian Student Association', initials: 'BE' },

@@ -59,9 +59,10 @@ export function Team() {
                     )}
                   </div>
                 </div>
-                {mem.bio && (
+                {mem.hometown && (
                   <p className="mt-4 text-sm text-brand-charcoal/75 opacity-0 transition group-hover:opacity-100 dark:text-white/75">
-                    {mem.bio}
+                    <span className="font-semibold">{t('team.hometown')}: </span>
+                    {mem.hometown}
                   </p>
                 )}
                 {mem.linkedin && (

@@ -2,7 +2,6 @@ import { partners } from '../data/partners.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { Card } from '../components/ui/Card.jsx';
-import { Button } from '../components/ui/Button.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 
 export function Partners() {
@@ -35,9 +34,14 @@ export function Partners() {
                   </div>
                 </div>
                 <p className="mt-4 flex-1 text-sm text-brand-charcoal/75 dark:text-white/75">{p.description}</p>
-                <Button as="a" href={p.website} target="_blank" rel="noopener noreferrer" className="mt-6 w-full !py-2 text-sm" variant="outline">
+                <a
+                  href={p.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-full border-2 border-brand-red bg-transparent px-6 py-2 text-sm font-semibold text-brand-red transition-all duration-150 hover:bg-brand-red hover:text-white dark:text-white"
+                >
                   {t('partners.visit')}
-                </Button>
+                </a>
               </Card>
             </ScrollReveal>
           ))}

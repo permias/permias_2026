@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { posts } from '../data/posts.js';
 import { formatDate } from '../utils/formatDate.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
@@ -74,11 +75,16 @@ export function Events() {
                     {formatDate(post.date, lang === 'id' ? 'id-ID' : 'en-US')} · {post.location}
                   </p>
                   <p className="mt-4 text-sm leading-relaxed text-brand-charcoal/80 dark:text-white/80">{post.description}</p>
-                  {post.externalLink && (
-                    <Button as="a" href={post.externalLink} target="_blank" rel="noopener noreferrer" className="mt-6">
-                      {t('events.rsvp')}
-                    </Button>
-                  )}
+                  {post.externalLink &&
+                    (post.externalLink.startsWith('/') ? (
+                      <Button as={Link} to={post.externalLink} className="mt-6">
+                        {t('events.rsvp')}
+                      </Button>
+                    ) : (
+                      <Button as="a" href={post.externalLink} target="_blank" rel="noopener noreferrer" className="mt-6">
+                        {t('events.rsvp')}
+                      </Button>
+                    ))}
                 </div>
               </div>
             </Card>

@@ -7,6 +7,8 @@ import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { AccordionItem } from '../components/ui/Accordion.jsx';
 import { sectionImages } from '../data/siteMedia.js';
 
+const API_BASE = (import.meta.env.VITE_API_BASE || '').replace(/\/$/, '');
+
 const socials = [
   {
     href: 'https://groups.google.com/g/permias-nasional',
@@ -32,7 +34,7 @@ export function Contact() {
     e.preventDefault();
     setStatus('loading');
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch(`${API_BASE}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
