@@ -206,9 +206,11 @@ export const phrases = {
   },
   'team.dept.executive': { en: 'Executive board', id: 'Pengurus harian' },
   'team.dept.academics': { en: 'Academics', id: 'Akademik' },
+  'team.dept.socaffairs': { en: 'Social affairs', id: 'Urusan sosial' },
   'team.dept.orgdev': { en: 'Organizational development', id: 'Pengembangan organisasi' },
   'team.dept.prodev': { en: 'Professional development', id: 'Pengembangan profesional' },
   'team.dept.pubpromo': { en: 'Publications & promotions', id: 'Publikasi & promosi' },
+  'team.hometown': { en: 'Hometown', id: 'Kota asal' },
   'about.title': { en: 'Our story', id: 'Cerita kami' },
   'about.sub': {
     en: 'Milestones from founding energy to today’s national network.',

@@ -12,7 +12,7 @@ export function flattenTeamForSearch() {
       title: mem.name,
       subtitle: mem.role,
       href: '/team',
-      keywords: [mem.name, mem.role, d.id],
+      keywords: [mem.name, mem.role, d.id, mem.hometown].filter(Boolean),
     })),
   );
 }

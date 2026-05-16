@@ -6,18 +6,48 @@
       {
         "name": "Axel Hutapea",
         "role": "President",
-        "education": "Georgetown University: B.A. Political Science",
+        "education": "Georgetown University: Political Science",
         "linkedin": "https://www.linkedin.com/",
-        "bio": "Leads national strategy and chapter coordination.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=AH"
       },
       {
         "name": "Kelly Soegiantoro",
         "role": "Vice President",
-        "education": "University of Texas, Austin: B.S. Finance",
+        "education": "University of Texas, Austin: Finance",
         "linkedin": "https://www.linkedin.com/",
-        "bio": "Supports presidents council and internal operations.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=KS"
+      }
+    ]
+  },
+  {
+    "id": "socaffairs",
+    "titleKey": "team.dept.socaffairs",
+    "members": [
+      {
+        "name": "Bayu Prasetyo",
+        "role": "Social Affairs",
+        "education": "Pennsylvania State University: Engineering Science and Mechanics",
+        "linkedin": null,
+        "hometown": "Bandung",
+        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=BP"
+      },
+      {
+        "name": "Aaron Timothy Soetopo",
+        "role": "Social Affairs",
+        "education": "Diablo Valley College: Electrical Engineering and Computer Engineering",
+        "linkedin": null,
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=ATS"
+      },
+      {
+        "name": "Muhammad Ikbal Putera",
+        "role": "Social Affairs",
+        "education": "North Carolina State University: PhD - Parks, Recreation, and Tourism Management",
+        "linkedin": null,
+        "hometown": "Raleigh",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=MIP"
       }
     ]
   },
@@ -26,20 +56,44 @@
     "titleKey": "team.dept.academics",
     "members": [
       {
-        "name": "Bima Sakti",
-        "role": "Director of Academics",
-        "education": "Institut Teknologi Sepuluh Nopember, B.S. Electrical Engineering",
+        "name": "Darren Darwis Tanuwijaya",
+        "role": "Academics",
+        "education": "University of Notre Dame: Economics",
         "linkedin": null,
-        "bio": "Scholarships, study skills, and faculty partnerships.",
-        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=BS"
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=DDT"
       },
       {
-        "name": "Clarissa Wijaya",
-        "role": "Academic Programs Lead",
-        "education": "University of Indonesia, B.A. Education",
+        "name": "Adin Wira Pramudita",
+        "role": "Academics",
+        "education": "Johns Hopkins University: M.S. Public Health",
         "linkedin": null,
-        "bio": "Workshops and peer tutoring networks.",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=CW"
+        "hometown": "Surabaya",
+        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=AWP"
+      },
+      {
+        "name": "Hanna Talitha",
+        "role": "Academics",
+        "education": "Washington and Lee University: Politics and Economics",
+        "linkedin": null,
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=HT"
+      },
+      {
+        "name": "Samantha Lie",
+        "role": "Academics",
+        "education": "University of California, San Diego: Business Economics",
+        "linkedin": null,
+        "hometown": "Cirebon",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=SL"
+      },
+      {
+        "name": "Hansen Tjo",
+        "role": "Research & Academics",
+        "education": "Princeton University: PhD - Chemical & Biological Engineering",
+        "linkedin": null,
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=HJ"
       }
     ]
   },
@@ -47,21 +101,82 @@
     "id": "orgdev",
     "titleKey": "team.dept.orgdev",
     "members": [
-     {
-        "name": "Jason Laksmana",
-        "role": "Co-Director for Organizational Development",
-        "education": "Ohio State University: B.S. Accounting",
-        "linkedin": null,
-        "bio": "Documentation, meetings, and chapter onboarding.",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=RP"
+      {
+        "name": "Gizelle Clevanka",
+        "role": "Co-Director",
+        "education": "University of Washington, Seattle: Public Policy & Governance; Public Health, Global Health",
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=GC"
       },
       {
-        "name": "Siti Rahma",
-        "role": "Chapter Success Manager",
-        "education": "Padjadjaran University, B.A. Psychology",
-        "linkedin": null,
-        "bio": "Onboarding playbooks and regional meetups.",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=SR"
+        "name": "Jason Laksmana",
+        "role": "Co-Director",
+        "education": "Ohio State University: Accounting",
+        "hometown": "Surabaya",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=JL"
+      },
+      {
+        "name": "Michelle Nugroho",
+        "role": "Midwest II",
+        "education": "DePaul University: Film and TV Production (Creative Producing)",
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=MN"
+      },
+      {
+        "name": "Pande Khesara",
+        "role": "West Coast I",
+        "education": "University of Utah: Computer Science",
+        "hometown": "Bali",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=PK"
+      },
+      {
+        "name": "Joanne Natalie Saputra",
+        "role": "West Coast II",
+        "education": "Diablo Valley College: Data Science",
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=JS"
+      },
+      {
+        "name": "Reynard Suhada",
+        "role": "Midwest I",
+        "education": "University of Notre Dame: Mathematics",
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=RSh"
+      },
+      {
+        "name": "Kayla Ghita Linadi",
+        "role": "West Coast III",
+        "education": "Edmonds College: Pre-law",
+        "hometown": "Tangsel",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=KL"
+      },
+      {
+        "name": "Reynard Susanto",
+        "role": "South",
+        "education": "Texas A&M University: Electrical Engineering",
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=RSu"
+      },
+      {
+        "name": "Nur Faza Fuadi",
+        "role": "East Coast II",
+        "education": "Pennsylvania State University: Mining Engineering",
+        "hometown": "Medan",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=NF"
+      },
+      {
+        "name": "Andrew Wong",
+        "role": "East Coast I",
+        "education": "Babson College: Entrepreneurship",
+        "hometown": "Jakarta",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=AW"
+      },
+      {
+        "name": "Christy Dio",
+        "role": "East Coast III",
+        "education": "University of Maryland, College Park: Teaching and Learning, Policy and Leadership",
+        "hometown": "Surabaya",
+        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=CD"
       }
     ]
   },
@@ -72,33 +187,33 @@
       {
         "name": "Jane Manalu",
         "role": "Director of Professional Development",
-        "education": "New York University: B.S. Computer Engineering and Minor in Management",
+        "education": "New York University: Computer Engineering and Minor in Management",
         "linkedin": null,
-        "bio": "Career treks, employer relations, and alumni.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=NK"
       },
       {
-        "name": "Irmma Dharmawan",
+        "name": "Irmma Darmawan",
         "role": "Professional Development Officer",
-        "education": "",
+        "education": "Boston College: Transformative Education, Applied Psychology",
         "linkedin": null,
-        "bio": "Sponsors and hiring partner programs.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=EP"
       },
       {
         "name": "Mario Andika Raharja",
         "role": "Professional Development Officer",
-        "education": "University of Washington, Bothell: B.B.A. Accounting",
+        "education": "University of Washington, Bothell: Accounting",
         "linkedin": null,
-        "bio": "Sponsors and hiring partner programs.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=EP"
       },
       {
         "name": "William Luky",
         "role": "Industry Partnerships Lead",
-        "education": "Reformed Theological Seminary: M.Div. Theology",
+        "education": "Reformed Theological Seminary: Theology",
         "linkedin": null,
-        "bio": "Sponsors and hiring partner programs.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=EP"
       }
     ]
@@ -110,9 +225,9 @@
       {
         "name": "Taryne Aktemah",
         "role": "Director of Publications & Promotions",
-        "education": "University of California, San Diego: B.A. Communications",
+        "education": "University of California, San Diego: Communications",
         "linkedin": null,
-        "bio": "Brand, campaigns, and creative direction.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=MP"
       },
       {
@@ -120,15 +235,15 @@
         "role": "Publications & Promotions Officer",
         "education": "Santa Monica Collega: Communications",
         "linkedin": null,
-        "bio": "Content calendar and chapter spotlights.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=JL"
       },
       {
         "name": "Patrick Roland Wijaya",
         "role": "Publications & Promotions Officer",
-        "education": "University of Washington, Seattle: B.S. Computer Science",
+        "education": "University of Washington, Seattle: Computer Science",
         "linkedin": null,
-        "bio": "Content calendar and chapter spotlights.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=JL"
       },
       {
@@ -136,7 +251,7 @@
         "role": "Publications & Promotions Officer",
         "education": "Diablo Valley College: Electrical Engineering and Computer Science",
         "linkedin": null,
-        "bio": "Content calendar and chapter spotlights.",
+        "hometown": "Jakarta",
         "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=JL"
       }
     ]
