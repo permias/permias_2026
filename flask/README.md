@@ -32,12 +32,14 @@ Default port is **5001** (see `PORT` in `.env`).
 | Method | Path | Description |
 | --- | --- | --- |
 | POST | `/api/chat` | **Site chat** — body: `{ "message": "...", "system": "..." }` → `{ "reply": "..." }` |
-| GET | `/api/health` | Liveness: `api_configured`, `model` (no secrets) |
+| POST | `/api/chapter-register` | **Chapter registration** — emails the national board (see below) |
+| POST | `/api/contact` | **Contact form** — emails the national board |
+| GET | `/api/health` | Liveness: `api_configured`, `mail_configured`, etc. (no secrets) |
 
 ## Local full stack (Vite + Flask)
 
 1. Start Flask: `python app.py` (port 5001).
-2. In `permias-nasional/`, run `npm run dev`. Vite proxies `POST /api/chat` to `http://127.0.0.1:5001`.
+2. In `permias-nasional/`, run `npm run dev`. Vite proxies `POST /api/chat`, `/api/chapter-register`, and `/api/contact` to `http://127.0.0.1:5001`.
 
 ## Production
 
@@ -54,6 +56,14 @@ Default port is **5001** (see `PORT` in `.env`).
 | `TRUST_X_FORWARDED_FOR` | No | Set to `1` / `true` if the app is **behind a reverse proxy** so the client IP (and rate limit) comes from `X-Forwarded-For`. |
 | `RATELIMIT_STORAGE_URI` | No | e.g. `redis://...` to share rate-limit counters across **multiple gunicorn workers**; default in-memory. |
 | `MAX_REQUEST_BYTES` | No | Max request body size (default `65536`) to protect against large POST abuse. |
+| `CHAPTER_REGISTER_TO` | No | Recipient(s), comma-separated (default `info@permiasnasional.com`) |
+| `SMTP_USER` / `SMTP_PASSWORD` | For chapter form* | Gmail (or other) SMTP — use an [app password](https://support.google.com/accounts/answer/185833) if 2FA is on |
+| `SMTP_HOST` / `SMTP_PORT` / `SMTP_FROM` | No | Defaults: `smtp.gmail.com`, `587`, same as `SMTP_USER` |
+| `RESEND_API_KEY` | For chapter form* | Alternative to SMTP via [Resend](https://resend.com) |
+| `CHAPTER_REGISTER_FROM` | With Resend | Verified sender, e.g. `PERMIAS Nasional <noreply@permiasnasional.com>` |
+| `CHAPTER_REGISTER_RATE_LIMIT` | No | Per-IP cap on chapter registrations (default `5 per minute`) |
+
+\*Set **either** SMTP credentials **or** `RESEND_API_KEY` (not both required).
 | `PORT` | No | Listen port for gunicorn/Flask |
 
 **Keep the API key on the server only** — set `GEMINI_API_KEY` in the host’s environment (or a secrets manager), never in the React repo or a `VITE_` variable (those are embedded in the public JS bundle).
@@ -84,6 +94,30 @@ location /api/ {
 ```
 
 Set `TRUST_X_FORWARDED_FOR=1` in Flask when you forward these headers, so per-IP rate limits use the real visitor IP.
+
+## Outbound email (chapter register + contact)
+
+Set **either** SMTP credentials **or** `RESEND_API_KEY` in `.env`. Both forms use the same mail settings.
+
+- `/chapters/register` → `POST /api/chapter-register` → `CHAPTER_REGISTER_TO`
+- `/contact` → `POST /api/contact` → `CONTACT_TO`
+
+**Reply-To** is always the submitter’s email.
+
+**Gmail SMTP (typical)**
+
+```bash
+CHAPTER_REGISTER_TO=info@permiasnasional.com
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-account@gmail.com
+SMTP_PASSWORD=your-16-char-app-password
+SMTP_FROM=PERMIAS Nasional <your-account@gmail.com>
+```
+
+Restart Flask. `GET /api/health` should show `"chapter_register_configured": true`.
+
+**Resend** — set `RESEND_API_KEY` and a verified `MAIL_FROM` instead of SMTP.
 
 ## cURL
 

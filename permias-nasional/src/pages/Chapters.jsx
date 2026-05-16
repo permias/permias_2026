@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { chapters, chaptersByStateId, REGIONS } from '../data/chapters.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo } from '../components/Seo.jsx';
@@ -56,7 +56,7 @@ export function Chapters() {
             <p className="mt-4 max-w-3xl text-lg text-brand-charcoal/75 dark:text-white/75">{t('chapters.sub')}</p>
             <p className="mt-2 text-base font-semibold text-brand-red">{t('chapters.register.line')}</p>
             <div className="mt-6">
-              <Button as="a" href="https://forms.gle/bx9bQx9eRBDgLTy57" target="_blank" rel="noopener noreferrer">
+              <Button as={Link} to="/chapters/register">
                 {t('chapters.register')}
               </Button>
             </div>

@@ -40,15 +40,6 @@ function apiPlugin() {
           sendJson(res, 200, { ok: true, message: 'Subscribed' });
           return;
         }
-        if (req.method === 'POST' && url === '/api/contact') {
-          const body = await readJsonBody(req);
-          if (!body.name || !body.email || !body.message) {
-            sendJson(res, 400, { ok: false, error: 'Missing fields' });
-            return;
-          }
-          sendJson(res, 200, { ok: true, message: 'Received' });
-          return;
-        }
         next();
       });
     },
@@ -59,12 +50,11 @@ function apiPlugin() {
 export default defineConfig({
   plugins: [react(), apiPlugin()],
   server: {
-    // Proxy to Flask chat API in dev: run `python app.py` in permias_2026/flask (port 5001)
+    // Proxy to Flask in dev: run `python app.py` in permias_2026/flask (port 5001)
     proxy: {
-      '/api/chat': {
-        target: 'http://127.0.0.1:5001',
-        changeOrigin: true,
-      },
+      '/api/chat': { target: 'http://127.0.0.1:5001', changeOrigin: true },
+      '/api/chapter-register': { target: 'http://127.0.0.1:5001', changeOrigin: true },
+      '/api/contact': { target: 'http://127.0.0.1:5001', changeOrigin: true },
     },
   },
 });

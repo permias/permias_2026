@@ -57,7 +57,7 @@ export const posts = [
     description:
       'New university-based organizations can register to affiliate with PERMIAS Nasional for the 2026–2027 academic year.',
     imageUrl: 'https://placehold.co/800x450/1A1A1A/FFFFFF?text=Chapters',
-    externalLink: 'https://forms.gle/bx9bQx9eRBDgLTy57',
+    externalLink: '/chapters/register',
     tags: ['chapters'],
   },
   {

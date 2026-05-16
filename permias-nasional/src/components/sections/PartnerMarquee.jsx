@@ -17,20 +17,37 @@ export function PartnerMarquee() {
       </div>
       <div className="group relative overflow-hidden">
         <div className="partner-marquee-track flex w-max gap-4 group-hover:[animation-play-state:paused]">
-          {doubled.map((item, idx) => (
-            <div
-              key={`${item.label}-${idx}`}
-              className="flex h-16 min-w-[200px] items-center rounded-full border border-white/15 bg-white/5 px-5 text-base font-semibold md:h-[4.25rem] md:min-w-[220px] md:text-lg"
-            >
-              <img
-                src={`https://placehold.co/96x96/CE1126/FFFFFF?text=${encodeURIComponent(item.initials)}`}
-                alt=""
-                className="mr-3 h-11 w-11 shrink-0 rounded-full object-cover md:h-12 md:w-12"
-                loading="lazy"
-              />
-              <span className="truncate">{item.label}</span>
-            </div>
-          ))}
+          {doubled.map((item, idx) => {
+            const className =
+              'flex h-16 min-w-[200px] items-center rounded-full border border-white/15 bg-white/5 px-5 text-base font-semibold transition hover:border-brand-red/50 hover:bg-white/10 md:h-[4.25rem] md:min-w-[220px] md:text-lg';
+            const inner = (
+              <>
+                <img
+                  src={`https://placehold.co/96x96/CE1126/FFFFFF?text=${encodeURIComponent(item.initials)}`}
+                  alt=""
+                  className="mr-3 h-11 w-11 shrink-0 rounded-full object-cover md:h-12 md:w-12"
+                  loading="lazy"
+                />
+                <span className="truncate">{item.label}</span>
+              </>
+            );
+
+            return item.href ? (
+              <a
+                key={`${item.label}-${idx}`}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+              >
+                {inner}
+              </a>
+            ) : (
+              <div key={`${item.label}-${idx}`} className={className}>
+                {inner}
+              </div>
+            );
+          })}
         </div>
       </div>
       <style>{`
