@@ -361,6 +361,8 @@ export const phrases = {
   'badge.announcement': { en: 'Announcement', id: 'Pengumuman' },
   'badge.opportunity': { en: 'Opportunity', id: 'Peluang' },
   'chat.open': { en: 'Open assistant', id: 'Buka asisten' },
+  'chat.fullscreen': { en: 'Full screen', id: 'Layar penuh' },
+  'chat.exitFullscreen': { en: 'Exit full screen', id: 'Keluar layar penuh' },
   'chat.title': { en: 'PERMIAS Assistant', id: 'Asisten PERMIAS' },
   'chat.intro': {
     en: 'This is an AI assistant—replies are generated automatically and may be incomplete or imprecise. For general guidance only, not legal, immigration, or tax advice. Always confirm important decisions with your DSO, school, or a qualified professional.',

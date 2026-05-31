@@ -11,9 +11,15 @@ function nextId() {
 export function ChatWidget() {
   const { t } = useLanguage();
   const [open, setOpen] = useState(false);
+  const [fullscreen, setFullscreen] = useState(false);
   const [text, setText] = useState('');
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const close = () => {
+    setOpen(false);
+    setFullscreen(false);
+  };
 
   const apiBase = (import.meta.env.VITE_API_BASE || '').replace(/\/$/, '');
 
@@ -55,21 +61,26 @@ export function ChatWidget() {
 
   return (
     <>
-      <button
-        type="button"
-        className="fixed bottom-6 right-4 z-[52] flex h-14 w-14 items-center justify-center rounded-full bg-brand-red text-white shadow-lg transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
-        aria-label={t('chat.open')}
-        aria-expanded={open}
-        onClick={() => setOpen((o) => !o)}
-      >
-        <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-        </svg>
-      </button>
+      {!open && (
+        <button
+          type="button"
+          className="fixed bottom-6 right-4 z-[52] flex h-14 w-14 items-center justify-center rounded-full bg-brand-red text-white shadow-lg transition hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red"
+          aria-label={t('chat.open')}
+          aria-expanded={open}
+          onClick={() => setOpen(true)}
+        >
+          <svg className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          </svg>
+        </button>
+      )}
 
       <div
         className={cn(
-          'fixed bottom-0 right-0 z-[52] flex h-[min(100%,480px)] w-full max-w-md translate-x-full flex-col border-l border-t border-brand-charcoal/10 bg-white shadow-2xl transition-transform duration-300 dark:border-white/10 dark:bg-surface-card sm:bottom-6 sm:right-6 sm:h-[420px] sm:rounded-2xl sm:border',
+          'fixed z-[52] flex translate-x-full flex-col bg-white shadow-2xl transition-[transform,width,height,inset,border-radius] duration-300 dark:bg-surface-card',
+          fullscreen
+            ? 'inset-0 h-dvh w-full rounded-none border-0'
+            : 'bottom-0 right-0 h-[min(100%,480px)] w-full max-w-md border-l border-t border-brand-charcoal/10 dark:border-white/10 sm:bottom-6 sm:right-6 sm:h-[420px] sm:rounded-2xl sm:border',
           open ? 'translate-x-0' : 'pointer-events-none',
         )}
         role="dialog"
@@ -78,11 +89,34 @@ export function ChatWidget() {
       >
         <div className="flex items-center justify-between border-b border-brand-charcoal/10 px-4 py-3 dark:border-white/10">
           <p className="font-display font-bold">{t('chat.title')}</p>
-          <button type="button" className="rounded-full p-2 text-sm font-semibold" onClick={() => setOpen(false)} aria-label={t('search.close')}>
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-              <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
-            </svg>
-          </button>
+          <div className="flex items-center gap-1">
+            <button
+              type="button"
+              className="rounded-full p-2 text-sm font-semibold transition hover:bg-black/5 dark:hover:bg-white/10"
+              onClick={() => setFullscreen((f) => !f)}
+              aria-label={fullscreen ? t('chat.exitFullscreen') : t('chat.fullscreen')}
+            >
+              {fullscreen ? (
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                  <path d="M4 14h6v6M14 4h6v6M14 20v-6h6M4 10V4h6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              ) : (
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                  <path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              )}
+            </button>
+            <button
+              type="button"
+              className="rounded-full p-2 text-sm font-semibold transition hover:bg-black/5 dark:hover:bg-white/10"
+              onClick={close}
+              aria-label={t('search.close')}
+            >
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
+              </svg>
+            </button>
+          </div>
         </div>
         <div className="flex-1 space-y-3 overflow-y-auto p-4 text-sm text-brand-charcoal/80 dark:text-white/80">
           <p className="rounded-xl bg-brand-red/5 p-3 text-xs dark:bg-white/5">{t('chat.intro')}</p>
@@ -97,7 +131,8 @@ export function ChatWidget() {
             >
               <p
                 className={cn(
-                  'min-w-0 max-w-[min(85%,20rem)] rounded-xl p-3 text-xs',
+                  'min-w-0 max-w-[min(85%,20rem)] rounded-xl p-3 text-xs sm:text-sm',
+                  fullscreen && 'max-w-[min(85%,42rem)]',
                   'w-fit whitespace-pre-wrap break-words [text-wrap:pretty]',
                   m.role === 'user' && 'border border-brand-red/20 bg-brand-red/10 text-left dark:border-white/10 dark:bg-brand-red/20',
                   m.role === 'assistant' && 'bg-black/5 text-left dark:bg-white/10',
