@@ -24,19 +24,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
+          # Lockfile was generated on macOS; install Linux Rolldown binding for Vite 8 on ubuntu-latest.
+          npm install --no-save --workspace=permias-nasional @rolldown/binding-linux-x64-gnu@1.0.0-rc.15
 
       - name: Build site
         run: npm run build
         env:
           VITE_SITE_URL: https://permiasnasional.com
-
-      - name: Add SPA fallback for client-side routes
-        run: cp permias-nasional/dist/index.html permias-nasional/dist/404.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
