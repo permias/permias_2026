@@ -28,10 +28,8 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: |
-          npm ci
-          # Lockfile was generated on macOS; install Linux Rolldown binding for Vite 8 on ubuntu-latest.
-          npm install --no-save --workspace=permias-nasional @rolldown/binding-linux-x64-gnu@1.0.0-rc.15
+        # npm install (not ci) so Linux optional native bindings (Rolldown/Lightning CSS) resolve on CI.
+        run: npm install
 
       - name: Build site
         run: npm run build
