@@ -8,6 +8,7 @@ import { ResourceTopic } from './pages/ResourceTopic.jsx';
 import { Events } from './pages/Events.jsx';
 import { Team } from './pages/Team.jsx';
 import { About } from './pages/About.jsx';
+import { Sejarah } from './pages/Sejarah.jsx';
 import { Contact } from './pages/Contact.jsx';
 import { Partners } from './pages/Partners.jsx';
 
@@ -26,7 +27,7 @@ export default function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/about/team" element={<Team />} />
           <Route path="/about" element={<About />} />
-          <Route path="/about/sejarah" element={<About />} />
+          <Route path="/about/sejarah" element={<Sejarah />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/partners" element={<Partners />} />
         </Route>

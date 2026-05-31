@@ -5,6 +5,7 @@ import { useLanguage } from '../../context/LanguageContext.jsx';
 import { Badge } from '../ui/Badge.jsx';
 import { Card } from '../ui/Card.jsx';
 import { ScrollReveal } from '../ui/ScrollReveal.jsx';
+import { cn } from '../../utils/cn.js';
 
 function typeVariant(type) {
   if (type === 'event') return 'event';
@@ -45,7 +46,12 @@ export function RecentPosts() {
                 <img
                   src={post.imageUrl}
                   alt=""
-                  className="h-52 w-full object-cover md:h-56"
+                  className={cn(
+                    'w-full bg-black/[0.03] dark:bg-white/[0.04]',
+                    post.imageAspect === 'portrait' && 'h-64 object-contain md:h-72',
+                    post.imageAspect === 'square' && 'aspect-square object-contain',
+                    (!post.imageAspect || post.imageAspect === 'landscape') && 'h-52 object-cover md:h-56',
+                  )}
                   loading="lazy"
                 />
                 <div className="flex flex-1 flex-col p-6 md:p-7">

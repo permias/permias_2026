@@ -159,6 +159,11 @@ export const phrases = {
   'chapters.visit': { en: 'Visit website', id: 'Kunjungi situs' },
   'chapters.sidebar.title': { en: 'Chapters in', id: 'Chapter di' },
   'chapters.sidebar.empty': { en: 'No chapters in this state yet.', id: 'Belum ada chapter di negara bagian ini.' },
+  'chapters.sidebar.hint': {
+    en: 'Select a highlighted state on the map to view local chapters.',
+    id: 'Pilih negara bagian yang disorot di peta untuk melihat chapter setempat.',
+  },
+  'chapters.sidebar.count': { en: '{n} chapter(s)', id: '{n} chapter' },
   'chapterRegister.title': { en: 'Chapter registration', id: 'Pendaftaran chapter' },
   'chapterRegister.sub': {
     en: 'Tell us about your student organization. The national board will review your submission and follow up by email.',
@@ -181,8 +186,16 @@ export const phrases = {
     id: 'Terima kasih! Pendaftaran chapter Anda telah kami terima.',
   },
   'chapterRegister.form.error': {
-    en: 'Something went wrong. Please try again or email info@permiasnasional.com.',
-    id: 'Terjadi kesalahan. Coba lagi atau email info@permiasnasional.com.',
+    en: 'Something went wrong. Please try again or email us directly (see below).',
+    id: 'Terjadi kesalahan. Coba lagi atau kirim email langsung (lihat di bawah).',
+  },
+  'chapterRegister.form.fallback': {
+    en: 'If this form does not work, email your chapter details directly to',
+    id: 'Jika formulir tidak berfungsi, kirim detail chapter Anda langsung ke',
+  },
+  'chapterRegister.form.fallbackSubject': {
+    en: 'PERMIAS chapter registration',
+    id: 'Pendaftaran chapter PERMIAS',
   },
   'resources.title': { en: 'Student resources', id: 'Sumber daya mahasiswa' },
   'resources.sub': {
@@ -222,7 +235,14 @@ export const phrases = {
   'events.tab.past': { en: 'Past', id: 'Lalu' },
   'events.tab.all': { en: 'All', id: 'Semua' },
   'events.rsvp': { en: 'RSVP / details', id: 'RSVP / detail' },
-  'events.ig.title': { en: 'From our Instagram', id: 'Dari Instagram kami' },
+  'events.empty': {
+    en: 'No events in this category yet. Try Past or All to browse previous programs.',
+    id: 'Belum ada acara dalam kategori ini. Coba tab Lalu atau Semua.',
+  },
+  'events.ig.more': {
+    en: 'Want more updates and chapter highlights? Follow us on Instagram.',
+    id: 'Ingin update dan sorotan chapter lainnya? Ikuti kami di Instagram.',
+  },
   'events.ig.follow': { en: 'Follow @permias.nasional', id: 'Ikuti @permias.nasional' },
   'team.title': { en: 'National team', id: 'Tim nasional' },
   'team.sub': {
@@ -238,9 +258,32 @@ export const phrases = {
   'team.hometown': { en: 'Hometown', id: 'Kota asal' },
   'about.title': { en: 'Our story', id: 'Cerita kami' },
   'about.sub': {
-    en: 'Milestones from founding energy to today’s national network.',
-    id: 'Tonggak dari semangat pendirian hingga jaringan nasional hari ini.',
+    en: 'Vision, mission, and national leadership structure.',
+    id: 'Visi, misi, dan struktur kepemimpinan nasional.',
   },
+  'sejarah.title': { en: 'Our history', id: 'Sejarah kami' },
+  'sejarah.intro': {
+    en: 'PERMIAS began with the first PERMIAS Congress in Washington, D.C. on 24 December 1961.',
+    id: 'Perjalanan PERMIAS dimulai sejak Kongres PERMIAS I di Washington, D.C. pada tanggal 24 Desember 1961.',
+  },
+  'sejarah.visionMission': { en: 'Vision & mission', id: 'Visi dan misi' },
+  'sejarah.visionMission.sub': {
+    en: 'Guiding principles for the current PERMIAS Nasional board in supporting Indonesian students in the United States.',
+    id: 'Panduan dan tujuan utama pengurus PERMIAS Nasional saat ini dalam mendukung pelajar Indonesia di Amerika Serikat.',
+  },
+  'sejarah.activities': { en: 'PERMIAS Nasional programming', id: 'Kegiatan PERMIAS Nasional' },
+  'sejarah.activities.sub': {
+    en: 'Events, collaborations, and forums for Indonesian students across the United States.',
+    id: 'Berbagai acara, kerja sama, dan forum komunikasi bagi mahasiswa Indonesia di Amerika Serikat.',
+  },
+  'sejarah.partners': { en: 'Partnerships & collaborations', id: 'Partnerships & collaborations' },
+  'sejarah.partners.sub': {
+    en: 'Thank you to our sponsors for supporting PERMIAS Nasional’s vision and mission for Indonesian students in the United States.',
+    id: 'Terima kasih kepada para sponsor yang telah mendukung kami. Dukungan Anda sangat berarti dalam mewujudkan visi dan misi PERMIAS Nasional untuk mendukung mahasiswa Indonesia di Amerika Serikat.',
+  },
+  'sejarah.partners.cta': { en: 'View our partners', id: 'Lihat mitra kami' },
+  'sejarah.partners.mailingList': { en: 'Mailing list on Google Groups', id: 'Milis di Google Groups' },
+  'sejarah.partners.contact': { en: 'Contact us at', id: 'Hubungi kami di' },
   'about.mission': { en: 'Mission', id: 'Misi' },
   'about.vision': { en: 'Vision', id: 'Visi' },
   'about.mission.body': {
@@ -272,7 +315,15 @@ export const phrases = {
   'contact.form.message': { en: 'Message', id: 'Pesan' },
   'contact.form.submit': { en: 'Send message', id: 'Kirim pesan' },
   'contact.form.success': { en: 'Message sent!', id: 'Pesan terkirim!' },
-  'contact.form.error': { en: 'Could not send. Try again.', id: 'Gagal mengirim. Coba lagi.' },
+  'contact.form.error': {
+    en: 'Something went wrong. Please try again or email us directly (see below).',
+    id: 'Terjadi kesalahan. Coba lagi atau kirim email langsung (lihat di bawah).',
+  },
+  'contact.form.fallback': {
+    en: 'If this form does not work, email your message directly to',
+    id: 'Jika formulir tidak berfungsi, kirim pesan Anda langsung ke',
+  },
+  'contact.form.fallbackSubject': { en: 'PERMIAS contact form', id: 'Formulir kontak PERMIAS' },
   'contact.subject.general': { en: 'General', id: 'Umum' },
   'contact.subject.chapter': { en: 'Chapter registration', id: 'Pendaftaran chapter' },
   'contact.subject.media': { en: 'Media / press', id: 'Media' },

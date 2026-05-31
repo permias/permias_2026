@@ -5,6 +5,7 @@ import { Seo } from '../components/Seo.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Input } from '../components/ui/Input.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
+import { CHAPTER_REGISTER_EMAIL } from '../data/contactEmails.js';
 
 const API_BASE = (import.meta.env.VITE_API_BASE || '').replace(/\/$/, '');
 
@@ -26,6 +27,8 @@ export function RegisterChapter() {
   const [msg, setMsg] = useState('');
 
   const set = (field) => (e) => setForm((prev) => ({ ...prev, [field]: e.target.value }));
+
+  const fallbackMailto = `mailto:${CHAPTER_REGISTER_EMAIL}?subject=${encodeURIComponent(t('chapterRegister.form.fallbackSubject'))}`;
 
   const submit = async (e) => {
     e.preventDefault();
@@ -174,6 +177,25 @@ export function RegisterChapter() {
                 {msg}
               </p>
             )}
+
+            <div
+              className={`rounded-xl border p-4 text-sm leading-relaxed ${
+                status === 'error'
+                  ? 'border-brand-red/30 bg-brand-red/5 text-brand-charcoal dark:border-brand-red/40 dark:bg-brand-red/10 dark:text-white'
+                  : 'border-brand-charcoal/10 bg-white text-brand-charcoal/75 dark:border-white/10 dark:bg-surface-dark dark:text-white/75'
+              }`}
+            >
+              <p>
+                {t('chapterRegister.form.fallback')}{' '}
+                <a
+                  href={fallbackMailto}
+                  className="font-bold text-brand-red underline-offset-4 hover:underline"
+                >
+                  {CHAPTER_REGISTER_EMAIL}
+                </a>
+                .
+              </p>
+            </div>
 
             <p className="text-center text-sm text-brand-charcoal/60 dark:text-white/60">
               <Link to="/chapters" className="font-semibold text-brand-red underline-offset-4 hover:underline">

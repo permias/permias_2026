@@ -8,7 +8,6 @@ import { PartnerMarquee } from '../components/sections/PartnerMarquee.jsx';
 import { SocialHub } from '../components/sections/SocialHub.jsx';
 import { NewsletterSection } from '../components/sections/NewsletterSection.jsx';
 import { ChapterFinder } from '../components/sections/ChapterFinder.jsx';
-import { InstagramGrid } from '../components/sections/InstagramGrid.jsx';
 import { StoriesSection } from '../components/sections/StoriesSection.jsx';
 import { SITE_ORIGIN } from '../utils/site.js';
 
@@ -43,7 +42,6 @@ export function Home() {
       <WhatIsPermias />
       <RecentPosts />
       <PartnerMarquee />
-      <InstagramGrid headingKey="home.ig.title" />
       <StoriesSection />
       <SocialHub />
       <NewsletterSection />
