@@ -81,6 +81,20 @@ Put the built Vite app behind nginx (or similar) and proxy `/api/` to gunicorn. 
 **Separate API host**  
 Build the frontend with `VITE_API_BASE` pointing at the API origin (see `permias-nasional/.env.example`). Set `CORS_ORIGINS` on Flask to that site’s origin.
 
+### Render (production)
+
+1. Connect GitHub repo `permias/permias_2026`, root directory **`flask`**, start command from `Procfile`.
+2. Set environment variables (see `.env.example` and `render.yaml`). **Required for chat:**
+   - `GEMINI_API_KEY` — copy the exact working key from your local `.env` (AI Studio key, `AIzaSy…`). Prefer this name over `VERTEX_API_KEY`.
+   - In [Google AI Studio](https://aistudio.google.com/apikey), ensure the key has **no IP or HTTP referrer restrictions** (server-side calls from Render will otherwise fail).
+   - `CORS_ORIGINS=https://permiasnasional.com`
+   - `TRUST_X_FORWARDED_FOR=1`
+3. **Email forms:** set `SMTP_USER`, `SMTP_PASSWORD`, `SMTP_FROM`, `MAIL_FROM`, `CHAPTER_REGISTER_TO`, `CONTACT_TO`.
+4. Verify: `GET https://YOUR-SERVICE.onrender.com/api/health` → `api_configured` and `mail_configured` should be `true`.
+5. Frontend CI sets `VITE_API_BASE=https://permias-api.onrender.com` in `.github/workflows/deploy-pages.yml`.
+
+If `/api/chat` returns 400 but the same key works locally, the Render env key is usually wrong, restricted, or stale — delete and re-paste `GEMINI_API_KEY`, then redeploy.
+
 ### Example: nginx (same host)
 
 ```nginx
