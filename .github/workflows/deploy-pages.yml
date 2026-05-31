@@ -32,7 +32,7 @@ jobs:
       - name: Build site
         run: npm run build
         env:
-          VITE_SITE_URL: https://permiasnasional.com
+          VITE_SITE_URL: https://permiasnasional.com/permias_2026/permias_2026
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

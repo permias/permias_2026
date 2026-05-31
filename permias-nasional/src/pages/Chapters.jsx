@@ -10,6 +10,7 @@ import { Card } from '../components/ui/Card.jsx';
 import { Input } from '../components/ui/Input.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { cn } from '../utils/cn.js';
+import { resolveAssetUrl } from '../utils/site.js';
 
 function ChapterCard({ chapter, visitLabel }) {
   const igHandle = chapter.instagram?.replace('@', '');
@@ -18,7 +19,7 @@ function ChapterCard({ chapter, visitLabel }) {
     <article className="overflow-hidden rounded-2xl border border-brand-charcoal/10 bg-neutral-50/80 dark:border-white/10 dark:bg-black/20">
       <div className="flex gap-3 p-4">
         <img
-          src={chapter.logoUrl}
+          src={resolveAssetUrl(chapter.logoUrl)}
           alt=""
           className="h-14 w-14 shrink-0 rounded-xl border border-brand-charcoal/10 object-cover dark:border-white/10"
         />
@@ -290,7 +291,7 @@ export function Chapters() {
               <ScrollReveal key={c.id} staggerIndex={i % 6}>
                 <Card className="group h-full border-brand-charcoal/10 transition duration-150 hover:-translate-y-1 hover:border-brand-red/40 hover:shadow-lg dark:border-white/10">
                   <div className="flex gap-4">
-                    <img src={c.logoUrl} alt="" className="h-14 w-14 rounded-xl object-cover" />
+                    <img src={resolveAssetUrl(c.logoUrl)} alt="" className="h-14 w-14 rounded-xl object-cover" />
                     <div>
                       <h3 className="font-display text-lg font-bold">{c.chapterName}</h3>
                       <p className="text-xs text-brand-charcoal/60 dark:text-white/60">{c.university}</p>

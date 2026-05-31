@@ -48,6 +48,7 @@ function apiPlugin() {
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/permias_2026/',
   plugins: [react(), apiPlugin()],
   server: {
     // Proxy to Flask in dev: run `python app.py` in permias_2026/flask (port 5001)

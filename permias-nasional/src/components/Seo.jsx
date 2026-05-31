@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { SITE_ORIGIN } from '../utils/site.js';
+import { SITE_ORIGIN, publicUrl } from '../utils/site.js';
 
 /** Default `<title>` for the home page (matches browser tab pattern). */
 export const DEFAULT_TAB_TITLE = 'PERMIAS Nasional | Indonesia';
@@ -16,7 +16,7 @@ export function pageTabTitle(pageLabel) {
 
 export function Seo({ title, description, path }) {
   const url = `${SITE_ORIGIN}${path === '/' ? '' : path}`;
-  const ogImage = `${SITE_ORIGIN}/og-image.svg`;
+  const ogImage = publicUrl('/og-image.svg');
 
   return (
     <Helmet prioritizeSeoTags>

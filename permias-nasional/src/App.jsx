@@ -14,7 +14,7 @@ import { Partners } from './pages/Partners.jsx';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/permias_2026">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

@@ -1,8 +1,15 @@
 /** Department tabs + members — photos use initials circles; optional imageUrl for future */
 
 import teamData from './team.json';
+import { resolveAssetUrl } from '../utils/site.js';
 
-export const teamDepartments = teamData;
+export const teamDepartments = teamData.map((dept) => ({
+  ...dept,
+  members: dept.members.map((mem) => ({
+    ...mem,
+    imageUrl: mem.imageUrl ? resolveAssetUrl(mem.imageUrl) : mem.imageUrl,
+  })),
+}));
 
 export function flattenTeamForSearch() {
   return teamDepartments.flatMap((d) =>

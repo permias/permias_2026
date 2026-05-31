@@ -1,5 +1,7 @@
 /** Events feed for /events and homepage — swap with CMS later */
-export const posts = [
+import { resolveAssetUrl } from '../utils/site.js';
+
+const rawPosts = [
   {
     id: 'e1',
     type: 'event',
@@ -105,6 +107,11 @@ export const posts = [
     tags: ['careers', 'ipa'],
   },
 ];
+
+export const posts = rawPosts.map((post) => ({
+  ...post,
+  imageUrl: resolveAssetUrl(post.imageUrl),
+}));
 
 export function getRecentPosts(n = 3) {
   return [...posts].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, n);
