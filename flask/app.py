@@ -92,15 +92,29 @@ def _handle_rate_limit_exceeded(_: RateLimitExceeded):
 
 
 # Server-side only. See https://ai.google.dev/gemini-api/docs/models
+def _env_key(name: str) -> str:
+    return os.environ.get(name, "").strip()
+
+
 GEMINI_API_KEY = (
-    os.environ.get("GEMINI_API_KEY")
-    or os.environ.get("GOOGLE_API_KEY")
-    or os.environ.get("VERTEX_API_KEY", "")
+    _env_key("GEMINI_API_KEY")
+    or _env_key("GOOGLE_API_KEY")
+    or _env_key("VERTEX_API_KEY")
 )
-DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash").strip()
+_MODEL_FALLBACKS = os.environ.get("GEMINI_MODEL_FALLBACKS", "gemini-2.0-flash,gemini-2.0-flash-lite")
 _MAX_MESSAGE_LEN = 8000
 
 _client: Any = None
+
+
+def _chat_models() -> list[str]:
+    models: list[str] = []
+    for candidate in [DEFAULT_MODEL, *_MODEL_FALLBACKS.split(",")]:
+        name = candidate.strip()
+        if name and name not in models:
+            models.append(name)
+    return models or ["gemini-2.5-flash"]
 
 
 def get_api_key() -> str:
@@ -151,12 +165,15 @@ def _public_gemini_error(exc: BaseException) -> tuple[str, int]:
             "The AI service is busy. Please wait a moment and try again.",
             429,
         )
-    if (
-        isinstance(exc, errors.ClientError)
-        and getattr(exc, "code", None) is not None
-        and 400 <= int(exc.code) < 500
-    ):
-        return "The request could not be completed.", int(exc.code)
+    if isinstance(exc, errors.ClientError):
+        code = getattr(exc, "code", None)
+        if code is not None and int(code) in (401, 403):
+            return (
+                "Chat is not configured correctly on the server. Check the Gemini API key.",
+                503,
+            )
+        if code is not None and 400 <= int(code) < 500:
+            return "The request could not be completed.", int(code)
     return "The assistant could not complete your request. Please try again later.", 502
 
 
@@ -167,14 +184,35 @@ def _generate_text(user_message: str, system_instruction: Optional[str]) -> str:
         config = types.GenerateContentConfig(
             system_instruction=system_instruction.strip()[:_MAX_MESSAGE_LEN]
         )
-    response = client.models.generate_content(
-        model=DEFAULT_MODEL,
-        contents=user_message,
-        config=config,
-    )
-    if response is None or response.text is None:
-        return ""
-    return response.text
+
+    last_exc: Optional[BaseException] = None
+    for model in _chat_models():
+        try:
+            response = client.models.generate_content(
+                model=model,
+                contents=user_message,
+                config=config,
+            )
+            if response is None or response.text is None:
+                return ""
+            if model != DEFAULT_MODEL:
+                logger.info("Gemini reply served by fallback model %s", model)
+            return response.text
+        except errors.ClientError as exc:
+            last_exc = exc
+            code = getattr(exc, "code", None)
+            if code is not None and int(code) == 429:
+                raise
+            logger.warning("Gemini model %s failed (%s): %s", model, code, exc)
+        except errors.APIError as exc:
+            last_exc = exc
+            if getattr(exc, "code", None) == 429:
+                raise
+            logger.warning("Gemini model %s failed: %s", model, exc)
+
+    if last_exc is not None:
+        raise last_exc
+    return ""
 
 
 @app.route("/api/chat", methods=["POST", "OPTIONS"])

@@ -32,7 +32,8 @@ jobs:
       - name: Build site
         run: npm run build
         env:
-          VITE_SITE_URL: https://permiasnasional.com/permias_2026/permias_2026
+          VITE_SITE_URL: https://permiasnasional.com/permias_2026
+          VITE_API_BASE: https://permias-api.onrender.com
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
