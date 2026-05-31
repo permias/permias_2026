@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../../context/LanguageContext.jsx';
+import { SUPPORT_EMAIL } from '../../data/contactEmails.js';
 
 /**
  * Horizontal strip at the very top: help + official email for issues.
@@ -14,10 +15,10 @@ export function SiteHeader() {
           <span className="font-semibold">{t('header.help')}</span>{' '}
           <span className="text-white/90">{t('header.help.sub')}</span>{' '}
           <a
-            href="mailto:info@permiasnasional.com"
+            href={`mailto:${SUPPORT_EMAIL}`}
             className="font-semibold text-white underline decoration-white/50 underline-offset-2 transition hover:decoration-white"
           >
-            info@permiasnasional.com
+            {SUPPORT_EMAIL}
           </a>
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3 sm:justify-end">

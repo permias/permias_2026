@@ -5,6 +5,19 @@ import { Seo } from '../components/Seo.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { cn } from '../utils/cn.js';
 
+/** Crop focus for circular avatars — lower % = show higher in frame (faces). */
+const TEAM_PHOTO_FOCUS = {
+  'Axel Hutapea': 'center 11%',
+  'Bayu Prasetyo': 'center 12%',
+  'Aaron Timothy Soetopo': 'center 18%',
+  'Hanna Talitha': 'center 22%',
+  'Samantha Lie': 'center 14%',
+  'Michelle Nugroho': 'center 20%',
+  'Mario Andika Raharja': 'center 10%',
+  'William Luky': 'center 24%',
+  'Patrick Roland Wijaya': 'center 22%',
+};
+
 export function Team() {
   const { t } = useLanguage();
   const [tab, setTab] = useState(teamDepartments[0].id);
@@ -45,10 +58,23 @@ export function Team() {
               <article className="group relative h-full rounded-2xl border border-brand-charcoal/10 border-t-[3px] border-t-transparent bg-white p-6 shadow-sm transition duration-150 hover:-translate-y-1 hover:border-t-brand-red dark:border-white/10 dark:bg-surface-card">
                 <div className="flex items-start gap-4">
                   {mem.imageUrl ? (
-                    <img src={mem.imageUrl} alt="" className="h-16 w-16 rounded-full object-cover" />
+                    <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full border-2 border-brand-red/20 shadow-sm">
+                      <img
+                        src={mem.imageUrl}
+                        alt={mem.name}
+                        className="h-full w-full object-cover"
+                        style={{ objectPosition: TEAM_PHOTO_FOCUS[mem.name] ?? 'center 35%' }}
+                        loading="lazy"
+                      />
+                    </div>
                   ) : (
-                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-red text-lg font-black text-white">
-                      {mem.initials}
+                    <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-brand-red text-lg font-black text-white">
+                      {mem.name
+                        .split(/\s+/)
+                        .map((part) => part[0])
+                        .join('')
+                        .slice(0, 2)
+                        .toUpperCase()}
                     </div>
                   )}
                   <div>

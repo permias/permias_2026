@@ -1,47 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { milestones } from '../data/about.js';
+import { useMemo } from 'react';
 import { teamDepartments } from '../data/team.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo } from '../components/Seo.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
-
-function MilestoneCard({ m, index, lang }) {
-  const ref = useRef(null);
-  const [on, setOn] = useState(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return undefined;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setOn(true);
-        });
-      },
-      { threshold: 0.45, rootMargin: '0px' },
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  return (
-    <article
-      ref={ref}
-      style={{
-        animationDelay: `${index * 60}ms`,
-        opacity: on ? 1 : 0,
-        transform: on ? 'scale(1)' : 'scale(0.96)',
-        transition: 'opacity 0.45s ease-out, transform 0.45s ease-out',
-      }}
-      className="min-w-[280px] max-w-xs snap-center rounded-2xl border border-brand-charcoal/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-surface-card"
-    >
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-red">{m.year}</p>
-      <h3 className="mt-2 font-display text-xl font-bold">{m.title[lang]}</h3>
-      <p className="mt-3 text-sm leading-relaxed text-brand-charcoal/75 dark:text-white/75">{m.desc[lang]}</p>
-    </article>
-  );
-}
 
 function OrgNode({ children, className = '' }) {
   return (
@@ -58,20 +19,12 @@ function OrgConnector({ className = '' }) {
 }
 
 export function About() {
-  const { lang, t } = useLanguage();
-  const location = useLocation();
-  const directorates = teamDepartments.filter((d) => d.id !== 'executive');
-
-  useEffect(() => {
-    if (location.pathname !== '/about/sejarah') return;
-    window.requestAnimationFrame(() => {
-      document.getElementById('sejarah')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  }, [location.pathname]);
+  const { t } = useLanguage();
+  const directorates = useMemo(() => teamDepartments.filter((d) => d.id !== 'executive'), []);
 
   return (
     <>
-      <Seo title="About PERMIAS | PERMIAS Nasional" description="History, mission, vision, and leadership structure of PERMIAS Nasional." path="/about" />
+      <Seo title="About PERMIAS | PERMIAS Nasional" description="Mission, vision, and leadership structure of PERMIAS Nasional." path="/about" />
       <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
@@ -80,20 +33,6 @@ export function About() {
           </ScrollReveal>
         </div>
       </div>
-
-      <section id="sejarah" className="scroll-mt-36 border-b border-brand-charcoal/10 bg-neutral-50 py-12 dark:border-white/10 dark:bg-black/30">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h2 className="font-display text-2xl font-bold">Timeline</h2>
-            <p className="mt-2 text-sm text-brand-charcoal/60 dark:text-white/60">Scroll or drag sideways to explore milestones.</p>
-          </ScrollReveal>
-          <div className="mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
-            {milestones.map((m, i) => (
-              <MilestoneCard key={m.year} m={m} index={i} lang={lang} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section className="mx-auto max-w-content space-y-10 px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>

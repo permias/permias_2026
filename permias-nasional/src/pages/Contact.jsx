@@ -6,6 +6,7 @@ import { Input } from '../components/ui/Input.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { AccordionItem } from '../components/ui/Accordion.jsx';
 import { sectionImages } from '../data/siteMedia.js';
+import { SUPPORT_EMAIL } from '../data/contactEmails.js';
 
 const API_BASE = (import.meta.env.VITE_API_BASE || '').replace(/\/$/, '');
 
@@ -30,9 +31,12 @@ export function Contact() {
   const [msg, setMsg] = useState('');
   const [form, setForm] = useState({ name: '', email: '', subject: 'general', message: '' });
 
+  const fallbackMailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(t('contact.form.fallbackSubject'))}`;
+
   const submit = async (e) => {
     e.preventDefault();
     setStatus('loading');
+    setMsg('');
     try {
       const res = await fetch(`${API_BASE}/api/contact`, {
         method: 'POST',
@@ -77,20 +81,6 @@ export function Contact() {
             loading="lazy"
           />
         </ScrollReveal>
-      </div>
-
-      <div className="border-y border-brand-charcoal/10 bg-neutral-50 py-10 dark:border-white/10 dark:bg-black/20">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h2 className="text-center font-display text-2xl font-bold">{t('contact.emergency.title')}</h2>
-            <img
-              src={sectionImages.emergencyMap}
-              alt=""
-              className="mx-auto mt-6 w-full max-w-4xl rounded-2xl border border-brand-charcoal/10 object-contain shadow-md dark:border-white/10"
-              loading="lazy"
-            />
-          </ScrollReveal>
-        </div>
       </div>
 
       <div className="mx-auto grid max-w-content gap-12 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
@@ -140,15 +130,38 @@ export function Contact() {
             <Button type="submit" disabled={status === 'loading'}>
               {status === 'loading' ? '…' : t('contact.form.submit')}
             </Button>
-            {msg && <p className="text-sm font-semibold text-brand-red dark:text-white">{msg}</p>}
+            {msg && (
+              <p
+                className={`text-sm font-semibold ${status === 'success' ? 'text-green-700 dark:text-green-400' : 'text-brand-red dark:text-white'}`}
+                role="status"
+              >
+                {msg}
+              </p>
+            )}
+
+            <div
+              className={`rounded-xl border p-4 text-sm leading-relaxed ${
+                status === 'error'
+                  ? 'border-brand-red/30 bg-brand-red/5 text-brand-charcoal dark:border-brand-red/40 dark:bg-brand-red/10 dark:text-white'
+                  : 'border-brand-charcoal/10 bg-white text-brand-charcoal/75 dark:border-white/10 dark:bg-surface-dark dark:text-white/75'
+              }`}
+            >
+              <p>
+                {t('contact.form.fallback')}{' '}
+                <a href={fallbackMailto} className="font-bold text-brand-red underline-offset-4 hover:underline">
+                  {SUPPORT_EMAIL}
+                </a>
+                .
+              </p>
+            </div>
           </form>
         </ScrollReveal>
 
         <div className="space-y-8">
           <ScrollReveal staggerIndex={1}>
             <h2 className="font-display text-xl font-bold">{t('contact.direct')}</h2>
-            <a href="mailto:info@permiasnasional.com" className="mt-2 block text-lg font-bold text-brand-red underline-offset-4 hover:underline">
-              info@permiasnasional.com
+            <a href={`mailto:${SUPPORT_EMAIL}`} className="mt-2 block text-lg font-bold text-brand-red underline-offset-4 hover:underline">
+              {SUPPORT_EMAIL}
             </a>
             <ul className="mt-6 space-y-4">
               {socials.map((s) => (
@@ -177,15 +190,6 @@ export function Contact() {
                 </AccordionItem>
               ))}
             </div>
-          </ScrollReveal>
-
-          <ScrollReveal staggerIndex={3}>
-            <h2 className="font-display text-xl font-bold">{t('contact.map.title')}</h2>
-            <img
-              src="https://placehold.co/800x400/1A1A1A/FFFFFF?text=USA+PERMIAS+Reach+%28placeholder+map%29"
-              alt="Map of the United States highlighting PERMIAS chapter presence"
-              className="mt-4 w-full rounded-2xl border border-brand-charcoal/10 object-cover dark:border-white/10"
-            />
           </ScrollReveal>
         </div>
       </div>
