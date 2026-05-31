@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { resourceSections } from '../data/resources.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo } from '../components/Seo.jsx';
+import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { Card } from '../components/ui/Card.jsx';
 
@@ -11,7 +11,7 @@ export function ResourcesIndex() {
   return (
     <>
       <Seo
-        title="Student Resources | PERMIAS Nasional"
+        title={pageTabTitle('Student Resources')}
         description="Embassies, visa pathways, scholarships, careers, research, entrepreneurship, and cultural programs."
         path="/resources"
       />
