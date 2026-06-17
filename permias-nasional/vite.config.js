@@ -47,8 +47,9 @@ function apiPlugin() {
 }
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: '/permias_2026/',
+export default defineConfig(({ command }) => ({
+  // Dev: http://localhost:5173/chapters/register — Prod/GitHub Pages: /permias_2026/
+  base: command === 'serve' ? '/' : '/permias_2026/',
   plugins: [react(), apiPlugin()],
   server: {
     // Proxy to Flask in dev: run `python app.py` in permias_2026/flask (port 5001)
@@ -58,4 +59,4 @@ export default defineConfig({
       '/api/contact': { target: 'http://127.0.0.1:5001', changeOrigin: true },
     },
   },
-});
+}));

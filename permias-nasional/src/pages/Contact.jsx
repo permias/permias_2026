@@ -3,6 +3,7 @@ import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Input } from '../components/ui/Input.jsx';
+import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { AccordionItem } from '../components/ui/Accordion.jsx';
 import { sectionImages } from '../data/siteMedia.js';
@@ -61,14 +62,7 @@ export function Contact() {
   return (
     <>
       <Seo title={pageTabTitle('Contact')} description="Reach the PERMIAS Nasional board for partnerships, media, and chapter support." path="/contact" />
-      <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{t('contact.title')}</h1>
-            <p className="mt-4 max-w-3xl text-lg text-brand-charcoal/75 dark:text-white/75">{t('contact.sub')}</p>
-          </ScrollReveal>
-        </div>
-      </div>
+      <PageHeader title={t('contact.title')} description={t('contact.sub')} />
 
       <div className="mx-auto max-w-content px-4 py-10 sm:px-6 lg:px-8">
         <ScrollReveal>
@@ -85,7 +79,7 @@ export function Contact() {
 
       <div className="mx-auto grid max-w-content gap-12 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
         <ScrollReveal>
-          <form onSubmit={submit} className="space-y-4 rounded-2xl border border-brand-charcoal/10 bg-neutral-50 p-6 dark:border-white/10 dark:bg-surface-card">
+          <form onSubmit={submit} className="surface-card space-y-4 p-6 sm:p-8">
             <div>
               <label className="text-sm font-semibold" htmlFor="c-name">
                 {t('contact.form.name')}

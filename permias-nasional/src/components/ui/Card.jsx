@@ -1,14 +1,8 @@
 import { cn } from '../../utils/cn.js';
 
-export function Card({ className, children, ...props }) {
+export function Card({ className, children, hover = false, ...props }) {
   return (
-    <div
-      className={cn(
-        'rounded-2xl border border-brand-charcoal/10 bg-white p-6 shadow-sm transition-colors duration-200 dark:border-white/10 dark:bg-surface-card',
-        className,
-      )}
-      {...props}
-    >
+    <div className={cn(hover ? 'surface-card-hover' : 'surface-card', 'p-6', className)} {...props}>
       {children}
     </div>
   );

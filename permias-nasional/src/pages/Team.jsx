@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { teamDepartments } from '../data/team.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo, pageTabTitle } from '../components/Seo.jsx';
+import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { cn } from '../utils/cn.js';
 
@@ -26,14 +27,7 @@ export function Team() {
   return (
     <>
       <Seo title={pageTabTitle('National Team')} description="Meet the PERMIAS Nasional volunteer leadership." path="/team" />
-      <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{t('team.title')}</h1>
-            <p className="mt-4 max-w-3xl text-lg text-brand-charcoal/75 dark:text-white/75">{t('team.sub')}</p>
-          </ScrollReveal>
-        </div>
-      </div>
+      <PageHeader title={t('team.title')} description={t('team.sub')} />
 
       <div className="mx-auto max-w-content px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex gap-2 overflow-x-auto pb-4">

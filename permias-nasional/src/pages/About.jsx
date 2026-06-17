@@ -3,6 +3,7 @@ import { teamDepartments } from '../data/team.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
+import { PageHeader } from '../components/layout/PageHeader.jsx';
 
 function OrgNode({ children, className = '' }) {
   return (
@@ -25,14 +26,7 @@ export function About() {
   return (
     <>
       <Seo title={pageTabTitle('About PERMIAS')} description="History, mission, vision, and leadership structure of PERMIAS Nasional." path="/about" />
-      <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{t('about.title')}</h1>
-            <p className="mt-4 max-w-3xl text-lg text-brand-charcoal/75 dark:text-white/75">{t('about.sub')}</p>
-          </ScrollReveal>
-        </div>
-      </div>
+      <PageHeader title={t('about.title')} description={t('about.sub')} />
 
       <section className="mx-auto max-w-content space-y-10 px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>

@@ -7,6 +7,7 @@ import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { Badge } from '../components/ui/Badge.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Card } from '../components/ui/Card.jsx';
+import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { cn } from '../utils/cn.js';
 
@@ -70,28 +71,25 @@ export function Events() {
   return (
     <>
       <Seo title={pageTabTitle('Events & Posts')} description="National events, announcements, and opportunities." path="/events" />
-      <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{t('events.title')}</h1>
-            <p className="mt-4 max-w-3xl text-lg text-brand-charcoal/75 dark:text-white/75">{t('events.sub')}</p>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {['upcoming', 'past', 'all'].map((key) => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => setTab(key)}
-                  className={`rounded-full px-4 py-2 text-sm font-bold transition ${
-                    tab === key ? 'bg-brand-red text-white' : 'bg-black/5 text-brand-charcoal dark:bg-white/10 dark:text-white'
-                  }`}
-                >
-                  {t(`events.tab.${key}`)}
-                </button>
-              ))}
-            </div>
-          </ScrollReveal>
+      <PageHeader title={t('events.title')} description={t('events.sub')}>
+        <div className="mt-8 flex flex-wrap gap-2">
+          {['upcoming', 'past', 'all'].map((key) => (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setTab(key)}
+              className={cn(
+                'rounded-lg border px-4 py-2 text-sm font-medium transition',
+                tab === key
+                  ? 'border-brand-red bg-brand-red text-white shadow-soft'
+                  : 'border-border bg-card text-muted-foreground hover:border-brand-red/30 hover:text-foreground',
+              )}
+            >
+              {t(`events.tab.${key}`)}
+            </button>
+          ))}
         </div>
-      </div>
+      </PageHeader>
 
       <div className="mx-auto max-w-content space-y-8 px-4 py-12 sm:px-6 lg:px-8">
         {filtered.length === 0 ? (

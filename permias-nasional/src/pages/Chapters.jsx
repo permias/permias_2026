@@ -8,6 +8,7 @@ import { USMap } from '../components/chapters/USMap.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Card } from '../components/ui/Card.jsx';
 import { Input } from '../components/ui/Input.jsx';
+import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { cn } from '../utils/cn.js';
 import { resolveAssetUrl } from '../utils/site.js';
@@ -207,20 +208,14 @@ export function Chapters() {
         description="Interactive map and directory of PERMIAS chapters across the United States."
         path="/chapters"
       />
-      <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{t('chapters.title')}</h1>
-            <p className="mt-4 max-w-3xl text-lg text-brand-charcoal/75 dark:text-white/75">{t('chapters.sub')}</p>
-            <p className="mt-2 text-base font-semibold text-brand-red">{t('chapters.register.line')}</p>
-            <div className="mt-6">
-              <Button as={Link} to="/chapters/register">
-                {t('chapters.register')}
-              </Button>
-            </div>
-          </ScrollReveal>
+      <PageHeader title={t('chapters.title')} description={t('chapters.sub')}>
+        <p className="mt-3 text-base font-medium text-brand-red">{t('chapters.register.line')}</p>
+        <div className="mt-6">
+          <Button as={Link} to="/chapters/register">
+            {t('chapters.register')}
+          </Button>
         </div>
-      </div>
+      </PageHeader>
 
       <div id="chapters-map" className="relative mx-auto max-w-content scroll-mt-36 px-4 py-10 sm:px-6 lg:scroll-mt-32 lg:px-8">
         <div className="grid items-start gap-8 lg:grid-cols-[1fr_340px]">

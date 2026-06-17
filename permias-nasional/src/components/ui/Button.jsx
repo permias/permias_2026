@@ -1,16 +1,25 @@
 import { createElement } from 'react';
 import { cn } from '../../utils/cn.js';
 
-export function Button({ as = 'button', className, variant = 'primary', children, ...props }) {
+export function Button({ as = 'button', className, variant = 'primary', size = 'md', children, ...props }) {
   const base =
-    'inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red disabled:pointer-events-none disabled:opacity-50';
+    'font-ui inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-red disabled:pointer-events-none disabled:opacity-50';
+  const sizes = {
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-5 py-2.5 text-sm',
+    lg: 'px-6 py-3 text-base',
+  };
   const styles = {
     primary:
-      'bg-brand-red text-white shadow-sm hover:scale-[1.04] hover:shadow-[0_0_0_3px_rgba(206,17,38,0.2)] active:scale-[0.99] dark:hover:shadow-[0_0_0_3px_rgba(206,17,38,0.35)]',
+      'bg-brand-red text-white shadow-soft hover:bg-brand-red/90 hover:shadow-glow active:scale-[0.98]',
     ghost:
-      'border border-brand-charcoal/15 bg-white text-brand-charcoal hover:border-brand-red/40 dark:border-white/15 dark:bg-surface-card dark:text-white',
+      'border border-border bg-card text-foreground hover:border-brand-red/30 hover:bg-muted dark:bg-surface-card',
     outline:
-      'border-2 border-brand-red bg-transparent text-brand-red hover:bg-brand-red hover:text-white dark:text-white',
+      'border border-brand-red/40 bg-transparent text-brand-red hover:bg-brand-red hover:text-white dark:text-white',
   };
-  return createElement(as, { className: cn(base, styles[variant], className), ...props }, children);
+  return createElement(
+    as,
+    { className: cn(base, sizes[size], styles[variant], className), ...props },
+    children,
+  );
 }

@@ -9,6 +9,7 @@ import { SocialHub } from '../components/sections/SocialHub.jsx';
 import { NewsletterSection } from '../components/sections/NewsletterSection.jsx';
 import { ChapterFinder } from '../components/sections/ChapterFinder.jsx';
 import { StoriesSection } from '../components/sections/StoriesSection.jsx';
+import { HomeRegisterSection } from '../components/sections/HomeRegisterSection.jsx';
 import { SITE_ORIGIN } from '../utils/site.js';
 
 const jsonLd = {
@@ -46,6 +47,7 @@ export function Home() {
       <SocialHub />
       <NewsletterSection />
       <ChapterFinder />
+      <HomeRegisterSection />
     </>
   );
 }

@@ -12,9 +12,11 @@ import { Sejarah } from './pages/Sejarah.jsx';
 import { Contact } from './pages/Contact.jsx';
 import { Partners } from './pages/Partners.jsx';
 
+const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 export default function App() {
   return (
-    <BrowserRouter basename="/permias_2026">
+    <BrowserRouter basename={routerBasename || undefined}>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />

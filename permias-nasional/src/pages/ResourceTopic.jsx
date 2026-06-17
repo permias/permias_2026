@@ -5,6 +5,7 @@ import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo, pageTabTitle } from '../components/Seo.jsx';
 import { ResourceSectionBody } from '../components/resources/ResourceSectionBody.jsx';
 import { Input } from '../components/ui/Input.jsx';
+import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 
 const VALID_IDS = new Set(resourceSections.map((s) => s.id));
@@ -42,16 +43,7 @@ export function ResourceTopic() {
         description={t('resources.sub')}
         path={`/resources/${topicId}`}
       />
-      <div className="border-b border-brand-charcoal/10 bg-white py-12 dark:border-white/10 dark:bg-surface-dark sm:py-14">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
-              {section?.title[lang] ?? section?.title.en}
-            </h1>
-            <p className="mt-4 max-w-3xl text-lg text-brand-charcoal/75 dark:text-white/75">{t('resources.sub')}</p>
-          </ScrollReveal>
-        </div>
-      </div>
+      <PageHeader title={section?.title[lang] ?? section?.title.en} description={t('resources.sub')} />
 
       <div className="mx-auto max-w-content px-4 py-10 sm:px-6 lg:px-8">
         <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t('resources.search')} className="max-w-xl" />

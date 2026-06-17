@@ -8,6 +8,7 @@ import {
 import { SUPPORT_EMAIL } from '../data/contactEmails.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo } from '../components/Seo.jsx';
+import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 
 export function Sejarah() {
@@ -21,16 +22,7 @@ export function Sejarah() {
         path="/about/sejarah"
       />
 
-      <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{t('sejarah.title')}</h1>
-            <p className="mt-4 max-w-3xl text-lg leading-relaxed text-brand-charcoal/75 dark:text-white/75">
-              {t('sejarah.intro')}
-            </p>
-          </ScrollReveal>
-        </div>
-      </div>
+      <PageHeader title={t('sejarah.title')} description={t('sejarah.intro')} />
 
       <section className="border-b border-brand-charcoal/10 bg-neutral-50 py-14 dark:border-white/10 dark:bg-black/30">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">

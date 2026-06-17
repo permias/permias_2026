@@ -3,19 +3,57 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 252 248 248;
+    --foreground: 23 23 23;
+    --muted: 248 242 242;
+    --muted-foreground: 100 100 100;
+    --border: 235 220 220;
+    --card: 255 252 252;
+    --ring: 206 17 38;
+  }
+
+  .dark {
+    --background: 12 8 8;
+    --foreground: 250 248 248;
+    --muted: 28 20 20;
+    --muted-foreground: 163 150 150;
+    --border: 48 32 32;
+    --card: 20 14 14;
+    --ring: 239 68 68;
+  }
+
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
-    @apply font-sans text-base leading-[1.65] transition-colors duration-200;
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    font-family: "Source Serif 4", Georgia, serif;
+    @apply text-base leading-relaxed transition-colors duration-200;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply font-display font-bold tracking-normal;
+    color: rgb(var(--foreground));
+    font-family: "Source Serif 4", Georgia, serif;
+    @apply font-semibold tracking-tight;
+  }
+
+  button,
+  input,
+  select,
+  textarea,
+  label,
+  .font-ui {
+    font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
   }
 
   :focus-visible {
@@ -31,6 +69,60 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+  }
+}
+
+@layer components {
+  .section-eyebrow {
+    @apply inline-flex items-center rounded-full border border-brand-red/20 bg-brand-red/5 px-3 py-1 text-xs font-medium tracking-normal text-brand-red dark:border-brand-red/30 dark:bg-brand-red/10;
+  }
+
+  .section-label {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: rgb(var(--muted-foreground));
+  }
+
+  .surface-card {
+    border-radius: 1rem;
+    border: 1px solid rgb(var(--border));
+    background-color: rgb(var(--card));
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04);
+  }
+
+  .surface-card-hover {
+    @apply surface-card transition-all duration-200 hover:border-brand-red/25;
+  }
+
+  .surface-card-hover:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 12px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  .page-mesh {
+    background-image:
+      radial-gradient(ellipse 90% 70% at 0% 0%, rgba(206, 17, 38, 0.1), transparent 55%),
+      radial-gradient(ellipse 70% 60% at 100% 10%, rgba(206, 17, 38, 0.05), transparent 50%),
+      linear-gradient(180deg, rgba(255, 252, 252, 1) 0%, rgba(252, 245, 245, 1) 100%);
+  }
+
+  .site-gradient {
+    background-image:
+      radial-gradient(ellipse 80% 55% at 10% -10%, rgba(206, 17, 38, 0.14), transparent 55%),
+      radial-gradient(ellipse 60% 45% at 95% 0%, rgba(206, 17, 38, 0.06), transparent 50%),
+      linear-gradient(180deg, rgb(var(--card)) 0%, rgb(var(--background)) 100%);
+  }
+
+  .dark .page-mesh {
+    background-image:
+      radial-gradient(ellipse 80% 60% at 0% 0%, rgba(206, 17, 38, 0.16), transparent 55%),
+      radial-gradient(ellipse 60% 50% at 100% 0%, rgba(255, 255, 255, 0.04), transparent 50%);
+  }
+
+  .dark .site-gradient {
+    background-image:
+      radial-gradient(ellipse 80% 55% at 10% -10%, rgba(206, 17, 38, 0.2), transparent 55%),
+      linear-gradient(180deg, rgb(var(--card)) 0%, rgb(var(--background)) 100%);
   }
 }
 

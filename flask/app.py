@@ -60,6 +60,7 @@ SMTP_PORT = int(os.environ.get("SMTP_PORT", "587"))
 SMTP_USER = os.environ.get("SMTP_USER", "").strip()
 SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "").strip()
 SMTP_FROM = os.environ.get("SMTP_FROM", SMTP_USER or MAIL_FROM).strip()
+MAIL_DEV_LOG = os.environ.get("MAIL_DEV_LOG", "").lower() in ("1", "true", "yes")
 _EMAIL_RE = re.compile(r"^[^\s@]+@[^\s@]+\.[^\s@]+$")
 _storage = os.environ.get("RATELIMIT_STORAGE_URI", "memory://")
 limiter = Limiter(
@@ -268,7 +269,9 @@ def _parse_chapter_register(data: dict) -> dict:
     org_name = _str_field(data, "orgName", max_len=200)
     school = _str_field(data, "school", max_len=200)
     city_state = _str_field(data, "cityState", max_len=120)
-    president = _str_field(data, "presidentName", max_len=120)
+    president = _str_field(data, "presidentName", max_len=120) or _str_field(
+        data, "fullName", max_len=120
+    )
     email = _str_field(data, "email", max_len=254)
     phone = _str_field(data, "phone", max_len=40)
 
@@ -311,13 +314,13 @@ def _format_chapter_register_email(payload: dict) -> tuple[str, str]:
     if instagram != "(not provided)" and not instagram.startswith("@"):
         instagram = f"@{instagram}"
 
-    subject = f"[PERMIAS] New chapter registration: {payload['orgName']}"
-    body = f"""New chapter registration submitted via permiasnasional.com
+    subject = f"[PERMIAS] New club registration: {payload['orgName']}"
+    body = f"""New club registration submitted via permiasnasional.com
 
 Organization: {payload['orgName']}
 University: {payload['school']}
 City, State: {payload['cityState']}
-President: {payload['presidentName']}
+Full name: {payload['presidentName']}
 Contact email: {payload['email']}
 Contact phone: {payload['phone']}
 Website: {website}
@@ -330,6 +333,16 @@ def _send_email(*, to: list[str], reply_to: str, subject: str, body: str) -> Non
     if not to:
         raise RuntimeError("No email recipients configured.")
     if not _mail_configured():
+        if MAIL_DEV_LOG:
+            logger.info(
+                "MAIL_DEV_LOG — email not sent (SMTP/Resend not configured)\n"
+                "To: %s\nReply-To: %s\nSubject: %s\n\n%s",
+                ", ".join(to),
+                reply_to,
+                subject,
+                body,
+            )
+            return
         raise RuntimeError("Outbound email is not configured.")
 
     if RESEND_API_KEY:
@@ -430,7 +443,7 @@ def _send_contact_email(payload: dict) -> None:
 def chapter_register():
     if request.method == "OPTIONS":
         return "", 204
-    if not _mail_configured():
+    if not _mail_configured() and not MAIL_DEV_LOG:
         return jsonify(
             {
                 "error": "Email is not configured on the server. Set SMTP_USER/SMTP_PASSWORD or RESEND_API_KEY."
@@ -456,7 +469,7 @@ def chapter_register():
 def contact():
     if request.method == "OPTIONS":
         return "", 204
-    if not _mail_configured():
+    if not _mail_configured() and not MAIL_DEV_LOG:
         return jsonify(
             {"error": "Email is not configured on the server. Set SMTP_USER/SMTP_PASSWORD or RESEND_API_KEY."}
         ), 503
@@ -483,8 +496,11 @@ def health():
             "api_configured": bool(get_api_key()),
             "model": DEFAULT_MODEL,
             "mail_configured": _mail_configured(),
-            "chapter_register_configured": _mail_configured() and bool(_parse_recipients(CHAPTER_REGISTER_TO)),
-            "contact_configured": _mail_configured() and bool(_parse_recipients(CONTACT_TO)),
+            "mail_dev_log": MAIL_DEV_LOG,
+            "chapter_register_configured": (_mail_configured() or MAIL_DEV_LOG)
+            and bool(_parse_recipients(CHAPTER_REGISTER_TO)),
+            "contact_configured": (_mail_configured() or MAIL_DEV_LOG)
+            and bool(_parse_recipients(CONTACT_TO)),
         }
     )
 

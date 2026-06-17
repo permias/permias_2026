@@ -51,10 +51,10 @@ function NavDropdown({ id, label, items, parentActive }) {
         aria-controls={`${id}-menu`}
         onClick={() => setOpen((v) => !v)}
         className={cn(
-          'inline-flex items-center gap-1 rounded-md px-2 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] transition-colors sm:px-2.5 sm:text-xs sm:tracking-[0.2em]',
+          'inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-sm font-medium transition-colors',
           open || parentActive
             ? 'text-brand-red'
-            : 'text-brand-charcoal/55 hover:text-brand-red dark:text-white/55 dark:hover:text-white',
+            : 'text-muted-foreground hover:text-foreground',
         )}
       >
         <span className="max-w-[8rem] truncate sm:max-w-none">{label}</span>
@@ -65,7 +65,7 @@ function NavDropdown({ id, label, items, parentActive }) {
         role="menu"
         aria-labelledby={`${id}-trigger`}
         className={cn(
-          'absolute left-0 top-full z-[80] mt-1.5 min-w-[min(100vw-2rem,260px)] rounded-xl border border-brand-charcoal/10 bg-white py-1.5 shadow-lg dark:border-white/10 dark:bg-surface-card',
+          'absolute left-0 top-full z-[80] mt-2 min-w-[min(100vw-2rem,260px)] rounded-xl border border-border bg-card py-1.5 shadow-soft-lg',
           open ? 'visible opacity-100' : 'invisible pointer-events-none opacity-0',
           'transition-opacity duration-150',
         )}
@@ -79,8 +79,8 @@ function NavDropdown({ id, label, items, parentActive }) {
                   role="menuitem"
                   to={item.to}
                   className={cn(
-                    'block w-full px-4 py-2.5 text-left text-sm font-medium text-brand-charcoal transition hover:bg-brand-red/10 hover:text-brand-red dark:text-white dark:hover:bg-white/10',
-                    isHere && 'bg-brand-red/10 font-semibold text-brand-red dark:text-white',
+                    'block w-full px-4 py-2.5 text-left text-sm font-medium text-foreground transition hover:bg-muted',
+                    isHere && 'bg-brand-red/5 font-semibold text-brand-red',
                   )}
                   onClick={() => setOpen(false)}
                 >
@@ -136,10 +136,8 @@ export function Navbar() {
 
   const linkClass = ({ isActive }) =>
     cn(
-      'rounded-lg px-3 py-2 text-sm font-semibold transition-colors',
-      isActive
-        ? 'text-brand-red'
-        : 'text-brand-charcoal/80 hover:text-brand-red dark:text-white/80 dark:hover:text-white',
+      'rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+      isActive ? 'text-brand-red' : 'text-muted-foreground hover:text-foreground',
     );
 
   return (
@@ -148,9 +146,9 @@ export function Navbar() {
         role="navigation"
         aria-label="Main navigation"
         className={cn(
-          'border-b border-transparent bg-white/90 backdrop-blur-md transition-all duration-200 dark:bg-surface-dark/90',
-          scrolled && 'border-brand-charcoal/10 py-3 dark:border-white/10',
-          !scrolled && 'py-4 md:py-5',
+          'transition-all duration-200',
+          scrolled && 'py-2.5',
+          !scrolled && 'py-3 md:py-3.5',
         )}
       >
         <div className="mx-auto flex max-w-content items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
@@ -174,13 +172,16 @@ export function Navbar() {
             <NavLink to="/contact" className={linkClass}>
               {t('nav.contact')}
             </NavLink>
+            <Button as={Link} to="/chapters/register" size="sm" className="ml-1 hidden xl:inline-flex">
+              {t('chapters.register')}
+            </Button>
           </nav>
 
           <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
             <button
               type="button"
               onClick={() => setLang(lang === 'en' ? 'id' : 'en')}
-              className="rounded-lg border border-brand-charcoal/15 px-2 py-1 text-xs font-bold uppercase tracking-wide text-brand-charcoal transition hover:border-brand-red/40 dark:border-white/15 dark:text-white"
+              className="rounded-lg border border-border px-2.5 py-1 text-xs font-medium text-foreground transition hover:border-brand-red/30"
               aria-label={t('nav.lang')}
             >
               {lang === 'en' ? 'EN' : 'ID'}

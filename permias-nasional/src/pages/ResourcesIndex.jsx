@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { resourceSections } from '../data/resources.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo, pageTabTitle } from '../components/Seo.jsx';
+import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { Card } from '../components/ui/Card.jsx';
 
@@ -15,15 +16,9 @@ export function ResourcesIndex() {
         description="Embassies, visa pathways, scholarships, careers, research, entrepreneurship, and cultural programs."
         path="/resources"
       />
-      <div className="border-b border-brand-charcoal/10 bg-white py-14 dark:border-white/10 dark:bg-surface-dark">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <h1 className="font-display text-4xl font-extrabold tracking-tight sm:text-5xl">{t('resources.title')}</h1>
-            <p className="mt-4 max-w-3xl text-lg text-brand-charcoal/75 dark:text-white/75">{t('resources.sub')}</p>
-            <p className="mt-3 text-sm text-brand-charcoal/60 dark:text-white/60">{t('resources.index.hint')}</p>
-          </ScrollReveal>
-        </div>
-      </div>
+      <PageHeader title={t('resources.title')} description={t('resources.sub')}>
+        <p className="mt-3 text-sm text-muted-foreground">{t('resources.index.hint')}</p>
+      </PageHeader>
 
       <div className="mx-auto max-w-content px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
