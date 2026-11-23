@@ -107,6 +107,9 @@ function cluster(list, d) {
   return out;
 }
 
+// Northeast states too small on the national map to tap; listed as chips beside it (north to south)
+const SMALL_STATES = ['vt', 'nh', 'ma', 'ri', 'ct', 'nj', 'de', 'md', 'dc'];
+
 export function ChapterMap({
   selectedState = '',
   selectedChapter = '',
@@ -152,6 +155,8 @@ export function ChapterMap({
   };
   const pct = (x, y) => ({ left: `${((x - vb[0]) / vb[2]) * 100}%`, top: `${((y - vb[1]) / vb[3]) * 100}%` });
 
+  const smallList = focus ? [] : SMALL_STATES.map((id) => ({ loc: usaMap.locations.find((l) => l.id === id), n: BY_STATE[id]?.length || 0 })).filter((x) => x.loc && x.n);
+
   return (
     <div ref={wrapRef} className={cn('relative select-none', className)} onPointerLeave={() => setHover(null)} data-offscreen={visible ? undefined : true}>
       <motion.svg
@@ -164,9 +169,7 @@ export function ChapterMap({
       >
         {usaMap.locations.map((loc) => {
           const n = BY_STATE[loc.id]?.length || 0;
-          const b = BBOX[loc.id];
-          const tiny = b && (b[2] - b[0]) * (BASE[2] / vb[2]) < 16 && (b[3] - b[1]) * (BASE[2] / vb[2]) < 16;
-          const pick = n && onSelectState && !tiny;
+          const pick = Boolean(n && onSelectState && !SMALL_STATES.includes(loc.id));
           const active = selectedState === loc.id;
           const hov = hoverState === loc.id;
           return (
@@ -175,14 +178,14 @@ export function ChapterMap({
               d={loc.path}
               vectorEffect="non-scaling-stroke"
               strokeWidth={active ? 2 : 1}
-              tabIndex={pick ? 0 : -1}
+              tabIndex={pick ? 0 : undefined}
               role={pick ? 'button' : undefined}
-              aria-label={n ? t('map.stateLabel', { state: loc.name, n }) : undefined}
-              aria-hidden={n ? undefined : true}
+              aria-label={pick ? t('map.stateLabel', { state: loc.name, n }) : undefined}
+              aria-hidden={pick ? undefined : true}
               aria-pressed={pick ? active : undefined}
               className={cn(
                 'outline-none transition-[fill,stroke] duration-200',
-                n ? 'cursor-pointer' : '',
+                pick ? 'cursor-pointer' : '',
                 active ? 'fill-merah/15 stroke-merah' : hov ? 'fill-land-on stroke-white dark:stroke-[#0A1220]' : n ? 'fill-land-on/80 stroke-white dark:stroke-[#0A1220]' : 'fill-land stroke-white dark:stroke-[#0A1220]',
                 'focus-visible:stroke-merah focus-visible:[stroke-width:3px]',
               )}
@@ -253,6 +256,38 @@ export function ChapterMap({
           </g>
         )}
       </motion.svg>
+
+      {/* Small Northeast states get real targets here instead of slivers of map */}
+      {onSelectState && smallList.length > 0 && (
+        <ul
+          className="mt-3 flex flex-wrap gap-1.5"
+          aria-label={t('map.smallStates')}
+        >
+          {smallList.map(({ loc, n }) => {
+            const active = selectedState === loc.id;
+            return (
+              <li key={loc.id}>
+                <button
+                  type="button"
+                  aria-pressed={active}
+                  aria-label={t('map.stateLabel', { state: loc.name, n })}
+                  title={loc.name}
+                  onClick={() => onSelectState(active ? '' : loc.id)}
+                  onPointerEnter={() => setHoverState(loc.id)}
+                  onPointerLeave={() => setHoverState(null)}
+                  className={cn(
+                    'flex min-h-[32px] items-center gap-2 rounded-full border px-3 text-[13px] font-semibold transition-colors duration-150',
+                    active ? 'border-merah bg-merah text-white' : 'border-border bg-surface/90 text-ink hover:border-merah/50',
+                  )}
+                >
+                  <span>{loc.id.toUpperCase()}</span>
+                  <span className={cn('tabular', active ? 'text-white/85' : 'text-muted-foreground')}>{n}</span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
 
       <AnimatePresence>
         {(hover || selChapter) && (

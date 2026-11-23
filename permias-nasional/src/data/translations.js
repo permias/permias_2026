@@ -476,6 +476,7 @@ export const phrases = {
   'home.join.sub': { en: 'Register your club and the national board will help you get started.', id: 'Daftarkan klubmu dan pengurus nasional akan membantu kamu memulai.' },
   'map.label': { en: 'Map of PERMIAS chapters in the United States', id: 'Peta chapter PERMIAS di Amerika Serikat' },
   'map.stateLabel': { en: '{state}: {n} chapters', id: '{state}: {n} chapter' },
+  'map.smallStates': { en: 'Small states in the Northeast', id: 'Negara bagian kecil di Timur Laut' },
   'map.clusterTitle': { en: '{n} chapters here', id: '{n} chapter di sini' },
   // ---- Institutional home (Preston feedback, 2026-11) ----
   'topbar.homeLabel': { en: 'PERMIAS Nasional home', id: 'Beranda PERMIAS Nasional' },
