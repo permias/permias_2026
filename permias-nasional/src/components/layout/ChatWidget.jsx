@@ -89,13 +89,14 @@ export function ChatWidget() {
     requestAnimationFrame(() => fabRef.current?.focus());
   }, [setChatOpen]);
 
-  // one light reachability check per session: an empty POST gets 400 from a live service without running the model
+  // one light reachability check per session: an empty POST gets 400 from a live service without running the model.
+  // The API sleeps when idle and takes up to ~50 s to wake, so allow a minute before calling it offline.
   const probed = useRef(false);
   useEffect(() => {
     if (!open || probed.current) return;
     probed.current = true;
     const ctrl = new AbortController();
-    const timer = setTimeout(() => ctrl.abort(), 4000);
+    const timer = setTimeout(() => ctrl.abort(), 60000);
     queueMicrotask(() => setStatus((s) => (s === 'unknown' ? 'checking' : s)));
     fetch(`${apiBase}/api/chat`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}', signal: ctrl.signal })
       // only our Flask service answers an empty message with a JSON 400 ("Missing or empty message field.")
@@ -139,10 +140,6 @@ export function ChatWidget() {
     if (!userText || loading) return;
     setText('');
     setMessages((prev) => [...prev, { id: nextId(), role: 'user', text: userText }]);
-    if (status === 'offline') {
-      setMessages((prev) => [...prev, offlineReply(userText)]);
-      return;
-    }
     setLoading(true);
     try {
       const res = await fetch(`${apiBase}/api/chat`, {
