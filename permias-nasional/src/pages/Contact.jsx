@@ -4,8 +4,9 @@ import { Seo } from '../components/Seo.jsx';
 import { pageTabTitle } from '../utils/seo.js';
 import { Button } from '../components/ui/Button.jsx';
 import { Input } from '../components/ui/Input.jsx';
+import { PAGE_PHOTOS } from '../data/photos.js';
 import { PageHeader } from '../components/layout/PageHeader.jsx';
-import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
+import { Reveal } from '../components/ui/Reveal.jsx';
 import { AccordionItem } from '../components/ui/Accordion.jsx';
 import { sectionImages } from '../data/siteMedia.js';
 import { SUPPORT_EMAIL } from '../data/contactEmails.js';
@@ -63,23 +64,23 @@ export function Contact() {
   return (
     <>
       <Seo title={pageTabTitle('Contact')} description="Reach the PERMIAS Nasional board for partnerships, media, and chapter support." path="/contact" />
-      <PageHeader title={t('contact.title')} description={t('contact.sub')} />
+      <PageHeader image={PAGE_PHOTOS.contact} title={t('contact.title')} description={t('contact.sub')} />
 
       <div className="mx-auto max-w-content px-4 py-10 sm:px-6 lg:px-8">
-        <ScrollReveal>
+        <Reveal>
           <h2 className="text-center font-display text-2xl font-bold">{t('contact.channels.title')}</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-brand-charcoal/80 dark:text-white/80">{t('contact.channels.intro')}</p>
+          <p className="mx-auto mt-3 max-w-2xl text-center text-ink/80 dark:text-white/80">{t('contact.channels.intro')}</p>
           <img
             src={sectionImages.contactCards}
             alt=""
-            className="mx-auto mt-8 w-full max-w-3xl rounded-2xl border border-brand-charcoal/10 object-cover shadow-lg dark:border-white/10"
+            className="mx-auto mt-8 w-full max-w-3xl rounded-2xl border border-ink/10 object-cover shadow-lg dark:border-white/10"
             loading="lazy"
           />
-        </ScrollReveal>
+        </Reveal>
       </div>
 
       <div className="mx-auto grid max-w-content gap-12 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <ScrollReveal>
+        <Reveal>
           <form onSubmit={submit} className="surface-card space-y-4 p-6 sm:p-8">
             <div>
               <label className="text-sm font-semibold" htmlFor="c-name">
@@ -99,7 +100,7 @@ export function Contact() {
               </label>
               <select
                 id="c-subject"
-                className="mt-1 w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm dark:border-white/15 dark:bg-surface-dark dark:text-white"
+                className="mt-1 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-sm dark:border-white/15 dark:bg-surface-dark dark:text-white"
                 value={form.subject}
                 onChange={(e) => setForm({ ...form, subject: e.target.value })}
               >
@@ -117,7 +118,7 @@ export function Contact() {
                 id="c-msg"
                 required
                 rows={5}
-                className="mt-1 w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm outline-none dark:border-white/15 dark:bg-surface-dark dark:text-white"
+                className="mt-1 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-sm outline-none dark:border-white/15 dark:bg-surface-dark dark:text-white"
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
               />
@@ -127,7 +128,7 @@ export function Contact() {
             </Button>
             {msg && (
               <p
-                className={`text-sm font-semibold ${status === 'success' ? 'text-green-700 dark:text-green-400' : 'text-brand-red dark:text-white'}`}
+                className={`text-sm font-semibold ${status === 'success' ? 'text-green-700 dark:text-green-400' : 'text-merah dark:text-white'}`}
                 role="status"
               >
                 {msg}
@@ -137,25 +138,25 @@ export function Contact() {
             <div
               className={`rounded-xl border p-4 text-sm leading-relaxed ${
                 status === 'error'
-                  ? 'border-brand-red/30 bg-brand-red/5 text-brand-charcoal dark:border-brand-red/40 dark:bg-brand-red/10 dark:text-white'
-                  : 'border-brand-charcoal/10 bg-white text-brand-charcoal/75 dark:border-white/10 dark:bg-surface-dark dark:text-white/75'
+                  ? 'border-merah/30 bg-merah/5 text-ink dark:border-merah/40 dark:bg-merah/10 dark:text-white'
+                  : 'border-ink/10 bg-white text-ink/75 dark:border-white/10 dark:bg-surface-dark dark:text-white/75'
               }`}
             >
               <p>
                 {t('contact.form.fallback')}{' '}
-                <a href={fallbackMailto} className="font-bold text-brand-red underline-offset-4 hover:underline">
+                <a href={fallbackMailto} className="font-bold text-merah underline-offset-4 hover:underline">
                   {SUPPORT_EMAIL}
                 </a>
                 .
               </p>
             </div>
           </form>
-        </ScrollReveal>
+        </Reveal>
 
         <div className="space-y-8">
-          <ScrollReveal staggerIndex={1}>
+          <Reveal delay={Math.min(1, 8) * 0.06}>
             <h2 className="font-display text-xl font-bold">{t('contact.direct')}</h2>
-            <a href={`mailto:${SUPPORT_EMAIL}`} className="mt-2 block text-lg font-bold text-brand-red underline-offset-4 hover:underline">
+            <a href={`mailto:${SUPPORT_EMAIL}`} className="mt-2 block text-lg font-bold text-merah underline-offset-4 hover:underline">
               {SUPPORT_EMAIL}
             </a>
             <ul className="mt-6 space-y-4">
@@ -165,27 +166,27 @@ export function Contact() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block rounded-xl border border-brand-charcoal/10 bg-white p-3 transition hover:border-brand-red/40 dark:border-white/10 dark:bg-surface-card"
+                    className="block rounded-xl border border-ink/10 bg-white p-3 transition hover:border-merah/40 dark:border-white/10 dark:bg-surface"
                   >
-                    <p className="text-[10px] font-bold uppercase tracking-wide text-brand-red">{s.label}</p>
+                    <p className="text-[10px] font-bold text-merah">{s.label}</p>
                     <p className="text-sm font-semibold">{s.handle}</p>
-                    <p className="text-[11px] text-brand-charcoal/60 dark:text-white/60">{s.followers}</p>
+                    <p className="text-[11px] text-ink/60 dark:text-white/60">{s.followers}</p>
                   </a>
                 </li>
               ))}
             </ul>
-          </ScrollReveal>
+          </Reveal>
 
-          <ScrollReveal staggerIndex={2}>
+          <Reveal delay={Math.min(2, 8) * 0.06}>
             <h2 className="font-display text-xl font-bold">{t('contact.faq.title')}</h2>
-            <div className="mt-4 rounded-2xl border border-brand-charcoal/10 bg-white px-4 dark:border-white/10 dark:bg-surface-card">
+            <div className="mt-4 rounded-2xl border border-ink/10 bg-white px-4 dark:border-white/10 dark:bg-surface">
               {faqKeys.map((f) => (
                 <AccordionItem key={f.q} title={t(f.q)}>
                   {t(f.a)}
                 </AccordionItem>
               ))}
             </div>
-          </ScrollReveal>
+          </Reveal>
         </div>
       </div>
     </>

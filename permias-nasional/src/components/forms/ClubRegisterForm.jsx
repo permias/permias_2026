@@ -167,7 +167,7 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
 
       {msg && (
         <p
-          className={`text-sm font-medium ${status === 'success' ? 'text-green-700 dark:text-green-400' : 'text-brand-red'}`}
+          className={`text-sm font-medium ${status === 'success' ? 'text-green-700 dark:text-green-400' : 'text-merah'}`}
           role="status"
         >
           {msg}
@@ -177,7 +177,7 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
       {status === 'error' && (
         <p className="text-sm text-muted-foreground">
           {t('chapterRegister.form.fallback')}{' '}
-          <a href={fallbackMailto} className="font-medium text-brand-red underline-offset-4 hover:underline">
+          <a href={fallbackMailto} className="font-medium text-merah underline-offset-4 hover:underline">
             {CHAPTER_REGISTER_EMAIL}
           </a>
         </p>
@@ -185,7 +185,7 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
 
       {showBackLink && (
         <p className="text-center text-sm text-muted-foreground">
-          <Link to="/chapters" className="font-medium text-brand-red underline-offset-4 hover:underline">
+          <Link to="/chapters" className="font-medium text-merah underline-offset-4 hover:underline">
             ← {t('chapterRegister.back')}
           </Link>
         </p>

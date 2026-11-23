@@ -6,8 +6,9 @@ import { Seo } from '../components/Seo.jsx';
 import { pageTabTitle } from '../utils/seo.js';
 import { ResourceSectionBody } from '../components/resources/ResourceSectionBody.jsx';
 import { Input } from '../components/ui/Input.jsx';
+import { PAGE_PHOTOS } from '../data/photos.js';
 import { PageHeader } from '../components/layout/PageHeader.jsx';
-import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
+import { Reveal } from '../components/ui/Reveal.jsx';
 
 const VALID_IDS = new Set(resourceSections.map((s) => s.id));
 
@@ -44,14 +45,14 @@ export function ResourceTopic() {
         description={t('resources.sub')}
         path={`/resources/${topicId}`}
       />
-      <PageHeader title={section?.title[lang] ?? section?.title.en} description={t('resources.sub')} />
+      <PageHeader image={PAGE_PHOTOS[section?.id] || PAGE_PHOTOS.resources} title={section?.title[lang] ?? section?.title.en} description={t('resources.sub')} />
 
       <div className="mx-auto max-w-content px-4 py-10 sm:px-6 lg:px-8">
         <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder={t('resources.search')} className="max-w-xl" />
         {section && (
           <div className="mt-10">
             {q.trim() && filteredCards?.length === 0 ? (
-              <p className="text-sm text-brand-charcoal/65 dark:text-white/65">{t('search.empty')}</p>
+              <p className="text-sm text-ink/65 dark:text-white/65">{t('search.empty')}</p>
             ) : (
               <ResourceSectionBody
                 sec={{ ...section, cards: filteredCards ?? section.cards }}

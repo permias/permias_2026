@@ -554,4 +554,12 @@ export const phrases = {
   'pengurus.cta': { en: 'Meet the national board', id: 'Kenali pengurus nasional' },
   'home.map.regionMeta': { en: '{n} chapters in {s} states', id: '{n} chapter di {s} negara bagian' },
   'join.motto': { en: 'Unity in diversity, the national motto of Indonesia', id: 'Berbeda-beda tetapi tetap satu' },
+  'chapters.metaDesc': { en: 'Find a PERMIAS chapter near your campus: map, directory and contacts for every chapter in the United States.', id: 'Temukan chapter PERMIAS di dekat kampusmu: peta, direktori, dan kontak setiap chapter di Amerika Serikat.' },
+  'chapters.pageSub': { en: '{n} campus and city chapters in {s} states and Washington, DC. Pick a state to zoom in, or search by campus.', id: '{n} chapter kampus dan kota di {s} negara bagian serta Washington, DC. Pilih negara bagian untuk memperbesar, atau cari per kampus.' },
+  'chapters.allUs': { en: 'All of the United States', id: 'Seluruh Amerika Serikat' },
+  'chapters.zoomOut': { en: 'Show all states', id: 'Tampilkan semua' },
+  'chapters.closeDetail': { en: 'Close chapter details', id: 'Tutup detail chapter' },
+  'chapters.website': { en: 'Website', id: 'Situs web' },
+  'chapters.verified': { en: 'Checked against the official PERMIAS Nasional chapter list. Sources:', id: 'Dicocokkan dengan daftar chapter resmi PERMIAS Nasional. Sumber:' },
+  'chapters.unverified': { en: 'Not yet verified. Sources:', id: 'Belum terverifikasi. Sumber:' },
 };

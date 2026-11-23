@@ -10,14 +10,40 @@
     "instagram": "@isanu_",
     "line": "",
     "whatsapp": "",
-    "email": "isanu_@permiasnasional.com",
-    "website": "https://instagram.com/isanu_",
+    "website": "https://isanortheastern.wixsite.com/indo",
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 42.34,
     "lng": -71.0883,
     "geoSource": "https://en.wikipedia.org/wiki/Northeastern_University",
     "mapX": 1172.7,
-    "mapY": 163.5
+    "mapY": 163.5,
+    "officialName": "Permias ISANU",
+    "officialRegion": "East Coast I",
+    "level": "University",
+    "universityFull": "Northeastern University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Northeastern University, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Northeastern University, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Northeastern_University",
+      "lng": "https://en.wikipedia.org/wiki/Northeastern_University",
+      "city": "https://en.wikipedia.org/wiki/Northeastern_University",
+      "state": "https://en.wikipedia.org/wiki/Northeastern_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "website": "https://isanortheastern.wixsite.com/indo",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://isanortheastern.wixsite.com/indo",
+      "https://en.wikipedia.org/wiki/Northeastern_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-theisabu",
@@ -30,14 +56,38 @@
     "instagram": "@the.isabu",
     "line": "",
     "whatsapp": "",
-    "email": "the.isabu@permiasnasional.com",
-    "website": "https://instagram.com/the.isabu",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
     "lat": 42.3489,
     "lng": -71.1003,
     "geoSource": "https://en.wikipedia.org/wiki/Boston_University",
     "mapX": 1172.5,
-    "mapY": 163.4
+    "mapY": 163.4,
+    "officialName": "ISA BU",
+    "officialRegion": "East Coast I",
+    "level": "University",
+    "universityFull": "Boston University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Boston University, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Boston University, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Boston_University",
+      "lng": "https://en.wikipedia.org/wiki/Boston_University",
+      "city": "https://en.wikipedia.org/wiki/Boston_University",
+      "state": "https://en.wikipedia.org/wiki/Boston_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Boston_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasmass",
@@ -50,14 +100,40 @@
     "instagram": "@permiasmass",
     "line": "",
     "whatsapp": "",
-    "email": "permiasmass@permiasnasional.com",
-    "website": "https://instagram.com/permiasmass",
+    "website": "https://permiasmass.org/",
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 42.3603,
     "lng": -71.0578,
     "geoSource": "https://en.wikipedia.org/wiki/Boston",
     "mapX": 1173.1,
-    "mapY": 163
+    "mapY": 163,
+    "officialName": "Permias Massachusetts",
+    "officialRegion": "East Coast I",
+    "level": "Regional",
+    "universityFull": "Babson College, Bentley University, Boston College, Boston University, Harvard University, Massachusetts General Hospital Institute of Health, Massachusetts Institute of Technology, Northeastern University, Suffolk University, University of Massachusetts Amherst, University of Massachusetts Boston",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Boston, Massachusetts, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Boston, Massachusetts, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Boston",
+      "lng": "https://en.wikipedia.org/wiki/Boston",
+      "city": "https://en.wikipedia.org/wiki/Boston",
+      "state": "https://en.wikipedia.org/wiki/Boston",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "website": "https://permiasmass.org/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://permiasmass.org/",
+      "https://en.wikipedia.org/wiki/Boston"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-biababson",
@@ -70,14 +146,38 @@
     "instagram": "@bia.babson",
     "line": "",
     "whatsapp": "",
-    "email": "bia.babson@permiasnasional.com",
-    "website": "https://instagram.com/bia.babson",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=BIA%20",
     "lat": 42.2982,
     "lng": -71.2612,
     "geoSource": "https://en.wikipedia.org/wiki/Babson_College",
     "mapX": 1170.2,
-    "mapY": 165.2
+    "mapY": 165.2,
+    "officialName": "BIA Babson",
+    "officialRegion": "East Coast I",
+    "level": "University",
+    "universityFull": "Babson College",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Babson College, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Babson College, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Babson_College",
+      "lng": "https://en.wikipedia.org/wiki/Babson_College",
+      "city": "https://en.wikipedia.org/wiki/Babson_College",
+      "state": "https://en.wikipedia.org/wiki/Babson_College",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Babson_College"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indonesiamit",
@@ -90,14 +190,38 @@
     "instagram": "@indonesia.mit",
     "line": "",
     "whatsapp": "",
-    "email": "indonesia.mit@permiasnasional.com",
-    "website": "https://instagram.com/indonesia.mit",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=AIS%20",
     "lat": 42.3597,
     "lng": -71.0919,
     "geoSource": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology",
     "mapX": 1172.5,
-    "mapY": 163.1
+    "mapY": 163.1,
+    "officialName": "AIS at MIT",
+    "officialRegion": "East Coast I",
+    "level": "University",
+    "universityFull": "Massachusetts Institute of Technology",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Massachusetts Institute of Technology, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Massachusetts Institute of Technology, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology",
+      "lng": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology",
+      "city": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology",
+      "state": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasri",
@@ -110,14 +234,38 @@
     "instagram": "@permiasri",
     "line": "",
     "whatsapp": "",
-    "email": "permiasri@permiasnasional.com",
-    "website": "https://instagram.com/permiasri",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 41.8236,
     "lng": -71.4222,
     "geoSource": "https://en.wikipedia.org/wiki/Providence%2C_Rhode_Island",
     "mapX": 1170.5,
-    "mapY": 176.1
+    "mapY": 176.1,
+    "officialName": "Permias Rhode Island",
+    "officialRegion": "East Coast I",
+    "level": "Regional",
+    "universityFull": "Brown University, University of Rhode Island",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Providence, Rhode Island, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Providence, Rhode Island, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Providence%2C_Rhode_Island",
+      "lng": "https://en.wikipedia.org/wiki/Providence%2C_Rhode_Island",
+      "city": "https://en.wikipedia.org/wiki/Providence%2C_Rhode_Island",
+      "state": "https://en.wikipedia.org/wiki/Providence%2C_Rhode_Island",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Providence%2C_Rhode_Island"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indonesiaharvard",
@@ -130,14 +278,38 @@
     "instagram": "@indonesiaharvard",
     "line": "",
     "whatsapp": "",
-    "email": "indonesiaharvard@permiasnasional.com",
-    "website": "https://instagram.com/indonesiaharvard",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Harv",
     "lat": 42.3744,
     "lng": -71.1169,
     "geoSource": "https://en.wikipedia.org/wiki/Harvard_University",
     "mapX": 1172.1,
-    "mapY": 162.9
+    "mapY": 162.9,
+    "officialName": "Harvard ISA",
+    "officialRegion": "East Coast I",
+    "level": "University",
+    "universityFull": "Harvard University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Harvard University, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Harvard University, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Harvard_University",
+      "lng": "https://en.wikipedia.org/wiki/Harvard_University",
+      "city": "https://en.wikipedia.org/wiki/Harvard_University",
+      "state": "https://en.wikipedia.org/wiki/Harvard_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Harvard_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-isaunh",
@@ -150,14 +322,38 @@
     "instagram": "@isaunh",
     "line": "",
     "whatsapp": "",
-    "email": "isaunh@permiasnasional.com",
-    "website": "https://instagram.com/isaunh",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
     "lat": 43.1364,
     "lng": -70.9322,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_New_Hampshire",
     "mapX": 1170.3,
-    "mapY": 145.7
+    "mapY": 145.7,
+    "officialName": "ISA University of New Hampshire",
+    "officialRegion": "East Coast I",
+    "level": "University",
+    "universityFull": "University of New Hampshire",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of New Hampshire, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of New Hampshire, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_New_Hampshire",
+      "lng": "https://en.wikipedia.org/wiki/University_of_New_Hampshire",
+      "city": "https://en.wikipedia.org/wiki/University_of_New_Hampshire",
+      "state": "https://en.wikipedia.org/wiki/University_of_New_Hampshire",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_New_Hampshire"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-isaumass",
@@ -170,14 +366,38 @@
     "instagram": "@isa.umass",
     "line": "",
     "whatsapp": "",
-    "email": "isa.umass@permiasnasional.com",
-    "website": "https://instagram.com/isa.umass",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
     "lat": 42.3889,
     "lng": -72.5278,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Massachusetts_Amherst",
     "mapX": 1149.5,
-    "mapY": 168.7
+    "mapY": 168.7,
+    "officialName": "ISA Amherst",
+    "officialRegion": "East Coast I",
+    "level": "University",
+    "universityFull": "University of Massachusetts Amherst",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Massachusetts Amherst, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Massachusetts Amherst, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Massachusetts_Amherst",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Massachusetts_Amherst",
+      "city": "https://en.wikipedia.org/wiki/University_of_Massachusetts_Amherst",
+      "state": "https://en.wikipedia.org/wiki/University_of_Massachusetts_Amherst",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Massachusetts_Amherst"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indonesiawpi",
@@ -190,14 +410,38 @@
     "instagram": "@indonesia.wpi",
     "line": "",
     "whatsapp": "",
-    "email": "indonesia.wpi@permiasnasional.com",
-    "website": "https://instagram.com/indonesia.wpi",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo",
     "lat": 42.2744,
     "lng": -71.8075,
     "geoSource": "https://en.wikipedia.org/wiki/Worcester_Polytechnic_Institute",
     "mapX": 1161.6,
-    "mapY": 168.1
+    "mapY": 168.1,
+    "officialName": "Indonesia WPI",
+    "officialRegion": "East Coast I",
+    "level": "University",
+    "universityFull": "Worcester Polytechnic Institute",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Worcester Polytechnic Institute, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Worcester Polytechnic Institute, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Worcester_Polytechnic_Institute",
+      "lng": "https://en.wikipedia.org/wiki/Worcester_Polytechnic_Institute",
+      "city": "https://en.wikipedia.org/wiki/Worcester_Polytechnic_Institute",
+      "state": "https://en.wikipedia.org/wiki/Worcester_Polytechnic_Institute",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Worcester_Polytechnic_Institute"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-berkleeindo",
@@ -210,14 +454,38 @@
     "instagram": "@berkleeindo",
     "line": "",
     "whatsapp": "",
-    "email": "berkleeindo@permiasnasional.com",
-    "website": "https://instagram.com/berkleeindo",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Berk",
     "lat": 42.3464,
     "lng": -71.0869,
     "geoSource": "https://en.wikipedia.org/wiki/Berklee_College_of_Music",
     "mapX": 1172.7,
-    "mapY": 163.4
+    "mapY": 163.4,
+    "officialName": "Berklee Indonesia",
+    "officialRegion": "East Coast I",
+    "level": "University",
+    "universityFull": "Berklee College of Music",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Berklee College of Music, listed by PERMIAS Nasional in its East Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Berklee College of Music, terdaftar di PERMIAS Nasional wilayah East Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Berklee_College_of_Music",
+      "lng": "https://en.wikipedia.org/wiki/Berklee_College_of_Music",
+      "city": "https://en.wikipedia.org/wiki/Berklee_College_of_Music",
+      "state": "https://en.wikipedia.org/wiki/Berklee_College_of_Music",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Berklee_College_of_Music"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiaspennstate",
@@ -230,14 +498,38 @@
     "instagram": "@permiaspennstate",
     "line": "",
     "whatsapp": "",
-    "email": "permiaspennstate@permiasnasional.com",
-    "website": "https://instagram.com/permiaspennstate",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 40.7983,
     "lng": -77.86,
     "geoSource": "https://en.wikipedia.org/wiki/Pennsylvania_State_University",
     "mapX": 1070.7,
-    "mapY": 223.3
+    "mapY": 223.3,
+    "officialName": "Permias Penn State",
+    "officialRegion": "East Coast II",
+    "level": "University",
+    "universityFull": "Pennsylvania State University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Pennsylvania State University, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Pennsylvania State University, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Pennsylvania_State_University",
+      "lng": "https://en.wikipedia.org/wiki/Pennsylvania_State_University",
+      "city": "https://en.wikipedia.org/wiki/Pennsylvania_State_University",
+      "state": "https://en.wikipedia.org/wiki/Pennsylvania_State_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Pennsylvania_State_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-cmupermias",
@@ -250,14 +542,38 @@
     "instagram": "@cmu_permias",
     "line": "",
     "whatsapp": "",
-    "email": "cmu_permias@permiasnasional.com",
-    "website": "https://instagram.com/cmu_permias",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISCM",
     "lat": 40.4425,
     "lng": -79.9433,
     "geoSource": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University",
     "mapX": 1037.5,
-    "mapY": 237.6
+    "mapY": 237.6,
+    "officialName": "ISCMU (Carnegie Mellon)",
+    "officialRegion": "East Coast II",
+    "level": "University",
+    "universityFull": "Carnegie Mellon University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Carnegie Mellon University, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Carnegie Mellon University, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University",
+      "lng": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University",
+      "city": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University",
+      "state": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Carnegie_Mellon_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasnyc",
@@ -270,14 +586,40 @@
     "instagram": "@permiasnyc",
     "line": "",
     "whatsapp": "",
-    "email": "permiasnyc@permiasnasional.com",
-    "website": "https://instagram.com/permiasnyc",
+    "website": "https://permiasnyc.org/",
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 40.7128,
     "lng": -74.0061,
     "geoSource": "https://en.wikipedia.org/wiki/New_York_City",
     "mapX": 1134.8,
-    "mapY": 211.1
+    "mapY": 211.1,
+    "officialName": "Permias NYC",
+    "officialRegion": "East Coast II",
+    "level": "Regional",
+    "universityFull": "New York City",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around New York, New York, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar New York, New York, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/New_York_City",
+      "lng": "https://en.wikipedia.org/wiki/New_York_City",
+      "city": "https://en.wikipedia.org/wiki/New_York_City",
+      "state": "https://en.wikipedia.org/wiki/New_York_City",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "website": "https://permiasnyc.org/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://permiasnyc.org/",
+      "https://en.wikipedia.org/wiki/New_York_City"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indonesiacolumbia",
@@ -290,14 +632,38 @@
     "instagram": "@indonesiacolumbia",
     "line": "",
     "whatsapp": "",
-    "email": "indonesiacolumbia@permiasnasional.com",
-    "website": "https://instagram.com/indonesiacolumbia",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Colu",
     "lat": 40.8075,
     "lng": -73.9619,
     "geoSource": "https://en.wikipedia.org/wiki/Columbia_University",
     "mapX": 1135,
-    "mapY": 208.8
+    "mapY": 208.8,
+    "officialName": "Columbia Indonesia",
+    "officialRegion": "East Coast II",
+    "level": "University",
+    "universityFull": "Columbia University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Columbia University, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Columbia University, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Columbia_University",
+      "lng": "https://en.wikipedia.org/wiki/Columbia_University",
+      "city": "https://en.wikipedia.org/wiki/Columbia_University",
+      "state": "https://en.wikipedia.org/wiki/Columbia_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Columbia_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasupitt",
@@ -310,14 +676,38 @@
     "instagram": "@permias.upitt",
     "line": "",
     "whatsapp": "",
-    "email": "permias.upitt@permiasnasional.com",
-    "website": "https://instagram.com/permias.upitt",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
     "lat": 40.4446,
     "lng": -79.9533,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Pittsburgh",
     "mapX": 1037.4,
-    "mapY": 237.6
+    "mapY": 237.6,
+    "officialName": "ISA at Pitt",
+    "officialRegion": "East Coast II",
+    "level": "University",
+    "universityFull": "University of Pittsburgh",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Pittsburgh, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Pittsburgh, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Pittsburgh",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Pittsburgh",
+      "city": "https://en.wikipedia.org/wiki/University_of_Pittsburgh",
+      "state": "https://en.wikipedia.org/wiki/University_of_Pittsburgh",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Pittsburgh"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiascuse",
@@ -330,14 +720,38 @@
     "instagram": "@permiascuse",
     "line": "",
     "whatsapp": "",
-    "email": "permiascuse@permiasnasional.com",
-    "website": "https://instagram.com/permiascuse",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 43.0376,
     "lng": -76.134,
     "geoSource": "https://en.wikipedia.org/wiki/Syracuse_University",
     "mapX": 1088.4,
-    "mapY": 168.3
+    "mapY": 168.3,
+    "officialName": "Permias Syracuse",
+    "officialRegion": "East Coast II",
+    "level": "University",
+    "universityFull": "Syracuse University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Syracuse University, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Syracuse University, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Syracuse_University",
+      "lng": "https://en.wikipedia.org/wiki/Syracuse_University",
+      "city": "https://en.wikipedia.org/wiki/Syracuse_University",
+      "state": "https://en.wikipedia.org/wiki/Syracuse_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Syracuse_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasnj",
@@ -350,14 +764,38 @@
     "instagram": "@permiasnj",
     "line": "",
     "whatsapp": "",
-    "email": "permiasnj@permiasnasional.com",
-    "website": "https://instagram.com/permiasnj",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 40.4867,
     "lng": -74.4444,
     "geoSource": "https://en.wikipedia.org/wiki/New_Brunswick%2C_New_Jersey",
     "mapX": 1128.8,
-    "mapY": 217.7
+    "mapY": 217.7,
+    "officialName": "Permias New Jersey",
+    "officialRegion": "East Coast II",
+    "level": "Regional",
+    "universityFull": "Rutgers University, Princeton University",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around New Brunswick, New Jersey, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar New Brunswick, New Jersey, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/New_Brunswick%2C_New_Jersey",
+      "lng": "https://en.wikipedia.org/wiki/New_Brunswick%2C_New_Jersey",
+      "city": "https://en.wikipedia.org/wiki/New_Brunswick%2C_New_Jersey",
+      "state": "https://en.wikipedia.org/wiki/New_Brunswick%2C_New_Jersey",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/New_Brunswick%2C_New_Jersey"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indonesiaatcornell",
@@ -370,14 +808,38 @@
     "instagram": "@indonesiaatcornell",
     "line": "",
     "whatsapp": "",
-    "email": "indonesiaatcornell@permiasnasional.com",
-    "website": "https://instagram.com/indonesiaatcornell",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Corn",
     "lat": 42.4492,
     "lng": -76.4839,
     "geoSource": "https://en.wikipedia.org/wiki/Cornell_University",
     "mapX": 1085.6,
-    "mapY": 182.4
+    "mapY": 182.4,
+    "officialName": "Cornell Indonesian Association",
+    "officialRegion": "East Coast II",
+    "level": "University",
+    "universityFull": "Cornell University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Cornell University, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Cornell University, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Cornell_University",
+      "lng": "https://en.wikipedia.org/wiki/Cornell_University",
+      "city": "https://en.wikipedia.org/wiki/Cornell_University",
+      "state": "https://en.wikipedia.org/wiki/Cornell_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Cornell_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasrochesterny",
@@ -390,14 +852,38 @@
     "instagram": "@permiasrochesterny",
     "line": "",
     "whatsapp": "",
-    "email": "permiasrochesterny@permiasnasional.com",
-    "website": "https://instagram.com/permiasrochesterny",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 43.1656,
     "lng": -77.6161,
     "geoSource": "https://en.wikipedia.org/wiki/Rochester%2C_New_York",
     "mapX": 1064.1,
-    "mapY": 170.5
+    "mapY": 170.5,
+    "officialName": "Permias Rochester",
+    "officialRegion": "East Coast II",
+    "level": "Regional",
+    "universityFull": "University of Rochester",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Rochester, New York, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Rochester, New York, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Rochester%2C_New_York",
+      "lng": "https://en.wikipedia.org/wiki/Rochester%2C_New_York",
+      "city": "https://en.wikipedia.org/wiki/Rochester%2C_New_York",
+      "state": "https://en.wikipedia.org/wiki/Rochester%2C_New_York",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Rochester%2C_New_York"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-nyuindonesia",
@@ -410,14 +896,38 @@
     "instagram": "@nyu.indonesia",
     "line": "",
     "whatsapp": "",
-    "email": "nyu.indonesia@permiasnasional.com",
-    "website": "https://instagram.com/nyu.indonesia",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=NYU%20",
     "lat": 40.73,
     "lng": -73.995,
     "geoSource": "https://en.wikipedia.org/wiki/New_York_University",
     "mapX": 1134.9,
-    "mapY": 210.6
+    "mapY": 210.6,
+    "officialName": "NYU Indonesia Community",
+    "officialRegion": "East Coast II",
+    "level": "University",
+    "universityFull": "New York University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at New York University, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di New York University, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/New_York_University",
+      "lng": "https://en.wikipedia.org/wiki/New_York_University",
+      "city": "https://en.wikipedia.org/wiki/New_York_University",
+      "state": "https://en.wikipedia.org/wiki/New_York_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/New_York_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-penncasila",
@@ -430,14 +940,38 @@
     "instagram": "@penncasila",
     "line": "",
     "whatsapp": "",
-    "email": "penncasila@permiasnasional.com",
-    "website": "https://instagram.com/penncasila",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Penn",
     "lat": 39.9519,
     "lng": -75.1936,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Pennsylvania",
     "mapX": 1119.1,
-    "mapY": 232.3
+    "mapY": 232.3,
+    "officialName": "Penncasila",
+    "officialRegion": "East Coast II",
+    "level": "University",
+    "universityFull": "University of Pennsylvania",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Pennsylvania, listed by PERMIAS Nasional in its East Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Pennsylvania, terdaftar di PERMIAS Nasional wilayah East Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Pennsylvania",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Pennsylvania",
+      "city": "https://en.wikipedia.org/wiki/University_of_Pennsylvania",
+      "state": "https://en.wikipedia.org/wiki/University_of_Pennsylvania",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Pennsylvania"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasdc",
@@ -450,14 +984,36 @@
     "instagram": "@permiasdc",
     "line": "",
     "whatsapp": "",
-    "email": "permiasdc@permiasnasional.com",
-    "website": "https://instagram.com/permiasdc",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 38.9047,
     "lng": -77.0164,
     "geoSource": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
     "mapX": 1093.5,
-    "mapY": 261.9
+    "mapY": 261.9,
+    "officialName": "Permias DC",
+    "officialRegion": "East Coast III",
+    "level": "Regional",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Washington, District of Columbia, listed by PERMIAS Nasional in its East Coast III region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Washington, District of Columbia, terdaftar di PERMIAS Nasional wilayah East Coast III."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+      "lng": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+      "city": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+      "state": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Washington%2C_D.C."
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasncstate",
@@ -470,14 +1026,38 @@
     "instagram": "@permiasncstate",
     "line": "",
     "whatsapp": "",
-    "email": "permiasncstate@permiasnasional.com",
-    "website": "https://instagram.com/permiasncstate",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 35.7872,
     "lng": -78.6706,
     "geoSource": "https://en.wikipedia.org/wiki/North_Carolina_State_University",
     "mapX": 1078.6,
-    "mapY": 336.1
+    "mapY": 336.1,
+    "officialName": "Permias at NC State University",
+    "officialRegion": "East Coast III",
+    "level": "University",
+    "universityFull": "North Carolina State University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at North Carolina State University, listed by PERMIAS Nasional in its East Coast III region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di North Carolina State University, terdaftar di PERMIAS Nasional wilayah East Coast III."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/North_Carolina_State_University",
+      "lng": "https://en.wikipedia.org/wiki/North_Carolina_State_University",
+      "city": "https://en.wikipedia.org/wiki/North_Carolina_State_University",
+      "state": "https://en.wikipedia.org/wiki/North_Carolina_State_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/North_Carolina_State_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasvt",
@@ -490,14 +1070,38 @@
     "instagram": "@permiasvt",
     "line": "",
     "whatsapp": "",
-    "email": "permiasvt@permiasnasional.com",
-    "website": "https://instagram.com/permiasvt",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 37.225,
     "lng": -80.425,
     "geoSource": "https://en.wikipedia.org/wiki/Virginia_Tech",
     "mapX": 1041.8,
-    "mapY": 310
+    "mapY": 310,
+    "officialName": "Permias Virginia Tech",
+    "officialRegion": "East Coast III",
+    "level": "University",
+    "universityFull": "Virginia Tech",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Virginia Tech, listed by PERMIAS Nasional in its East Coast III region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Virginia Tech, terdaftar di PERMIAS Nasional wilayah East Coast III."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Virginia_Tech",
+      "lng": "https://en.wikipedia.org/wiki/Virginia_Tech",
+      "city": "https://en.wikipedia.org/wiki/Virginia_Tech",
+      "state": "https://en.wikipedia.org/wiki/Virginia_Tech",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Virginia_Tech"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indonesiahopkins",
@@ -510,14 +1114,38 @@
     "instagram": "@indonesiahopkins",
     "line": "",
     "whatsapp": "",
-    "email": "indonesiahopkins@permiasnasional.com",
-    "website": "https://instagram.com/indonesiahopkins",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo",
     "lat": 39.3289,
     "lng": -76.6203,
     "geoSource": "https://en.wikipedia.org/wiki/Johns_Hopkins_University",
     "mapX": 1098.2,
-    "mapY": 251.2
+    "mapY": 251.2,
+    "officialName": "Indonesian Student Association at John Hopkins",
+    "officialRegion": "East Coast III",
+    "level": "University",
+    "universityFull": "Johns Hopkins University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Johns Hopkins University, listed by PERMIAS Nasional in its East Coast III region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Johns Hopkins University, terdaftar di PERMIAS Nasional wilayah East Coast III."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Johns_Hopkins_University",
+      "lng": "https://en.wikipedia.org/wiki/Johns_Hopkins_University",
+      "city": "https://en.wikipedia.org/wiki/Johns_Hopkins_University",
+      "state": "https://en.wikipedia.org/wiki/Johns_Hopkins_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Johns_Hopkins_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiaswv",
@@ -530,14 +1158,38 @@
     "instagram": "@permias.wv",
     "line": "",
     "whatsapp": "",
-    "email": "permias.wv@permiasnasional.com",
-    "website": "https://instagram.com/permias.wv",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 39.6458,
     "lng": -79.9697,
     "geoSource": "https://en.wikipedia.org/wiki/West_Virginia_University",
     "mapX": 1040.2,
-    "mapY": 255.2
+    "mapY": 255.2,
+    "officialName": "Permias WV",
+    "officialRegion": "East Coast III",
+    "level": "Regional",
+    "universityFull": "West Virginia University",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Morgantown, West Virginia, listed by PERMIAS Nasional in its East Coast III region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Morgantown, West Virginia, terdaftar di PERMIAS Nasional wilayah East Coast III."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/West_Virginia_University",
+      "lng": "https://en.wikipedia.org/wiki/West_Virginia_University",
+      "city": "https://en.wikipedia.org/wiki/West_Virginia_University",
+      "state": "https://en.wikipedia.org/wiki/West_Virginia_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/West_Virginia_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasuofsc",
@@ -550,14 +1202,38 @@
     "instagram": "@permias.uofsc",
     "line": "",
     "whatsapp": "",
-    "email": "permias.uofsc@permiasnasional.com",
-    "website": "https://instagram.com/permias.uofsc",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 33.9975,
     "lng": -81.0253,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_South_Carolina",
     "mapX": 1043.1,
-    "mapY": 383
+    "mapY": 383,
+    "officialName": "Permias UoSC",
+    "officialRegion": "East Coast III",
+    "level": "University",
+    "universityFull": "University of South Carolina",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of South Carolina, listed by PERMIAS Nasional in its East Coast III region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of South Carolina, terdaftar di PERMIAS Nasional wilayah East Coast III."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_South_Carolina",
+      "lng": "https://en.wikipedia.org/wiki/University_of_South_Carolina",
+      "city": "https://en.wikipedia.org/wiki/University_of_South_Carolina",
+      "state": "https://en.wikipedia.org/wiki/University_of_South_Carolina",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_South_Carolina"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indonesiaumich",
@@ -570,14 +1246,38 @@
     "instagram": "@indonesia.umich",
     "line": "",
     "whatsapp": "",
-    "email": "indonesia.umich@permiasnasional.com",
-    "website": "https://instagram.com/indonesia.umich",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 42.2769,
     "lng": -83.7381,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Michigan",
     "mapX": 968.3,
-    "mapY": 206.8
+    "mapY": 206.8,
+    "officialName": "Permias Michigan",
+    "officialRegion": "Midwest I",
+    "level": "University",
+    "universityFull": "University of Michigan",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Michigan, listed by PERMIAS Nasional in its Midwest I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Michigan, terdaftar di PERMIAS Nasional wilayah Midwest I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Michigan",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Michigan",
+      "city": "https://en.wikipedia.org/wiki/University_of_Michigan",
+      "state": "https://en.wikipedia.org/wiki/University_of_Michigan",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Michigan"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasou",
@@ -590,14 +1290,38 @@
     "instagram": "@permias_ou",
     "line": "",
     "whatsapp": "",
-    "email": "permias_ou@permiasnasional.com",
-    "website": "https://instagram.com/permias_ou",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=PERM",
     "lat": 39.324,
     "lng": -82.102,
     "geoSource": "https://en.wikipedia.org/wiki/Ohio_University",
     "mapX": 1005.1,
-    "mapY": 268.3
+    "mapY": 268.3,
+    "officialName": "PERMIAS Ohio University",
+    "officialRegion": "Midwest I",
+    "level": "University",
+    "universityFull": "Ohio University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Ohio University, listed by PERMIAS Nasional in its Midwest I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Ohio University, terdaftar di PERMIAS Nasional wilayah Midwest I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Ohio_University",
+      "lng": "https://en.wikipedia.org/wiki/Ohio_University",
+      "city": "https://en.wikipedia.org/wiki/Ohio_University",
+      "state": "https://en.wikipedia.org/wiki/Ohio_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Ohio_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiaskalamazoo",
@@ -610,14 +1334,38 @@
     "instagram": "@permiaskalamazoo",
     "line": "",
     "whatsapp": "",
-    "email": "permiaskalamazoo@permiasnasional.com",
-    "website": "https://instagram.com/permiaskalamazoo",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 42.2833,
     "lng": -85.6139,
     "geoSource": "https://en.wikipedia.org/wiki/Western_Michigan_University",
     "mapX": 937.5,
-    "mapY": 210.4
+    "mapY": 210.4,
+    "officialName": "Permias Kalamazoo",
+    "officialRegion": "Midwest I",
+    "level": "University",
+    "universityFull": "Western Michigan University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Western Michigan University, listed by PERMIAS Nasional in its Midwest I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Western Michigan University, terdaftar di PERMIAS Nasional wilayah Midwest I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Western_Michigan_University",
+      "lng": "https://en.wikipedia.org/wiki/Western_Michigan_University",
+      "city": "https://en.wikipedia.org/wiki/Western_Michigan_University",
+      "state": "https://en.wikipedia.org/wiki/Western_Michigan_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Western_Michigan_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiascolumbus",
@@ -630,14 +1378,38 @@
     "instagram": "@permiascolumbus",
     "line": "",
     "whatsapp": "",
-    "email": "permiascolumbus@permiasnasional.com",
-    "website": "https://instagram.com/permiascolumbus",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=PERM",
     "lat": 40.0006,
     "lng": -83.0144,
     "geoSource": "https://en.wikipedia.org/wiki/Ohio_State_University",
     "mapX": 987.4,
-    "mapY": 255.6
+    "mapY": 255.6,
+    "officialName": "PERMIAS Columbus",
+    "officialRegion": "Midwest I",
+    "level": "University",
+    "universityFull": "Ohio State University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Ohio State University, listed by PERMIAS Nasional in its Midwest I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Ohio State University, terdaftar di PERMIAS Nasional wilayah Midwest I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Ohio_State_University",
+      "lng": "https://en.wikipedia.org/wiki/Ohio_State_University",
+      "city": "https://en.wikipedia.org/wiki/Ohio_State_University",
+      "state": "https://en.wikipedia.org/wiki/Ohio_State_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Ohio_State_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasmsu",
@@ -650,14 +1422,38 @@
     "instagram": "@permias.msu",
     "line": "",
     "whatsapp": "",
-    "email": "permias.msu@permiasnasional.com",
-    "website": "https://instagram.com/permias.msu",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 42.725,
     "lng": -84.48,
     "geoSource": "https://en.wikipedia.org/wiki/Michigan_State_University",
     "mapX": 954.8,
-    "mapY": 198.4
+    "mapY": 198.4,
+    "officialName": "Permias MSU",
+    "officialRegion": "Midwest I",
+    "level": "University",
+    "universityFull": "Michigan State University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Michigan State University, listed by PERMIAS Nasional in its Midwest I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Michigan State University, terdaftar di PERMIAS Nasional wilayah Midwest I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Michigan_State_University",
+      "lng": "https://en.wikipedia.org/wiki/Michigan_State_University",
+      "city": "https://en.wikipedia.org/wiki/Michigan_State_University",
+      "state": "https://en.wikipedia.org/wiki/Michigan_State_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Michigan_State_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiaspurdue",
@@ -670,14 +1466,38 @@
     "instagram": "@permiaspurdue",
     "line": "",
     "whatsapp": "",
-    "email": "permiaspurdue@permiasnasional.com",
-    "website": "https://instagram.com/permiaspurdue",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 40.425,
     "lng": -86.9231,
     "geoSource": "https://en.wikipedia.org/wiki/Purdue_University",
     "mapX": 920.1,
-    "mapY": 254.1
+    "mapY": 254.1,
+    "officialName": "Permias Purdue",
+    "officialRegion": "Midwest I",
+    "level": "University",
+    "universityFull": "Purdue University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Purdue University, listed by PERMIAS Nasional in its Midwest I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Purdue University, terdaftar di PERMIAS Nasional wilayah Midwest I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Purdue_University",
+      "lng": "https://en.wikipedia.org/wiki/Purdue_University",
+      "city": "https://en.wikipedia.org/wiki/Purdue_University",
+      "state": "https://en.wikipedia.org/wiki/Purdue_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Purdue_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasnd",
@@ -690,14 +1510,38 @@
     "instagram": "@permiasnd",
     "line": "",
     "whatsapp": "",
-    "email": "permiasnd@permiasnasional.com",
-    "website": "https://instagram.com/permiasnd",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 41.7,
     "lng": -86.2389,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Notre_Dame",
     "mapX": 928.6,
-    "mapY": 224.5
+    "mapY": 224.5,
+    "officialName": "Permias Notre Dame",
+    "officialRegion": "Midwest I",
+    "level": "University",
+    "universityFull": "University of Notre Dame",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Notre Dame, listed by PERMIAS Nasional in its Midwest I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Notre Dame, terdaftar di PERMIAS Nasional wilayah Midwest I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Notre_Dame",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Notre_Dame",
+      "city": "https://en.wikipedia.org/wiki/University_of_Notre_Dame",
+      "state": "https://en.wikipedia.org/wiki/University_of_Notre_Dame",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Notre_Dame"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasbloomington",
@@ -710,14 +1554,38 @@
     "instagram": "@permiasbloomington",
     "line": "",
     "whatsapp": "",
-    "email": "permiasbloomington@permiasnasional.com",
-    "website": "https://instagram.com/permiasbloomington",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 39.1672,
     "lng": -86.5214,
     "geoSource": "https://en.wikipedia.org/wiki/Indiana_University_Bloomington",
     "mapX": 929.8,
-    "mapY": 281.4
+    "mapY": 281.4,
+    "officialName": "Permias Bloomington",
+    "officialRegion": "Midwest I",
+    "level": "University",
+    "universityFull": "Indiana University Bloomington",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Indiana University Bloomington, listed by PERMIAS Nasional in its Midwest I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Indiana University Bloomington, terdaftar di PERMIAS Nasional wilayah Midwest I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Indiana_University_Bloomington",
+      "lng": "https://en.wikipedia.org/wiki/Indiana_University_Bloomington",
+      "city": "https://en.wikipedia.org/wiki/Indiana_University_Bloomington",
+      "state": "https://en.wikipedia.org/wiki/Indiana_University_Bloomington",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Indiana_University_Bloomington"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasmissouri",
@@ -730,14 +1598,38 @@
     "instagram": "@permiasmissouri",
     "line": "",
     "whatsapp": "",
-    "email": "permiasmissouri@permiasnasional.com",
-    "website": "https://instagram.com/permiasmissouri",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Miss",
     "lat": 38.9453,
     "lng": -92.3288,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Missouri",
     "mapX": 829.8,
-    "mapY": 293.6
+    "mapY": 293.6,
+    "officialName": "Missouri ISA",
+    "officialRegion": "Midwest I",
+    "level": "University",
+    "universityFull": "University of Missouri",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Missouri, listed by PERMIAS Nasional in its Midwest I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Missouri, terdaftar di PERMIAS Nasional wilayah Midwest I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Missouri",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Missouri",
+      "city": "https://en.wikipedia.org/wiki/University_of_Missouri",
+      "state": "https://en.wikipedia.org/wiki/University_of_Missouri",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Missouri"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiaskansas",
@@ -750,14 +1642,38 @@
     "instagram": "@permiaskansas",
     "line": "",
     "whatsapp": "",
-    "email": "permiaskansas@permiasnasional.com",
-    "website": "https://instagram.com/permiaskansas",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 38.9584,
     "lng": -95.2478,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Kansas",
     "mapX": 779.1,
-    "mapY": 294.5
+    "mapY": 294.5,
+    "officialName": "Permias Kansas",
+    "officialRegion": "Midwest II",
+    "level": "University",
+    "universityFull": "University of Kansas",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Kansas, listed by PERMIAS Nasional in its Midwest II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Kansas, terdaftar di PERMIAS Nasional wilayah Midwest II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Kansas",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Kansas",
+      "city": "https://en.wikipedia.org/wiki/University_of_Kansas",
+      "state": "https://en.wikipedia.org/wiki/University_of_Kansas",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Kansas"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasames",
@@ -770,14 +1686,38 @@
     "instagram": "@permias.ames",
     "line": "",
     "whatsapp": "",
-    "email": "permias.ames@permiasnasional.com",
-    "website": "https://instagram.com/permias.ames",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 42.0262,
     "lng": -93.648,
     "geoSource": "https://en.wikipedia.org/wiki/Iowa_State_University",
     "mapX": 805.1,
-    "mapY": 225.3
+    "mapY": 225.3,
+    "officialName": "Permias Ames",
+    "officialRegion": "Midwest II",
+    "level": "University",
+    "universityFull": "Iowa State University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Iowa State University, listed by PERMIAS Nasional in its Midwest II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Iowa State University, terdaftar di PERMIAS Nasional wilayah Midwest II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Iowa_State_University",
+      "lng": "https://en.wikipedia.org/wiki/Iowa_State_University",
+      "city": "https://en.wikipedia.org/wiki/Iowa_State_University",
+      "state": "https://en.wikipedia.org/wiki/Iowa_State_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Iowa_State_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasuiuc",
@@ -790,14 +1730,38 @@
     "instagram": "@permiasuiuc",
     "line": "",
     "whatsapp": "",
-    "email": "permiasuiuc@permiasnasional.com",
-    "website": "https://instagram.com/permiasuiuc",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 40.1106,
     "lng": -88.2283,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign",
     "mapX": 898.6,
-    "mapY": 263.1
+    "mapY": 263.1,
+    "officialName": "Permias UIUC",
+    "officialRegion": "Midwest II",
+    "level": "University",
+    "universityFull": "University of Illinois Urbana-Champaign",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Illinois Urbana-Champaign, listed by PERMIAS Nasional in its Midwest II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Illinois Urbana-Champaign, terdaftar di PERMIAS Nasional wilayah Midwest II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign",
+      "city": "https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign",
+      "state": "https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiaschicago",
@@ -810,14 +1774,38 @@
     "instagram": "@permiaschicago",
     "line": "",
     "whatsapp": "",
-    "email": "permiaschicago@permiasnasional.com",
-    "website": "https://instagram.com/permiaschicago",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=PERM",
     "lat": 41.8819,
     "lng": -87.6278,
     "geoSource": "https://en.wikipedia.org/wiki/Chicago",
     "mapX": 905.2,
-    "mapY": 222.7
+    "mapY": 222.7,
+    "officialName": "PERMIAS Chicago",
+    "officialRegion": "Midwest II",
+    "level": "Regional",
+    "universityFull": "University of Chicago",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Chicago, Illinois, listed by PERMIAS Nasional in its Midwest II region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Chicago, Illinois, terdaftar di PERMIAS Nasional wilayah Midwest II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Chicago",
+      "lng": "https://en.wikipedia.org/wiki/Chicago",
+      "city": "https://en.wikipedia.org/wiki/Chicago",
+      "state": "https://en.wikipedia.org/wiki/Chicago",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Chicago"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-idsanu",
@@ -830,14 +1818,38 @@
     "instagram": "@idsa.nu",
     "line": "",
     "whatsapp": "",
-    "email": "idsa.nu@permiasnasional.com",
-    "website": "https://instagram.com/idsa.nu",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=IDSA",
     "lat": 42.0558,
     "lng": -87.6747,
     "geoSource": "https://en.wikipedia.org/wiki/Northwestern_University",
     "mapX": 904,
-    "mapY": 218.9
+    "mapY": 218.9,
+    "officialName": "IDSA Northwestern University",
+    "officialRegion": "Midwest II",
+    "level": "University",
+    "universityFull": "Northwestern University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Northwestern University, listed by PERMIAS Nasional in its Midwest II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Northwestern University, terdaftar di PERMIAS Nasional wilayah Midwest II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Northwestern_University",
+      "lng": "https://en.wikipedia.org/wiki/Northwestern_University",
+      "city": "https://en.wikipedia.org/wiki/Northwestern_University",
+      "state": "https://en.wikipedia.org/wiki/Northwestern_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Northwestern_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasmadison",
@@ -850,14 +1862,38 @@
     "instagram": "@permiasmadison",
     "line": "",
     "whatsapp": "",
-    "email": "permiasmadison@permiasnasional.com",
-    "website": "https://instagram.com/permiasmadison",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 43.0753,
     "lng": -89.4042,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison",
     "mapX": 873.8,
-    "mapY": 198.5
+    "mapY": 198.5,
+    "officialName": "Permias Madison",
+    "officialRegion": "Midwest II",
+    "level": "University",
+    "universityFull": "University of Wisconsin-Madison",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Wisconsin-Madison, listed by PERMIAS Nasional in its Midwest II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Wisconsin-Madison, terdaftar di PERMIAS Nasional wilayah Midwest II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison",
+      "city": "https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison",
+      "state": "https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indoatku",
@@ -870,14 +1906,38 @@
     "instagram": "@indoatku",
     "line": "",
     "whatsapp": "",
-    "email": "indoatku@permiasnasional.com",
-    "website": "https://instagram.com/indoatku",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo",
     "lat": 38.9584,
     "lng": -95.2478,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Kansas",
     "mapX": 779.1,
-    "mapY": 294.5
+    "mapY": 294.5,
+    "officialName": "Indos at KU (ISAKU)",
+    "officialRegion": "Midwest II",
+    "level": "University",
+    "universityFull": "University of Kansas",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Kansas, listed by PERMIAS Nasional in its Midwest II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Kansas, terdaftar di PERMIAS Nasional wilayah Midwest II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Kansas",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Kansas",
+      "city": "https://en.wikipedia.org/wiki/University_of_Kansas",
+      "state": "https://en.wikipedia.org/wiki/University_of_Kansas",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Kansas"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasmn",
@@ -890,14 +1950,38 @@
     "instagram": "@permiasmn",
     "line": "",
     "whatsapp": "",
-    "email": "permiasmn@permiasnasional.com",
-    "website": "https://instagram.com/permiasmn",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 44.975,
     "lng": -93.2353,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Minnesota",
     "mapX": 809.9,
-    "mapY": 159.3
+    "mapY": 159.3,
+    "officialName": "Permias Minnesota",
+    "officialRegion": "Midwest II",
+    "level": "University",
+    "universityFull": "University of Minnesota",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Minnesota, listed by PERMIAS Nasional in its Midwest II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Minnesota, terdaftar di PERMIAS Nasional wilayah Midwest II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Minnesota",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Minnesota",
+      "city": "https://en.wikipedia.org/wiki/University_of_Minnesota",
+      "state": "https://en.wikipedia.org/wiki/University_of_Minnesota",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Minnesota"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiastamu",
@@ -910,14 +1994,38 @@
     "instagram": "@permiastamu",
     "line": "",
     "whatsapp": "",
-    "email": "permiastamu@permiasnasional.com",
-    "website": "https://instagram.com/permiastamu",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 30.61,
     "lng": -96.35,
     "geoSource": "https://en.wikipedia.org/wiki/Texas_A%26M_University",
     "mapX": 759.2,
-    "mapY": 480.9
+    "mapY": 480.9,
+    "officialName": "Permias Texas A&M",
+    "officialRegion": "South",
+    "level": "University",
+    "universityFull": "Texas A&M University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Texas A&M University, listed by PERMIAS Nasional in its South region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Texas A&M University, terdaftar di PERMIAS Nasional wilayah South."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Texas_A%26M_University",
+      "lng": "https://en.wikipedia.org/wiki/Texas_A%26M_University",
+      "city": "https://en.wikipedia.org/wiki/Texas_A%26M_University",
+      "state": "https://en.wikipedia.org/wiki/Texas_A%26M_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Texas_A%26M_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasaustin",
@@ -930,14 +2038,38 @@
     "instagram": "@permiasaustin",
     "line": "",
     "whatsapp": "",
-    "email": "permiasaustin@permiasnasional.com",
-    "website": "https://instagram.com/permiasaustin",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 30.285,
     "lng": -97.735,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Texas_at_Austin",
     "mapX": 732.2,
-    "mapY": 487.8
+    "mapY": 487.8,
+    "officialName": "Permias Austin",
+    "officialRegion": "South",
+    "level": "University",
+    "universityFull": "University of Texas at Austin",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Texas at Austin, listed by PERMIAS Nasional in its South region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Texas at Austin, terdaftar di PERMIAS Nasional wilayah South."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Texas_at_Austin",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Texas_at_Austin",
+      "city": "https://en.wikipedia.org/wiki/University_of_Texas_at_Austin",
+      "state": "https://en.wikipedia.org/wiki/University_of_Texas_at_Austin",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Texas_at_Austin"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasarkansas",
@@ -950,14 +2082,38 @@
     "instagram": "@permiasarkansas",
     "line": "",
     "whatsapp": "",
-    "email": "permiasarkansas@permiasnasional.com",
-    "website": "https://instagram.com/permiasarkansas",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 36.0686,
     "lng": -94.1761,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Arkansas",
     "mapX": 799,
-    "mapY": 358.9
+    "mapY": 358.9,
+    "officialName": "Permias Arkansas",
+    "officialRegion": "South",
+    "level": "University",
+    "universityFull": "University of Arkansas",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Arkansas, listed by PERMIAS Nasional in its South region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Arkansas, terdaftar di PERMIAS Nasional wilayah South."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Arkansas",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Arkansas",
+      "city": "https://en.wikipedia.org/wiki/University_of_Arkansas",
+      "state": "https://en.wikipedia.org/wiki/University_of_Arkansas",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Arkansas"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-isagatech",
@@ -970,14 +2126,38 @@
     "instagram": "@isa.gatech",
     "line": "",
     "whatsapp": "",
-    "email": "isa.gatech@permiasnasional.com",
-    "website": "https://instagram.com/isa.gatech",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 33.776,
     "lng": -84.396,
     "geoSource": "https://en.wikipedia.org/wiki/Georgia_Tech",
     "mapX": 981.7,
-    "mapY": 396.9
+    "mapY": 396.9,
+    "officialName": "Permias Georgia Tech",
+    "officialRegion": "South",
+    "level": "University",
+    "universityFull": "Georgia Institute of Technology",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Georgia Institute of Technology, listed by PERMIAS Nasional in its South region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Georgia Institute of Technology, terdaftar di PERMIAS Nasional wilayah South."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Georgia_Tech",
+      "lng": "https://en.wikipedia.org/wiki/Georgia_Tech",
+      "city": "https://en.wikipedia.org/wiki/Georgia_Tech",
+      "state": "https://en.wikipedia.org/wiki/Georgia_Tech",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Georgia_Tech"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-aisauburn",
@@ -990,14 +2170,38 @@
     "instagram": "@ais.auburn",
     "line": "",
     "whatsapp": "",
-    "email": "ais.auburn@permiasnasional.com",
-    "website": "https://instagram.com/ais.auburn",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 32.603,
     "lng": -85.486,
     "geoSource": "https://en.wikipedia.org/wiki/Auburn_University",
     "mapX": 964.6,
-    "mapY": 425.3
+    "mapY": 425.3,
+    "officialName": "Permias Auburn",
+    "officialRegion": "South",
+    "level": "University",
+    "universityFull": "Auburn University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Auburn University, listed by PERMIAS Nasional in its South region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Auburn University, terdaftar di PERMIAS Nasional wilayah South."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Auburn_University",
+      "lng": "https://en.wikipedia.org/wiki/Auburn_University",
+      "city": "https://en.wikipedia.org/wiki/Auburn_University",
+      "state": "https://en.wikipedia.org/wiki/Auburn_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Auburn_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasok",
@@ -1010,14 +2214,38 @@
     "instagram": "@permiasok",
     "line": "",
     "whatsapp": "",
-    "email": "permiasok@permiasnasional.com",
-    "website": "https://instagram.com/permiasok",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 35.2088,
     "lng": -97.4457,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Oklahoma",
     "mapX": 739.6,
-    "mapY": 378.3
+    "mapY": 378.3,
+    "officialName": "Permias Oklahoma",
+    "officialRegion": "South",
+    "level": "University",
+    "universityFull": "University of Oklahoma",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Oklahoma, listed by PERMIAS Nasional in its South region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Oklahoma, terdaftar di PERMIAS Nasional wilayah South."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Oklahoma",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Oklahoma",
+      "city": "https://en.wikipedia.org/wiki/University_of_Oklahoma",
+      "state": "https://en.wikipedia.org/wiki/University_of_Oklahoma",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Oklahoma"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasgainesville",
@@ -1030,14 +2258,38 @@
     "instagram": "@permiasgainesville",
     "line": "",
     "whatsapp": "",
-    "email": "permiasgainesville@permiasnasional.com",
-    "website": "https://instagram.com/permiasgainesville",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 29.6475,
     "lng": -82.345,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Florida",
     "mapX": 1033.3,
-    "mapY": 482.4
+    "mapY": 482.4,
+    "officialName": "Permias UF (Gainesville)",
+    "officialRegion": "South",
+    "level": "University",
+    "universityFull": "University of Florida Gainesville",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Florida Gainesville, listed by PERMIAS Nasional in its South region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Florida Gainesville, terdaftar di PERMIAS Nasional wilayah South."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Florida",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Florida",
+      "city": "https://en.wikipedia.org/wiki/University_of_Florida",
+      "state": "https://en.wikipedia.org/wiki/University_of_Florida",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Florida"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasdallas",
@@ -1050,14 +2302,36 @@
     "instagram": "@permiasdallas",
     "line": "",
     "whatsapp": "",
-    "email": "permiasdallas@permiasnasional.com",
-    "website": "https://instagram.com/permiasdallas",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 32.7792,
     "lng": -96.8089,
     "geoSource": "https://en.wikipedia.org/wiki/Dallas",
     "mapX": 750.8,
-    "mapY": 432.6
+    "mapY": 432.6,
+    "officialName": "Permias Dallas",
+    "officialRegion": "South",
+    "level": "Regional",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Dallas, Texas, listed by PERMIAS Nasional in its South region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Dallas, Texas, terdaftar di PERMIAS Nasional wilayah South."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Dallas",
+      "lng": "https://en.wikipedia.org/wiki/Dallas",
+      "city": "https://en.wikipedia.org/wiki/Dallas",
+      "state": "https://en.wikipedia.org/wiki/Dallas",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Dallas"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-isagsu",
@@ -1070,14 +2344,38 @@
     "instagram": "@isa.gsu",
     "line": "",
     "whatsapp": "",
-    "email": "isa.gsu@permiasnasional.com",
-    "website": "https://instagram.com/isa.gsu",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
     "lat": 33.7537,
     "lng": -84.386,
     "geoSource": "https://en.wikipedia.org/wiki/Georgia_State_University",
     "mapX": 982,
-    "mapY": 397.4
+    "mapY": 397.4,
+    "officialName": "ISA GSU",
+    "officialRegion": "South",
+    "level": "University",
+    "universityFull": "Georgia State University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Georgia State University, listed by PERMIAS Nasional in its South region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Georgia State University, terdaftar di PERMIAS Nasional wilayah South."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Georgia_State_University",
+      "lng": "https://en.wikipedia.org/wiki/Georgia_State_University",
+      "city": "https://en.wikipedia.org/wiki/Georgia_State_University",
+      "state": "https://en.wikipedia.org/wiki/Georgia_State_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Georgia_State_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-byuhindonesianchapter",
@@ -1090,14 +2388,38 @@
     "instagram": "@byuhindonesianchapter",
     "line": "",
     "whatsapp": "",
-    "email": "byuhindonesianchapter@permiasnasional.com",
-    "website": "https://instagram.com/byuhindonesianchapter",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=BYUH",
     "lat": 21.6414,
     "lng": -157.9253,
     "geoSource": "https://en.wikipedia.org/wiki/Brigham_Young_University%E2%80%93Hawaii",
     "mapX": 524.3,
-    "mapY": 509.5
+    "mapY": 509.5,
+    "officialName": "BYUH-Indonesia",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "Brigham Young University–Hawaii",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Brigham Young University–Hawaii, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Brigham Young University–Hawaii, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Brigham_Young_University%E2%80%93Hawaii",
+      "lng": "https://en.wikipedia.org/wiki/Brigham_Young_University%E2%80%93Hawaii",
+      "city": "https://en.wikipedia.org/wiki/Brigham_Young_University%E2%80%93Hawaii",
+      "state": "https://en.wikipedia.org/wiki/Brigham_Young_University%E2%80%93Hawaii",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Brigham_Young_University%E2%80%93Hawaii"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiassdia",
@@ -1110,14 +2432,38 @@
     "instagram": "@permias.sdia",
     "line": "",
     "whatsapp": "",
-    "email": "permias.sdia@permiasnasional.com",
-    "website": "https://instagram.com/permias.sdia",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 32.8801,
     "lng": -117.234,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_San_Diego",
     "mapX": 369.2,
-    "mapY": 384.6
+    "mapY": 384.6,
+    "officialName": "Permias San Diego",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "University of California, San Diego (UCSD)",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of California, San Diego (UCSD), listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of California, San Diego (UCSD), terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_California%2C_San_Diego",
+      "lng": "https://en.wikipedia.org/wiki/University_of_California%2C_San_Diego",
+      "city": "https://en.wikipedia.org/wiki/University_of_California%2C_San_Diego",
+      "state": "https://en.wikipedia.org/wiki/University_of_California%2C_San_Diego",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_California%2C_San_Diego"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasisuci",
@@ -1130,14 +2476,38 @@
     "instagram": "@permias.isuci",
     "line": "",
     "whatsapp": "",
-    "email": "permias.isuci@permiasnasional.com",
-    "website": "https://instagram.com/permias.isuci",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISUC",
     "lat": 33.6456,
     "lng": -117.8425,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_Irvine",
     "mapX": 362.1,
-    "mapY": 365.3
+    "mapY": 365.3,
+    "officialName": "ISUCI",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "University of California, Irvine (UCI)",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of California, Irvine (UCI), listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of California, Irvine (UCI), terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_California%2C_Irvine",
+      "lng": "https://en.wikipedia.org/wiki/University_of_California%2C_Irvine",
+      "city": "https://en.wikipedia.org/wiki/University_of_California%2C_Irvine",
+      "state": "https://en.wikipedia.org/wiki/University_of_California%2C_Irvine",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_California%2C_Irvine"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiassmc",
@@ -1150,14 +2520,38 @@
     "instagram": "@permiassmc",
     "line": "",
     "whatsapp": "",
-    "email": "permiassmc@permiasnasional.com",
-    "website": "https://instagram.com/permiassmc",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 34.0168,
     "lng": -118.4707,
     "geoSource": "https://en.wikipedia.org/wiki/Santa_Monica_College",
     "mapX": 352.7,
-    "mapY": 354.5
+    "mapY": 354.5,
+    "officialName": "Permias SMC",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "Santa Monica College",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Santa Monica College, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Santa Monica College, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Santa_Monica_College",
+      "lng": "https://en.wikipedia.org/wiki/Santa_Monica_College",
+      "city": "https://en.wikipedia.org/wiki/Santa_Monica_College",
+      "state": "https://en.wikipedia.org/wiki/Santa_Monica_College",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Santa_Monica_College"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiaspasadena",
@@ -1170,14 +2564,38 @@
     "instagram": "@permiaspasadena",
     "line": "",
     "whatsapp": "",
-    "email": "permiaspasadena@permiasnasional.com",
-    "website": "https://instagram.com/permiaspasadena",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 34.1444,
     "lng": -118.1181,
     "geoSource": "https://en.wikipedia.org/wiki/Pasadena_City_College",
     "mapX": 359.8,
-    "mapY": 353.3
+    "mapY": 353.3,
+    "officialName": "Permias Pasadena",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "Pasadena City College",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Pasadena City College, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Pasadena City College, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Pasadena_City_College",
+      "lng": "https://en.wikipedia.org/wiki/Pasadena_City_College",
+      "city": "https://en.wikipedia.org/wiki/Pasadena_City_College",
+      "state": "https://en.wikipedia.org/wiki/Pasadena_City_College",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Pasadena_City_College"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasla",
@@ -1190,14 +2608,38 @@
     "instagram": "@permiasla",
     "line": "",
     "whatsapp": "",
-    "email": "permiasla@permiasnasional.com",
-    "website": "https://instagram.com/permiasla",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 34.05,
     "lng": -118.25,
     "geoSource": "https://en.wikipedia.org/wiki/Los_Angeles",
     "mapX": 356.9,
-    "mapY": 354.8
+    "mapY": 354.8,
+    "officialName": "Permias LA",
+    "officialRegion": "West Coast I",
+    "level": "Regional",
+    "universityFull": "Biola University, Pasadena City College, University of California, Irvine (UCI), University of California, Los Angeles (UCLA), University of Southern California",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Los Angeles, California, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Los Angeles, California, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Los_Angeles",
+      "lng": "https://en.wikipedia.org/wiki/Los_Angeles",
+      "city": "https://en.wikipedia.org/wiki/Los_Angeles",
+      "state": "https://en.wikipedia.org/wiki/Los_Angeles",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Los_Angeles"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiashawaii",
@@ -1210,14 +2652,38 @@
     "instagram": "@permiashawaii",
     "line": "",
     "whatsapp": "",
-    "email": "permiashawaii@permiasnasional.com",
-    "website": "https://instagram.com/permiashawaii",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 21.3,
     "lng": -157.85,
     "geoSource": "https://en.wikipedia.org/wiki/Honolulu",
     "mapX": 526.6,
-    "mapY": 528.4
+    "mapY": 528.4,
+    "officialName": "Permias Hawaii",
+    "officialRegion": "West Coast I",
+    "level": "Regional",
+    "universityFull": "Hawaii",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Honolulu, Hawaii, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Honolulu, Hawaii, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Honolulu",
+      "lng": "https://en.wikipedia.org/wiki/Honolulu",
+      "city": "https://en.wikipedia.org/wiki/Honolulu",
+      "state": "https://en.wikipedia.org/wiki/Honolulu",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Honolulu"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indoatlmu",
@@ -1230,14 +2696,38 @@
     "instagram": "@indoatlmu",
     "line": "",
     "whatsapp": "",
-    "email": "indoatlmu@permiasnasional.com",
-    "website": "https://instagram.com/indoatlmu",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ILMU",
     "lat": 33.97,
     "lng": -118.418,
     "geoSource": "https://en.wikipedia.org/wiki/Loyola_Marymount_University",
     "mapX": 353.4,
-    "mapY": 355.7
+    "mapY": 355.7,
+    "officialName": "ILMU",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "Loyola Marymount University (LMU)",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Loyola Marymount University (LMU), listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Loyola Marymount University (LMU), terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Loyola_Marymount_University",
+      "lng": "https://en.wikipedia.org/wiki/Loyola_Marymount_University",
+      "city": "https://en.wikipedia.org/wiki/Loyola_Marymount_University",
+      "state": "https://en.wikipedia.org/wiki/Loyola_Marymount_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Loyola_Marymount_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-uscasis",
@@ -1250,14 +2740,38 @@
     "instagram": "@uscasis",
     "line": "",
     "whatsapp": "",
-    "email": "uscasis@permiasnasional.com",
-    "website": "https://instagram.com/uscasis",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=USC%20",
     "lat": 34.0206,
     "lng": -118.2848,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Southern_California",
     "mapX": 356.1,
-    "mapY": 355.2
+    "mapY": 355.2,
+    "officialName": "USC ASIS",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "University of Southern California",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Southern California, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Southern California, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Southern_California",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Southern_California",
+      "city": "https://en.wikipedia.org/wiki/University_of_Southern_California",
+      "state": "https://en.wikipedia.org/wiki/University_of_Southern_California",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Southern_California"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-pepperdinebois",
@@ -1270,14 +2784,38 @@
     "instagram": "@pepperdine.bois",
     "line": "",
     "whatsapp": "",
-    "email": "pepperdine.bois@permiasnasional.com",
-    "website": "https://instagram.com/pepperdine.bois",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Pepp",
     "lat": 34.0387,
     "lng": -118.7076,
     "geoSource": "https://en.wikipedia.org/wiki/Pepperdine_University",
     "mapX": 348.6,
-    "mapY": 353
+    "mapY": 353,
+    "officialName": "Pepperdine BOIS",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "Pepperdine University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Pepperdine University, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Pepperdine University, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Pepperdine_University",
+      "lng": "https://en.wikipedia.org/wiki/Pepperdine_University",
+      "city": "https://en.wikipedia.org/wiki/Pepperdine_University",
+      "state": "https://en.wikipedia.org/wiki/Pepperdine_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Pepperdine_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-bruinsibsa",
@@ -1290,14 +2828,38 @@
     "instagram": "@bruins.ibsa",
     "line": "",
     "whatsapp": "",
-    "email": "bruins.ibsa@permiasnasional.com",
-    "website": "https://instagram.com/bruins.ibsa",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=IBSA",
     "lat": 34.0722,
     "lng": -118.4427,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_Los_Angeles",
     "mapX": 353.5,
-    "mapY": 353.4
+    "mapY": 353.4,
+    "officialName": "IBSA Bruins UCLA",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "University of California, Los Angeles (UCLA)",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of California, Los Angeles (UCLA), listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of California, Los Angeles (UCLA), terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_California%2C_Los_Angeles",
+      "lng": "https://en.wikipedia.org/wiki/University_of_California%2C_Los_Angeles",
+      "city": "https://en.wikipedia.org/wiki/University_of_California%2C_Los_Angeles",
+      "state": "https://en.wikipedia.org/wiki/University_of_California%2C_Los_Angeles",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_California%2C_Los_Angeles"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasphoenix",
@@ -1310,14 +2872,38 @@
     "instagram": "@permiasphoenix",
     "line": "",
     "whatsapp": "",
-    "email": "permiasphoenix@permiasnasional.com",
-    "website": "https://instagram.com/permiasphoenix",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 33.4483,
     "lng": -112.0739,
     "geoSource": "https://en.wikipedia.org/wiki/Phoenix%2C_Arizona",
     "mapX": 466.7,
-    "mapY": 391.6
+    "mapY": 391.6,
+    "officialName": "Permias Phoenix",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "University of Phoenix",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Phoenix, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Phoenix, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Phoenix%2C_Arizona",
+      "lng": "https://en.wikipedia.org/wiki/Phoenix%2C_Arizona",
+      "city": "https://en.wikipedia.org/wiki/Phoenix%2C_Arizona",
+      "state": "https://en.wikipedia.org/wiki/Phoenix%2C_Arizona",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Phoenix%2C_Arizona"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiastucson",
@@ -1330,14 +2916,36 @@
     "instagram": "@permiastucson",
     "line": "",
     "whatsapp": "",
-    "email": "permiastucson@permiasnasional.com",
-    "website": "https://instagram.com/permiastucson",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 32.2319,
     "lng": -110.9527,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Arizona",
     "mapX": 482.9,
-    "mapY": 421.9
+    "mapY": 421.9,
+    "officialName": "Permias Tucson",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Arizona, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Arizona, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Arizona",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Arizona",
+      "city": "https://en.wikipedia.org/wiki/University_of_Arizona",
+      "state": "https://en.wikipedia.org/wiki/University_of_Arizona",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Arizona"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasclaremont",
@@ -1350,14 +2958,36 @@
     "instagram": "@permiasclaremont",
     "line": "",
     "whatsapp": "",
-    "email": "permiasclaremont@permiasnasional.com",
-    "website": "https://instagram.com/permiasclaremont",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 34.1025,
     "lng": -117.7125,
     "geoSource": "https://en.wikipedia.org/wiki/Claremont_Colleges",
     "mapX": 366.9,
-    "mapY": 356
+    "mapY": 356,
+    "officialName": "Permias Claremont",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Claremont Colleges, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Claremont Colleges, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Claremont_Colleges",
+      "lng": "https://en.wikipedia.org/wiki/Claremont_Colleges",
+      "city": "https://en.wikipedia.org/wiki/Claremont_Colleges",
+      "state": "https://en.wikipedia.org/wiki/Claremont_Colleges",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Claremont_Colleges"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasutah",
@@ -1370,14 +3000,36 @@
     "instagram": "@permiasutah",
     "line": "",
     "whatsapp": "",
-    "email": "permiasutah@permiasnasional.com",
-    "website": "https://instagram.com/permiasutah",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 40.7608,
     "lng": -111.8911,
     "geoSource": "https://en.wikipedia.org/wiki/Salt_Lake_City",
     "mapX": 498.5,
-    "mapY": 231.1
+    "mapY": 231.1,
+    "officialName": "Permias Utah",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Regional Utah, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Regional Utah, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Salt_Lake_City",
+      "lng": "https://en.wikipedia.org/wiki/Salt_Lake_City",
+      "city": "https://en.wikipedia.org/wiki/Salt_Lake_City",
+      "state": "https://en.wikipedia.org/wiki/Salt_Lake_City",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Salt_Lake_City"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiaslb",
@@ -1390,14 +3042,38 @@
     "instagram": "@permiaslb",
     "line": "",
     "whatsapp": "",
-    "email": "permiaslb@permiasnasional.com",
-    "website": "https://instagram.com/permiaslb",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 33.783,
     "lng": -118.1129,
     "geoSource": "https://en.wikipedia.org/wiki/California_State_University%2C_Long_Beach",
     "mapX": 357.9,
-    "mapY": 361.2
+    "mapY": 361.2,
+    "officialName": "Permias CSULB",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "California State University, Long Beach",
+    "description": {
+      "en": "Campus chapter for Indonesian students at California State University, Long Beach, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di California State University, Long Beach, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/California_State_University%2C_Long_Beach",
+      "lng": "https://en.wikipedia.org/wiki/California_State_University%2C_Long_Beach",
+      "city": "https://en.wikipedia.org/wiki/California_State_University%2C_Long_Beach",
+      "state": "https://en.wikipedia.org/wiki/California_State_University%2C_Long_Beach",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/California_State_University%2C_Long_Beach"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasgoldencolorado",
@@ -1410,14 +3086,36 @@
     "instagram": "@permiasgolden.colorado",
     "line": "",
     "whatsapp": "",
-    "email": "permiasgolden.colorado@permiasnasional.com",
-    "website": "https://instagram.com/permiasgolden.colorado",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 39.7533,
     "lng": -105.2153,
     "geoSource": "https://en.wikipedia.org/wiki/Golden%2C_Colorado",
     "mapX": 608.1,
-    "mapY": 268.8
+    "mapY": 268.8,
+    "officialName": "Permias Golden - Colorado",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Regional Colorado, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Regional Colorado, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Golden%2C_Colorado",
+      "lng": "https://en.wikipedia.org/wiki/Golden%2C_Colorado",
+      "city": "https://en.wikipedia.org/wiki/Golden%2C_Colorado",
+      "state": "https://en.wikipedia.org/wiki/Golden%2C_Colorado",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Golden%2C_Colorado"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-biolabisa",
@@ -1430,14 +3128,38 @@
     "instagram": "@biolabisa",
     "line": "",
     "whatsapp": "",
-    "email": "biolabisa@permiasnasional.com",
-    "website": "https://instagram.com/biolabisa",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Biol",
     "lat": 33.9056,
     "lng": -118.0167,
     "geoSource": "https://en.wikipedia.org/wiki/Biola_University",
     "mapX": 360.3,
-    "mapY": 358.9
+    "mapY": 358.9,
+    "officialName": "Biola Bisa",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "Biola University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Biola University, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Biola University, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Biola_University",
+      "lng": "https://en.wikipedia.org/wiki/Biola_University",
+      "city": "https://en.wikipedia.org/wiki/Biola_University",
+      "state": "https://en.wikipedia.org/wiki/Biola_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Biola_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasac",
@@ -1450,14 +3172,38 @@
     "instagram": "@permias_ac",
     "line": "",
     "whatsapp": "",
-    "email": "permias_ac@permiasnasional.com",
-    "website": "https://instagram.com/permias_ac",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 34.1686,
     "lng": -118.185,
     "geoSource": "https://en.wikipedia.org/wiki/ArtCenter_College_of_Design",
     "mapX": 358.7,
-    "mapY": 352.5
+    "mapY": 352.5,
+    "officialName": "Permias Art Center",
+    "officialRegion": "West Coast I",
+    "level": "University",
+    "universityFull": "Art Center College of Design",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Art Center College of Design, listed by PERMIAS Nasional in its West Coast I region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Art Center College of Design, terdaftar di PERMIAS Nasional wilayah West Coast I."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/ArtCenter_College_of_Design",
+      "lng": "https://en.wikipedia.org/wiki/ArtCenter_College_of_Design",
+      "city": "https://en.wikipedia.org/wiki/ArtCenter_College_of_Design",
+      "state": "https://en.wikipedia.org/wiki/ArtCenter_College_of_Design",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/ArtCenter_College_of_Design"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasusfca",
@@ -1470,14 +3216,38 @@
     "instagram": "@permias.usfca",
     "line": "",
     "whatsapp": "",
-    "email": "permias.usfca@permiasnasional.com",
-    "website": "https://instagram.com/permias.usfca",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 37.7794,
     "lng": -122.4519,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_San_Francisco",
     "mapX": 305.5,
-    "mapY": 254.5
+    "mapY": 254.5,
+    "officialName": "Permias USF",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "University of San Francisco",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of San Francisco, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of San Francisco, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_San_Francisco",
+      "lng": "https://en.wikipedia.org/wiki/University_of_San_Francisco",
+      "city": "https://en.wikipedia.org/wiki/University_of_San_Francisco",
+      "state": "https://en.wikipedia.org/wiki/University_of_San_Francisco",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_San_Francisco"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-stanfordindonesia",
@@ -1490,14 +3260,38 @@
     "instagram": "@stanford.indonesia",
     "line": "",
     "whatsapp": "",
-    "email": "stanford.indonesia@permiasnasional.com",
-    "website": "https://instagram.com/stanford.indonesia",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Stan",
     "lat": 37.4275,
     "lng": -122.1703,
     "geoSource": "https://en.wikipedia.org/wiki/Stanford_University",
     "mapX": 308.1,
-    "mapY": 263.4
+    "mapY": 263.4,
+    "officialName": "Stanford ISA",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "Stanford University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Stanford University, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Stanford University, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Stanford_University",
+      "lng": "https://en.wikipedia.org/wiki/Stanford_University",
+      "city": "https://en.wikipedia.org/wiki/Stanford_University",
+      "state": "https://en.wikipedia.org/wiki/Stanford_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Stanford_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-berkeleybisa",
@@ -1510,14 +3304,38 @@
     "instagram": "@berkeleybisa",
     "line": "",
     "whatsapp": "",
-    "email": "berkeleybisa@permiasnasional.com",
-    "website": "https://instagram.com/berkeleybisa",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Berk",
     "lat": 37.8719,
     "lng": -122.2583,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_Berkeley",
     "mapX": 309.4,
-    "mapY": 253.4
+    "mapY": 253.4,
+    "officialName": "Berkeley BISA",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "University of California, Berkeley (UCB)",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of California, Berkeley (UCB), listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of California, Berkeley (UCB), terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_California%2C_Berkeley",
+      "lng": "https://en.wikipedia.org/wiki/University_of_California%2C_Berkeley",
+      "city": "https://en.wikipedia.org/wiki/University_of_California%2C_Berkeley",
+      "state": "https://en.wikipedia.org/wiki/University_of_California%2C_Berkeley",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_California%2C_Berkeley"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasdeanza",
@@ -1530,14 +3348,38 @@
     "instagram": "@permias_deanza",
     "line": "",
     "whatsapp": "",
-    "email": "permias_deanza@permiasnasional.com",
-    "website": "https://instagram.com/permias_deanza",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 37.3192,
     "lng": -122.0453,
     "geoSource": "https://en.wikipedia.org/wiki/De_Anza_College",
     "mapX": 309.5,
-    "mapY": 266.4
+    "mapY": 266.4,
+    "officialName": "Permias De Anza",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "De Anza College",
+    "description": {
+      "en": "Campus chapter for Indonesian students at De Anza College, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di De Anza College, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/De_Anza_College",
+      "lng": "https://en.wikipedia.org/wiki/De_Anza_College",
+      "city": "https://en.wikipedia.org/wiki/De_Anza_College",
+      "state": "https://en.wikipedia.org/wiki/De_Anza_College",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/De_Anza_College"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasucd",
@@ -1550,14 +3392,38 @@
     "instagram": "@permiasucd",
     "line": "",
     "whatsapp": "",
-    "email": "permiasucd@permiasnasional.com",
-    "website": "https://instagram.com/permiasucd",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 38.54,
     "lng": -121.75,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_Davis",
     "mapX": 322.2,
-    "mapY": 241.5
+    "mapY": 241.5,
+    "officialName": "Permias UC Davis",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "University of California, Davis (UCD)",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of California, Davis (UCD), listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of California, Davis (UCD), terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_California%2C_Davis",
+      "lng": "https://en.wikipedia.org/wiki/University_of_California%2C_Davis",
+      "city": "https://en.wikipedia.org/wiki/University_of_California%2C_Davis",
+      "state": "https://en.wikipedia.org/wiki/University_of_California%2C_Davis",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_California%2C_Davis"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiassfba",
@@ -1570,14 +3436,36 @@
     "instagram": "@permias.sfba",
     "line": "",
     "whatsapp": "",
-    "email": "permias.sfba@permiasnasional.com",
-    "website": "https://instagram.com/permias.sfba",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 37.7775,
     "lng": -122.4164,
     "geoSource": "https://en.wikipedia.org/wiki/San_Francisco",
     "mapX": 306.1,
-    "mapY": 254.7
+    "mapY": 254.7,
+    "officialName": "Permias SFBA",
+    "officialRegion": "West Coast II",
+    "level": "Regional",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around San Francisco, California, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar San Francisco, California, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/San_Francisco",
+      "lng": "https://en.wikipedia.org/wiki/San_Francisco",
+      "city": "https://en.wikipedia.org/wiki/San_Francisco",
+      "state": "https://en.wikipedia.org/wiki/San_Francisco",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/San_Francisco"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-indodvc",
@@ -1590,14 +3478,38 @@
     "instagram": "@indodvc",
     "line": "",
     "whatsapp": "",
-    "email": "indodvc@permiasnasional.com",
-    "website": "https://instagram.com/indodvc",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo",
     "lat": 37.9714,
     "lng": -122.07,
     "geoSource": "https://en.wikipedia.org/wiki/Diablo_Valley_College",
     "mapX": 313.2,
-    "mapY": 252.2
+    "mapY": 252.2,
+    "officialName": "IndoDVC",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "Diablo Valley College",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Diablo Valley College, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Diablo Valley College, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Diablo_Valley_College",
+      "lng": "https://en.wikipedia.org/wiki/Diablo_Valley_College",
+      "city": "https://en.wikipedia.org/wiki/Diablo_Valley_College",
+      "state": "https://en.wikipedia.org/wiki/Diablo_Valley_College",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Diablo_Valley_College"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasspokane",
@@ -1610,14 +3522,38 @@
     "instagram": "@permiasspokane",
     "line": "",
     "whatsapp": "",
-    "email": "permiasspokane@permiasnasional.com",
-    "website": "https://instagram.com/permiasspokane",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 47.6589,
     "lng": -117.425,
     "geoSource": "https://en.wikipedia.org/wiki/Spokane%2C_Washington",
     "mapX": 442.8,
-    "mapY": 62.6
+    "mapY": 62.6,
+    "officialName": "Permias Spokane",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "Gonzaga University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Gonzaga University, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Gonzaga University, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Spokane%2C_Washington",
+      "lng": "https://en.wikipedia.org/wiki/Spokane%2C_Washington",
+      "city": "https://en.wikipedia.org/wiki/Spokane%2C_Washington",
+      "state": "https://en.wikipedia.org/wiki/Spokane%2C_Washington",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Spokane%2C_Washington"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasseattle",
@@ -1630,14 +3566,40 @@
     "instagram": "@permiasseattle",
     "line": "",
     "whatsapp": "",
-    "email": "permiasseattle@permiasnasional.com",
-    "website": "https://instagram.com/permiasseattle",
+    "website": "https://permiasseattle.org/",
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 47.6039,
     "lng": -122.33,
     "geoSource": "https://en.wikipedia.org/wiki/Seattle",
     "mapX": 370.3,
-    "mapY": 44.7
+    "mapY": 44.7,
+    "officialName": "Permias Seattle",
+    "officialRegion": "West Coast II",
+    "level": "Regional",
+    "universityFull": "Bellevue College, Edmonds College, Green River College, North Seattle College, Shoreline Community College, University of Washington",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Seattle, Washington, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Seattle, Washington, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Seattle",
+      "lng": "https://en.wikipedia.org/wiki/Seattle",
+      "city": "https://en.wikipedia.org/wiki/Seattle",
+      "state": "https://en.wikipedia.org/wiki/Seattle",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "website": "https://permiasseattle.org/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://permiasseattle.org/",
+      "https://en.wikipedia.org/wiki/Seattle"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-bellevueindoclub",
@@ -1650,14 +3612,38 @@
     "instagram": "@bellevueindoclub",
     "line": "",
     "whatsapp": "",
-    "email": "bellevueindoclub@permiasnasional.com",
-    "website": "https://instagram.com/bellevueindoclub",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 47.585,
     "lng": -122.1493,
     "geoSource": "https://en.wikipedia.org/wiki/Bellevue_College",
     "mapX": 372.8,
-    "mapY": 45.9
+    "mapY": 45.9,
+    "officialName": "Permias Bellevue",
+    "officialRegion": "West Coast II",
+    "level": "Regional",
+    "universityFull": "Bellevue College",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Bellevue, Washington, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Bellevue, Washington, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Bellevue_College",
+      "lng": "https://en.wikipedia.org/wiki/Bellevue_College",
+      "city": "https://en.wikipedia.org/wiki/Bellevue_College",
+      "state": "https://en.wikipedia.org/wiki/Bellevue_College",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Bellevue_College"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasoregon",
@@ -1670,14 +3656,38 @@
     "instagram": "@permiasoregon",
     "line": "",
     "whatsapp": "",
-    "email": "permiasoregon@permiasnasional.com",
-    "website": "https://instagram.com/permiasoregon",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 44.5639,
     "lng": -123.2747,
     "geoSource": "https://en.wikipedia.org/wiki/Oregon_State_University",
     "mapX": 336.5,
-    "mapY": 105.2
+    "mapY": 105.2,
+    "officialName": "Permias Oregon",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "Oregon State University",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Oregon State University, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Oregon State University, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Oregon_State_University",
+      "lng": "https://en.wikipedia.org/wiki/Oregon_State_University",
+      "city": "https://en.wikipedia.org/wiki/Oregon_State_University",
+      "state": "https://en.wikipedia.org/wiki/Oregon_State_University",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Oregon_State_University"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-isauwhuskies",
@@ -1690,14 +3700,38 @@
     "instagram": "@isauwhuskies",
     "line": "",
     "whatsapp": "",
-    "email": "isauwhuskies@permiasnasional.com",
-    "website": "https://instagram.com/isauwhuskies",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISAU",
     "lat": 47.6542,
     "lng": -122.3081,
     "geoSource": "https://en.wikipedia.org/wiki/University_of_Washington",
     "mapX": 371,
-    "mapY": 43.7
+    "mapY": 43.7,
+    "officialName": "ISAUW",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "University of Washington",
+    "description": {
+      "en": "Campus chapter for Indonesian students at University of Washington, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di University of Washington, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/University_of_Washington",
+      "lng": "https://en.wikipedia.org/wiki/University_of_Washington",
+      "city": "https://en.wikipedia.org/wiki/University_of_Washington",
+      "state": "https://en.wikipedia.org/wiki/University_of_Washington",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/University_of_Washington"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-iscshoreline",
@@ -1710,14 +3744,38 @@
     "instagram": "@iscshoreline",
     "line": "",
     "whatsapp": "",
-    "email": "iscshoreline@permiasnasional.com",
-    "website": "https://instagram.com/iscshoreline",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISC%20",
     "lat": 47.7483,
     "lng": -122.3594,
     "geoSource": "https://en.wikipedia.org/wiki/Shoreline_College",
     "mapX": 370.8,
-    "mapY": 41.5
+    "mapY": 41.5,
+    "officialName": "ISC Shoreline",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "Shoreline Community College",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Shoreline Community College, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Shoreline Community College, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Shoreline_College",
+      "lng": "https://en.wikipedia.org/wiki/Shoreline_College",
+      "city": "https://en.wikipedia.org/wiki/Shoreline_College",
+      "state": "https://en.wikipedia.org/wiki/Shoreline_College",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Shoreline_College"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-permiasbham",
@@ -1730,14 +3788,36 @@
     "instagram": "@permiasbham",
     "line": "",
     "whatsapp": "",
-    "email": "permiasbham@permiasnasional.com",
-    "website": "https://instagram.com/permiasbham",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 48.75,
     "lng": -122.4833,
     "geoSource": "https://en.wikipedia.org/wiki/Bellingham%2C_Washington",
     "mapX": 375.4,
-    "mapY": 19.8
+    "mapY": 19.8,
+    "officialName": "Permias Bellingham",
+    "officialRegion": "West Coast II",
+    "level": "Regional",
+    "description": {
+      "en": "City-wide chapter for Indonesian students around Bellingham, Washington, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter tingkat kota bagi mahasiswa Indonesia di sekitar Bellingham, Washington, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Bellingham%2C_Washington",
+      "lng": "https://en.wikipedia.org/wiki/Bellingham%2C_Washington",
+      "city": "https://en.wikipedia.org/wiki/Bellingham%2C_Washington",
+      "state": "https://en.wikipedia.org/wiki/Bellingham%2C_Washington",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Bellingham%2C_Washington"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-eicindoclub",
@@ -1750,14 +3830,38 @@
     "instagram": "@eicindoclub",
     "line": "",
     "whatsapp": "",
-    "email": "eicindoclub@permiasnasional.com",
-    "website": "https://instagram.com/eicindoclub",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Edmo",
     "lat": 47.8158,
     "lng": -122.3278,
     "geoSource": "https://en.wikipedia.org/wiki/Edmonds_College",
     "mapX": 371.7,
-    "mapY": 40.2
+    "mapY": 40.2,
+    "officialName": "Edmonds Indonesian Club",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "Edmonds College",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Edmonds College, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Edmonds College, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Edmonds_College",
+      "lng": "https://en.wikipedia.org/wiki/Edmonds_College",
+      "city": "https://en.wikipedia.org/wiki/Edmonds_College",
+      "state": "https://en.wikipedia.org/wiki/Edmonds_College",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Edmonds_College"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-isogrc",
@@ -1770,14 +3874,38 @@
     "instagram": "@isogrc",
     "line": "",
     "whatsapp": "",
-    "email": "isogrc@permiasnasional.com",
-    "website": "https://instagram.com/isogrc",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISO%20",
     "lat": 47.3133,
     "lng": -122.1783,
     "geoSource": "https://en.wikipedia.org/wiki/Green_River_College",
     "mapX": 370.7,
-    "mapY": 51.5
+    "mapY": 51.5,
+    "officialName": "ISO at Green River College",
+    "officialRegion": "West Coast II",
+    "level": "University",
+    "universityFull": "Green River College",
+    "description": {
+      "en": "Campus chapter for Indonesian students at Green River College, listed by PERMIAS Nasional in its West Coast II region.",
+      "id": "Chapter kampus bagi mahasiswa Indonesia di Green River College, terdaftar di PERMIAS Nasional wilayah West Coast II."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Green_River_College",
+      "lng": "https://en.wikipedia.org/wiki/Green_River_College",
+      "city": "https://en.wikipedia.org/wiki/Green_River_College",
+      "state": "https://en.wikipedia.org/wiki/Green_River_College",
+      "universityFull": "https://permiasnasional.com/about/chapters/",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Green_River_College"
+    ],
+    "status": "verified"
   },
   {
     "id": "c-imapausacanada",
@@ -1790,13 +3918,35 @@
     "instagram": "@imapausacanada",
     "line": "",
     "whatsapp": "",
-    "email": "imapausacanada@permiasnasional.com",
-    "website": "https://instagram.com/imapausacanada",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=IMAP",
     "lat": 38.9047,
     "lng": -77.0164,
     "geoSource": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
     "mapX": 1093.5,
-    "mapY": 261.9
+    "mapY": 261.9,
+    "officialName": "IMAPA USA Canada",
+    "officialRegion": "West Coast I",
+    "level": "National",
+    "description": {
+      "en": "The national body that links every PERMIAS chapter in the United States.",
+      "id": "Badan nasional yang menghubungkan seluruh chapter PERMIAS di Amerika Serikat."
+    },
+    "fieldSources": {
+      "chapterName": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://permiasnasional.com/about/chapters/",
+      "region": "https://permiasnasional.com/about/chapters/",
+      "level": "https://permiasnasional.com/about/chapters/",
+      "lat": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+      "lng": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+      "city": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+      "state": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+      "description": "https://permiasnasional.com/about/chapters/"
+    },
+    "sources": [
+      "https://permiasnasional.com/about/chapters/",
+      "https://en.wikipedia.org/wiki/Washington%2C_D.C."
+    ],
+    "status": "verified"
   }
 ]
