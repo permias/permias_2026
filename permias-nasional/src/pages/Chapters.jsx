@@ -15,6 +15,8 @@ import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ChapterMap } from '../components/chapters/ChapterMap.jsx';
 import { IconArrowRight, IconArrowUpRight, IconChevronDown, IconInstagram, IconLocate, IconSearch } from '../components/ui/Icons.jsx';
 import { Reveal } from '../components/ui/Reveal.jsx';
+import { ChapterLogo } from '../components/chapters/ChapterLogo.jsx';
+import { chapterPath } from '../lib/chapterInfo.js';
 
 const sorted = [...chapters].sort((a, b) => campusName(a).localeCompare(campusName(b)));
 
@@ -32,7 +34,8 @@ function DetailCard({ c, onClose }) {
       aria-live="polite"
     >
       <div className="flex items-start justify-between gap-4">
-        <p className={cn('flex items-center gap-2 text-sm font-semibold', tone.text)}>
+        <ChapterLogo c={c} size={56} />
+        <p className={cn('mr-auto mt-1 flex items-center gap-2 text-sm font-semibold', tone.text)}>
           <span className={cn('h-2 w-2 rounded-full', tone.dot)} aria-hidden="true" />
           {pick(REGION_LABELS[c.region])}
           <span className="text-muted-foreground">/ {isRegional(c) ? t('dir.kindCity') : t('dir.kindCampus')}</span>
@@ -50,6 +53,13 @@ function DetailCard({ c, onClose }) {
       </p>
       {c.description && <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-ink/80">{pick(c.description)}</p>}
       <div className="mt-5 flex flex-wrap gap-2">
+        <Link
+          to={chapterPath(c)}
+          className="inline-flex min-h-[44px] items-center gap-2 rounded-[12px] bg-merah px-4 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,.25)] transition-[background-color,transform] duration-150 hover:bg-[#B50F21] active:scale-[0.97]"
+        >
+          {t('chapters.openPage')}
+          <IconArrowRight className="h-4 w-4" />
+        </Link>
         {c.instagram && (
           <a
             href={instagramUrl(c.instagram)}
@@ -137,6 +147,12 @@ export function Chapters() {
     return list;
   }, [q, index, stateId, region, distances]);
 
+  // search results and the selected chapter fly the map to where they are
+  const focus = useMemo(() => {
+    if (chapterId) return chapters.filter((c) => c.id === chapterId);
+    if (q.trim() && results.length > 0 && results.length <= 15) return results;
+    return undefined;
+  }, [chapterId, q, results]);
   const highlight = useMemo(() => (q || region ? new Set(results.map((c) => c.id)) : undefined), [q, region, results]);
   const selected = chapters.find((c) => c.id === chapterId);
   const stateName = states.find((s) => s.id === stateId)?.label;
@@ -152,9 +168,11 @@ export function Chapters() {
           <div className="lg:sticky lg:top-24">
             <Reveal x={-24} className="rounded-[28px] border border-border bg-surface p-3 shadow-[0_30px_80px_-50px_rgba(19,35,63,.55)] sm:p-5">
               <div className="flex flex-wrap items-center justify-between gap-3 px-1 pb-3">
-                <p className="font-display text-2xl text-ink">{stateName || t('chapters.allUs')}</p>
-                {stateId && (
-                  <button type="button" onClick={() => set({ state: '', chapter: '' })} className="inline-flex min-h-[40px] items-center gap-1.5 rounded-full border border-ink/15 px-3.5 text-sm font-semibold text-ink transition-colors hover:bg-ink/5">
+                <p className="font-display text-2xl text-ink" aria-live="polite">
+                  {selected ? `${selected.city}, ${selected.state}` : focus ? `“${q.trim()}”` : stateName || t('chapters.allUs')}
+                </p>
+                {(stateId || focus) && (
+                  <button type="button" onClick={() => set({ state: '', chapter: '', q: '' })} className="inline-flex min-h-[40px] items-center gap-1.5 rounded-full border border-ink/15 px-3.5 text-sm font-semibold text-ink transition-colors hover:bg-ink/5">
                     {t('chapters.zoomOut')}
                   </button>
                 )}
@@ -162,6 +180,7 @@ export function Chapters() {
               <ChapterMap
                 selectedState={stateId}
                 selectedChapter={chapterId}
+                focus={focus}
                 highlight={highlight}
                 userPoint={userPoint}
                 onSelectState={(id) => set({ state: id, chapter: '' })}

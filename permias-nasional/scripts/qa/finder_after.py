@@ -18,7 +18,7 @@ with sync_playwright() as p:
     b = p.chromium.launch(headless=True, channel='chrome')
     for theme in ['light', 'dark']:
         ctx = b.new_context(viewport={'width': 1440, 'height': 900})
-        ctx.add_init_script(f"localStorage.setItem('permias_cookie_consent','declined'); localStorage.setItem('permias_theme','{theme}'); localStorage.setItem('permias_lang','en')")
+        ctx.add_init_script(f"localStorage.setItem('permias_cookie_consent','declined'); localStorage.setItem('permias_theme',JSON.stringify('{theme}')); localStorage.setItem('permias_lang',JSON.stringify('en'))")
         pg = ctx.new_page(); pg.goto(base + '/', wait_until='load'); pg.wait_for_timeout(1500)
         pg.locator('#cari-chapter').scroll_into_view_if_needed(); pg.wait_for_timeout(800)
         res[theme] = pg.evaluate(JS)

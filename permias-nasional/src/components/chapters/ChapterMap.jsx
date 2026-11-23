@@ -1,11 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { motion, useInView } from 'motion/react';
+import { AnimatePresence, motion, useInView } from 'motion/react';
 import usaMap from '@svg-maps/usa';
 import { svgPathBbox } from 'svg-path-bbox';
 import { chapters, chaptersByStateId } from '../../data/chapters.js';
 import { useLanguage } from '../../context/LanguageContext.jsx';
 import { motionTokens, springs } from '../../lib/motion.js';
 import { cn } from '../../utils/cn.js';
+import { chapterMedia, placePhoto } from '../../lib/chapterInfo.js';
+import { ChapterLogo } from './ChapterLogo.jsx';
 
 const BASE = usaMap.viewBox.split(' ').map(Number); // [x, y, w, h]
 const ASPECT = BASE[2] / BASE[3];
@@ -31,6 +33,66 @@ function stateViewBox(stateId) {
   return [cx - w / 2, cy - h / 2, w, h];
 }
 
+/** viewBox that frames a set of chapters (search results, one selected chapter). */
+function pointsViewBox(list, minW = 210) {
+  const pts = list.filter((c) => c.mapX != null);
+  if (!pts.length) return null;
+  const xs = pts.map((c) => c.mapX);
+  const ys = pts.map((c) => c.mapY);
+  const cx = (Math.min(...xs) + Math.max(...xs)) / 2;
+  const cy = (Math.min(...ys) + Math.max(...ys)) / 2;
+  let w = Math.max((Math.max(...xs) - Math.min(...xs)) * 1.4, minW);
+  let h = Math.max((Math.max(...ys) - Math.min(...ys)) * 1.4, minW / ASPECT);
+  if (w / h > ASPECT) h = w / ASPECT;
+  else w = h * ASPECT;
+  if (w >= BASE[2]) return BASE;
+  return [cx - w / 2, cy - h / 2, w, h];
+}
+
+/** Hover / tap card: the chapter's own photo when the media collector found one, else its campus or city photo. */
+function PinCard({ items }) {
+  const { t } = useLanguage();
+  if (items.length > 1) {
+    return (
+      <div className="w-[260px] p-3">
+        <p className="px-1 text-sm font-bold leading-tight text-ink">{t('map.clusterTitle', { n: items.length })}</p>
+        <ul className="mt-2 space-y-1.5">
+          {items.slice(0, 4).map((c) => (
+            <li key={c.id} className="flex items-center gap-2.5">
+              <ChapterLogo c={c} size={28} />
+              <span className="min-w-0">
+                <span className="block truncate text-[13px] font-semibold leading-tight text-ink">{c.chapterName}</span>
+                <span className="block truncate text-xs text-muted-foreground">{c.university}</span>
+              </span>
+            </li>
+          ))}
+        </ul>
+        {items.length > 4 && <p className="mt-1.5 px-1 text-xs text-muted-foreground">+{items.length - 4}</p>}
+      </div>
+    );
+  }
+  const c = items[0];
+  const own = chapterMedia(c).photos[0];
+  const img = own ? own.src : placePhoto(c).small;
+  return (
+    <div className="w-[248px] overflow-hidden">
+      <div className="relative h-[108px] bg-[#0A1220]">
+        {img && <img src={img} alt="" width="248" height="108" className="h-full w-full object-cover" />}
+        <span className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" aria-hidden="true" />
+        <span className="absolute -bottom-5 left-3 rounded-full ring-[3px] ring-white dark:ring-[#16223A]">
+          <ChapterLogo c={c} size={44} ring={false} />
+        </span>
+      </div>
+      <div className="px-3 pb-3 pt-7">
+        <p className="text-[15px] font-bold leading-tight text-ink">{c.chapterName}</p>
+        <p className="mt-0.5 text-xs leading-snug text-muted-foreground">
+          {c.universityFull || c.university}, {c.city}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 /** Greedy clustering in map units; `d` shrinks as you zoom in. */
 function cluster(list, d) {
   const out = [];
@@ -48,6 +110,7 @@ function cluster(list, d) {
 export function ChapterMap({
   selectedState = '',
   selectedChapter = '',
+  focus, // chapters to frame (search results); wins over selectedState
   highlight, // Set of chapter ids, or undefined = all
   userPoint, // { mapX, mapY } | null
   onSelectState,
@@ -64,7 +127,11 @@ export function ChapterMap({
   const [hover, setHover] = useState(null); // { x, y, items }
   const [hoverState, setHoverState] = useState(null);
 
-  const vb = zoom && selectedState ? stateViewBox(selectedState) : BASE;
+  const selChapter = selectedChapter ? PINNED.find((c) => c.id === selectedChapter) : null;
+  const focusKey = focus ? focus.map((c) => c.id).join(',') : '';
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const focusVb = useMemo(() => (focus && focus.length ? pointsViewBox(focus) : null), [focusKey]);
+  const vb = !zoom ? BASE : focusVb || (selectedState ? stateViewBox(selectedState) : BASE);
   const k = BASE[2] / vb[2];
   const r = 7 / Math.pow(k, 0.8);
   const groups = useMemo(() => cluster(PINNED, 15 / k), [k]);
@@ -77,6 +144,12 @@ export function ChapterMap({
     return () => clearTimeout(id);
   }, [inView, settled]);
 
+  // keep the card inside the map: flip below pins near the top, shift sideways near the edges
+  const tipPlace = (x, y) => {
+    const fx = (x - vb[0]) / vb[2];
+    const fy = (y - vb[1]) / vb[3];
+    return cn(fy < 0.42 ? 'top-[14px]' : 'bottom-[14px]', fx < 0.22 ? '-translate-x-[12%]' : fx > 0.78 ? '-translate-x-[88%]' : '-translate-x-1/2');
+  };
   const pct = (x, y) => ({ left: `${((x - vb[0]) / vb[2]) * 100}%`, top: `${((y - vb[1]) / vb[3]) * 100}%` });
 
   return (
@@ -140,6 +213,7 @@ export function ChapterMap({
               style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
               className="cursor-pointer"
               onPointerEnter={() => setHover(g)}
+              onPointerLeave={() => setHover(null)}
               onClick={() => onSelectCluster?.(g.items)}
             >
               {settled && lit && !sel && (
@@ -177,27 +251,28 @@ export function ChapterMap({
         )}
       </motion.svg>
 
-      {hover && (
-        <div
-          className="glass pointer-events-none absolute z-10 w-max max-w-[240px] -translate-x-1/2 rounded-[16px] px-3 py-2"
-          style={{ ...pct(hover.x, hover.y), transform: 'translate(-50%, calc(-100% - 14px))' }}
-          role="presentation"
-        >
-          {hover.items.length === 1 ? (
-            <>
-              <p className="text-sm font-bold leading-tight text-ink">{hover.items[0].chapterName}</p>
-              <p className="text-xs text-muted-foreground">
-                {hover.items[0].university}, {hover.items[0].city}
-              </p>
-            </>
-          ) : (
-            <>
-              <p className="text-sm font-bold leading-tight text-ink">{t('map.clusterTitle', { n: hover.items.length })}</p>
-              <p className="line-clamp-2 text-xs text-muted-foreground">{hover.items.map((c) => c.chapterName).join(', ')}</p>
-            </>
-          )}
-        </div>
-      )}
+      <AnimatePresence>
+        {(hover || selChapter) && (
+          <motion.div
+            key={hover ? hover.id + hover.items.length : selChapter.id}
+            className="pointer-events-none absolute z-10"
+            style={hover ? pct(hover.x, hover.y) : pct(selChapter.mapX, selChapter.mapY)}
+            initial={{ opacity: 0, scale: motionTokens.scale.press }}
+            animate={{ opacity: 1, scale: 1, transition: { duration: motionTokens.duration.fast, ease: motionTokens.easing.smooth, delay: hover ? 0 : motionTokens.duration.crawl * 0.9 } }}
+            exit={{ opacity: 0, transition: { duration: motionTokens.duration.instant } }}
+            role="presentation"
+          >
+            <div
+              className={cn(
+                'absolute left-0 overflow-hidden rounded-[18px] border border-white/70 bg-white/[0.94] shadow-[0_24px_50px_-20px_rgba(15,27,45,.55)] backdrop-blur-xl dark:border-white/10 dark:bg-[#16223A]/[0.96]',
+                tipPlace(hover ? hover.x : selChapter.mapX, hover ? hover.y : selChapter.mapY),
+              )}
+            >
+              <PinCard items={hover ? hover.items : [selChapter]} />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -150,7 +150,7 @@ export function buildSearchIndex(lang = 'en') {
     category: 'chapters',
     title: c.chapterName,
     subtitle: `${c.university}, ${c.city}, ${c.state}`,
-    href: `/chapters?state=${c.stateId}&chapter=${c.id}`,
+    href: `/chapters/${c.id.replace(/^c-/, '')}`,
     keywords: [c.university, c.universityFull, c.city, c.state, c.stateId, c.instagram, c.region, pick(c.description)],
     boost: 0.05,
   }));

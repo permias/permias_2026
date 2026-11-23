@@ -560,6 +560,7 @@ export const phrases = {
   'chapters.zoomOut': { en: 'Show all states', id: 'Tampilkan semua' },
   'chapters.closeDetail': { en: 'Close chapter details', id: 'Tutup detail chapter' },
   'chapters.website': { en: 'Website', id: 'Situs web' },
+  'chapters.openPage': { en: 'Open chapter page', id: 'Buka halaman chapter' },
   'chapters.verified': { en: 'Checked against the official PERMIAS Nasional chapter list. Sources:', id: 'Dicocokkan dengan daftar chapter resmi PERMIAS Nasional. Sumber:' },
   'chapters.unverified': { en: 'Not yet verified. Sources:', id: 'Belum terverifikasi. Sumber:' },
 };

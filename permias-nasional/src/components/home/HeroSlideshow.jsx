@@ -178,7 +178,7 @@ export function HeroSlideshow() {
                       {near.map((c, k) => (
                         <span key={c.id}>
                           {k > 0 && ', '}
-                          <Link to={`/chapters?state=${c.stateId}&chapter=${c.id}`} className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
+                          <Link to={`/chapters/${c.id.replace(/^c-/, '')}`} className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
                             {c.chapterName}
                           </Link>
                         </span>
