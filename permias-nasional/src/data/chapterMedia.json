@@ -23,24 +23,24 @@
       },
       {
         "src": "/images/chapters/national/3.webp",
-        "source": "https://www.instagram.com/p/Df0pMvTmTl1/",
-        "alt": "PERMIAS Nasional and KJRI Los Angeles meet to discuss developing Indonesian student talent",
-        "w": 1080,
-        "h": 1350
-      },
-      {
-        "src": "/images/chapters/national/4.webp",
         "source": "https://www.instagram.com/p/DfTYVaaG8q9/",
         "alt": "PERMIAS representatives receive a plaque at the Indonesian Consulate General in Chicago",
         "w": 1080,
         "h": 810
       },
       {
-        "src": "/images/chapters/national/5.webp",
+        "src": "/images/chapters/national/4.webp",
         "source": "https://www.instagram.com/p/DfTYVaaG8q9/",
         "alt": "Student leaders meet with consulate staff around a batik-covered table",
         "w": 1080,
         "h": 810
+      },
+      {
+        "src": "/images/chapters/national/5.webp",
+        "source": "https://www.instagram.com/p/Df0pMvTmTl1/",
+        "alt": "PERMIAS Nasional and KJRI Los Angeles meet to discuss developing Indonesian student talent",
+        "w": 1080,
+        "h": 1350
       },
       {
         "src": "/images/chapters/national/6.webp",
@@ -59,7 +59,15 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/isanu/1.webp",
+        "source": "https://static.wixstatic.com/media/4dcac1_aad9006d2e7a4d4a98aecb00be2b871d~mv2_d_1600_1202_s_2.jpeg",
+        "alt": "ISANU members pose for a group photo among flowers on a Boston campus plaza",
+        "w": 1600,
+        "h": 1202
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-theisabu": {
@@ -70,7 +78,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-permiasmass": {
     "logo": {
@@ -186,7 +195,29 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/indonesiaharvard/1.webp",
+        "source": "https://www.instagram.com/p/CxomnEjPzIH/",
+        "alt": "A speaker presents a talk on politics and policy for youth to Harvard Indonesian students",
+        "w": 1200,
+        "h": 900
+      },
+      {
+        "src": "/images/chapters/indonesiaharvard/2.webp",
+        "source": "https://www.instagram.com/p/CxomnEjPzIH/",
+        "alt": "Students listen to a presentation in a Harvard lecture hall",
+        "w": 1200,
+        "h": 900
+      },
+      {
+        "src": "/images/chapters/indonesiaharvard/3.webp",
+        "source": "https://www.instagram.com/p/DYt3rjFEXwr/",
+        "alt": "Thank-you graphic showing angklung and dance performers at the Harvard Arts Festival",
+        "w": 1080,
+        "h": 1350
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-isaunh": {
@@ -197,7 +228,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: all 6 latest posts in the public profile embed are videos/reels (no stills), and web search found no older public post links from @isaunh. No chapter website listed."
   },
   "c-isaumass": {
     "logo": {
@@ -207,7 +239,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-indonesiawpi": {
     "logo": {
@@ -217,7 +250,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Instagram @indonesia.wpi is private (embed disabled); logo from the public profile picture (og:image). No public posts reachable logged-out, web search found no public post links, and no chapter website is listed."
   },
   "c-berkleeindo": {
     "logo": {
@@ -254,24 +288,24 @@
     "photos": [
       {
         "src": "/images/chapters/permiaspennstate/1.webp",
+        "source": "https://www.instagram.com/p/DfbH6OtEfjh/",
+        "alt": "Members warm up beside a bonfire at night",
+        "w": 1080,
+        "h": 720
+      },
+      {
+        "src": "/images/chapters/permiaspennstate/2.webp",
         "source": "https://www.instagram.com/p/Dfe0IavjZYd/",
         "alt": "Recap collage of Permias Penn State members at a bonfire night",
         "w": 1072,
         "h": 1350
       },
       {
-        "src": "/images/chapters/permiaspennstate/2.webp",
+        "src": "/images/chapters/permiaspennstate/3.webp",
         "source": "https://www.instagram.com/p/Dfe0IavjZYd/",
         "alt": "Collage of members gathered around a campfire and snacks",
         "w": 1077,
         "h": 1352
-      },
-      {
-        "src": "/images/chapters/permiaspennstate/3.webp",
-        "source": "https://www.instagram.com/p/DfbH6OtEfjh/",
-        "alt": "Members warm up beside a bonfire at night",
-        "w": 1080,
-        "h": 720
       }
     ],
     "checked": "2026-11-22"
@@ -308,7 +342,15 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/permiasnyc/1.webp",
+        "source": "https://www.instagram.com/p/DdsYe1gAOn1/",
+        "alt": "PERMIAS NYC members pose together in an events graphic with a stamp frame",
+        "w": 1280,
+        "h": 1600
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-indonesiacolumbia": {
@@ -318,7 +360,22 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/indonesiacolumbia/1.webp",
+        "source": "https://www.instagram.com/p/DOwhKp_Erod/",
+        "alt": "Large group of Columbia Indonesian Society members and guests on a campus lawn with the Indonesian flag",
+        "w": 1440,
+        "h": 1440
+      },
+      {
+        "src": "/images/chapters/indonesiacolumbia/2.webp",
+        "source": "https://www.instagram.com/p/DOwhKp_Erod/",
+        "alt": "Members cheer together during an outdoor gathering at Columbia",
+        "w": 1440,
+        "h": 1440
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-permiasupitt": {
@@ -361,7 +418,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Instagram profile is public but shows 0 posts; logo from the public profile picture. Web search for older posts found none from @permiascuse. No chapter website listed."
   },
   "c-permiasnj": {
     "logo": {
@@ -371,7 +429,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-indonesiaatcornell": {
     "logo": {
@@ -380,7 +439,22 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/indonesiaatcornell/1.webp",
+        "source": "https://www.instagram.com/p/DPKEatTkkio/",
+        "alt": "Crowd at the Indonesian Association at Cornell food tent during a campus festival",
+        "w": 1080,
+        "h": 1349
+      },
+      {
+        "src": "/images/chapters/indonesiaatcornell/2.webp",
+        "source": "https://www.instagram.com/p/DPKEatTkkio/",
+        "alt": "Collage of members serving food at a Cornell cultural event",
+        "w": 1080,
+        "h": 1349
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-permiasrochesterny": {
@@ -391,7 +465,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-nyuindonesia": {
     "logo": {
@@ -400,7 +475,22 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/nyuindonesia/1.webp",
+        "source": "https://www.instagram.com/p/DOXKs_SjnK3/",
+        "alt": "Black-and-white collage of opening remarks at the NYU Indonesia welcoming picnic",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "src": "/images/chapters/nyuindonesia/2.webp",
+        "source": "https://www.instagram.com/p/DOXKs_SjnK3/",
+        "alt": "Recap graphic of the NYU Indonesia new-student welcoming event in a park",
+        "w": 1080,
+        "h": 1350
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-penncasila": {
@@ -410,7 +500,15 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/penncasila/1.webp",
+        "source": "https://www.instagram.com/p/CSxQo_NByHY/",
+        "alt": "PENNCASILA members hold the Indonesian flag at an Independence Day gathering",
+        "w": 1080,
+        "h": 1080
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-permiasdc": {
@@ -492,7 +590,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Instagram @permiasvt is private (embed disabled); logo from the public profile picture (og:image). No public posts reachable logged-out, web search found no public post links, and no chapter website is listed."
   },
   "c-indonesiahopkins": {
     "logo": {
@@ -527,7 +626,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Instagram has only 1 public post (an online-networking flyer); logo from the public profile picture. No chapter website listed."
   },
   "c-permiasuofsc": {
     "logo": {
@@ -537,7 +637,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-indonesiaumich": {
     "logo": {
@@ -546,7 +647,15 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/indonesiaumich/1.webp",
+        "source": "https://www.instagram.com/p/C6Tx2TxMKzy/",
+        "alt": "Participants race in a kerupuk-eating contest at an Indonesian Independence Day celebration",
+        "w": 1440,
+        "h": 1080
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-permiasou": {
@@ -556,7 +665,22 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/permiasou/1.webp",
+        "source": "https://www.instagram.com/p/DIGwhLIOEri/",
+        "alt": "Permias Ohio University members share food at a picnic table under a tent",
+        "w": 1440,
+        "h": 817
+      },
+      {
+        "src": "/images/chapters/permiasou/2.webp",
+        "source": "https://www.instagram.com/p/DIGwhLIOEri/",
+        "alt": "Members take a selfie at an outdoor picnic",
+        "w": 1440,
+        "h": 1080
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-permiaskalamazoo": {
@@ -591,18 +715,70 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/permiascolumbus/1.webp",
+        "source": "https://www.instagram.com/p/CsAXrtsM6wd/",
+        "alt": "PERMIAS Columbus members gather for a group photo in the Ohio Union atrium",
+        "w": 1440,
+        "h": 1438
+      },
+      {
+        "src": "/images/chapters/permiascolumbus/2.webp",
+        "source": "https://www.instagram.com/p/CsAXrtsM6wd/",
+        "alt": "Members pose in front of a presentation screen after a chapter talk",
+        "w": 1440,
+        "h": 1439
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-permiasmsu": {
     "logo": {
       "src": "/images/chapters/permiasmsu/logo.webp",
-      "source": "https://www.instagram.com/permiasmsu/",
+      "source": "https://static.wixstatic.com/media/104561_41a857f89c4b49288f9c058b4877b669~mv2.png",
       "w": 256,
       "h": 256
     },
-    "photos": [],
-    "checked": "2026-11-22"
+    "photos": [
+      {
+        "src": "/images/chapters/permiasmsu/1.webp",
+        "source": "https://static.wixstatic.com/media/104561_2044aadd1308460f8329dadb55df3c95~mv2_d_4928_3264_s_4_2.jpg",
+        "alt": "PERMIAS MSU members strike playful poses in front of Beaumont Tower",
+        "w": 1600,
+        "h": 1059
+      },
+      {
+        "src": "/images/chapters/permiasmsu/2.webp",
+        "source": "https://static.wixstatic.com/media/104561_f8f49ee60ad14f0bac93936e5de30dcb~mv2_d_4928_3264_s_4_2.jpg",
+        "alt": "Members and guests share dinner at long tables in a campus hall",
+        "w": 1600,
+        "h": 1059
+      },
+      {
+        "src": "/images/chapters/permiasmsu/3.webp",
+        "source": "https://static.wixstatic.com/media/104561_e97d040946614fa2b7a3c9c2d077e4f2~mv2_d_4928_3264_s_4_2.jpg",
+        "alt": "Students try out angklung bamboo instruments at a cultural event",
+        "w": 1600,
+        "h": 1059
+      },
+      {
+        "src": "/images/chapters/permiasmsu/4.webp",
+        "source": "https://static.wixstatic.com/media/104561_8de799964504423fb5b16429ed851bf2~mv2_d_4928_3264_s_4_2.jpeg",
+        "alt": "Members in Indonesia shirts walk through an outdoor festival",
+        "w": 1600,
+        "h": 1059
+      },
+      {
+        "src": "/images/chapters/permiasmsu/5.webp",
+        "source": "https://static.wixstatic.com/media/104561_18d98e367d224892b341eb8a193c1a79~mv2_d_4928_3264_s_4_2.jpeg",
+        "alt": "Members serve Indonesian food at a buffet table",
+        "w": 1600,
+        "h": 1059
+      }
+    ],
+    "checked": "2026-11-22",
+    "note": "Directory handle @permias.msu does not exist on Instagram; the chapter uses @permiasmsu (instagram.com/permiasmsu, permiasmsu.org). Logo and photos from permiasmsu.org."
   },
   "c-permiaspurdue": {
     "logo": {
@@ -680,7 +856,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-permiaskansas": {
     "logo": {
@@ -715,7 +892,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-permiasuiuc": {
     "logo": {
@@ -724,7 +902,50 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/permiasuiuc/1.webp",
+        "source": "https://permiasuiuc.com/AboutUs/image1.png",
+        "alt": "PERMIAS UIUC members in matching black jackets pose on the lawn by Foellinger Auditorium",
+        "w": 1600,
+        "h": 1067
+      },
+      {
+        "src": "/images/chapters/permiasuiuc/2.webp",
+        "source": "https://permiasuiuc.com/AboutUs/image2.png",
+        "alt": "Members in batik gather on the steps of a campus building for Batik Day",
+        "w": 1600,
+        "h": 1067
+      },
+      {
+        "src": "/images/chapters/permiasuiuc/3.webp",
+        "source": "https://permiasuiuc.com/events/batik_day_2023/eight.jpg",
+        "alt": "Members in batik shirts and dresses walk together across campus on Batik Day",
+        "w": 1600,
+        "h": 1067
+      },
+      {
+        "src": "/images/chapters/permiasuiuc/4.webp",
+        "source": "https://permiasuiuc.com/events/buka_bersama_2024/eight.jpg",
+        "alt": "Students fill a hall for the PERMIAS UIUC buka bersama (iftar) gathering",
+        "w": 1600,
+        "h": 1067
+      },
+      {
+        "src": "/images/chapters/permiasuiuc/5.webp",
+        "source": "https://permiasuiuc.com/events/welcoming_event_2024/eight.png",
+        "alt": "Members share food at picnic tables under a pavilion during the welcoming event",
+        "w": 1600,
+        "h": 1067
+      },
+      {
+        "src": "/images/chapters/permiasuiuc/6.webp",
+        "source": "https://permiasuiuc.com/events/pumpkin_potluck_2023/eight.jpg",
+        "alt": "Members smile with drinks and snacks at a chapter potluck",
+        "w": 1600,
+        "h": 1067
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-permiaschicago": {
@@ -737,24 +958,24 @@
     "photos": [
       {
         "src": "/images/chapters/permiaschicago/1.webp",
-        "source": "https://www.instagram.com/p/Dd21utalteI/",
-        "alt": "Recap collage of the Permias Chicago welcoming day at the Indonesian consulate",
-        "w": 1080,
-        "h": 1350
-      },
-      {
-        "src": "/images/chapters/permiaschicago/2.webp",
         "source": "https://www.instagram.com/p/DfTYVaaG8q9/",
         "alt": "Chapter representatives receive a plaque at the Indonesian Consulate General in Chicago",
         "w": 1080,
         "h": 810
       },
       {
-        "src": "/images/chapters/permiaschicago/3.webp",
+        "src": "/images/chapters/permiaschicago/2.webp",
         "source": "https://www.instagram.com/p/DfTYVaaG8q9/",
         "alt": "Permias Chicago members meet with consulate staff around a batik-covered table",
         "w": 1080,
         "h": 810
+      },
+      {
+        "src": "/images/chapters/permiaschicago/3.webp",
+        "source": "https://www.instagram.com/p/Dd21utalteI/",
+        "alt": "Recap collage of the Permias Chicago welcoming day at the Indonesian consulate",
+        "w": 1080,
+        "h": 1350
       },
       {
         "src": "/images/chapters/permiaschicago/4.webp",
@@ -791,14 +1012,14 @@
       {
         "src": "/images/chapters/idsanu/3.webp",
         "source": "https://www.instagram.com/p/DYDrW3BjLX6/",
-        "alt": "Members play volleyball outdoors during a chapter retreat",
+        "alt": "Members walk to a coffee run on a sunny street",
         "w": 1080,
         "h": 1350
       },
       {
         "src": "/images/chapters/idsanu/4.webp",
         "source": "https://www.instagram.com/p/DYDrW3BjLX6/",
-        "alt": "Members walk to a coffee run on a sunny street",
+        "alt": "Members play volleyball outdoors during a chapter retreat",
         "w": 1080,
         "h": 1350
       }
@@ -830,7 +1051,15 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/indoatku/1.webp",
+        "source": "https://www.instagram.com/p/CvC290LuzG8/",
+        "alt": "ISAKU members gather for a group photo at an indoor welcome party",
+        "w": 1440,
+        "h": 1440
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-permiasmn": {
@@ -841,7 +1070,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-permiastamu": {
     "logo": {
@@ -1040,7 +1270,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Instagram @permiasdallas is private (embed disabled); logo from the public profile picture (og:image). No public posts reachable logged-out, web search found no public post links, and no chapter website is listed."
   },
   "c-isagsu": {
     "logo": {
@@ -1050,7 +1281,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Instagram @isa.gsu is private (embed disabled); logo from the public profile picture (og:image). No public posts reachable logged-out, web search found no public post links, and no chapter website is listed."
   },
   "c-byuhindonesianchapter": {
     "logo": {
@@ -1063,14 +1295,14 @@
       {
         "src": "/images/chapters/byuhindonesianchapter/1.webp",
         "source": "https://www.instagram.com/p/Desb65jmScs/",
-        "alt": "Indonesia Chapter members in kebaya and batik gather on campus steps for a fall photo",
+        "alt": "Indonesia Club at BYU-Hawaii members in traditional dress pose on outdoor steps",
         "w": 1080,
         "h": 1350
       },
       {
         "src": "/images/chapters/byuhindonesianchapter/2.webp",
         "source": "https://www.instagram.com/p/Desb65jmScs/",
-        "alt": "Indonesia Club at BYU-Hawaii members in traditional dress pose on outdoor steps",
+        "alt": "Indonesia Chapter members in kebaya and batik gather on campus steps for a fall photo",
         "w": 1080,
         "h": 1350
       }
@@ -1084,7 +1316,22 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/permiassdia/1.webp",
+        "source": "https://www.instagram.com/p/DaSRo-8kY6a/",
+        "alt": "Collage of PERMIAS SDIA members sharing food at an Asian night market",
+        "w": 1080,
+        "h": 1351
+      },
+      {
+        "src": "/images/chapters/permiassdia/2.webp",
+        "source": "https://www.instagram.com/p/DaSRo-8kY6a/",
+        "alt": "Highlights collage of PERMIAS SDIA members at evening events in San Diego",
+        "w": 1080,
+        "h": 1351
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-permiasisuci": {
@@ -1095,7 +1342,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-permiassmc": {
     "logo": {
@@ -1123,7 +1371,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-permiasla": {
     "logo": {
@@ -1154,14 +1403,14 @@
       {
         "src": "/images/chapters/permiashawaii/1.webp",
         "source": "https://www.instagram.com/p/Cdo8b2GJYGh/",
-        "alt": "Permias Hawai'i members pose for a group photo at a potluck by the mountains",
+        "alt": "Members sit together on the grass at Chinaman's Hat scenic viewpoint",
         "w": 1080,
         "h": 1080
       },
       {
         "src": "/images/chapters/permiashawaii/2.webp",
         "source": "https://www.instagram.com/p/Cdo8b2GJYGh/",
-        "alt": "Members sit together on the grass at Chinaman's Hat scenic viewpoint",
+        "alt": "Permias Hawai'i members pose for a group photo at a potluck by the mountains",
         "w": 1080,
         "h": 1080
       },
@@ -1242,24 +1491,24 @@
     "photos": [
       {
         "src": "/images/chapters/pepperdinebois/1.webp",
-        "source": "https://www.instagram.com/p/DWnUHylguo-/",
-        "alt": "Pepperdine BOIS members share dinner at a long restaurant table",
-        "w": 1080,
-        "h": 1440
-      },
-      {
-        "src": "/images/chapters/pepperdinebois/2.webp",
         "source": "https://www.instagram.com/p/DWNX4AMFeez/",
         "alt": "Members pose together at a badminton night",
         "w": 1080,
         "h": 714
       },
       {
-        "src": "/images/chapters/pepperdinebois/3.webp",
+        "src": "/images/chapters/pepperdinebois/2.webp",
         "source": "https://www.instagram.com/p/DWNX4AMFeez/",
         "alt": "Members play badminton across several courts",
         "w": 1080,
         "h": 717
+      },
+      {
+        "src": "/images/chapters/pepperdinebois/3.webp",
+        "source": "https://www.instagram.com/p/DWnUHylguo-/",
+        "alt": "Pepperdine BOIS members share dinner at a long restaurant table",
+        "w": 1080,
+        "h": 1440
       }
     ],
     "checked": "2026-11-22"
@@ -1340,7 +1589,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Logo from the public Instagram profile picture. No usable photos: the 6 latest posts in the public profile embed and older posts found via web search were flyers, graphics or individual board portrait cards (no event photos). No chapter website listed."
   },
   "c-permiasutah": {
     "logo": {
@@ -1389,7 +1639,8 @@
       "h": 256
     },
     "photos": [],
-    "checked": "2026-11-22"
+    "checked": "2026-11-22",
+    "note": "Instagram has only 3 public posts (beach scenery and the logo, no people); logo from the public profile picture. No chapter website listed."
   },
   "c-permiasgoldencolorado": {
     "logo": {
@@ -1505,7 +1756,36 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/stanfordindonesia/1.webp",
+        "source": "https://www.instagram.com/p/DAglpZuSV49/",
+        "alt": "Indonesian Student Association at Stanford members pose with a banner at the welcome event",
+        "w": 1203,
+        "h": 904
+      },
+      {
+        "src": "/images/chapters/stanfordindonesia/2.webp",
+        "source": "https://www.instagram.com/p/DAglpZuSV49/",
+        "alt": "A speaker opens the Indonesian Student Association welcome session",
+        "w": 1440,
+        "h": 1082
+      },
+      {
+        "src": "/images/chapters/stanfordindonesia/3.webp",
+        "source": "https://www.instagram.com/p/C7X9rt6R1Er/",
+        "alt": "Members take a group selfie during a visit to Meta",
+        "w": 1080,
+        "h": 1080
+      },
+      {
+        "src": "/images/chapters/stanfordindonesia/4.webp",
+        "source": "https://www.instagram.com/p/C7X9rt6R1Er/",
+        "alt": "Members share a meal at outdoor tables on campus",
+        "w": 1080,
+        "h": 1080
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-berkeleybisa": {
@@ -1637,7 +1917,36 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/permiasseattle/1.webp",
+        "source": "https://www.instagram.com/p/ByQir2kBvjF/",
+        "alt": "PERMIAS Seattle sports-day winners hold a first-place banner in a gym",
+        "w": 888,
+        "h": 591
+      },
+      {
+        "src": "/images/chapters/permiasseattle/2.webp",
+        "source": "https://www.instagram.com/p/ByQir2kBvjF/",
+        "alt": "Members and players celebrate together on a basketball court",
+        "w": 888,
+        "h": 591
+      },
+      {
+        "src": "/images/chapters/permiasseattle/3.webp",
+        "source": "https://www.instagram.com/p/DbcrjmOEmC-/",
+        "alt": "Memories collage of PERMIAS Seattle members at chapter events",
+        "w": 1080,
+        "h": 1350
+      },
+      {
+        "src": "/images/chapters/permiasseattle/4.webp",
+        "source": "https://www.instagram.com/p/DbcrjmOEmC-/",
+        "alt": "Collage of members on a 2025 cabin trip",
+        "w": 1080,
+        "h": 1350
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-bellevueindoclub": {
@@ -1651,37 +1960,37 @@
       {
         "src": "/images/chapters/bellevueindoclub/1.webp",
         "source": "https://www.instagram.com/p/DY6UMWEFesY/",
-        "alt": "Members gather at a red-and-white decorated booth under a tent",
-        "w": 1080,
-        "h": 1440
-      },
-      {
-        "src": "/images/chapters/bellevueindoclub/2.webp",
-        "source": "https://www.instagram.com/p/DY6UMWEFesY/",
         "alt": "Members serve Indonesian food at a cultural event table",
         "w": 1080,
         "h": 810
       },
       {
+        "src": "/images/chapters/bellevueindoclub/2.webp",
+        "source": "https://www.instagram.com/p/DXw9E8lFIWM/",
+        "alt": "Club members host a food table at a campus event",
+        "w": 1080,
+        "h": 810
+      },
+      {
         "src": "/images/chapters/bellevueindoclub/3.webp",
+        "source": "https://www.instagram.com/p/DY6UMWEFesY/",
+        "alt": "Members gather at a red-and-white decorated booth under a tent",
+        "w": 1080,
+        "h": 1440
+      },
+      {
+        "src": "/images/chapters/bellevueindoclub/4.webp",
         "source": "https://www.instagram.com/p/DX7rT4ckr9S/",
         "alt": "Dancers in traditional dress perform at Southeast Asian Night",
         "w": 1080,
         "h": 857
       },
       {
-        "src": "/images/chapters/bellevueindoclub/4.webp",
+        "src": "/images/chapters/bellevueindoclub/5.webp",
         "source": "https://www.instagram.com/p/DX7rT4ckr9S/",
         "alt": "Members hold the Indonesian flag on stage at Southeast Asian Night",
         "w": 1080,
         "h": 857
-      },
-      {
-        "src": "/images/chapters/bellevueindoclub/5.webp",
-        "source": "https://www.instagram.com/p/DXw9E8lFIWM/",
-        "alt": "Club members host a food table at a campus event",
-        "w": 1080,
-        "h": 810
       }
     ],
     "checked": "2026-11-22"
@@ -1711,7 +2020,15 @@
       "w": 256,
       "h": 256
     },
-    "photos": [],
+    "photos": [
+      {
+        "src": "/images/chapters/isauwhuskies/1.webp",
+        "source": "https://www.instagram.com/p/DSEEwYPDhnB/",
+        "alt": "ISAUW marketing and communication team pose together outdoors",
+        "w": 1080,
+        "h": 1350
+      }
+    ],
     "checked": "2026-11-22"
   },
   "c-iscshoreline": {

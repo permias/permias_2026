@@ -1419,10 +1419,10 @@
     "state": "Michigan",
     "stateId": "mi",
     "region": "Midwest",
-    "instagram": "@permias.msu",
+    "instagram": "@permiasmsu",
     "line": "",
     "whatsapp": "",
-    "website": null,
+    "website": "https://permiasmsu.org",
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 42.725,
     "lng": -84.48,
@@ -1439,7 +1439,8 @@
     },
     "fieldSources": {
       "chapterName": "https://permiasnasional.com/about/chapters/",
-      "instagram": "https://permiasnasional.com/about/chapters/",
+      "instagram": "https://www.instagram.com/permiasmsu/",
+      "website": "https://permiasmsu.org",
       "region": "https://permiasnasional.com/about/chapters/",
       "level": "https://permiasnasional.com/about/chapters/",
       "lat": "https://en.wikipedia.org/wiki/Michigan_State_University",
@@ -1451,7 +1452,8 @@
     },
     "sources": [
       "https://permiasnasional.com/about/chapters/",
-      "https://en.wikipedia.org/wiki/Michigan_State_University"
+      "https://en.wikipedia.org/wiki/Michigan_State_University",
+      "https://www.instagram.com/permiasmsu/"
     ],
     "status": "verified"
   },
