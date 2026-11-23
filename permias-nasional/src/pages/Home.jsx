@@ -1,15 +1,11 @@
 import { Helmet } from 'react-helmet-async';
-import { Seo, DEFAULT_TAB_TITLE } from '../components/Seo.jsx';
-import { Hero } from '../components/sections/Hero.jsx';
-import { Stats } from '../components/sections/Stats.jsx';
-import { WhatIsPermias } from '../components/sections/WhatIsPermias.jsx';
-import { RecentPosts } from '../components/sections/RecentPosts.jsx';
-import { PartnerMarquee } from '../components/sections/PartnerMarquee.jsx';
-import { SocialHub } from '../components/sections/SocialHub.jsx';
-import { NewsletterSection } from '../components/sections/NewsletterSection.jsx';
-import { ChapterFinder } from '../components/sections/ChapterFinder.jsx';
-import { StoriesSection } from '../components/sections/StoriesSection.jsx';
-import { HomeRegisterSection } from '../components/sections/HomeRegisterSection.jsx';
+import { Seo } from '../components/Seo.jsx';
+import { DEFAULT_TAB_TITLE } from '../utils/seo.js';
+import { HeroSlideshow } from '../components/home/HeroSlideshow.jsx';
+import { ChapterDirectory } from '../components/home/ChapterDirectory.jsx';
+import { Bersama, CampusMarquee, Pengurus } from '../components/home/Institutional.jsx';
+import { MapAct } from '../components/home/MapAct.jsx';
+import { EventsRail, JoinBand, Moments, PartnersIndex, WhatWeDo } from '../components/home/HomeSections.jsx';
 import { SITE_ORIGIN } from '../utils/site.js';
 
 const jsonLd = {
@@ -18,6 +14,7 @@ const jsonLd = {
   name: 'PERMIAS Nasional',
   url: SITE_ORIGIN,
   logo: `${SITE_ORIGIN}/images/brand/logo-permias-horizontal.png`,
+  foundingDate: '1961-12-24',
   sameAs: [
     'https://www.instagram.com/permias.nasional/',
     'https://www.facebook.com/permias.nasional',
@@ -32,22 +29,23 @@ export function Home() {
     <>
       <Seo
         title={DEFAULT_TAB_TITLE}
-        description="Join the Indonesian student community across the United States—chapters, scholarships, visas, and national programs."
+        description="PERMIAS chapters for Indonesian students across the United States: find your campus community, events, and student guides."
         path="/"
       />
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
-      <Hero />
-      <Stats />
-      <WhatIsPermias />
-      <RecentPosts />
-      <PartnerMarquee />
-      <StoriesSection />
-      <SocialHub />
-      <NewsletterSection />
-      <ChapterFinder />
-      <HomeRegisterSection />
+      <HeroSlideshow />
+      <ChapterDirectory />
+      <CampusMarquee />
+      <Bersama />
+      <MapAct />
+      <WhatWeDo />
+      <EventsRail />
+      <Pengurus />
+      <PartnersIndex />
+      <Moments />
+      <JoinBand />
     </>
   );
 }

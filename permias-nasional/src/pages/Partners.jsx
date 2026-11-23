@@ -1,6 +1,7 @@
 import { partners } from '../data/partners.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo, pageTabTitle } from '../components/Seo.jsx';
+import { Seo } from '../components/Seo.jsx';
+import { pageTabTitle } from '../utils/seo.js';
 import { Card } from '../components/ui/Card.jsx';
 import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';

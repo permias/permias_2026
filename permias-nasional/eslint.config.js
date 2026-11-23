@@ -5,7 +5,7 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'dist-local']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [
@@ -23,8 +23,13 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // `motion` is only referenced as <motion.div> (JSX member), which core no-unused-vars cannot see
+      'no-unused-vars': ['error', { varsIgnorePattern: '^([A-Z_]|motion$)', argsIgnorePattern: '^[A-Z_]' }],
     },
+  },
+  {
+    files: ['scripts/**/*.{js,mjs}', '*.config.js'],
+    languageOptions: { globals: globals.node },
   },
   {
     files: ['src/context/**/*.{js,jsx}'],

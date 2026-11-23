@@ -52,7 +52,9 @@ export default defineConfig(({ command }) => ({
   base: command === 'serve' ? '/' : '/permias_2026/',
   plugins: [react(), apiPlugin()],
   // Pre-bundle so the first dev page load never re-optimizes mid-request (duplicate React → invalid hook call)
-  optimizeDeps: { include: ['motion/react', 'react', 'react-dom', 'react-router-dom', '@svg-maps/usa'] },
+  optimizeDeps: {
+    include: ['motion/react', 'react', 'react-dom', 'react-dom/client', 'react-router-dom', 'react-helmet-async', '@svg-maps/usa', 'd3-geo', 'svg-path-bbox', 'clsx', 'tailwind-merge'],
+  },
   server: {
     // Proxy to Flask in dev: run `python app.py` in permias_2026/flask (port 5001)
     proxy: {

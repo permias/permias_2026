@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import { useLanguage } from '../../context/LanguageContext.jsx';
+import { motionTokens, springs } from '../../lib/motion.js';
 import { Button } from '../ui/Button.jsx';
 
 const KEY = 'permias_cookie_consent';
 
+/** Small glass notice that floats above the dock until answered. */
 export function CookieBanner() {
   const { t } = useLanguage();
   const [visible, setVisible] = useState(() => {
@@ -23,25 +26,28 @@ export function CookieBanner() {
     setVisible(false);
   };
 
-  if (!visible) return null;
-
   return (
-    <div
-      role="dialog"
-      aria-live="polite"
-      className="fixed bottom-0 left-0 right-0 z-[90] border-t border-brand-charcoal/10 bg-white p-4 shadow-2xl dark:border-white/10 dark:bg-surface-card sm:p-5"
-    >
-      <div className="mx-auto flex max-w-content flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-brand-charcoal dark:text-white">{t('cookie.text')}</p>
-        <div className="flex gap-2">
-          <Button type="button" variant="primary" className="!py-2" onClick={() => save('accepted')}>
-            {t('cookie.accept')}
-          </Button>
-          <Button type="button" variant="ghost" className="!py-2 dark:border-white/20" onClick={() => save('declined')}>
-            {t('cookie.decline')}
-          </Button>
-        </div>
-      </div>
-    </div>
+    <AnimatePresence>
+      {visible && (
+        <motion.section
+          key="cookie"
+          aria-label={t('cookie.label')}
+          className="glass fixed inset-x-3 bottom-[calc(var(--dock-h)+30px+env(safe-area-inset-bottom))] z-[58] mx-auto flex max-w-[520px] flex-col gap-3 rounded-[22px] p-4 sm:flex-row sm:items-center"
+          initial={{ opacity: 0, y: motionTokens.distance.lg }}
+          animate={{ opacity: 1, y: 0, transition: { ...springs.gentle, delay: motionTokens.duration.crawl } }}
+          exit={{ opacity: 0, y: motionTokens.distance.md, transition: { duration: motionTokens.duration.exit } }}
+        >
+          <p className="flex-1 text-sm text-ink">{t('cookie.text')}</p>
+          <div className="flex gap-2">
+            <Button type="button" size="sm" variant="dark" onClick={() => save('accepted')}>
+              {t('cookie.accept')}
+            </Button>
+            <Button type="button" size="sm" variant="outline" onClick={() => save('declined')}>
+              {t('cookie.decline')}
+            </Button>
+          </div>
+        </motion.section>
+      )}
+    </AnimatePresence>
   );
 }

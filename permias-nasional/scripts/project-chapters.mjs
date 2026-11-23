@@ -89,4 +89,10 @@ for (const c of rows) {
   c.mapY = Math.round((fy.a * py + fy.b) * 10) / 10;
 }
 writeFileSync(DATA, `${JSON.stringify(rows, null, 2)}\n`);
+// parameters for projecting arbitrary points (e.g. the visitor's location) in the browser
+const params = {
+  lower48: { rotate: [best.rot, 0], center: [0, 38], parallels: best.par, fx: best.fx, fy: best.fy, rmsError: best.err },
+  hawaii: { rotate: [157, 0], center: [-3, 19.9], parallels: [8, 18], fx: hi.fx, fy: hi.fy },
+};
+writeFileSync(new URL('../src/data/mapProjection.json', import.meta.url), `${JSON.stringify(params, null, 2)}\n`);
 console.log(`wrote mapX/mapY for ${rows.filter((r) => r.mapX != null).length} chapters`);

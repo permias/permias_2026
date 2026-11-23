@@ -1,8 +1,8 @@
 import { cn } from '../../utils/cn.js';
 
-export function Card({ className, children, hover = false, ...props }) {
+export function Card({ className, children, ...props }) {
   return (
-    <div className={cn(hover ? 'surface-card-hover' : 'surface-card', 'p-6', className)} {...props}>
+    <div className={cn('surface p-6', className)} {...props}>
       {children}
     </div>
   );

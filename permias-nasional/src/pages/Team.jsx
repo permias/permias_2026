@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { teamDepartments } from '../data/team.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo, pageTabTitle } from '../components/Seo.jsx';
+import { Seo } from '../components/Seo.jsx';
+import { pageTabTitle } from '../utils/seo.js';
 import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { cn } from '../utils/cn.js';

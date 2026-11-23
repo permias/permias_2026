@@ -1,25 +1,32 @@
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useCallback, useContext, useEffect, useMemo } from 'react';
 import { phrases } from '../data/translations.js';
+import { useLocalStorage } from '../hooks/useLocalStorage.js';
 
 const LanguageContext = createContext(null);
 
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState('id');
+  // Indonesian stays the default (as on the live site); the choice now persists across reloads.
+  const [lang, setLang] = useLocalStorage('permias_lang', 'id');
 
   useEffect(() => {
     document.documentElement.lang = lang === 'id' ? 'id' : 'en';
   }, [lang]);
 
+  /** t('key') or t('key', { n: 3 }) — `{n}` placeholders are replaced. */
   const t = useCallback(
-    (key) => {
+    (key, vars) => {
       const row = phrases[key];
-      if (!row) return key;
-      return row[lang] ?? row.en ?? key;
+      let s = row ? (row[lang] ?? row.en ?? key) : key;
+      if (vars) for (const [k, v] of Object.entries(vars)) s = s.replaceAll(`{${k}}`, String(v));
+      return s;
     },
     [lang],
   );
 
-  const value = useMemo(() => ({ lang, setLang, t }), [lang, t]);
+  /** Pick from an inline { en, id } object. */
+  const pick = useCallback((obj) => (obj ? (obj[lang] ?? obj.en ?? '') : ''), [lang]);
+
+  const value = useMemo(() => ({ lang, setLang, t, pick }), [lang, setLang, t, pick]);
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }

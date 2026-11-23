@@ -31,7 +31,7 @@ with sync_playwright() as p:
             init.append(f"localStorage.setItem('permias_lang', JSON.stringify('{a.lang}'));")
         if a.theme:
             init.append(f"localStorage.setItem('permias_theme', JSON.stringify('{a.theme}'));")
-        init.append("localStorage.setItem('permias_cookie_choice', JSON.stringify('declined'));")
+        init.append("localStorage.setItem('permias_cookie_consent', 'declined');")
         ctx.add_init_script(''.join(init))
         for r in a.routes:
             route, _, name = r.partition('=')

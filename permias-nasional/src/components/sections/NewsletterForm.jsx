@@ -4,7 +4,7 @@ import { Button } from '../ui/Button.jsx';
 import { Input } from '../ui/Input.jsx';
 import { cn } from '../../utils/cn.js';
 
-export function NewsletterForm({ className = '' }) {
+export function NewsletterForm({ className = '', tone = 'light' }) {
   const { t } = useLanguage();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle');
@@ -36,7 +36,7 @@ export function NewsletterForm({ className = '' }) {
   };
 
   return (
-    <form onSubmit={submit} className={cn('flex flex-col gap-3 sm:flex-row', className)}>
+    <form onSubmit={submit} className={cn('flex flex-col gap-2', className)}>
       <Input
         type="email"
         required
@@ -46,12 +46,13 @@ export function NewsletterForm({ className = '' }) {
         placeholder={t('home.newsletter.placeholder')}
         aria-label={t('home.newsletter.placeholder')}
         disabled={status === 'loading'}
+        className={tone === 'dark' ? 'border-white/15 bg-white/[0.06] text-white placeholder:text-white/50' : undefined}
       />
-      <Button type="submit" disabled={status === 'loading'} className="shrink-0">
+      <Button type="submit" variant={tone === 'dark' ? 'light' : 'primary'} disabled={status === 'loading'} className="shrink-0">
         {status === 'loading' ? '…' : t('home.newsletter.submit')}
       </Button>
       {message && (
-        <p className="w-full text-sm font-medium text-brand-red sm:col-span-full dark:text-white" role="status">
+        <p className={cn('w-full text-sm font-medium', tone === 'dark' ? 'text-white/85' : status === 'error' ? 'text-merah' : 'text-ink')} role="status">
           {message}
         </p>
       )}

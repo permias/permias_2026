@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import { resourceSections } from '../data/resources.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo, pageTabTitle } from '../components/Seo.jsx';
+import { Seo } from '../components/Seo.jsx';
+import { pageTabTitle } from '../utils/seo.js';
 import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ScrollReveal } from '../components/ui/ScrollReveal.jsx';
 import { Card } from '../components/ui/Card.jsx';

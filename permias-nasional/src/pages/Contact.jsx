@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { Seo, pageTabTitle } from '../components/Seo.jsx';
+import { Seo } from '../components/Seo.jsx';
+import { pageTabTitle } from '../utils/seo.js';
 import { Button } from '../components/ui/Button.jsx';
 import { Input } from '../components/ui/Input.jsx';
 import { PageHeader } from '../components/layout/PageHeader.jsx';

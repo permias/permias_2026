@@ -57,7 +57,7 @@
     "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Chicago_Skyline_in_April_2024_b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
     "w": 2446,
     "h": 981,
-    "artist": "File:Chicago Skyline in April 2024.jpg: xiquinhosilva derivative work: Georgfotoart",
+    "artist": "xiquinhosilva; derivative work: Georgfotoart",
     "license": "CC BY 2.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
     "credit": "This file was derived from: Chicago Skyline in April 2024.jpg:",
@@ -135,21 +135,395 @@
       "800": "/images/photos/pittsburgh-night-800.webp"
     }
   },
-  "ann-arbor-skyline": {
-    "file": "Ann_Arbor_Skyline_2021.jpg",
-    "page": "https://commons.wikimedia.org/wiki/File:Ann_Arbor_Skyline_2021.jpg",
-    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Ann_Arbor_Skyline_2021.jpg/1920px-Ann_Arbor_Skyline_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-    "original": "https://upload.wikimedia.org/wikipedia/commons/9/91/Ann_Arbor_Skyline_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-    "w": 4024,
-    "h": 1901,
-    "artist": "WeaponizingArchitecture",
+  "dc-indonesian-embassy": {
+    "file": "Embassy of Indonesia, Washington, D.C..jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Embassy_of_Indonesia,_Washington,_D.C..jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/5/52/Embassy_of_Indonesia%2C_Washington%2C_D.C..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/5/52/Embassy_of_Indonesia%2C_Washington%2C_D.C..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 960,
+    "h": 705,
+    "artist": "SimonP at English Wikipedia",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "credit": "Transferred from en.wikipedia to Commons by Kobac using CommonsHelper.",
+    "subject": "Embassy of Indonesia, Washington, D.C.",
+    "files": {
+      "1600": "/images/photos/dc-indonesian-embassy-1600.webp",
+      "800": "/images/photos/dc-indonesian-embassy-800.webp"
+    }
+  },
+  "dc-capitol": {
+    "file": "United States Capitol west front edit2 (cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:United_States_Capitol_west_front_edit2_(cropped).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/United_States_Capitol_west_front_edit2_%28cropped%29.jpg/1920px-United_States_Capitol_west_front_edit2_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/8/80/United_States_Capitol_west_front_edit2_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 2547,
+    "h": 1529,
+    "artist": "Architect of the Capitol; derivative work: O.J.",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "credit": "United_States_Capitol_-_west_front.jpg",
+    "subject": "United States Capitol, Washington, D.C.",
+    "files": {
+      "1600": "/images/photos/dc-capitol-1600.webp",
+      "800": "/images/photos/dc-capitol-800.webp"
+    }
+  },
+  "borobudur-sunrise": {
+    "file": "Borobudur Sunrise 2012-01-05.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Borobudur_Sunrise_2012-01-05.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Borobudur_Sunrise_2012-01-05.jpg/1920px-Borobudur_Sunrise_2012-01-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Borobudur_Sunrise_2012-01-05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4288,
+    "h": 2803,
+    "artist": "Justine Hong",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "credit": "https://www.flickr.com/photos/justinbusy/6702545199/",
+    "subject": "Borobudur at sunrise, Central Java",
+    "files": {
+      "1600": "/images/photos/borobudur-sunrise-1600.webp",
+      "800": "/images/photos/borobudur-sunrise-800.webp"
+    }
+  },
+  "batik-tulis-imogiri": {
+    "file": "Maestro Batik Tulis di Imogiri.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Maestro_Batik_Tulis_di_Imogiri.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Maestro_Batik_Tulis_di_Imogiri.jpg/1920px-Maestro_Batik_Tulis_di_Imogiri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Maestro_Batik_Tulis_di_Imogiri.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4734,
+    "h": 3156,
+    "artist": "Aconkyeah",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "credit": "Own work",
-    "subject": "Ann Arbor skyline",
+    "subject": "Batik tulis artisan in Imogiri, Yogyakarta",
     "files": {
-      "1600": "/images/photos/ann-arbor-skyline-1600.webp",
-      "800": "/images/photos/ann-arbor-skyline-800.webp"
+      "1600": "/images/photos/batik-tulis-imogiri-1600.webp",
+      "800": "/images/photos/batik-tulis-imogiri-800.webp"
+    }
+  },
+  "uw-suzzallo": {
+    "file": "Suzzallo Reading Room University of Washington restoration Seattle Washington 2026.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Suzzallo_Reading_Room_University_of_Washington_restoration_Seattle_Washington_2026.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Suzzallo_Reading_Room_University_of_Washington_restoration_Seattle_Washington_2026.jpg/1920px-Suzzallo_Reading_Room_University_of_Washington_restoration_Seattle_Washington_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/6/63/Suzzallo_Reading_Room_University_of_Washington_restoration_Seattle_Washington_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 11648,
+    "h": 8736,
+    "artist": "Guywelch2000",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "credit": "Own work",
+    "subject": "Suzzallo Library reading room, University of Washington",
+    "files": {
+      "1600": "/images/photos/uw-suzzallo-1600.webp",
+      "800": "/images/photos/uw-suzzallo-800.webp"
+    }
+  },
+  "harvard-yard-autumn": {
+    "file": "Harvard Yard in autumn, Boston, Massachusetts, 2015.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Harvard_Yard_in_autumn,_Boston,_Massachusetts,_2015.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Harvard_Yard_in_autumn%2C_Boston%2C_Massachusetts%2C_2015.jpg/1920px-Harvard_Yard_in_autumn%2C_Boston%2C_Massachusetts%2C_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Harvard_Yard_in_autumn%2C_Boston%2C_Massachusetts%2C_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 3872,
+    "h": 2581,
+    "artist": "Nina R from Africa",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "credit": "Boston, Massachusetts",
+    "subject": "Harvard Yard in autumn",
+    "files": {
+      "1600": "/images/photos/harvard-yard-autumn-1600.webp",
+      "800": "/images/photos/harvard-yard-autumn-800.webp"
+    }
+  },
+  "golden-gate-sunset": {
+    "file": "Golden Gate Bridge at sunset 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_sunset_1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Golden_Gate_Bridge_at_sunset_1.jpg/1920px-Golden_Gate_Bridge_at_sunset_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Golden_Gate_Bridge_at_sunset_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 2222,
+    "h": 1481,
+    "artist": "Brocken Inaglory",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "Own work",
+    "subject": "Golden Gate Bridge at sunset",
+    "files": {
+      "1600": "/images/photos/golden-gate-sunset-1600.webp",
+      "800": "/images/photos/golden-gate-sunset-800.webp"
+    }
+  },
+  "id-monas": {
+    "file": "Monumen Nasional, Jakarta, Indonesia.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Monumen_Nasional,_Jakarta,_Indonesia.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Monumen_Nasional%2C_Jakarta%2C_Indonesia.jpg/1920px-Monumen_Nasional%2C_Jakarta%2C_Indonesia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/4/49/Monumen_Nasional%2C_Jakarta%2C_Indonesia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4160,
+    "h": 2352,
+    "artist": "Ramayoni",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Monumen Nasional (Monas), Jakarta",
+    "files": {
+      "1600": "/images/photos/id-monas-1600.webp",
+      "800": "/images/photos/id-monas-800.webp"
+    }
+  },
+  "id-prambanan": {
+    "file": "Yogyakarta Indonesia Prambanan-temple-complex-02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Yogyakarta_Indonesia_Prambanan-temple-complex-02.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Yogyakarta_Indonesia_Prambanan-temple-complex-02.jpg/1920px-Yogyakarta_Indonesia_Prambanan-temple-complex-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/6/66/Yogyakarta_Indonesia_Prambanan-temple-complex-02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 5703,
+    "h": 2658,
+    "artist": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "Own work",
+    "subject": "Candi Prambanan, Yogyakarta",
+    "files": {
+      "1600": "/images/photos/id-prambanan-1600.webp",
+      "800": "/images/photos/id-prambanan-800.webp"
+    }
+  },
+  "id-gedung-sate": {
+    "file": "Gedung Sate Bandung.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Gedung_Sate_Bandung.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Gedung_Sate_Bandung.jpg/1920px-Gedung_Sate_Bandung.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/0/01/Gedung_Sate_Bandung.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 1984,
+    "h": 1173,
+    "artist": "Gunawan Kartapranata",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "Own work",
+    "subject": "Gedung Sate, Bandung",
+    "files": {
+      "1600": "/images/photos/id-gedung-sate-1600.webp",
+      "800": "/images/photos/id-gedung-sate-800.webp"
+    }
+  },
+  "id-jam-gadang": {
+    "file": "Jam Gadang, Bukittinggi, 2016-02-12 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Jam_Gadang,_Bukittinggi,_2016-02-12_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Jam_Gadang%2C_Bukittinggi%2C_2016-02-12_01.jpg/1920px-Jam_Gadang%2C_Bukittinggi%2C_2016-02-12_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/4/48/Jam_Gadang%2C_Bukittinggi%2C_2016-02-12_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 2537,
+    "h": 3946,
+    "artist": "Crisco 1492",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Jam Gadang, Bukittinggi",
+    "files": {
+      "1600": "/images/photos/id-jam-gadang-1600.webp",
+      "800": "/images/photos/id-jam-gadang-800.webp"
+    }
+  },
+  "id-ulun-danu": {
+    "file": "Brantan Bali Pura-Ulun-Danu-Bratan-01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Brantan_Bali_Pura-Ulun-Danu-Bratan-01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Brantan_Bali_Pura-Ulun-Danu-Bratan-01.jpg/1920px-Brantan_Bali_Pura-Ulun-Danu-Bratan-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Brantan_Bali_Pura-Ulun-Danu-Bratan-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 5097,
+    "h": 3398,
+    "artist": "CEphoto, Uwe Aranas",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "credit": "Own work",
+    "subject": "Pura Ulun Danu Bratan, Bali",
+    "files": {
+      "1600": "/images/photos/id-ulun-danu-1600.webp",
+      "800": "/images/photos/id-ulun-danu-800.webp"
+    }
+  },
+  "id-tanah-lot": {
+    "file": "The sunset in Tanah Lot Temple Bali.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_sunset_in_Tanah_Lot_Temple_Bali.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/The_sunset_in_Tanah_Lot_Temple_Bali.jpg/1920px-The_sunset_in_Tanah_Lot_Temple_Bali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/8/88/The_sunset_in_Tanah_Lot_Temple_Bali.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 3024,
+    "h": 4032,
+    "artist": "Pinterpandai",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Pura Tanah Lot, Bali",
+    "files": {
+      "1600": "/images/photos/id-tanah-lot-1600.webp",
+      "800": "/images/photos/id-tanah-lot-800.webp"
+    }
+  },
+  "us-liberty": {
+    "file": "New York City skyline with Statue of Liberty at dusk aerial 2018.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:New_York_City_skyline_with_Statue_of_Liberty_at_dusk_aerial_2018.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/New_York_City_skyline_with_Statue_of_Liberty_at_dusk_aerial_2018.jpg/1920px-New_York_City_skyline_with_Statue_of_Liberty_at_dusk_aerial_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/9d/New_York_City_skyline_with_Statue_of_Liberty_at_dusk_aerial_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 6247,
+    "h": 4167,
+    "artist": "SebastianBlumeArt",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Statue of Liberty and Lower Manhattan, New York",
+    "files": {
+      "1600": "/images/photos/us-liberty-1600.webp",
+      "800": "/images/photos/us-liberty-800.webp"
+    }
+  },
+  "us-lincoln-reflecting": {
+    "file": "Lincoln Memorial Reflecting Pool With The Washington Monument.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Lincoln_Memorial_Reflecting_Pool_With_The_Washington_Monument.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Lincoln_Memorial_Reflecting_Pool_With_The_Washington_Monument.jpg/1920px-Lincoln_Memorial_Reflecting_Pool_With_The_Washington_Monument.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Lincoln_Memorial_Reflecting_Pool_With_The_Washington_Monument.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4032,
+    "h": 2268,
+    "artist": "Ali Khan",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Lincoln Memorial Reflecting Pool, Washington DC",
+    "files": {
+      "1600": "/images/photos/us-lincoln-reflecting-1600.webp",
+      "800": "/images/photos/us-lincoln-reflecting-800.webp"
+    }
+  },
+  "campus-mit-dome": {
+    "file": "Great dome of MIT, Feb 2021.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Great_dome_of_MIT,_Feb_2021.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Great_dome_of_MIT%2C_Feb_2021.jpg/1920px-Great_dome_of_MIT%2C_Feb_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Great_dome_of_MIT%2C_Feb_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4032,
+    "h": 3024,
+    "artist": "Peacearth",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Great Dome, MIT, Cambridge",
+    "files": {
+      "1600": "/images/photos/campus-mit-dome-1600.webp",
+      "800": "/images/photos/campus-mit-dome-800.webp"
+    }
+  },
+  "campus-stanford": {
+    "file": "Stanford University Arches with Memorial Church in the background.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Stanford_University_Arches_with_Memorial_Church_in_the_background.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Stanford_University_Arches_with_Memorial_Church_in_the_background.jpg/1920px-Stanford_University_Arches_with_Memorial_Church_in_the_background.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Stanford_University_Arches_with_Memorial_Church_in_the_background.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 5120,
+    "h": 2962,
+    "artist": "Jawed",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Main Quad, Stanford University",
+    "files": {
+      "1600": "/images/photos/campus-stanford-1600.webp",
+      "800": "/images/photos/campus-stanford-800.webp"
+    }
+  },
+  "campus-ucla-royce": {
+    "file": "2019 UCLA Royce Hall 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2019_UCLA_Royce_Hall_2.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/2019_UCLA_Royce_Hall_2.jpg/1920px-2019_UCLA_Royce_Hall_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/9a/2019_UCLA_Royce_Hall_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4791,
+    "h": 2875,
+    "artist": "Beyond My Ken",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Royce Hall, UCLA",
+    "files": {
+      "1600": "/images/photos/campus-ucla-royce-1600.webp",
+      "800": "/images/photos/campus-ucla-royce-800.webp"
+    }
+  },
+  "campus-uw-quad": {
+    "file": "University of Washington Quad cherry blossoms 2017 - 06.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:University_of_Washington_Quad_cherry_blossoms_2017_-_06.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/University_of_Washington_Quad_cherry_blossoms_2017_-_06.jpg/1920px-University_of_Washington_Quad_cherry_blossoms_2017_-_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/4/4d/University_of_Washington_Quad_cherry_blossoms_2017_-_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4288,
+    "h": 2848,
+    "artist": "Joe Mabel",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Photo by Joe Mabel",
+    "subject": "The Quad in bloom, University of Washington",
+    "files": {
+      "1600": "/images/photos/campus-uw-quad-1600.webp",
+      "800": "/images/photos/campus-uw-quad-800.webp"
+    }
+  },
+  "campus-columbia-low": {
+    "file": "Low Memorial Library Columbia University NYC retouched.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Low_Memorial_Library_Columbia_University_NYC_retouched.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/0/07/Low_Memorial_Library_Columbia_University_NYC_retouched.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/0/07/Low_Memorial_Library_Columbia_University_NYC_retouched.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 1024,
+    "h": 768,
+    "artist": "AlMare (Wikimedia Commons uploader)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "credit": "",
+    "subject": "Low Memorial Library, Columbia University",
+    "files": {
+      "1600": "/images/photos/campus-columbia-low-1600.webp",
+      "800": "/images/photos/campus-columbia-low-800.webp"
+    }
+  },
+  "campus-cornell": {
+    "file": "Cornell University - McGraw Tower and Olin Library.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Cornell_University_-_McGraw_Tower_and_Olin_Library.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Cornell_University_-_McGraw_Tower_and_Olin_Library.jpg/1920px-Cornell_University_-_McGraw_Tower_and_Olin_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Cornell_University_-_McGraw_Tower_and_Olin_Library.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 2848,
+    "h": 4288,
+    "artist": "P. Hughes",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "credit": "Own work",
+    "subject": "McGraw Tower, Cornell University",
+    "files": {
+      "1600": "/images/photos/campus-cornell-1600.webp",
+      "800": "/images/photos/campus-cornell-800.webp"
+    }
+  },
+  "campus-purdue": {
+    "file": "Purdue Bell Tower Purdue University 2016 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Purdue_Bell_Tower_Purdue_University_2016_02.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Purdue_Bell_Tower_Purdue_University_2016_02.jpg/1920px-Purdue_Bell_Tower_Purdue_University_2016_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/d/da/Purdue_Bell_Tower_Purdue_University_2016_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 3111,
+    "h": 4617,
+    "artist": "Julian Herzog (Website)",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "credit": "Own work",
+    "subject": "Purdue Bell Tower, Purdue University",
+    "files": {
+      "1600": "/images/photos/campus-purdue-1600.webp",
+      "800": "/images/photos/campus-purdue-800.webp"
+    }
+  },
+  "us-brooklyn-bridge": {
+    "file": "Brooklyn Bridge and the Lower Manhattan skyline from Pebble Beach, New York.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach,_New_York.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg/1920px-Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Brooklyn_Bridge_and_the_Lower_Manhattan_skyline_from_Pebble_Beach%2C_New_York.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 26508,
+    "h": 8836,
+    "artist": "Christian David",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Brooklyn Bridge and Lower Manhattan",
+    "files": {
+      "1600": "/images/photos/us-brooklyn-bridge-1600.webp",
+      "800": "/images/photos/us-brooklyn-bridge-800.webp"
     }
   }
 }
