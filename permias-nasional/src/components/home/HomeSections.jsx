@@ -54,7 +54,7 @@ export function WhatWeDo() {
                 className="group flex h-full flex-col overflow-hidden rounded-[22px] border border-border bg-surface transition-[box-shadow,border-color] duration-200 hover:border-ink/20 hover:shadow-[0_24px_50px_-30px_rgba(19,35,63,.55)]"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <img src={img.small} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]" />
+                  <img src={img.small} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.06]" />
                   <span className={cn('absolute left-4 top-4 flex h-11 w-11 items-center justify-center rounded-[12px] text-white shadow-lg', tone)}>
                     <Icon className="h-5 w-5" />
                   </span>
@@ -180,10 +180,9 @@ export function Moments() {
                 alt={tile.alt || ''}
                 loading="lazy"
                 style={{ y: tile.drift }}
-                className="absolute inset-[-40px_0] h-[calc(100%+80px)] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                className="absolute inset-[-40px_0] h-[calc(100%+80px)] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
               />
-              <span className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/75 to-transparent" aria-hidden="true" />
-              <span className="absolute bottom-3 left-4 right-4">
+              <span className="absolute inset-x-0 bottom-0 flex h-1/2 flex-col justify-end bg-gradient-to-t from-black/80 to-black/0 px-4 pb-3">
                 <span className="block truncate text-[15px] font-semibold text-white">{tile.label}</span>
                 <span className="block truncate text-[13px] text-white/80">{tile.sub}</span>
               </span>
@@ -245,7 +244,7 @@ export function JoinBand() {
             <p className="font-display text-[clamp(2.6rem,1.4rem+4.6vw,5.6rem)] leading-none text-white" lang="id">
               Bhinneka Tunggal Ika
             </p>
-            <p className="mt-3 text-[15px] font-semibold text-[#F2C46D]">{t('join.motto')}</p>
+            <p className="mt-3 text-[16px] font-semibold text-[#F2C46D]">{t('join.motto')}</p>
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-2">
             <Reveal delay={0.05} className="rounded-[24px] bg-white p-7 text-[#13233F] md:p-9">

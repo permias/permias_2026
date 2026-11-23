@@ -43,7 +43,7 @@ export function PhotoTile({ image, title, sub, to, links = [], className, size =
           width="1600"
           height="1067"
           loading={priority ? 'eager' : 'lazy'}
-          className="photo-grade absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
+          className="photo-grade absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
         />
       )}
       <span className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(10,18,32,.05)_25%,rgba(10,18,32,.8)_100%)]" aria-hidden="true" />

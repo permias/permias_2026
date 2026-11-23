@@ -38,13 +38,15 @@ function TabBar({ tab, setTab, t }) {
           type="button"
           aria-pressed={tab === key}
           onClick={() => setTab(key)}
-          className={cn(
-            'relative min-h-[44px] rounded-full px-5 text-[15px] font-semibold transition-colors duration-150',
-            tab === key ? 'text-[#13233F]' : 'text-white/90 hover:text-white',
-          )}
+          className={cn('relative flex min-h-[44px] items-center rounded-full text-[15px] font-semibold transition-colors duration-150', tab === key ? 'text-[#13233F]' : 'text-white/90 hover:text-white')}
         >
-          {tab === key && <motion.span layoutId="events-tab" className="absolute inset-0 rounded-full bg-white shadow-[0_6px_16px_-8px_rgba(0,0,0,.5)]" transition={springs.snappy} aria-hidden="true" />}
-          <span className="relative">{t(`events.tab.${key}`)}</span>
+          {tab === key ? (
+            <motion.span layoutId="events-tab" className="flex min-h-[44px] items-center rounded-full bg-white px-5 shadow-[0_6px_16px_-8px_rgba(0,0,0,.5)]" transition={springs.snappy}>
+              {t(`events.tab.${key}`)}
+            </motion.span>
+          ) : (
+            <span className="px-5">{t(`events.tab.${key}`)}</span>
+          )}
         </button>
       ))}
     </div>
@@ -105,7 +107,7 @@ export function Events() {
           <Reveal>
             <article className="grid overflow-hidden rounded-[32px] border border-border bg-surface md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
               <div className="relative isolate flex items-center justify-center overflow-hidden bg-[#0A1220] p-6 md:p-10">
-                <img src={feature.imageUrl} alt="" aria-hidden="true" className="absolute inset-0 -z-10 h-full w-full scale-110 object-cover opacity-50 blur-2xl" />
+                <img src={feature.imageUrl} alt="" aria-hidden="true" width="560" height="700" className="absolute inset-0 -z-10 h-full w-full scale-110 object-cover opacity-50 blur-2xl" />
                 <img
                   src={feature.imageUrl}
                   alt={feature.title}
@@ -128,7 +130,7 @@ export function Events() {
                 <h2 id="ev-feature" className="mt-6 max-w-[24ch] font-display text-[clamp(1.75rem,1.3rem+1.4vw,2.6rem)] leading-[1.08] text-ink">
                   {feature.title}
                 </h2>
-                <p className="mt-3 flex items-center gap-2 text-[15px] text-muted-foreground">
+                <p className="mt-3 flex items-center gap-2 text-[16px] text-muted-foreground">
                   <IconPin className="h-4 w-4 shrink-0" />
                   {feature.location}
                 </p>
@@ -190,7 +192,7 @@ export function Events() {
                           <div className="min-w-0">
                             <p className="text-sm font-semibold text-merah">{t(`badge.${p.type}`)}</p>
                             <h4 className="mt-1 font-display text-[24px] leading-[1.15] text-ink">{p.title}</h4>
-                            <p className="mt-1.5 flex items-center gap-1.5 text-[15px] text-muted-foreground">
+                            <p className="mt-1.5 flex items-center gap-1.5 text-[16px] text-muted-foreground">
                               <IconPin className="h-4 w-4 shrink-0" />
                               {p.location}
                             </p>

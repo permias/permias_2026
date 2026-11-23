@@ -45,7 +45,7 @@ function TypingDots({ label }) {
 function OfflineCard({ pick, onNavigate }) {
   return (
     <div className="rounded-[20px] border border-ink/10 bg-white/70 p-4 dark:border-white/10 dark:bg-white/[0.06]">
-      <p className="text-[15px] font-semibold text-ink">{pick({ en: 'The assistant is offline on this preview', id: 'Asisten sedang offline di pratinjau ini' })}</p>
+      <p className="text-[16px] font-semibold text-ink">{pick({ en: 'The assistant is offline on this preview', id: 'Asisten sedang offline di pratinjau ini' })}</p>
       <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
         {pick({
           en: 'Its answer service is not running here, so it cannot reply yet. These pages answer the questions students ask most:',

@@ -36,7 +36,7 @@ function ChapterCard({ c, index, distance }) {
           {distance != null && <span className="tabular text-muted-foreground">{distance}</span>}
         </p>
         <h3 className="mt-3 font-display text-[22px] leading-tight text-ink">{campusName(c)}</h3>
-        <p className="mt-1 text-[15px] font-medium text-ink/80">{c.chapterName}</p>
+        <p className="mt-1 text-[16px] font-medium text-ink/80">{c.chapterName}</p>
         <p className="mt-0.5 text-sm text-muted-foreground">
           {c.city}, {c.state}
         </p>

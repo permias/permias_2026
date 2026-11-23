@@ -375,7 +375,7 @@ export function ChapterPage() {
             <h2 id="ch-sources" className="font-display text-[28px] leading-tight text-ink">
               {pick({ en: 'Sources', id: 'Sumber' })}
             </h2>
-            <p className="mt-3 max-w-[40ch] text-[15px] leading-relaxed text-muted-foreground">
+            <p className="mt-3 max-w-[40ch] text-[16px] leading-relaxed text-muted-foreground">
               {c.status === 'verified'
                 ? pick({ en: 'Checked against the official PERMIAS Nasional chapter list. Each line says which details come from where.', id: 'Dicocokkan dengan daftar chapter resmi PERMIAS Nasional. Setiap baris menyebut data mana yang berasal dari mana.' })
                 : pick({ en: 'Not yet verified against the official list.', id: 'Belum dicocokkan dengan daftar resmi.' })}

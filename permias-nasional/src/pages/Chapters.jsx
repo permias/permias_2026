@@ -52,7 +52,7 @@ function DetailCard({ c, onClose }) {
       <p className="text-muted-foreground">
         {c.city}, {c.state}
       </p>
-      {c.description && <p className="mt-4 max-w-[60ch] text-[15px] leading-relaxed text-ink/80">{pick(c.description)}</p>}
+      {c.description && <p className="mt-4 max-w-[60ch] text-[16px] leading-relaxed text-ink/80">{pick(c.description)}</p>}
       <div className="mt-5 flex flex-wrap gap-2">
         <Link
           to={chapterPath(c)}

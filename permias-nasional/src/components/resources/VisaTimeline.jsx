@@ -12,7 +12,7 @@ export function VisaTimeline() {
           <span className="absolute -left-[9px] top-0 h-4 w-4 rounded-full border-[3px] border-background bg-merah md:-top-[9px] md:left-0" aria-hidden="true" />
           <p className="font-display text-[34px] leading-none text-merah tabular">{i + 1}</p>
           <p className="mt-2 text-[17px] font-semibold leading-snug text-ink">{stage.title[lang] ?? stage.title.en}</p>
-          <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{stage.body[lang] ?? stage.body.en}</p>
+          <p className="mt-2 text-[16px] leading-relaxed text-muted-foreground">{stage.body[lang] ?? stage.body.en}</p>
         </Reveal>
       ))}
     </ol>

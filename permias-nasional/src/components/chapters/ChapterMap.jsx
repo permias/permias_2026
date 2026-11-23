@@ -84,7 +84,7 @@ function PinCard({ items }) {
         </span>
       </div>
       <div className="px-3 pb-3 pt-7">
-        <p className="text-[15px] font-bold leading-tight text-ink">{c.chapterName}</p>
+        <p className="text-[16px] font-bold leading-tight text-ink">{c.chapterName}</p>
         <p className="mt-0.5 text-xs leading-snug text-muted-foreground">
           {c.universityFull || c.university}, {c.city}
         </p>
@@ -164,6 +164,9 @@ export function ChapterMap({
       >
         {usaMap.locations.map((loc) => {
           const n = BY_STATE[loc.id]?.length || 0;
+          const b = BBOX[loc.id];
+          const tiny = b && (b[2] - b[0]) * (BASE[2] / vb[2]) < 16 && (b[3] - b[1]) * (BASE[2] / vb[2]) < 16;
+          const pick = n && onSelectState && !tiny;
           const active = selectedState === loc.id;
           const hov = hoverState === loc.id;
           return (
@@ -172,11 +175,11 @@ export function ChapterMap({
               d={loc.path}
               vectorEffect="non-scaling-stroke"
               strokeWidth={active ? 2 : 1}
-              tabIndex={n && onSelectState ? 0 : -1}
-              role={n && onSelectState ? 'button' : undefined}
+              tabIndex={pick ? 0 : -1}
+              role={pick ? 'button' : undefined}
               aria-label={n ? t('map.stateLabel', { state: loc.name, n }) : undefined}
               aria-hidden={n ? undefined : true}
-              aria-pressed={n && onSelectState ? active : undefined}
+              aria-pressed={pick ? active : undefined}
               className={cn(
                 'outline-none transition-[fill,stroke] duration-200',
                 n ? 'cursor-pointer' : '',

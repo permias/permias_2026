@@ -37,6 +37,16 @@ HIT_JS = r"""
     if (r.bottom < 0 || r.top > innerHeight || r.right < 0 || r.left > innerWidth) continue;
     const x = Math.min(Math.max(r.left + r.width / 2, 1), innerWidth - 1);
     const y = Math.min(Math.max(r.top + r.height / 2, 1), innerHeight - 1);
+    // scrolled out of a horizontal scroller (chip rows, A-Z bar): not on screen, so not a blocked target
+    let clipped = false;
+    for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) {
+      const s = getComputedStyle(a);
+      if (/(auto|scroll|hidden|clip)/.test(s.overflowX + s.overflowY)) {
+        const ar = a.getBoundingClientRect();
+        if (x < ar.left || x > ar.right || y < ar.top || y > ar.bottom) { clipped = true; break; }
+      }
+    }
+    if (clipped) continue;
     const at = document.elementFromPoint(x, y);
     const ok = at && (at === el || el.contains(at) || at.contains(el) && at.tagName === 'LABEL');
     if (ok) { clear.push(key(el)); continue; }

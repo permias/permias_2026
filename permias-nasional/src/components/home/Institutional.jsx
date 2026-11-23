@@ -177,7 +177,7 @@ export function Pengurus() {
                       src={m.imageUrl}
                       alt=""
                       loading="lazy"
-                      className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                      className="h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.04]"
                     />
                   ) : (
                     <span className="flex h-full items-center justify-center font-display text-5xl text-ink/40">{initials(m.name)}</span>

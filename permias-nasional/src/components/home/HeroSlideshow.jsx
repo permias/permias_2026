@@ -83,6 +83,8 @@ export function HeroSlideshow() {
             src={p.src}
             srcSet={p.srcSet}
             sizes="100vw"
+            width="1600"
+            height="1067"
             alt={`${pick(slide.name)}, ${slide.place}`}
             className="photo-grade h-full w-full object-cover"
             initial={{ scale: 1.14, x: '-2%' }}

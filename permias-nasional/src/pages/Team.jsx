@@ -51,7 +51,7 @@ function Portrait({ m, size = 'md', index }) {
             width="480"
             height="600"
             loading="lazy"
-            className="media-outline h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            className="media-outline h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
             style={{ objectPosition: FOCUS[m.name] ?? 'center 25%' }}
           />
         ) : (
@@ -61,10 +61,10 @@ function Portrait({ m, size = 'md', index }) {
         )}
       </div>
       <h3 className={cn('mt-4 font-display leading-tight text-ink', size === 'lg' ? 'text-[30px]' : 'text-[24px]')}>{m.name}</h3>
-      <p className="mt-1 text-[15px] font-semibold text-merah">{m.role}</p>
-      {m.education && <p className="mt-1 text-[15px] leading-snug text-muted-foreground">{m.education}</p>}
+      <p className="mt-1 text-[16px] font-semibold text-merah">{m.role}</p>
+      {m.education && <p className="mt-1 text-[16px] leading-snug text-muted-foreground">{m.education}</p>}
       {m.hometown && (
-        <p className="mt-1 text-[15px] text-muted-foreground">
+        <p className="mt-1 text-[16px] text-muted-foreground">
           {pick({ en: 'From', id: 'Asal' })} {m.hometown}
         </p>
       )}
@@ -122,15 +122,17 @@ export function Team() {
               type="button"
               aria-pressed={tab === d.id}
               onClick={() => setParams({ d: d.id }, { replace: true, preventScrollReset: true })}
-              className={cn(
-                'relative min-h-[44px] shrink-0 whitespace-nowrap rounded-full px-4 text-[15px] font-semibold transition-colors duration-150',
-                tab === d.id ? 'text-mist' : 'text-ink/70 hover:text-ink',
-              )}
+              className={cn('relative flex min-h-[44px] shrink-0 items-center whitespace-nowrap rounded-full text-[15px] font-semibold transition-colors duration-150', tab === d.id ? 'text-mist' : 'text-ink/70 hover:text-ink')}
             >
-              {tab === d.id && <motion.span layoutId="team-tab" className="absolute inset-0 rounded-full bg-ink" transition={springs.snappy} aria-hidden="true" />}
-              <span className="relative">
-                {t(d.titleKey)} <span className={cn('tabular', tab === d.id ? 'text-mist/70' : 'text-muted-foreground')}>{d.members.length}</span>
-              </span>
+              {tab === d.id ? (
+                <motion.span layoutId="team-tab" className="flex min-h-[44px] items-center gap-1.5 rounded-full bg-ink px-4" transition={springs.snappy}>
+                  {t(d.titleKey)} <span className="tabular text-mist/75">{d.members.length}</span>
+                </motion.span>
+              ) : (
+                <span className="flex items-center gap-1.5 px-4">
+                  {t(d.titleKey)} <span className="tabular text-muted-foreground">{d.members.length}</span>
+                </span>
+              )}
             </button>
           ))}
         </div>

@@ -54,7 +54,7 @@ function Callout({ to, image, title, sub, onNavigate }) {
           width="800"
           height="533"
           loading="lazy"
-          className="photo-grade absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+          className="photo-grade absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
         />
       )}
       <span className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(10,18,32,0)_30%,rgba(10,18,32,.82)_100%)]" aria-hidden="true" />
@@ -197,19 +197,21 @@ function LangSwitch({ lang, setLang, label, light }) {
             aria-checked={on}
             onClick={() => setLang(o.value)}
             className={cn(
-              'relative flex min-h-[36px] min-w-[38px] items-center justify-center rounded-full px-2 sm:min-w-[42px] sm:px-2.5 text-[13px] font-semibold tracking-wide transition-colors duration-150',
+              'relative flex min-h-[36px] items-center justify-center rounded-full text-[13px] font-semibold tracking-wide transition-colors duration-150',
               on ? (light ? 'text-[#13233F]' : 'text-ink') : light ? 'text-white/85 hover:text-white' : 'text-ink/65 hover:text-ink',
             )}
           >
-            {on && (
+            {on ? (
               <motion.span
                 layoutId="lang-thumb"
-                className="absolute inset-0 rounded-full bg-white shadow-[0_2px_8px_-2px_rgba(15,27,45,.35)] dark:bg-white/20"
+                className="flex min-h-[36px] min-w-[38px] items-center justify-center rounded-full bg-white px-2 shadow-[0_2px_8px_-2px_rgba(15,27,45,.35)] sm:min-w-[42px] sm:px-2.5 dark:bg-[#2A3954]"
                 transition={springs.snappy}
-                aria-hidden="true"
-              />
+              >
+                {o.label}
+              </motion.span>
+            ) : (
+              <span className="flex min-h-[36px] min-w-[38px] items-center justify-center px-2 sm:min-w-[42px] sm:px-2.5">{o.label}</span>
             )}
-            <span className="relative">{o.label}</span>
           </button>
         );
       })}
@@ -240,7 +242,6 @@ export function TopBar() {
   const overHero = isHome && !scrolled && !menu;
   const strong = useTransform(scrollY, [0, 140], [0, 1]);
   const softHome = useTransform(scrollY, [0, 60], [0, 1]);
-  const heroScrim = useTransform(scrollY, [0, 140], [1, 0]);
   const [isMac] = useState(() => typeof navigator === 'undefined' || /mac|iphone|ipad/i.test(navigator.platform || navigator.userAgent));
 
   // a route change closes any open menu (state adjusted during render, not in an effect)
@@ -293,7 +294,7 @@ export function TopBar() {
   return (
     <header
       ref={headerRef}
-      className={cn('fixed inset-x-0 top-0 z-[55] transition-colors duration-300', light ? 'text-white' : 'text-ink')}
+      className={cn('fixed inset-x-0 top-0 z-[55] transition-colors duration-300', light ? 'bg-gradient-to-b from-black/50 to-black/0 text-white' : 'text-ink')}
       onPointerLeave={closeSoon}
       onPointerEnter={() => clearTimeout(timer.current)}
       onBlur={(e) => {
@@ -307,13 +308,6 @@ export function TopBar() {
         className="pointer-events-none absolute inset-0 -z-10 bg-white/[0.86] shadow-[0_1px_0_rgb(var(--border)),0_18px_40px_-28px_rgba(19,35,63,.45)] backdrop-blur-[24px] backdrop-saturate-[1.8] dark:bg-[#0A1220]/[0.86] dark:shadow-[0_1px_0_rgba(255,255,255,.08),0_18px_40px_-28px_rgba(0,0,0,.8)]"
         style={{ opacity: menu ? 1 : strong }}
       />
-      {isHome && (
-        <motion.div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 -z-20 h-28 bg-gradient-to-b from-black/45 to-transparent"
-          style={{ opacity: heroScrim }}
-        />
-      )}
 
       <div className="container-x flex h-16 items-center justify-between gap-2 sm:gap-4 md:h-[72px]">
         <Link to="/" className="group flex min-w-0 shrink items-center gap-2 rounded-[12px] sm:gap-3 lg:shrink-0 outline-offset-4" aria-label={t('topbar.homeLabel')}>

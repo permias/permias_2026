@@ -39,7 +39,7 @@ export function RegisterChapter() {
               </li>
             ))}
           </ol>
-          <p className="border-t border-border pt-6 text-[15px] leading-relaxed text-muted-foreground">
+          <p className="border-t border-border pt-6 text-[16px] leading-relaxed text-muted-foreground">
             {pick({
               en: `You join ${chapters.length} chapters in ${stateCount} states and Washington, DC. Questions first? Email `,
               id: `Anda bergabung dengan ${chapters.length} chapter di ${stateCount} negara bagian dan Washington, DC. Ada pertanyaan? Email `,
