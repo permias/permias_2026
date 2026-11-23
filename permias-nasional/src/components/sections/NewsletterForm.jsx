@@ -48,8 +48,8 @@ export function NewsletterForm({ className = '', tone = 'light' }) {
         disabled={status === 'loading'}
         className={tone === 'dark' ? 'border-white/15 bg-white/[0.06] text-white placeholder:text-white/50' : undefined}
       />
-      <Button type="submit" variant={tone === 'dark' ? 'light' : 'primary'} disabled={status === 'loading'} className="shrink-0">
-        {status === 'loading' ? '…' : t('home.newsletter.submit')}
+      <Button type="submit" variant={tone === 'dark' ? 'light' : 'primary'} loading={status === 'loading'} className="shrink-0">
+        {t('home.newsletter.submit')}
       </Button>
       {message && (
         <p className={cn('w-full text-sm font-medium', tone === 'dark' ? 'text-white/85' : status === 'error' ? 'text-merah' : 'text-ink')} role="status">

@@ -72,7 +72,7 @@ export function About() {
         </div>
         {wide && (
           <Reveal className="mt-4">
-            <img src={wide.src} srcSet={wide.srcSet} sizes="100vw" alt={wide.alt} width="1600" height="1067" loading="lazy" className="media-outline h-[280px] w-full rounded-[32px] object-cover md:h-[420px]" />
+            <img src={wide.src} srcSet={wide.srcSet} sizes="100vw" alt={wide.alt} width="1600" height="1067" loading="lazy" className="photo-grade media-outline h-[280px] w-full rounded-[32px] object-cover md:h-[420px]" />
             <Credit image="campus-columbia-low" className="mt-2" />
           </Reveal>
         )}

@@ -2,6 +2,8 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
+  // hover styles only on devices that really hover, so a tap never leaves a control stuck in its hover state
+  future: { hoverOnlyWhenSupported: true },
   theme: {
     extend: {
       colors: {

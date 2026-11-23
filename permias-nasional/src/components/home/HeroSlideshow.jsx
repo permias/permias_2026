@@ -84,7 +84,7 @@ export function HeroSlideshow() {
             srcSet={p.srcSet}
             sizes="100vw"
             alt={`${pick(slide.name)}, ${slide.place}`}
-            className="h-full w-full object-cover"
+            className="photo-grade h-full w-full object-cover"
             initial={{ scale: 1.14, x: '-2%' }}
             animate={{ scale: 1.02, x: '0%' }}
             transition={{ duration: (SLIDE_MS / 1000) * 1.4, ease: motionTokens.easing.linear }}
@@ -190,7 +190,10 @@ export function HeroSlideshow() {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="flex items-center gap-1" role="group" aria-label={t('hero.slides')}>
+              <p className="text-sm font-semibold text-white/85 tabular sm:hidden" aria-hidden="true">
+                {i + 1} / {n}
+              </p>
+              <div className="hidden items-center sm:flex" role="group" aria-label={t('hero.slides')}>
                 {heroSlides.map((s, k) => (
                   <button
                     key={s.slug}
@@ -198,9 +201,9 @@ export function HeroSlideshow() {
                     onClick={() => go(k)}
                     aria-label={t('hero.goTo', { n: k + 1, total: n, name: pick(s.name) })}
                     aria-current={k === i ? 'true' : undefined}
-                    className="group flex h-8 items-center"
+                    className={cn('group flex h-8 items-center justify-center rounded-full', k === i ? 'min-w-[48px]' : 'min-w-[24px]')}
                   >
-                    <span className={cn('relative block h-[3px] overflow-hidden rounded-full bg-white/30 transition-[width] duration-300', k === i ? 'w-10' : 'w-3 group-hover:bg-white/60')}>
+                    <span className={cn('relative block h-[3px] overflow-hidden rounded-full bg-white/30 transition-colors duration-150', k === i ? 'w-10' : 'w-3 group-hover:bg-white/70')}>
                       {k === i && (
                         <span
                           key={`${i}-${paused}`}
@@ -215,7 +218,7 @@ export function HeroSlideshow() {
               <button
                 type="button"
                 onClick={() => setUserPaused((v) => !v)}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:bg-white/15"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 text-white transition-[background-color,transform] duration-150 hover:bg-white/15 active:scale-95"
                 aria-label={paused ? t('hero.play') : t('hero.pause')}
                 aria-pressed={userPaused}
               >

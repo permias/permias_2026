@@ -54,7 +54,7 @@ function Callout({ to, image, title, sub, onNavigate }) {
           width="800"
           height="533"
           loading="lazy"
-          className="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+          className="photo-grade absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
         />
       )}
       <span className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(10,18,32,0)_30%,rgba(10,18,32,.82)_100%)]" aria-hidden="true" />
@@ -143,7 +143,7 @@ function GuidesMenu({ pick, onNavigate }) {
           return (
             <li key={s.id}>
               <MenuLink to={`/resources/${s.id}`} onNavigate={onNavigate} title={pick(s.title)} note={pick(GUIDE_NOTES[s.id])}>
-                {p && <img src={p.small} alt="" width="44" height="44" loading="lazy" className="media-outline h-11 w-11 shrink-0 rounded-[10px] object-cover" />}
+                {p && <img src={p.small} alt="" width="44" height="44" loading="lazy" className="photo-grade media-outline h-11 w-11 shrink-0 rounded-[10px] object-cover" />}
               </MenuLink>
             </li>
           );

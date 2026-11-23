@@ -35,7 +35,7 @@ export function PageHeader({ title, description, children, image, className, com
               alt=""
               width="1600"
               height="1067"
-              className="h-full w-full object-cover"
+              className="photo-grade h-full w-full object-cover"
               initial={{ scale: 1.08 }}
               animate={{ scale: 1 }}
               transition={{ duration: motionTokens.duration.crawl * 1.6, ease: motionTokens.easing.smooth }}

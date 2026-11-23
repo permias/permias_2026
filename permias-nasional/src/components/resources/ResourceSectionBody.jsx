@@ -28,7 +28,7 @@ export function ResourceSectionBody({ sec, lang, t }) {
             <Reveal as="li" key={`${sec.id}-${card.title}-${ci}`} delay={Math.min(ci % 4, 8) * 0.06} className="flex flex-col overflow-hidden rounded-[24px] border border-border bg-surface">
               {p && (
                 <figure className="relative">
-                  <img src={p.small} alt={p.alt} width="800" height="400" loading="lazy" className="aspect-[2/1] w-full object-cover" />
+                  <img src={p.small} alt={p.alt} width="800" height="400" loading="lazy" className="photo-grade aspect-[2/1] w-full object-cover" />
                   <figcaption className="absolute bottom-2 right-2 max-w-[80%] truncate rounded-full bg-black/45 px-2 py-0.5 text-[11px] text-white/90 backdrop-blur">
                     <a href={p.page} target="_blank" rel="noopener noreferrer" className="hover:text-white">
                       {p.artist}, {p.license}

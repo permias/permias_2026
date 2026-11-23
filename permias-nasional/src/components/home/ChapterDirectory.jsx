@@ -8,6 +8,7 @@ import { motionTokens } from '../../lib/motion.js';
 import { buildSearchIndex, fold, searchIndex } from '../../utils/searchIndex.js';
 import { cn } from '../../utils/cn.js';
 import { IconArrowRight, IconChevronDown, IconInstagram, IconLocate, IconMap, IconSearch } from '../ui/Icons.jsx';
+import { Spinner } from '../ui/Button.jsx';
 import { TiltCard } from '../ui/TiltCard.jsx';
 import { REGION_TONE, campusName, isRegional } from '../../lib/regionTone.js';
 
@@ -143,7 +144,7 @@ export function ChapterDirectory() {
               onClick={() => geo.request()}
               className="inline-flex min-h-[48px] shrink-0 items-center gap-2 self-start rounded-[12px] border border-ink/15 px-4 text-[15px] font-semibold text-ink transition-[background-color,transform] duration-150 hover:bg-ink/[0.04] active:scale-[0.97] lg:self-auto"
             >
-              <IconLocate className="h-5 w-5 text-merah" />
+              {geo.status === 'asking' ? <Spinner className="h-5 w-5 text-merah" /> : <IconLocate className="h-5 w-5 text-merah" />}
               {geo.status === 'asking' ? t('home.finder.locating') : distances ? t('dir.sortedByDistance') : t('home.finder.near')}
             </button>
           </div>

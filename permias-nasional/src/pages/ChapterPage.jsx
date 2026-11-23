@@ -204,7 +204,7 @@ export function ChapterPage() {
               width="1600"
               height="1067"
               fetchPriority="high"
-              className="h-full w-full object-cover"
+              className="photo-grade h-full w-full object-cover"
               initial={{ scale: 1.08 }}
               animate={{ scale: 1 }}
               transition={{ duration: motionTokens.duration.crawl * 1.6, ease: motionTokens.easing.smooth }}

@@ -280,6 +280,14 @@
     text-decoration-color: rgb(var(--merah));
   }
 
+  /* One grade for every landscape/campus photo, so Commons photos from different cameras sit together */
+  .photo-grade {
+    filter: saturate(0.92) contrast(1.05) brightness(0.98);
+  }
+  .dark .photo-grade {
+    filter: saturate(0.88) contrast(1.06) brightness(0.9);
+  }
+
   .media-outline {
     outline: 1px solid rgba(15, 27, 45, 0.08);
     outline-offset: -1px;

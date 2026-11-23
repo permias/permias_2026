@@ -9,7 +9,7 @@ Photos in `public/images/photos/` come from Wikimedia Commons under the licenses
 | berkeley-glade | UC Berkeley, Memorial Glade | Gku | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Berkeley_glade_afternoon.jpg |
 | borobudur-sunrise | Borobudur at sunrise, Central Java | Justine Hong | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Borobudur_Sunrise_2012-01-05.jpg |
 | boston-skyline | Boston skyline from the Longfellow Bridge | King of Hearts | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg |
-| campus-columbia-low | Low Memorial Library, Columbia University | AlMare (Wikimedia Commons uploader) | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Low_Memorial_Library_Columbia_University_NYC_retouched.jpg |
+| campus-columbia-low | Low Memorial Library, Columbia University | Ashley98lee | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Columbia_University_Low_Memorial_Library_1.jpg |
 | campus-cornell | McGraw Tower, Cornell University | P. Hughes | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Cornell_University_-_McGraw_Tower_and_Olin_Library.jpg |
 | campus-mit-dome | Great Dome, MIT, Cambridge | Peacearth | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Great_dome_of_MIT,_Feb_2021.jpg |
 | campus-purdue | Purdue Bell Tower, Purdue University | Julian Herzog (Website) | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Purdue_Bell_Tower_Purdue_University_2016_02.jpg |

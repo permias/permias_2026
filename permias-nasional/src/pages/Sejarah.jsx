@@ -9,7 +9,7 @@ import { Reveal } from '../components/ui/Reveal.jsx';
 import { Credit, SectionHead } from '../components/ui/Section.jsx';
 import { IconArrowRight, IconMail } from '../components/ui/Icons.jsx';
 
-const ACTIVITY_PHOTOS = ['dc-indonesian-embassy', 'uw-suzzallo', 'berkeley-glade'];
+const ACTIVITY_PHOTOS = ['dc-indonesian-embassy', 'uw-suzzallo', 'campus-uw-quad'];
 
 /** Sejarah: the founding story as an editorial spread, vision and mission, and what PERMIAS runs today. */
 export function Sejarah() {
@@ -66,7 +66,7 @@ export function Sejarah() {
             const p = photo(ACTIVITY_PHOTOS[i]);
             return (
               <Reveal as="li" key={item.title.en} delay={i * 0.07} className="flex flex-col overflow-hidden rounded-[28px] border border-border bg-surface">
-                {p && <img src={p.small} alt={p.alt} width="800" height="533" loading="lazy" className="aspect-[3/2] w-full object-cover" />}
+                {p && <img src={p.small} alt={p.alt} width="800" height="533" loading="lazy" className="photo-grade aspect-[3/2] w-full object-cover" />}
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-[26px] leading-tight text-ink">{item.title[lang]}</h3>
                   <p className="mt-3 text-[16px] leading-relaxed text-muted-foreground">{item.desc[lang]}</p>

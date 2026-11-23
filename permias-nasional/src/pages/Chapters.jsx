@@ -14,6 +14,7 @@ import { Seo } from '../components/Seo.jsx';
 import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { ChapterMap } from '../components/chapters/ChapterMap.jsx';
 import { IconArrowRight, IconArrowUpRight, IconChevronDown, IconInstagram, IconLocate, IconSearch } from '../components/ui/Icons.jsx';
+import { Spinner } from '../components/ui/Button.jsx';
 import { Reveal } from '../components/ui/Reveal.jsx';
 import { ChapterLogo } from '../components/chapters/ChapterLogo.jsx';
 import { chapterPath } from '../lib/chapterInfo.js';
@@ -257,7 +258,7 @@ export function Chapters() {
                   onClick={() => (near ? requestGeo() : set({ near: '1' }))}
                   className="inline-flex h-[54px] items-center gap-2 rounded-[14px] border border-ink/15 px-4 text-[15px] font-semibold text-ink transition-[background-color,transform] duration-150 hover:bg-ink/5 active:scale-[0.97]"
                 >
-                  <IconLocate className="h-5 w-5 text-merah" />
+                  {geo.status === 'asking' ? <Spinner className="h-5 w-5 text-merah" /> : <IconLocate className="h-5 w-5 text-merah" />}
                   <span className="hidden sm:inline">{geo.status === 'asking' ? t('home.finder.locating') : t('home.finder.near')}</span>
                   <span className="sr-only sm:hidden">{t('home.finder.near')}</span>
                 </button>

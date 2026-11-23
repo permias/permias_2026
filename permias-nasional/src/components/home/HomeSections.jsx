@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useLanguage } from '../../context/LanguageContext.jsx';
 import { getRecentPosts } from '../../data/posts.js';
-import { instagramPosts } from '../../data/instagramPosts.js';
 import { partners } from '../../data/partners.js';
-import { stories } from '../../data/siteMedia.js';
 import { photo } from '../../data/photos.js';
+import { chapterPath, featuredChapterPhotos } from '../../lib/chapterInfo.js';
 import { formatDate } from '../../utils/formatDate.js';
 import { cn } from '../../utils/cn.js';
 import { NewsletterForm } from '../sections/NewsletterForm.jsx';
@@ -150,20 +149,16 @@ export function Moments() {
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
   const up = useTransform(scrollYProgress, [0, 1], [40, -40]);
   const down = useTransform(scrollYProgress, [0, 1], [-30, 30]);
-  const tiles = [
-    { src: stories.eidRecap, label: t('home.stories.eid'), cls: 'col-span-2 row-span-2', drift: up },
-    { src: instagramPosts[1].image, label: t(instagramPosts[1].titleKey), cls: 'row-span-2', drift: down },
-    { src: stories.kartini, label: t('home.stories.kartini'), cls: 'col-span-2', drift: up },
-    { src: instagramPosts[0].image, label: t(instagramPosts[0].titleKey), cls: '', drift: down },
-    { src: stories.leadership, label: t('home.stories.leadership'), cls: '', drift: up },
-  ];
+  const { pick } = useLanguage();
+  const shapes = ['col-span-2 row-span-2', 'row-span-2', 'col-span-2', '', ''];
+  const tiles = featuredChapterPhotos(5).map(({ c, p }, k) => ({ src: p.src, alt: p.alt, label: c.chapterName, sub: `${c.city}, ${c.state}`, to: chapterPath(c), cls: shapes[k], drift: k % 2 ? down : up }));
   return (
     <section ref={ref} className="container-x mt-24 md:mt-32" aria-labelledby="moments-title">
       <SectionHead
         id="moments-title"
         word="Cerita"
-        title={t('home.stories.title')}
-        sub={t('home.stories.sub')}
+        title={pick({ en: 'From the chapters', id: 'Dari chapter-chapter' })}
+        sub={pick({ en: 'Photos the chapters posted themselves, from welcome days to Indonesian nights on campus.', id: 'Foto yang diunggah sendiri oleh chapter, dari hari penyambutan hingga malam budaya Indonesia di kampus.' })}
         action={
           <a
             href="https://www.instagram.com/permias.nasional/"
@@ -179,17 +174,20 @@ export function Moments() {
       <ul className="mt-10 grid auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[190px] md:grid-cols-4 md:gap-4">
         {tiles.map((tile) => (
           <li key={tile.label} className={cn('relative overflow-hidden rounded-[24px] bg-muted', tile.cls)}>
-            <a href="https://www.instagram.com/permias.nasional/" target="_blank" rel="noopener noreferrer" className="group block h-full">
+            <Link to={tile.to} className="group block h-full">
               <motion.img
                 src={tile.src}
-                alt=""
+                alt={tile.alt || ''}
                 loading="lazy"
                 style={{ y: tile.drift }}
                 className="absolute inset-[-40px_0] h-[calc(100%+80px)] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               <span className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/75 to-transparent" aria-hidden="true" />
-              <span className="absolute bottom-3 left-4 right-4 truncate text-[15px] font-semibold text-white">{tile.label}</span>
-            </a>
+              <span className="absolute bottom-3 left-4 right-4">
+                <span className="block truncate text-[15px] font-semibold text-white">{tile.label}</span>
+                <span className="block truncate text-[13px] text-white/80">{tile.sub}</span>
+              </span>
+            </Link>
           </li>
         ))}
       </ul>

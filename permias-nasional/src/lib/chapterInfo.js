@@ -94,3 +94,19 @@ export function nearbyChapters(c, limit = 4) {
 }
 
 export const mediaCount = () => Object.values(MEDIA).filter((m) => m && (m.logo || (m.photos || []).length)).length;
+
+/** Chapter photos for mosaics: wide shots first, one per chapter, spread across regions. */
+export function featuredChapterPhotos(n = 5) {
+  const rows = chapters
+    .map((c) => ({ c, p: chapterMedia(c).photos.find((x) => x.w && x.h && x.w / x.h >= 1.2) }))
+    .filter((r) => r.p);
+  const out = [];
+  const regions = [...new Set(rows.map((r) => r.c.region))];
+  for (let k = 0; out.length < n && k < rows.length; k++) {
+    for (const reg of regions) {
+      const r = rows.filter((x) => x.c.region === reg)[k];
+      if (r && out.length < n) out.push(r);
+    }
+  }
+  return out;
+}
