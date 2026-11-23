@@ -147,7 +147,19 @@ with sync_playwright() as p:
             nav_click('top: Guides menu opens and links to a guide', lambda pg: (top(pg).get_by_role('button', name=re.compile('^(Guides menu|Menu Panduan)$')).click(), pg.wait_for_timeout(600), pg.get_by_role('link', name=re.compile('^(Visa|Visa)')).first)[-1], r'/resources/')
         nav_click('chapter page: next chapter', lambda pg: pg.get_by_role('link', name=re.compile('^(Next chapter|Chapter berikutnya)')), r'/chapters/[a-z0-9_.-]+$', start='/chapters/berkeleybisa')
         nav_click('chapter page: full map', lambda pg: pg.get_by_role('link', name=re.compile('^(Open the full map|Buka peta lengkap)$')), r'/chapters\?state=ca&chapter=c-berkeleybisa', start='/chapters/berkeleybisa')
-        nav_click('chat: opens panel', lambda pg: pg.get_by_role('button', name=re.compile('^(Open assistant|Buka asisten)$')), None, lambda pg: pg.get_by_role('dialog').count() > 0)
+        def open_chat(pg):
+            if w >= 768:
+                return pg.get_by_role('button', name=re.compile('^(Open assistant|Buka asisten)$'))
+            dock(pg).get_by_role('button', name=re.compile('^(Lainnya|More)$')).click()
+            pg.wait_for_timeout(700)
+            return pg.get_by_role('button', name=re.compile('^(Open assistant|Buka asisten)$')).first
+        chat_dialog = lambda pg: pg.get_by_role('dialog', name=re.compile('Assistant|Asisten'))
+        nav_click('chat: opens panel', open_chat, None, lambda pg: chat_dialog(pg).count() > 0)
+        def offline_link(pg):
+            open_chat(pg).click()
+            pg.wait_for_timeout(5000)  # reachability check times out or fails, then the offline card appears
+            return chat_dialog(pg).get_by_role('link', name=re.compile('^(Visa guide|Panduan visa)$')).first
+        nav_click('chat: offline card links to the visa guide', offline_link, r'/resources/visa$')
         nav_click('top: register chapter', lambda pg: pg.get_by_role('link', name=re.compile('^(Daftarkan chapter Anda|Register your chapter)$')).first, r'/chapters/register') if w >= 768 else None
         nav_click('top: EN toggle', lambda pg: pg.get_by_role('radio', name='EN').first, None,
                   lambda pg: pg.evaluate("document.documentElement.lang") == 'en')
