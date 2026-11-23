@@ -144,7 +144,8 @@ with sync_playwright() as p:
         top = lambda pg: pg.get_by_role('navigation', name=re.compile('Navigasi situs|Site navigation'))
         nav_click('dock: Chapters', lambda pg: dock(pg).get_by_role('link', name=re.compile('^Chapter')), r'/chapters')
         nav_click('dock: Events', lambda pg: dock(pg).get_by_role('link', name=re.compile('^(Acara|Events)$')), r'/events')
-        nav_click('dock: Home', lambda pg: dock(pg).get_by_role('link', name=re.compile('^(Beranda|Home)$')), r'/$', start='/events')
+        # home is the base URL itself; under a subpath base the router shows it without the trailing slash
+        nav_click('dock: Home', lambda pg: dock(pg).get_by_role('link', name=re.compile('^(Beranda|Home)$')), rf'^{re.escape(base)}/?(\?.*)?$', start='/events')
         nav_click('dock: Search opens dialog', lambda pg: dock(pg).get_by_role('button', name=re.compile('^(Cari|Search)$')), None,
                   lambda pg: pg.get_by_role('dialog').count() > 0)
         nav_click('dock: More opens dialog', lambda pg: dock(pg).get_by_role('button', name=re.compile('^(Lainnya|More)$')), None,
