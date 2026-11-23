@@ -12,19 +12,31 @@ import { Footer } from './Footer.jsx';
 import { CookieBanner } from './CookieBanner.jsx';
 import { ChatWidget } from './ChatWidget.jsx';
 
-function ScrollManager() {
-  const { pathname, hash } = useLocation();
+/** In-page anchors scroll after render; route changes scroll to top once the old page has faded out. */
+function HashScroll() {
+  const { hash, pathname } = useLocation();
   useEffect(() => {
-    if (hash) {
-      const el = document.getElementById(decodeURIComponent(hash.slice(1)));
-      if (el) {
-        requestAnimationFrame(() => el.scrollIntoView({ block: 'start' }));
-        return;
-      }
-    }
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (!hash) return;
+    const el = document.getElementById(decodeURIComponent(hash.slice(1)));
+    if (el) requestAnimationFrame(() => el.scrollIntoView({ block: 'start' }));
   }, [pathname, hash]);
   return null;
+}
+
+/** A thin red line that sweeps across the top on every route change. */
+function RouteProgress({ routeKey }) {
+  return (
+    <AnimatePresence initial={false}>
+      <motion.span
+        key={routeKey}
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-x-0 top-0 z-[70] h-[2px] origin-left bg-merah"
+        initial={{ scaleX: 0, opacity: 1 }}
+        animate={{ scaleX: 1, opacity: 0, transition: { scaleX: { duration: motionTokens.duration.slow, ease: motionTokens.easing.smooth }, opacity: { delay: motionTokens.duration.slow, duration: motionTokens.duration.fast } } }}
+        exit={{ opacity: 0, transition: { duration: motionTokens.duration.instant } }}
+      />
+    </AnimatePresence>
+  );
 }
 
 export function Layout() {
@@ -42,17 +54,24 @@ export function Layout() {
           >
             {t('skip.main')}
           </a>
-          <ScrollManager />
+          <HashScroll />
+          <RouteProgress routeKey={location.pathname} />
           <TopBar />
-          <AnimatePresence mode="wait" initial={false}>
+          <AnimatePresence
+            mode="wait"
+            initial={false}
+            onExitComplete={() => {
+              if (!window.location.hash) window.scrollTo({ top: 0, behavior: 'instant' });
+            }}
+          >
             <motion.main
               key={location.pathname}
               id="main-content"
               tabIndex={-1}
               className="outline-none"
-              initial={{ opacity: 0, y: motionTokens.distance.sm }}
+              initial={{ opacity: 0, y: motionTokens.distance.md }}
               animate={{ opacity: 1, y: 0, transition: { duration: motionTokens.duration.normal, ease: motionTokens.easing.smooth } }}
-              exit={{ opacity: 0, transition: { duration: motionTokens.duration.exit } }}
+              exit={{ opacity: 0, y: -motionTokens.distance.xs, transition: { duration: motionTokens.duration.exit, ease: motionTokens.easing.sharp } }}
             >
               {outlet}
             </motion.main>

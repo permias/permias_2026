@@ -34,7 +34,11 @@ function DockItem({ mouseX, active, label, Icon, as: As = 'button', className, a
       aria-current={active ? 'page' : undefined}
       className={cn(
         'relative flex h-[52px] min-w-[56px] flex-col items-center justify-center rounded-[20px] px-2.5 text-[11px] font-semibold outline-offset-2 sm:min-w-[64px]',
-        accent ? 'text-white' : active ? 'text-ink' : 'text-ink/70 hover:text-ink',
+        accent
+          ? 'mx-1 h-[44px] min-w-[52px] rounded-[17px] bg-merah text-white shadow-[0_8px_20px_-8px_rgb(var(--merah)/0.8),inset_0_1px_0_rgba(255,255,255,.35)] transition-[background-color] duration-150 hover:bg-[#B50F21] sm:min-w-[60px]'
+          : active
+            ? 'text-ink'
+            : 'text-ink/70 hover:text-ink',
         className,
       )}
       {...rest}
@@ -47,7 +51,6 @@ function DockItem({ mouseX, active, label, Icon, as: As = 'button', className, a
           aria-hidden="true"
         />
       )}
-      {accent && <span className="absolute inset-1 rounded-[17px] bg-merah shadow-[0_8px_20px_-8px_rgb(var(--merah)/0.8),inset_0_1px_0_rgba(255,255,255,.35)]" aria-hidden="true" />}
       <motion.span className="relative flex flex-col items-center gap-0.5" style={{ scale, y }}>
         <Icon className="h-[22px] w-[22px]" strokeWidth={active || accent ? 2.1 : 1.8} />
         <span className="leading-none">{label}</span>
