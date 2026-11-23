@@ -12,7 +12,12 @@
     "whatsapp": "",
     "email": "isanu_@permiasnasional.com",
     "website": "https://instagram.com/isanu_",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 42.34,
+    "lng": -71.0883,
+    "geoSource": "https://en.wikipedia.org/wiki/Northeastern_University",
+    "mapX": 1172.7,
+    "mapY": 163.5
   },
   {
     "id": "c-theisabu",
@@ -27,7 +32,12 @@
     "whatsapp": "",
     "email": "the.isabu@permiasnasional.com",
     "website": "https://instagram.com/the.isabu",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
+    "lat": 42.3489,
+    "lng": -71.1003,
+    "geoSource": "https://en.wikipedia.org/wiki/Boston_University",
+    "mapX": 1172.5,
+    "mapY": 163.4
   },
   {
     "id": "c-permiasmass",
@@ -42,7 +52,12 @@
     "whatsapp": "",
     "email": "permiasmass@permiasnasional.com",
     "website": "https://instagram.com/permiasmass",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 42.3603,
+    "lng": -71.0578,
+    "geoSource": "https://en.wikipedia.org/wiki/Boston",
+    "mapX": 1173.1,
+    "mapY": 163
   },
   {
     "id": "c-biababson",
@@ -57,7 +72,12 @@
     "whatsapp": "",
     "email": "bia.babson@permiasnasional.com",
     "website": "https://instagram.com/bia.babson",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=BIA%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=BIA%20",
+    "lat": 42.2982,
+    "lng": -71.2612,
+    "geoSource": "https://en.wikipedia.org/wiki/Babson_College",
+    "mapX": 1170.2,
+    "mapY": 165.2
   },
   {
     "id": "c-indonesiamit",
@@ -72,7 +92,12 @@
     "whatsapp": "",
     "email": "indonesia.mit@permiasnasional.com",
     "website": "https://instagram.com/indonesia.mit",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=AIS%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=AIS%20",
+    "lat": 42.3597,
+    "lng": -71.0919,
+    "geoSource": "https://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology",
+    "mapX": 1172.5,
+    "mapY": 163.1
   },
   {
     "id": "c-permiasri",
@@ -87,7 +112,12 @@
     "whatsapp": "",
     "email": "permiasri@permiasnasional.com",
     "website": "https://instagram.com/permiasri",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 41.8236,
+    "lng": -71.4222,
+    "geoSource": "https://en.wikipedia.org/wiki/Providence%2C_Rhode_Island",
+    "mapX": 1170.5,
+    "mapY": 176.1
   },
   {
     "id": "c-indonesiaharvard",
@@ -102,7 +132,12 @@
     "whatsapp": "",
     "email": "indonesiaharvard@permiasnasional.com",
     "website": "https://instagram.com/indonesiaharvard",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Harv"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Harv",
+    "lat": 42.3744,
+    "lng": -71.1169,
+    "geoSource": "https://en.wikipedia.org/wiki/Harvard_University",
+    "mapX": 1172.1,
+    "mapY": 162.9
   },
   {
     "id": "c-isaunh",
@@ -117,7 +152,12 @@
     "whatsapp": "",
     "email": "isaunh@permiasnasional.com",
     "website": "https://instagram.com/isaunh",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
+    "lat": 43.1364,
+    "lng": -70.9322,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_New_Hampshire",
+    "mapX": 1170.3,
+    "mapY": 145.7
   },
   {
     "id": "c-isaumass",
@@ -132,7 +172,12 @@
     "whatsapp": "",
     "email": "isa.umass@permiasnasional.com",
     "website": "https://instagram.com/isa.umass",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
+    "lat": 42.3889,
+    "lng": -72.5278,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Massachusetts_Amherst",
+    "mapX": 1149.5,
+    "mapY": 168.7
   },
   {
     "id": "c-indonesiawpi",
@@ -147,7 +192,12 @@
     "whatsapp": "",
     "email": "indonesia.wpi@permiasnasional.com",
     "website": "https://instagram.com/indonesia.wpi",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo",
+    "lat": 42.2744,
+    "lng": -71.8075,
+    "geoSource": "https://en.wikipedia.org/wiki/Worcester_Polytechnic_Institute",
+    "mapX": 1161.6,
+    "mapY": 168.1
   },
   {
     "id": "c-berkleeindo",
@@ -162,7 +212,12 @@
     "whatsapp": "",
     "email": "berkleeindo@permiasnasional.com",
     "website": "https://instagram.com/berkleeindo",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Berk"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Berk",
+    "lat": 42.3464,
+    "lng": -71.0869,
+    "geoSource": "https://en.wikipedia.org/wiki/Berklee_College_of_Music",
+    "mapX": 1172.7,
+    "mapY": 163.4
   },
   {
     "id": "c-permiaspennstate",
@@ -177,7 +232,12 @@
     "whatsapp": "",
     "email": "permiaspennstate@permiasnasional.com",
     "website": "https://instagram.com/permiaspennstate",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 40.7983,
+    "lng": -77.86,
+    "geoSource": "https://en.wikipedia.org/wiki/Pennsylvania_State_University",
+    "mapX": 1070.7,
+    "mapY": 223.3
   },
   {
     "id": "c-cmupermias",
@@ -192,7 +252,12 @@
     "whatsapp": "",
     "email": "cmu_permias@permiasnasional.com",
     "website": "https://instagram.com/cmu_permias",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISCM"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISCM",
+    "lat": 40.4425,
+    "lng": -79.9433,
+    "geoSource": "https://en.wikipedia.org/wiki/Carnegie_Mellon_University",
+    "mapX": 1037.5,
+    "mapY": 237.6
   },
   {
     "id": "c-permiasnyc",
@@ -207,7 +272,12 @@
     "whatsapp": "",
     "email": "permiasnyc@permiasnasional.com",
     "website": "https://instagram.com/permiasnyc",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 40.7128,
+    "lng": -74.0061,
+    "geoSource": "https://en.wikipedia.org/wiki/New_York_City",
+    "mapX": 1134.8,
+    "mapY": 211.1
   },
   {
     "id": "c-indonesiacolumbia",
@@ -222,7 +292,12 @@
     "whatsapp": "",
     "email": "indonesiacolumbia@permiasnasional.com",
     "website": "https://instagram.com/indonesiacolumbia",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Colu"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Colu",
+    "lat": 40.8075,
+    "lng": -73.9619,
+    "geoSource": "https://en.wikipedia.org/wiki/Columbia_University",
+    "mapX": 1135,
+    "mapY": 208.8
   },
   {
     "id": "c-permiasupitt",
@@ -237,7 +312,12 @@
     "whatsapp": "",
     "email": "permias.upitt@permiasnasional.com",
     "website": "https://instagram.com/permias.upitt",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
+    "lat": 40.4446,
+    "lng": -79.9533,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Pittsburgh",
+    "mapX": 1037.4,
+    "mapY": 237.6
   },
   {
     "id": "c-permiascuse",
@@ -252,7 +332,12 @@
     "whatsapp": "",
     "email": "permiascuse@permiasnasional.com",
     "website": "https://instagram.com/permiascuse",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 43.0376,
+    "lng": -76.134,
+    "geoSource": "https://en.wikipedia.org/wiki/Syracuse_University",
+    "mapX": 1088.4,
+    "mapY": 168.3
   },
   {
     "id": "c-permiasnj",
@@ -267,7 +352,12 @@
     "whatsapp": "",
     "email": "permiasnj@permiasnasional.com",
     "website": "https://instagram.com/permiasnj",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 40.4867,
+    "lng": -74.4444,
+    "geoSource": "https://en.wikipedia.org/wiki/New_Brunswick%2C_New_Jersey",
+    "mapX": 1128.8,
+    "mapY": 217.7
   },
   {
     "id": "c-indonesiaatcornell",
@@ -282,7 +372,12 @@
     "whatsapp": "",
     "email": "indonesiaatcornell@permiasnasional.com",
     "website": "https://instagram.com/indonesiaatcornell",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Corn"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Corn",
+    "lat": 42.4492,
+    "lng": -76.4839,
+    "geoSource": "https://en.wikipedia.org/wiki/Cornell_University",
+    "mapX": 1085.6,
+    "mapY": 182.4
   },
   {
     "id": "c-permiasrochesterny",
@@ -297,7 +392,12 @@
     "whatsapp": "",
     "email": "permiasrochesterny@permiasnasional.com",
     "website": "https://instagram.com/permiasrochesterny",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 43.1656,
+    "lng": -77.6161,
+    "geoSource": "https://en.wikipedia.org/wiki/Rochester%2C_New_York",
+    "mapX": 1064.1,
+    "mapY": 170.5
   },
   {
     "id": "c-nyuindonesia",
@@ -312,7 +412,12 @@
     "whatsapp": "",
     "email": "nyu.indonesia@permiasnasional.com",
     "website": "https://instagram.com/nyu.indonesia",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=NYU%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=NYU%20",
+    "lat": 40.73,
+    "lng": -73.995,
+    "geoSource": "https://en.wikipedia.org/wiki/New_York_University",
+    "mapX": 1134.9,
+    "mapY": 210.6
   },
   {
     "id": "c-penncasila",
@@ -327,7 +432,12 @@
     "whatsapp": "",
     "email": "penncasila@permiasnasional.com",
     "website": "https://instagram.com/penncasila",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Penn"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Penn",
+    "lat": 39.9519,
+    "lng": -75.1936,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Pennsylvania",
+    "mapX": 1119.1,
+    "mapY": 232.3
   },
   {
     "id": "c-permiasdc",
@@ -342,7 +452,12 @@
     "whatsapp": "",
     "email": "permiasdc@permiasnasional.com",
     "website": "https://instagram.com/permiasdc",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 38.9047,
+    "lng": -77.0164,
+    "geoSource": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+    "mapX": 1093.5,
+    "mapY": 261.9
   },
   {
     "id": "c-permiasncstate",
@@ -357,7 +472,12 @@
     "whatsapp": "",
     "email": "permiasncstate@permiasnasional.com",
     "website": "https://instagram.com/permiasncstate",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 35.7872,
+    "lng": -78.6706,
+    "geoSource": "https://en.wikipedia.org/wiki/North_Carolina_State_University",
+    "mapX": 1078.6,
+    "mapY": 336.1
   },
   {
     "id": "c-permiasvt",
@@ -372,7 +492,12 @@
     "whatsapp": "",
     "email": "permiasvt@permiasnasional.com",
     "website": "https://instagram.com/permiasvt",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 37.225,
+    "lng": -80.425,
+    "geoSource": "https://en.wikipedia.org/wiki/Virginia_Tech",
+    "mapX": 1041.8,
+    "mapY": 310
   },
   {
     "id": "c-indonesiahopkins",
@@ -387,7 +512,12 @@
     "whatsapp": "",
     "email": "indonesiahopkins@permiasnasional.com",
     "website": "https://instagram.com/indonesiahopkins",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo",
+    "lat": 39.3289,
+    "lng": -76.6203,
+    "geoSource": "https://en.wikipedia.org/wiki/Johns_Hopkins_University",
+    "mapX": 1098.2,
+    "mapY": 251.2
   },
   {
     "id": "c-permiaswv",
@@ -402,7 +532,12 @@
     "whatsapp": "",
     "email": "permias.wv@permiasnasional.com",
     "website": "https://instagram.com/permias.wv",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 39.6458,
+    "lng": -79.9697,
+    "geoSource": "https://en.wikipedia.org/wiki/West_Virginia_University",
+    "mapX": 1040.2,
+    "mapY": 255.2
   },
   {
     "id": "c-permiasuofsc",
@@ -417,7 +552,12 @@
     "whatsapp": "",
     "email": "permias.uofsc@permiasnasional.com",
     "website": "https://instagram.com/permias.uofsc",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 33.9975,
+    "lng": -81.0253,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_South_Carolina",
+    "mapX": 1043.1,
+    "mapY": 383
   },
   {
     "id": "c-indonesiaumich",
@@ -432,7 +572,12 @@
     "whatsapp": "",
     "email": "indonesia.umich@permiasnasional.com",
     "website": "https://instagram.com/indonesia.umich",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 42.2769,
+    "lng": -83.7381,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Michigan",
+    "mapX": 968.3,
+    "mapY": 206.8
   },
   {
     "id": "c-permiasou",
@@ -447,7 +592,12 @@
     "whatsapp": "",
     "email": "permias_ou@permiasnasional.com",
     "website": "https://instagram.com/permias_ou",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=PERM"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=PERM",
+    "lat": 39.324,
+    "lng": -82.102,
+    "geoSource": "https://en.wikipedia.org/wiki/Ohio_University",
+    "mapX": 1005.1,
+    "mapY": 268.3
   },
   {
     "id": "c-permiaskalamazoo",
@@ -462,7 +612,12 @@
     "whatsapp": "",
     "email": "permiaskalamazoo@permiasnasional.com",
     "website": "https://instagram.com/permiaskalamazoo",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 42.2833,
+    "lng": -85.6139,
+    "geoSource": "https://en.wikipedia.org/wiki/Western_Michigan_University",
+    "mapX": 937.5,
+    "mapY": 210.4
   },
   {
     "id": "c-permiascolumbus",
@@ -477,7 +632,12 @@
     "whatsapp": "",
     "email": "permiascolumbus@permiasnasional.com",
     "website": "https://instagram.com/permiascolumbus",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=PERM"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=PERM",
+    "lat": 40.0006,
+    "lng": -83.0144,
+    "geoSource": "https://en.wikipedia.org/wiki/Ohio_State_University",
+    "mapX": 987.4,
+    "mapY": 255.6
   },
   {
     "id": "c-permiasmsu",
@@ -492,7 +652,12 @@
     "whatsapp": "",
     "email": "permias.msu@permiasnasional.com",
     "website": "https://instagram.com/permias.msu",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 42.725,
+    "lng": -84.48,
+    "geoSource": "https://en.wikipedia.org/wiki/Michigan_State_University",
+    "mapX": 954.8,
+    "mapY": 198.4
   },
   {
     "id": "c-permiaspurdue",
@@ -507,7 +672,12 @@
     "whatsapp": "",
     "email": "permiaspurdue@permiasnasional.com",
     "website": "https://instagram.com/permiaspurdue",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 40.425,
+    "lng": -86.9231,
+    "geoSource": "https://en.wikipedia.org/wiki/Purdue_University",
+    "mapX": 920.1,
+    "mapY": 254.1
   },
   {
     "id": "c-permiasnd",
@@ -522,7 +692,12 @@
     "whatsapp": "",
     "email": "permiasnd@permiasnasional.com",
     "website": "https://instagram.com/permiasnd",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 41.7,
+    "lng": -86.2389,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Notre_Dame",
+    "mapX": 928.6,
+    "mapY": 224.5
   },
   {
     "id": "c-permiasbloomington",
@@ -537,7 +712,12 @@
     "whatsapp": "",
     "email": "permiasbloomington@permiasnasional.com",
     "website": "https://instagram.com/permiasbloomington",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 39.1672,
+    "lng": -86.5214,
+    "geoSource": "https://en.wikipedia.org/wiki/Indiana_University_Bloomington",
+    "mapX": 929.8,
+    "mapY": 281.4
   },
   {
     "id": "c-permiasmissouri",
@@ -552,7 +732,12 @@
     "whatsapp": "",
     "email": "permiasmissouri@permiasnasional.com",
     "website": "https://instagram.com/permiasmissouri",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Miss"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Miss",
+    "lat": 38.9453,
+    "lng": -92.3288,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Missouri",
+    "mapX": 829.8,
+    "mapY": 293.6
   },
   {
     "id": "c-permiaskansas",
@@ -567,7 +752,12 @@
     "whatsapp": "",
     "email": "permiaskansas@permiasnasional.com",
     "website": "https://instagram.com/permiaskansas",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 38.9584,
+    "lng": -95.2478,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Kansas",
+    "mapX": 779.1,
+    "mapY": 294.5
   },
   {
     "id": "c-permiasames",
@@ -582,7 +772,12 @@
     "whatsapp": "",
     "email": "permias.ames@permiasnasional.com",
     "website": "https://instagram.com/permias.ames",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 42.0262,
+    "lng": -93.648,
+    "geoSource": "https://en.wikipedia.org/wiki/Iowa_State_University",
+    "mapX": 805.1,
+    "mapY": 225.3
   },
   {
     "id": "c-permiasuiuc",
@@ -597,7 +792,12 @@
     "whatsapp": "",
     "email": "permiasuiuc@permiasnasional.com",
     "website": "https://instagram.com/permiasuiuc",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 40.1106,
+    "lng": -88.2283,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Illinois_Urbana-Champaign",
+    "mapX": 898.6,
+    "mapY": 263.1
   },
   {
     "id": "c-permiaschicago",
@@ -612,7 +812,12 @@
     "whatsapp": "",
     "email": "permiaschicago@permiasnasional.com",
     "website": "https://instagram.com/permiaschicago",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=PERM"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=PERM",
+    "lat": 41.8819,
+    "lng": -87.6278,
+    "geoSource": "https://en.wikipedia.org/wiki/Chicago",
+    "mapX": 905.2,
+    "mapY": 222.7
   },
   {
     "id": "c-idsanu",
@@ -627,7 +832,12 @@
     "whatsapp": "",
     "email": "idsa.nu@permiasnasional.com",
     "website": "https://instagram.com/idsa.nu",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=IDSA"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=IDSA",
+    "lat": 42.0558,
+    "lng": -87.6747,
+    "geoSource": "https://en.wikipedia.org/wiki/Northwestern_University",
+    "mapX": 904,
+    "mapY": 218.9
   },
   {
     "id": "c-permiasmadison",
@@ -642,7 +852,12 @@
     "whatsapp": "",
     "email": "permiasmadison@permiasnasional.com",
     "website": "https://instagram.com/permiasmadison",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 43.0753,
+    "lng": -89.4042,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison",
+    "mapX": 873.8,
+    "mapY": 198.5
   },
   {
     "id": "c-indoatku",
@@ -657,7 +872,12 @@
     "whatsapp": "",
     "email": "indoatku@permiasnasional.com",
     "website": "https://instagram.com/indoatku",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo",
+    "lat": 38.9584,
+    "lng": -95.2478,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Kansas",
+    "mapX": 779.1,
+    "mapY": 294.5
   },
   {
     "id": "c-permiasmn",
@@ -672,7 +892,12 @@
     "whatsapp": "",
     "email": "permiasmn@permiasnasional.com",
     "website": "https://instagram.com/permiasmn",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 44.975,
+    "lng": -93.2353,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Minnesota",
+    "mapX": 809.9,
+    "mapY": 159.3
   },
   {
     "id": "c-permiastamu",
@@ -687,7 +912,12 @@
     "whatsapp": "",
     "email": "permiastamu@permiasnasional.com",
     "website": "https://instagram.com/permiastamu",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 30.61,
+    "lng": -96.35,
+    "geoSource": "https://en.wikipedia.org/wiki/Texas_A%26M_University",
+    "mapX": 759.2,
+    "mapY": 480.9
   },
   {
     "id": "c-permiasaustin",
@@ -702,7 +932,12 @@
     "whatsapp": "",
     "email": "permiasaustin@permiasnasional.com",
     "website": "https://instagram.com/permiasaustin",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 30.285,
+    "lng": -97.735,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Texas_at_Austin",
+    "mapX": 732.2,
+    "mapY": 487.8
   },
   {
     "id": "c-permiasarkansas",
@@ -717,7 +952,12 @@
     "whatsapp": "",
     "email": "permiasarkansas@permiasnasional.com",
     "website": "https://instagram.com/permiasarkansas",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 36.0686,
+    "lng": -94.1761,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Arkansas",
+    "mapX": 799,
+    "mapY": 358.9
   },
   {
     "id": "c-isagatech",
@@ -732,7 +972,12 @@
     "whatsapp": "",
     "email": "isa.gatech@permiasnasional.com",
     "website": "https://instagram.com/isa.gatech",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 33.776,
+    "lng": -84.396,
+    "geoSource": "https://en.wikipedia.org/wiki/Georgia_Tech",
+    "mapX": 981.7,
+    "mapY": 396.9
   },
   {
     "id": "c-aisauburn",
@@ -747,7 +992,12 @@
     "whatsapp": "",
     "email": "ais.auburn@permiasnasional.com",
     "website": "https://instagram.com/ais.auburn",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 32.603,
+    "lng": -85.486,
+    "geoSource": "https://en.wikipedia.org/wiki/Auburn_University",
+    "mapX": 964.6,
+    "mapY": 425.3
   },
   {
     "id": "c-permiasok",
@@ -762,7 +1012,12 @@
     "whatsapp": "",
     "email": "permiasok@permiasnasional.com",
     "website": "https://instagram.com/permiasok",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 35.2088,
+    "lng": -97.4457,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Oklahoma",
+    "mapX": 739.6,
+    "mapY": 378.3
   },
   {
     "id": "c-permiasgainesville",
@@ -777,7 +1032,12 @@
     "whatsapp": "",
     "email": "permiasgainesville@permiasnasional.com",
     "website": "https://instagram.com/permiasgainesville",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 29.6475,
+    "lng": -82.345,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Florida",
+    "mapX": 1033.3,
+    "mapY": 482.4
   },
   {
     "id": "c-permiasdallas",
@@ -792,7 +1052,12 @@
     "whatsapp": "",
     "email": "permiasdallas@permiasnasional.com",
     "website": "https://instagram.com/permiasdallas",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 32.7792,
+    "lng": -96.8089,
+    "geoSource": "https://en.wikipedia.org/wiki/Dallas",
+    "mapX": 750.8,
+    "mapY": 432.6
   },
   {
     "id": "c-isagsu",
@@ -807,7 +1072,12 @@
     "whatsapp": "",
     "email": "isa.gsu@permiasnasional.com",
     "website": "https://instagram.com/isa.gsu",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISA%20",
+    "lat": 33.7537,
+    "lng": -84.386,
+    "geoSource": "https://en.wikipedia.org/wiki/Georgia_State_University",
+    "mapX": 982,
+    "mapY": 397.4
   },
   {
     "id": "c-byuhindonesianchapter",
@@ -822,7 +1092,12 @@
     "whatsapp": "",
     "email": "byuhindonesianchapter@permiasnasional.com",
     "website": "https://instagram.com/byuhindonesianchapter",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=BYUH"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=BYUH",
+    "lat": 21.6414,
+    "lng": -157.9253,
+    "geoSource": "https://en.wikipedia.org/wiki/Brigham_Young_University%E2%80%93Hawaii",
+    "mapX": 524.3,
+    "mapY": 509.5
   },
   {
     "id": "c-permiassdia",
@@ -837,7 +1112,12 @@
     "whatsapp": "",
     "email": "permias.sdia@permiasnasional.com",
     "website": "https://instagram.com/permias.sdia",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 32.8801,
+    "lng": -117.234,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_San_Diego",
+    "mapX": 369.2,
+    "mapY": 384.6
   },
   {
     "id": "c-permiasisuci",
@@ -852,7 +1132,12 @@
     "whatsapp": "",
     "email": "permias.isuci@permiasnasional.com",
     "website": "https://instagram.com/permias.isuci",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISUC"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISUC",
+    "lat": 33.6456,
+    "lng": -117.8425,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_Irvine",
+    "mapX": 362.1,
+    "mapY": 365.3
   },
   {
     "id": "c-permiassmc",
@@ -867,7 +1152,12 @@
     "whatsapp": "",
     "email": "permiassmc@permiasnasional.com",
     "website": "https://instagram.com/permiassmc",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 34.0168,
+    "lng": -118.4707,
+    "geoSource": "https://en.wikipedia.org/wiki/Santa_Monica_College",
+    "mapX": 352.7,
+    "mapY": 354.5
   },
   {
     "id": "c-permiaspasadena",
@@ -882,7 +1172,12 @@
     "whatsapp": "",
     "email": "permiaspasadena@permiasnasional.com",
     "website": "https://instagram.com/permiaspasadena",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 34.1444,
+    "lng": -118.1181,
+    "geoSource": "https://en.wikipedia.org/wiki/Pasadena_City_College",
+    "mapX": 359.8,
+    "mapY": 353.3
   },
   {
     "id": "c-permiasla",
@@ -897,7 +1192,12 @@
     "whatsapp": "",
     "email": "permiasla@permiasnasional.com",
     "website": "https://instagram.com/permiasla",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 34.05,
+    "lng": -118.25,
+    "geoSource": "https://en.wikipedia.org/wiki/Los_Angeles",
+    "mapX": 356.9,
+    "mapY": 354.8
   },
   {
     "id": "c-permiashawaii",
@@ -912,7 +1212,12 @@
     "whatsapp": "",
     "email": "permiashawaii@permiasnasional.com",
     "website": "https://instagram.com/permiashawaii",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 21.3,
+    "lng": -157.85,
+    "geoSource": "https://en.wikipedia.org/wiki/Honolulu",
+    "mapX": 526.6,
+    "mapY": 528.4
   },
   {
     "id": "c-indoatlmu",
@@ -927,7 +1232,12 @@
     "whatsapp": "",
     "email": "indoatlmu@permiasnasional.com",
     "website": "https://instagram.com/indoatlmu",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ILMU"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ILMU",
+    "lat": 33.97,
+    "lng": -118.418,
+    "geoSource": "https://en.wikipedia.org/wiki/Loyola_Marymount_University",
+    "mapX": 353.4,
+    "mapY": 355.7
   },
   {
     "id": "c-uscasis",
@@ -942,7 +1252,12 @@
     "whatsapp": "",
     "email": "uscasis@permiasnasional.com",
     "website": "https://instagram.com/uscasis",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=USC%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=USC%20",
+    "lat": 34.0206,
+    "lng": -118.2848,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Southern_California",
+    "mapX": 356.1,
+    "mapY": 355.2
   },
   {
     "id": "c-pepperdinebois",
@@ -957,7 +1272,12 @@
     "whatsapp": "",
     "email": "pepperdine.bois@permiasnasional.com",
     "website": "https://instagram.com/pepperdine.bois",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Pepp"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Pepp",
+    "lat": 34.0387,
+    "lng": -118.7076,
+    "geoSource": "https://en.wikipedia.org/wiki/Pepperdine_University",
+    "mapX": 348.6,
+    "mapY": 353
   },
   {
     "id": "c-bruinsibsa",
@@ -972,7 +1292,12 @@
     "whatsapp": "",
     "email": "bruins.ibsa@permiasnasional.com",
     "website": "https://instagram.com/bruins.ibsa",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=IBSA"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=IBSA",
+    "lat": 34.0722,
+    "lng": -118.4427,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_Los_Angeles",
+    "mapX": 353.5,
+    "mapY": 353.4
   },
   {
     "id": "c-permiasphoenix",
@@ -987,7 +1312,12 @@
     "whatsapp": "",
     "email": "permiasphoenix@permiasnasional.com",
     "website": "https://instagram.com/permiasphoenix",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 33.4483,
+    "lng": -112.0739,
+    "geoSource": "https://en.wikipedia.org/wiki/Phoenix%2C_Arizona",
+    "mapX": 466.7,
+    "mapY": 391.6
   },
   {
     "id": "c-permiastucson",
@@ -1002,7 +1332,12 @@
     "whatsapp": "",
     "email": "permiastucson@permiasnasional.com",
     "website": "https://instagram.com/permiastucson",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 32.2319,
+    "lng": -110.9527,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Arizona",
+    "mapX": 482.9,
+    "mapY": 421.9
   },
   {
     "id": "c-permiasclaremont",
@@ -1017,7 +1352,12 @@
     "whatsapp": "",
     "email": "permiasclaremont@permiasnasional.com",
     "website": "https://instagram.com/permiasclaremont",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 34.1025,
+    "lng": -117.7125,
+    "geoSource": "https://en.wikipedia.org/wiki/Claremont_Colleges",
+    "mapX": 366.9,
+    "mapY": 356
   },
   {
     "id": "c-permiasutah",
@@ -1032,7 +1372,12 @@
     "whatsapp": "",
     "email": "permiasutah@permiasnasional.com",
     "website": "https://instagram.com/permiasutah",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 40.7608,
+    "lng": -111.8911,
+    "geoSource": "https://en.wikipedia.org/wiki/Salt_Lake_City",
+    "mapX": 498.5,
+    "mapY": 231.1
   },
   {
     "id": "c-permiaslb",
@@ -1047,7 +1392,12 @@
     "whatsapp": "",
     "email": "permiaslb@permiasnasional.com",
     "website": "https://instagram.com/permiaslb",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 33.783,
+    "lng": -118.1129,
+    "geoSource": "https://en.wikipedia.org/wiki/California_State_University%2C_Long_Beach",
+    "mapX": 357.9,
+    "mapY": 361.2
   },
   {
     "id": "c-permiasgoldencolorado",
@@ -1062,7 +1412,12 @@
     "whatsapp": "",
     "email": "permiasgolden.colorado@permiasnasional.com",
     "website": "https://instagram.com/permiasgolden.colorado",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 39.7533,
+    "lng": -105.2153,
+    "geoSource": "https://en.wikipedia.org/wiki/Golden%2C_Colorado",
+    "mapX": 608.1,
+    "mapY": 268.8
   },
   {
     "id": "c-biolabisa",
@@ -1077,7 +1432,12 @@
     "whatsapp": "",
     "email": "biolabisa@permiasnasional.com",
     "website": "https://instagram.com/biolabisa",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Biol"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Biol",
+    "lat": 33.9056,
+    "lng": -118.0167,
+    "geoSource": "https://en.wikipedia.org/wiki/Biola_University",
+    "mapX": 360.3,
+    "mapY": 358.9
   },
   {
     "id": "c-permiasac",
@@ -1092,7 +1452,12 @@
     "whatsapp": "",
     "email": "permias_ac@permiasnasional.com",
     "website": "https://instagram.com/permias_ac",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 34.1686,
+    "lng": -118.185,
+    "geoSource": "https://en.wikipedia.org/wiki/ArtCenter_College_of_Design",
+    "mapX": 358.7,
+    "mapY": 352.5
   },
   {
     "id": "c-permiasusfca",
@@ -1107,7 +1472,12 @@
     "whatsapp": "",
     "email": "permias.usfca@permiasnasional.com",
     "website": "https://instagram.com/permias.usfca",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 37.7794,
+    "lng": -122.4519,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_San_Francisco",
+    "mapX": 305.5,
+    "mapY": 254.5
   },
   {
     "id": "c-stanfordindonesia",
@@ -1122,7 +1492,12 @@
     "whatsapp": "",
     "email": "stanford.indonesia@permiasnasional.com",
     "website": "https://instagram.com/stanford.indonesia",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Stan"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Stan",
+    "lat": 37.4275,
+    "lng": -122.1703,
+    "geoSource": "https://en.wikipedia.org/wiki/Stanford_University",
+    "mapX": 308.1,
+    "mapY": 263.4
   },
   {
     "id": "c-berkeleybisa",
@@ -1137,7 +1512,12 @@
     "whatsapp": "",
     "email": "berkeleybisa@permiasnasional.com",
     "website": "https://instagram.com/berkeleybisa",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Berk"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Berk",
+    "lat": 37.8719,
+    "lng": -122.2583,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_Berkeley",
+    "mapX": 309.4,
+    "mapY": 253.4
   },
   {
     "id": "c-permiasdeanza",
@@ -1152,7 +1532,12 @@
     "whatsapp": "",
     "email": "permias_deanza@permiasnasional.com",
     "website": "https://instagram.com/permias_deanza",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 37.3192,
+    "lng": -122.0453,
+    "geoSource": "https://en.wikipedia.org/wiki/De_Anza_College",
+    "mapX": 309.5,
+    "mapY": 266.4
   },
   {
     "id": "c-permiasucd",
@@ -1167,7 +1552,12 @@
     "whatsapp": "",
     "email": "permiasucd@permiasnasional.com",
     "website": "https://instagram.com/permiasucd",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 38.54,
+    "lng": -121.75,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_California%2C_Davis",
+    "mapX": 322.2,
+    "mapY": 241.5
   },
   {
     "id": "c-permiassfba",
@@ -1182,7 +1572,12 @@
     "whatsapp": "",
     "email": "permias.sfba@permiasnasional.com",
     "website": "https://instagram.com/permias.sfba",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 37.7775,
+    "lng": -122.4164,
+    "geoSource": "https://en.wikipedia.org/wiki/San_Francisco",
+    "mapX": 306.1,
+    "mapY": 254.7
   },
   {
     "id": "c-indodvc",
@@ -1197,7 +1592,12 @@
     "whatsapp": "",
     "email": "indodvc@permiasnasional.com",
     "website": "https://instagram.com/indodvc",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Indo",
+    "lat": 37.9714,
+    "lng": -122.07,
+    "geoSource": "https://en.wikipedia.org/wiki/Diablo_Valley_College",
+    "mapX": 313.2,
+    "mapY": 252.2
   },
   {
     "id": "c-permiasspokane",
@@ -1212,7 +1612,12 @@
     "whatsapp": "",
     "email": "permiasspokane@permiasnasional.com",
     "website": "https://instagram.com/permiasspokane",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 47.6589,
+    "lng": -117.425,
+    "geoSource": "https://en.wikipedia.org/wiki/Spokane%2C_Washington",
+    "mapX": 442.8,
+    "mapY": 62.6
   },
   {
     "id": "c-permiasseattle",
@@ -1227,7 +1632,12 @@
     "whatsapp": "",
     "email": "permiasseattle@permiasnasional.com",
     "website": "https://instagram.com/permiasseattle",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 47.6039,
+    "lng": -122.33,
+    "geoSource": "https://en.wikipedia.org/wiki/Seattle",
+    "mapX": 370.3,
+    "mapY": 44.7
   },
   {
     "id": "c-bellevueindoclub",
@@ -1242,7 +1652,12 @@
     "whatsapp": "",
     "email": "bellevueindoclub@permiasnasional.com",
     "website": "https://instagram.com/bellevueindoclub",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 47.585,
+    "lng": -122.1493,
+    "geoSource": "https://en.wikipedia.org/wiki/Bellevue_College",
+    "mapX": 372.8,
+    "mapY": 45.9
   },
   {
     "id": "c-permiasoregon",
@@ -1257,7 +1672,12 @@
     "whatsapp": "",
     "email": "permiasoregon@permiasnasional.com",
     "website": "https://instagram.com/permiasoregon",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 44.5639,
+    "lng": -123.2747,
+    "geoSource": "https://en.wikipedia.org/wiki/Oregon_State_University",
+    "mapX": 336.5,
+    "mapY": 105.2
   },
   {
     "id": "c-isauwhuskies",
@@ -1272,7 +1692,12 @@
     "whatsapp": "",
     "email": "isauwhuskies@permiasnasional.com",
     "website": "https://instagram.com/isauwhuskies",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISAU"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISAU",
+    "lat": 47.6542,
+    "lng": -122.3081,
+    "geoSource": "https://en.wikipedia.org/wiki/University_of_Washington",
+    "mapX": 371,
+    "mapY": 43.7
   },
   {
     "id": "c-iscshoreline",
@@ -1287,7 +1712,12 @@
     "whatsapp": "",
     "email": "iscshoreline@permiasnasional.com",
     "website": "https://instagram.com/iscshoreline",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISC%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISC%20",
+    "lat": 47.7483,
+    "lng": -122.3594,
+    "geoSource": "https://en.wikipedia.org/wiki/Shoreline_College",
+    "mapX": 370.8,
+    "mapY": 41.5
   },
   {
     "id": "c-permiasbham",
@@ -1302,7 +1732,12 @@
     "whatsapp": "",
     "email": "permiasbham@permiasnasional.com",
     "website": "https://instagram.com/permiasbham",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
+    "lat": 48.75,
+    "lng": -122.4833,
+    "geoSource": "https://en.wikipedia.org/wiki/Bellingham%2C_Washington",
+    "mapX": 375.4,
+    "mapY": 19.8
   },
   {
     "id": "c-eicindoclub",
@@ -1317,7 +1752,12 @@
     "whatsapp": "",
     "email": "eicindoclub@permiasnasional.com",
     "website": "https://instagram.com/eicindoclub",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Edmo"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Edmo",
+    "lat": 47.8158,
+    "lng": -122.3278,
+    "geoSource": "https://en.wikipedia.org/wiki/Edmonds_College",
+    "mapX": 371.7,
+    "mapY": 40.2
   },
   {
     "id": "c-isogrc",
@@ -1332,7 +1772,12 @@
     "whatsapp": "",
     "email": "isogrc@permiasnasional.com",
     "website": "https://instagram.com/isogrc",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISO%20"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=ISO%20",
+    "lat": 47.3133,
+    "lng": -122.1783,
+    "geoSource": "https://en.wikipedia.org/wiki/Green_River_College",
+    "mapX": 370.7,
+    "mapY": 51.5
   },
   {
     "id": "c-imapausacanada",
@@ -1347,6 +1792,11 @@
     "whatsapp": "",
     "email": "imapausacanada@permiasnasional.com",
     "website": "https://instagram.com/imapausacanada",
-    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=IMAP"
+    "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=IMAP",
+    "lat": 38.9047,
+    "lng": -77.0164,
+    "geoSource": "https://en.wikipedia.org/wiki/Washington%2C_D.C.",
+    "mapX": 1093.5,
+    "mapY": 261.9
   }
 ]

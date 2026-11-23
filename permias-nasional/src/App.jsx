@@ -11,6 +11,7 @@ import { About } from './pages/About.jsx';
 import { Sejarah } from './pages/Sejarah.jsx';
 import { Contact } from './pages/Contact.jsx';
 import { Partners } from './pages/Partners.jsx';
+import { Directions } from './pages/directions/Directions.jsx';
 
 const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -18,6 +19,8 @@ export default function App() {
   return (
     <BrowserRouter basename={routerBasename || undefined}>
       <Routes>
+        <Route path="/__directions" element={<Directions />} />
+        <Route path="/__directions/:id" element={<Directions />} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/chapters" element={<Chapters />} />

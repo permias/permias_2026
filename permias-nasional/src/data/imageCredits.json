@@ -1,0 +1,155 @@
+{
+  "berkeley-campanile-sunset": {
+    "file": "CampanileMtTamalpiasSunset-original.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:CampanileMtTamalpiasSunset-original.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/CampanileMtTamalpiasSunset-original.jpg/1920px-CampanileMtTamalpiasSunset-original.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/95/CampanileMtTamalpiasSunset-original.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 2448,
+    "h": 3264,
+    "artist": "Tristan Harward",
+    "license": "CC BY-SA 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+    "credit": "http://en.wikipedia.org/wiki/Image:CampanileMtTamalpiasSunset-original.jpg",
+    "subject": "UC Berkeley, Sather Tower at sunset",
+    "files": {
+      "1600": "/images/photos/berkeley-campanile-sunset-1600.webp",
+      "800": "/images/photos/berkeley-campanile-sunset-800.webp"
+    }
+  },
+  "berkeley-glade": {
+    "file": "Berkeley_glade_afternoon.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Berkeley_glade_afternoon.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/2/24/Berkeley_glade_afternoon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/2/24/Berkeley_glade_afternoon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 640,
+    "h": 480,
+    "artist": "Gku",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+    "credit": "Own work",
+    "subject": "UC Berkeley, Memorial Glade",
+    "files": {
+      "1600": "/images/photos/berkeley-glade-1600.webp",
+      "800": "/images/photos/berkeley-glade-800.webp"
+    }
+  },
+  "boston-skyline": {
+    "file": "Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg/1920px-Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Boston_skyline_from_Longfellow_Bridge_September_2017_panorama_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 9250,
+    "h": 3700,
+    "artist": "King of Hearts",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Boston skyline from the Longfellow Bridge",
+    "files": {
+      "1600": "/images/photos/boston-skyline-1600.webp",
+      "800": "/images/photos/boston-skyline-800.webp"
+    }
+  },
+  "chicago-skyline": {
+    "file": "Chicago_Skyline_in_April_2024_b.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chicago_Skyline_in_April_2024_b.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Chicago_Skyline_in_April_2024_b.jpg/1920px-Chicago_Skyline_in_April_2024_b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Chicago_Skyline_in_April_2024_b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 2446,
+    "h": 981,
+    "artist": "File:Chicago Skyline in April 2024.jpg: xiquinhosilva derivative work: Georgfotoart",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "credit": "This file was derived from: Chicago Skyline in April 2024.jpg:",
+    "subject": "Chicago skyline",
+    "files": {
+      "1600": "/images/photos/chicago-skyline-1600.webp",
+      "800": "/images/photos/chicago-skyline-800.webp"
+    }
+  },
+  "seattle-kerry-park": {
+    "file": "Seattle_skyline_panorama_from_Kerry_Park,_June_2022.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Seattle_skyline_panorama_from_Kerry_Park,_June_2022.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Seattle_skyline_panorama_from_Kerry_Park%2C_June_2022.jpg/1920px-Seattle_skyline_panorama_from_Kerry_Park%2C_June_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/1/16/Seattle_skyline_panorama_from_Kerry_Park%2C_June_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 13516,
+    "h": 2221,
+    "artist": "SounderBruce",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Seattle skyline from Kerry Park",
+    "files": {
+      "1600": "/images/photos/seattle-kerry-park-1600.webp",
+      "800": "/images/photos/seattle-kerry-park-800.webp"
+    }
+  },
+  "nyc-empire-state": {
+    "file": "View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_(cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_(cropped).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg/1920px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/7/7a/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 8207,
+    "h": 4616,
+    "artist": "Dllu",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "This image has been extracted from another file",
+    "subject": "Midtown Manhattan from Rockefeller Center",
+    "files": {
+      "1600": "/images/photos/nyc-empire-state-1600.webp",
+      "800": "/images/photos/nyc-empire-state-800.webp"
+    }
+  },
+  "la-griffith-night": {
+    "file": "The_Griffith_Observatory_at_night,_Mt._Hollywood,_Los_Angeles,_California,_U.S.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Griffith_Observatory_at_night,_Mt._Hollywood,_Los_Angeles,_California,_U.S.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/c/cb/The_Griffith_Observatory_at_night%2C_Mt._Hollywood%2C_Los_Angeles%2C_California%2C_U.S.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/c/cb/The_Griffith_Observatory_at_night%2C_Mt._Hollywood%2C_Los_Angeles%2C_California%2C_U.S.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 1197,
+    "h": 746,
+    "artist": "IIP Photo Archive",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "credit": "https://www.flickr.com/photos/iip-photo-archive/33880714488/",
+    "subject": "Griffith Observatory, Los Angeles",
+    "files": {
+      "1600": "/images/photos/la-griffith-night-1600.webp",
+      "800": "/images/photos/la-griffith-night-800.webp"
+    }
+  },
+  "pittsburgh-night": {
+    "file": "Pittsburgh_skyline_panorama_at_night.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Pittsburgh_skyline_panorama_at_night.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Pittsburgh_skyline_panorama_at_night.jpg/1920px-Pittsburgh_skyline_panorama_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Pittsburgh_skyline_panorama_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 28318,
+    "h": 7000,
+    "artist": "Dllu",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Pittsburgh skyline at night",
+    "files": {
+      "1600": "/images/photos/pittsburgh-night-1600.webp",
+      "800": "/images/photos/pittsburgh-night-800.webp"
+    }
+  },
+  "ann-arbor-skyline": {
+    "file": "Ann_Arbor_Skyline_2021.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ann_Arbor_Skyline_2021.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Ann_Arbor_Skyline_2021.jpg/1920px-Ann_Arbor_Skyline_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "original": "https://upload.wikimedia.org/wikipedia/commons/9/91/Ann_Arbor_Skyline_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+    "w": 4024,
+    "h": 1901,
+    "artist": "WeaponizingArchitecture",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "credit": "Own work",
+    "subject": "Ann Arbor skyline",
+    "files": {
+      "1600": "/images/photos/ann-arbor-skyline-1600.webp",
+      "800": "/images/photos/ann-arbor-skyline-800.webp"
+    }
+  }
+}
