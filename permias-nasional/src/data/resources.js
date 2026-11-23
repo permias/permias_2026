@@ -198,7 +198,7 @@ export const resourceSections = [
       {
         title: 'EducationUSA',
         description: 'Advising centers for applying to U.S. universities.',
-        href: 'https://www.educationusa.info/',
+        href: 'https://educationusa.state.gov/',
         keywords: ['educationusa', 'apply', 'college'],
       },
       {
@@ -344,7 +344,7 @@ export const resourceSections = [
       {
         title: 'Google Research internships',
         description: 'Industry research internships—competitive global pipelines.',
-        href: 'https://research.google/jobs/',
+        href: 'https://research.google/careers/',
         keywords: ['google', 'research', 'intern'],
       },
       {

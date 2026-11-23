@@ -100,7 +100,7 @@
     "instagram": "@permiasmass",
     "line": "",
     "whatsapp": "",
-    "website": "https://permiasmass.org/",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 42.3603,
     "lng": -71.0578,
@@ -125,12 +125,10 @@
       "city": "https://en.wikipedia.org/wiki/Boston",
       "state": "https://en.wikipedia.org/wiki/Boston",
       "universityFull": "https://permiasnasional.com/about/chapters/",
-      "website": "https://permiasmass.org/",
       "description": "https://permiasnasional.com/about/chapters/"
     },
     "sources": [
       "https://permiasnasional.com/about/chapters/",
-      "https://permiasmass.org/",
       "https://en.wikipedia.org/wiki/Boston"
     ],
     "status": "verified"
@@ -3568,7 +3566,7 @@
     "instagram": "@permiasseattle",
     "line": "",
     "whatsapp": "",
-    "website": "https://permiasseattle.org/",
+    "website": null,
     "logoUrl": "https://placehold.co/96x96/CE1126/FFFFFF?text=Perm",
     "lat": 47.6039,
     "lng": -122.33,
@@ -3593,12 +3591,10 @@
       "city": "https://en.wikipedia.org/wiki/Seattle",
       "state": "https://en.wikipedia.org/wiki/Seattle",
       "universityFull": "https://permiasnasional.com/about/chapters/",
-      "website": "https://permiasseattle.org/",
       "description": "https://permiasnasional.com/about/chapters/"
     },
     "sources": [
       "https://permiasnasional.com/about/chapters/",
-      "https://permiasseattle.org/",
       "https://en.wikipedia.org/wiki/Seattle"
     ],
     "status": "verified"
