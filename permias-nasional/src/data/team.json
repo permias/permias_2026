@@ -141,42 +141,42 @@
         "role": "Midwest I",
         "education": "University of Notre Dame: Mathematics",
         "hometown": "Jakarta",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=RSh"
+        "imageUrl": null
       },
       {
         "name": "Kayla Ghita Linadi",
         "role": "West Coast III",
         "education": "Edmonds College: Pre-law",
         "hometown": "Tangsel",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=KL"
+        "imageUrl": null
       },
       {
         "name": "Reynard Susanto",
         "role": "South",
         "education": "Texas A&M University: Electrical Engineering",
         "hometown": "Jakarta",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=RSu"
+        "imageUrl": null
       },
       {
         "name": "Nur Faza Fuadi",
         "role": "East Coast II",
         "education": "Pennsylvania State University: Mining Engineering",
         "hometown": "Medan",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=NF"
+        "imageUrl": null
       },
       {
         "name": "Andrew Wong",
         "role": "East Coast I",
         "education": "Babson College: Entrepreneurship",
         "hometown": "Jakarta",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=AW"
+        "imageUrl": null
       },
       {
         "name": "Christy Dio",
         "role": "East Coast III",
         "education": "University of Maryland, College Park: Teaching and Learning, Policy and Leadership",
         "hometown": "Surabaya",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=CD"
+        "imageUrl": null
       }
     ]
   },
@@ -198,7 +198,7 @@
         "education": "Boston College: Transformative Education, Applied Psychology",
         "linkedin": null,
         "hometown": "Jakarta",
-        "imageUrl": "https://placehold.co/320x320/1A1A1A/FFFFFF?text=EP"
+        "imageUrl": null
       },
       {
         "name": "Mario Andika Raharja",
@@ -228,12 +228,12 @@
         "education": "University of California, San Diego: Communications",
         "linkedin": null,
         "hometown": "Jakarta",
-        "imageUrl": "https://placehold.co/320x320/CE1126/FFFFFF?text=MP"
+        "imageUrl": null
       },
       {
         "name": "Madelaine Lourdes Nugroho",
         "role": "Publications & Promotions Officer",
-        "education": "Santa Monica Collega: Communications",
+        "education": "Santa Monica College: Communications",
         "linkedin": null,
         "hometown": "Jakarta",
         "imageUrl": "/images/team/madelaine-lourdes-nugroho.png"

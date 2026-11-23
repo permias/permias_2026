@@ -38,6 +38,34 @@ export function Sejarah() {
               {p[lang]}
             </p>
           ))}
+          <a
+            href="https://www.youtube.com/watch?v=YXJGqoOUEjc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-10 block overflow-hidden rounded-[24px] border border-border bg-[#0A1220] text-white"
+          >
+            <span className="relative block aspect-video overflow-hidden">
+              <img
+                src="https://i.ytimg.com/vi/YXJGqoOUEjc/hqdefault.jpg"
+                alt=""
+                width="480"
+                height="360"
+                loading="lazy"
+                className="h-full w-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+              />
+              <span className="absolute inset-0 flex items-center justify-center">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-merah shadow-[0_12px_30px_-10px_rgba(0,0,0,.6)] transition-transform duration-150 group-hover:scale-105">
+                  <svg viewBox="0 0 24 24" className="ml-1 h-7 w-7" fill="currentColor" aria-hidden="true">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </span>
+              </span>
+            </span>
+            <span className="block p-5">
+              <span className="block text-sm text-white/65">{pick({ en: 'Watch on YouTube', id: 'Tonton di YouTube' })} · PERMIAS Nasional</span>
+              <span className="mt-1 block text-[17px] font-semibold leading-snug">Why are you proud to be Indonesian? | Ignite Indonesia by PERMIAS Nasional</span>
+            </span>
+          </a>
         </Reveal>
       </section>
 

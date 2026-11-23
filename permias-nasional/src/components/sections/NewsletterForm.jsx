@@ -54,6 +54,19 @@ export function NewsletterForm({ className = '', tone = 'light' }) {
       {message && (
         <p className={cn('w-full text-sm font-medium', tone === 'dark' ? 'text-white/85' : status === 'error' ? 'text-merah' : 'text-ink')} role="status">
           {message}
+          {status === 'error' && (
+            <>
+              {' '}
+              <a
+                href="https://groups.google.com/g/permias-nasional"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn('font-semibold underline underline-offset-4', tone === 'dark' ? 'text-white' : 'text-ink')}
+              >
+                groups.google.com/g/permias-nasional
+              </a>
+            </>
+          )}
         </p>
       )}
     </form>

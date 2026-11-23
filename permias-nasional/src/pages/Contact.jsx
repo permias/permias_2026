@@ -127,7 +127,7 @@ export function Contact() {
                     <>
                       <p className="font-semibold">{pick({ en: 'The message service is not reachable right now.', id: 'Layanan pesan sedang tidak dapat dihubungi.' })}</p>
                       <p className="mt-1 text-muted-foreground">
-                        {pick({ en: 'Your text is still in the form. Send it by email and it reaches the same inbox:', id: 'Teks Anda masih ada di formulir. Kirim lewat email, tujuannya sama:' })}{' '}
+                        {pick({ en: 'Your text is still in the form. You can send it by email instead:', id: 'Teks Anda masih ada di formulir. Anda bisa mengirimnya lewat email:' })}{' '}
                         <a href={mailto} className="font-semibold text-merah underline underline-offset-4">
                           {SUPPORT_EMAIL}
                         </a>
