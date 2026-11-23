@@ -1,107 +1,154 @@
-import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import { AnimatePresence, motion } from 'motion/react';
 import { teamDepartments } from '../data/team.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo } from '../components/Seo.jsx';
 import { pageTabTitle } from '../utils/seo.js';
 import { PAGE_PHOTOS } from '../data/photos.js';
 import { PageHeader } from '../components/layout/PageHeader.jsx';
-import { Reveal } from '../components/ui/Reveal.jsx';
+import { SectionHead } from '../components/ui/Section.jsx';
+import { motionTokens, springs } from '../lib/motion.js';
 import { cn } from '../utils/cn.js';
 
-/** Crop focus for circular avatars — lower % = show higher in frame (faces). */
-const TEAM_PHOTO_FOCUS = {
-  'Axel Hutapea': 'center 11%',
-  'Bayu Prasetyo': 'center 12%',
+/** Crop focus for portraits: lower % shows higher in the frame (faces). */
+const FOCUS = {
+  'Axel Hutapea': 'center 14%',
+  'Bayu Prasetyo': 'center 14%',
   'Aaron Timothy Soetopo': 'center 18%',
-  'Hanna Talitha': 'center 22%',
-  'Samantha Lie': 'center 14%',
+  'Hanna Talitha': 'center 20%',
+  'Samantha Lie': 'center 16%',
   'Michelle Nugroho': 'center 20%',
-  'Mario Andika Raharja': 'center 10%',
-  'William Luky': 'center 24%',
-  'Patrick Roland Wijaya': 'center 22%',
+  'Mario Andika Raharja': 'center 12%',
+  'William Luky': 'center 22%',
+  'Patrick Roland Wijaya': 'center 20%',
 };
 
+const initials = (name) =>
+  name
+    .split(/\s+/)
+    .map((p) => p[0])
+    .join('')
+    .slice(0, 2)
+    .toUpperCase();
+
+// "https://www.linkedin.com/" placeholders in team.json are not real profiles, so they are not shown.
+const realProfile = (u) => u && !/^https?:\/\/(www\.)?linkedin\.com\/?$/.test(u);
+
+function Portrait({ m, size = 'md', index }) {
+  const { pick } = useLanguage();
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: index < 8 ? motionTokens.distance.md : 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: motionTokens.duration.normal, ease: motionTokens.easing.smooth, delay: Math.min(index, 8) * motionTokens.stagger.children }}
+      className="group"
+    >
+      <div className={cn('relative overflow-hidden rounded-[24px] bg-mist', size === 'lg' ? 'aspect-[4/5]' : 'aspect-[4/5]')}>
+        {m.imageUrl ? (
+          <img
+            src={m.imageUrl}
+            alt={m.name}
+            width="480"
+            height="600"
+            loading="lazy"
+            className="media-outline h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            style={{ objectPosition: FOCUS[m.name] ?? 'center 25%' }}
+          />
+        ) : (
+          <span className="flex h-full w-full items-center justify-center bg-[#13233F] font-display text-6xl text-white" aria-hidden="true">
+            {initials(m.name)}
+          </span>
+        )}
+      </div>
+      <h3 className={cn('mt-4 font-display leading-tight text-ink', size === 'lg' ? 'text-[30px]' : 'text-[24px]')}>{m.name}</h3>
+      <p className="mt-1 text-[15px] font-semibold text-merah">{m.role}</p>
+      {m.education && <p className="mt-1 text-[15px] leading-snug text-muted-foreground">{m.education}</p>}
+      {m.hometown && (
+        <p className="mt-1 text-[15px] text-muted-foreground">
+          {pick({ en: 'From', id: 'Asal' })} {m.hometown}
+        </p>
+      )}
+      {realProfile(m.linkedin) && (
+        <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="link-quiet mt-2 inline-flex min-h-[32px] items-center text-[15px] font-semibold text-ink">
+          LinkedIn
+        </a>
+      )}
+    </motion.article>
+  );
+}
+
+/** Team: the president and vice president first, then one directorate at a time. */
 export function Team() {
-  const { t } = useLanguage();
-  const [tab, setTab] = useState(teamDepartments[0].id);
-  const active = teamDepartments.find((d) => d.id === tab) || teamDepartments[0];
+  const { t, pick } = useLanguage();
+  const [params, setParams] = useSearchParams();
+  const exec = teamDepartments.find((d) => d.id === 'executive');
+  const directorates = teamDepartments.filter((d) => d.id !== 'executive');
+  const tab = directorates.some((d) => d.id === params.get('d')) ? params.get('d') : directorates[0].id;
+  const active = directorates.find((d) => d.id === tab);
+  const total = teamDepartments.reduce((n, d) => n + d.members.length, 0);
 
   return (
     <>
       <Seo title={pageTabTitle('National Team')} description="Meet the PERMIAS Nasional volunteer leadership." path="/team" />
       <PageHeader image={PAGE_PHOTOS.team} title={t('team.title')} description={t('team.sub')} />
 
-      <div className="mx-auto max-w-content px-4 py-10 sm:px-6 lg:px-8">
-        <div className="flex gap-2 overflow-x-auto pb-4">
-          {teamDepartments.map((d) => (
+      {exec && (
+        <section className="container-x mt-16 md:mt-24" aria-labelledby="team-exec">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-end">
+            <SectionHead
+              id="team-exec"
+              word="Pengurus inti"
+              title={t(exec.titleKey)}
+              intro={pick({
+                en: `${total} students volunteer on the national board, alongside their studies on campuses across the United States.`,
+                id: `${total} mahasiswa menjadi relawan pengurus nasional, sambil kuliah di kampus-kampus di seluruh Amerika Serikat.`,
+              })}
+            />
+            <div className="grid grid-cols-2 gap-5 md:gap-8">
+              {exec.members.map((m, i) => (
+                <Portrait key={m.name} m={m} size="lg" index={i} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <section className="container-x page-pad mt-20 md:mt-28" aria-labelledby="team-dirs">
+        <SectionHead id="team-dirs" word="Direktorat" title={pick({ en: 'Directorates', id: 'Direktorat' })} />
+        <div role="group" aria-label={pick({ en: 'Choose a directorate', id: 'Pilih direktorat' })} className="no-scrollbar -mx-5 mt-8 flex gap-1 overflow-x-auto px-5 pb-1 md:mx-0 md:flex-wrap md:px-0">
+          {directorates.map((d) => (
             <button
               key={d.id}
               type="button"
-              onClick={() => setTab(d.id)}
+              aria-pressed={tab === d.id}
+              onClick={() => setParams({ d: d.id }, { replace: true, preventScrollReset: true })}
               className={cn(
-                'whitespace-nowrap rounded-full px-4 py-2 text-sm font-bold transition',
-                tab === d.id ? 'bg-merah text-white' : 'bg-black/5 text-ink dark:bg-white/10 dark:text-white',
+                'relative min-h-[44px] shrink-0 whitespace-nowrap rounded-full px-4 text-[15px] font-semibold transition-colors duration-150',
+                tab === d.id ? 'text-mist' : 'text-ink/70 hover:text-ink',
               )}
             >
-              {t(d.titleKey)}
+              {tab === d.id && <motion.span layoutId="team-tab" className="absolute inset-0 rounded-full bg-ink" transition={springs.snappy} aria-hidden="true" />}
+              <span className="relative">
+                {t(d.titleKey)} <span className={cn('tabular', tab === d.id ? 'text-mist/70' : 'text-muted-foreground')}>{d.members.length}</span>
+              </span>
             </button>
           ))}
         </div>
-
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {active.members.map((mem, i) => (
-            <Reveal key={mem.name} delay={Math.min(i % 5, 8) * 0.06}>
-              <article className="group relative h-full rounded-2xl border border-ink/10 border-t-[3px] border-t-transparent bg-white p-6 shadow-sm transition duration-150 hover:-translate-y-1 hover:border-t-merah dark:border-white/10 dark:bg-surface">
-                <div className="flex items-start gap-4">
-                  {mem.imageUrl ? (
-                    <div className="h-20 w-20 shrink-0 overflow-hidden rounded-full border-2 border-merah/20 shadow-sm">
-                      <img
-                        src={mem.imageUrl}
-                        alt={mem.name}
-                        className="h-full w-full object-cover"
-                        style={{ objectPosition: TEAM_PHOTO_FOCUS[mem.name] ?? 'center 35%' }}
-                        loading="lazy"
-                      />
-                    </div>
-                  ) : (
-                    <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-merah text-lg font-black text-white">
-                      {mem.name
-                        .split(/\s+/)
-                        .map((part) => part[0])
-                        .join('')
-                        .slice(0, 2)
-                        .toUpperCase()}
-                    </div>
-                  )}
-                  <div>
-                    <h3 className="font-display text-lg font-bold">{mem.name}</h3>
-                    <p className="text-sm font-semibold text-merah">{mem.role}</p>
-                    {mem.education && (
-                      <p className="text-sm text-ink/60 dark:text-white/60">{mem.education}</p>
-                    )}
-                  </div>
-                </div>
-                {mem.hometown && (
-                  <p className="mt-4 text-sm text-ink/75 opacity-0 transition group-hover:opacity-100 dark:text-white/75">
-                    <span className="font-semibold">{t('team.hometown')}: </span>
-                    {mem.hometown}
-                  </p>
-                )}
-                {mem.linkedin && (
-                  <a
-                    href={mem.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex text-sm font-bold text-merah underline-offset-4 hover:underline"
-                  >
-                    LinkedIn ↗
-                  </a>
-                )}
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </div>
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
+            key={tab}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0, transition: { duration: motionTokens.duration.exit } }}
+            className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4"
+            aria-live="polite"
+          >
+            {active.members.map((m, i) => (
+              <Portrait key={m.name} m={m} index={i} />
+            ))}
+          </motion.div>
+        </AnimatePresence>
+      </section>
     </>
   );
 }

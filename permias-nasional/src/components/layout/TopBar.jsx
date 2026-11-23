@@ -7,6 +7,7 @@ import { useUi } from '../../context/UiContext.jsx';
 import { chapters, REGION_LABELS, REGIONS, stateCount } from '../../data/chapters.js';
 import { PAGE_PHOTOS, photo } from '../../data/photos.js';
 import { resourceSections } from '../../data/resources.js';
+import { GUIDE_NOTES } from '../../data/guideNotes.js';
 import { chapterPath } from '../../lib/chapterInfo.js';
 import { REGION_TONE } from '../../lib/regionTone.js';
 import { motionTokens, springs } from '../../lib/motion.js';
@@ -24,16 +25,6 @@ const LINKS = [
   { to: '/contact', key: 'nav.contact.short', match: (p) => p === '/contact' },
 ];
 
-const GUIDE_NOTES = {
-  embassies: { en: 'Embassy and five consulates, with addresses', id: 'Kedutaan dan lima konsulat, lengkap dengan alamat' },
-  visa: { en: 'F-1, J-1, OPT and keeping your status', id: 'F-1, J-1, OPT, dan menjaga status' },
-  academics: { en: 'Applying, testing and campus life', id: 'Pendaftaran, tes, dan kehidupan kampus' },
-  jobs: { en: 'Internships, CPT, OPT and job boards', id: 'Magang, CPT, OPT, dan situs lowongan' },
-  research: { en: 'Labs, journals and research networks', id: 'Lab, jurnal, dan jaringan riset' },
-  scholarships: { en: 'LPDP, Fulbright and campus funding', id: 'LPDP, Fulbright, dan dana kampus' },
-  entrepreneurship: { en: 'Founders, programs and capital', id: 'Pendiri, program, dan permodalan' },
-  cultural: { en: 'Indonesian culture across the U.S.', id: 'Budaya Indonesia di seluruh AS' },
-};
 
 const ABOUT_LINKS = [
   { to: '/about', title: { en: 'About PERMIAS', id: 'Tentang PERMIAS' }, note: { en: 'Mission, vision and how we are organised', id: 'Misi, visi, dan struktur organisasi' } },
@@ -206,7 +197,7 @@ function LangSwitch({ lang, setLang, label, light }) {
             aria-checked={on}
             onClick={() => setLang(o.value)}
             className={cn(
-              'relative flex min-h-[36px] min-w-[42px] items-center justify-center rounded-full px-2.5 text-[13px] font-semibold tracking-wide transition-colors duration-150',
+              'relative flex min-h-[36px] min-w-[38px] items-center justify-center rounded-full px-2 sm:min-w-[42px] sm:px-2.5 text-[13px] font-semibold tracking-wide transition-colors duration-150',
               on ? (light ? 'text-[#13233F]' : 'text-ink') : light ? 'text-white/85 hover:text-white' : 'text-ink/65 hover:text-ink',
             )}
           >
@@ -324,20 +315,20 @@ export function TopBar() {
         />
       )}
 
-      <div className="container-x flex h-16 items-center justify-between gap-4 md:h-[72px]">
-        <Link to="/" className="group flex shrink-0 items-center gap-3 rounded-[12px] outline-offset-4" aria-label={t('topbar.homeLabel')}>
+      <div className="container-x flex h-16 items-center justify-between gap-2 sm:gap-4 md:h-[72px]">
+        <Link to="/" className="group flex min-w-0 shrink items-center gap-2 rounded-[12px] sm:gap-3 lg:shrink-0 outline-offset-4" aria-label={t('topbar.homeLabel')}>
           <img
             src={publicUrl(light || theme === 'dark' ? '/images/brand/emblem-white.png' : '/images/brand/emblem-red.png')}
             alt=""
             width="36"
             height="40"
-            className="h-10 w-9 transition-transform duration-300 ease-out group-hover:-translate-y-0.5"
+            className="h-9 w-8 transition-transform sm:h-10 sm:w-9 duration-300 ease-out group-hover:-translate-y-0.5"
           />
           <span className="flex flex-col leading-none">
-            <span className="font-display text-[21px] tracking-[0.01em]">
+            <span className="whitespace-nowrap font-display text-[18px] tracking-[0.01em] sm:text-[21px]">
               PERMIAS <span className="italic">Nasional</span>
             </span>
-            <span className={cn('mt-1 hidden text-[11px] font-medium sm:block', light ? 'text-white/75' : 'text-muted-foreground')}>
+            <span className={cn('mt-1 hidden whitespace-nowrap text-[11px] font-medium sm:block lg:hidden xl:block', light ? 'text-white/75' : 'text-muted-foreground')}>
               {pick({ en: 'Indonesian students in the United States', id: 'Mahasiswa Indonesia di Amerika Serikat' })}
             </span>
           </span>

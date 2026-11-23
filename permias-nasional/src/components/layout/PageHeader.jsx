@@ -33,6 +33,8 @@ export function PageHeader({ title, description, children, image, className, com
               srcSet={p.srcSet}
               sizes="100vw"
               alt=""
+              width="1600"
+              height="1067"
               className="h-full w-full object-cover"
               initial={{ scale: 1.08 }}
               animate={{ scale: 1 }}

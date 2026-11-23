@@ -186,6 +186,14 @@
     border-radius: 28px;
   }
 
+  /* Form and panel card */
+  .surface-card {
+    background-color: rgb(var(--card));
+    border: 1px solid rgb(var(--border));
+    border-radius: 28px;
+    box-shadow: 0 30px 70px -50px rgba(19, 35, 63, 0.5);
+  }
+
   .page-pad {
     padding-bottom: calc(var(--dock-h) + 48px + env(safe-area-inset-bottom));
   }

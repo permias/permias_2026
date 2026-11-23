@@ -76,7 +76,10 @@ export function placePhoto(c) {
 /** The hero image for a chapter page: its own photo first, else the place photo. */
 export function heroImage(c) {
   const m = chapterMedia(c);
-  if (m.photos.length) return { src: m.photos[0].src, srcSet: undefined, alt: m.photos[0].alt || c.chapterName, source: m.photos[0].source, own: true };
+  // only wide photos make a good full-bleed hero; portrait group shots stay in the gallery
+  const wide = m.photos.find((p) => p.w && p.h && p.w / p.h >= 1.3);
+  if (wide) m.photos = [wide, ...m.photos.filter((p) => p !== wide)];
+  if (wide) return { src: m.photos[0].src, srcSet: undefined, alt: m.photos[0].alt || c.chapterName, source: m.photos[0].source, own: true };
   const p = placePhoto(c);
   return { src: p.src, srcSet: p.srcSet, alt: p.alt, artist: p.artist, license: p.license, page: p.page, own: false, kind: p.kind };
 }

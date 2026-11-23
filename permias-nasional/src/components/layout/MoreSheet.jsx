@@ -104,7 +104,7 @@ export function MoreSheet() {
           ))}
         </nav>
 
-        <h3 className="mt-6 text-sm font-semibold text-muted-foreground" style={{ fontFamily: 'inherit', letterSpacing: 0 }}>
+        <h3 className="font-sans mt-6 text-sm font-semibold text-muted-foreground" style={{ fontFamily: 'inherit', letterSpacing: 0 }}>
           {t('more.guides')}
         </h3>
         <ul className="mt-2 flex flex-wrap gap-2">

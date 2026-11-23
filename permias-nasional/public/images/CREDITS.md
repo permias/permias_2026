@@ -35,3 +35,6 @@ Photos in `public/images/photos/` come from Wikimedia Commons under the licenses
 | us-liberty | Statue of Liberty and Lower Manhattan, New York | SebastianBlumeArt | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:New_York_City_skyline_with_Statue_of_Liberty_at_dusk_aerial_2018.jpg |
 | us-lincoln-reflecting | Lincoln Memorial Reflecting Pool, Washington DC | Ali Khan | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Lincoln_Memorial_Reflecting_Pool_With_The_Washington_Monument.jpg |
 | uw-suzzallo | Suzzallo Library reading room, University of Washington | Guywelch2000 | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Suzzallo_Reading_Room_University_of_Washington_restoration_Seattle_Washington_2026.jpg |
+| houston-night | Downtown Houston at night | User eflon on Flickr | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Houston_night.jpg |
+| atlanta-skyline | Atlanta skyline from Buckhead | Chuck Koehler from Cartersville, GA, USA | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Atlanta_Skyline_from_Buckhead.jpg |
+| campus-tamu-academic | Academic Building, Texas A&M University | Donnie Ray Jones | CC BY 2.0 | https://commons.wikimedia.org/wiki/File:Texas_A%26M_University_Academic_Building.jpg |

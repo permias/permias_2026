@@ -54,10 +54,10 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
   };
 
   return (
-    <form onSubmit={submit} className="surface-card space-y-4 p-6 sm:p-8">
-      <p className="section-label">{t('chapterRegister.form.sectionContact')}</p>
+    <form onSubmit={submit} className="surface-card space-y-5 p-6 sm:p-8">
+      <p className="font-display text-[22px] text-ink">{t('chapterRegister.form.sectionContact')}</p>
       <div>
-        <label className="text-sm font-medium" htmlFor={compact ? 'home-cr-fullname' : 'cr-fullname'}>
+        <label className="text-[15px] font-semibold text-ink" htmlFor={compact ? 'home-cr-fullname' : 'cr-fullname'}>
           {t('chapterRegister.form.fullName')}
         </label>
         <Input
@@ -71,7 +71,7 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="text-sm font-medium" htmlFor={compact ? 'home-cr-email' : 'cr-email'}>
+          <label className="text-[15px] font-semibold text-ink" htmlFor={compact ? 'home-cr-email' : 'cr-email'}>
             {t('chapterRegister.form.email')}
           </label>
           <Input
@@ -85,7 +85,7 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
           />
         </div>
         <div>
-          <label className="text-sm font-medium" htmlFor={compact ? 'home-cr-phone' : 'cr-phone'}>
+          <label className="text-[15px] font-semibold text-ink" htmlFor={compact ? 'home-cr-phone' : 'cr-phone'}>
             {t('chapterRegister.form.phone')}
           </label>
           <Input
@@ -101,9 +101,9 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
         </div>
       </div>
 
-      <p className="section-label pt-1">{t('chapterRegister.form.sectionOrg')}</p>
+      <p className="border-t border-border pt-6 font-display text-[22px] text-ink">{t('chapterRegister.form.sectionOrg')}</p>
       <div>
-        <label className="text-sm font-medium" htmlFor={compact ? 'home-cr-org' : 'cr-org'}>
+        <label className="text-[15px] font-semibold text-ink" htmlFor={compact ? 'home-cr-org' : 'cr-org'}>
           {t('chapterRegister.form.orgName')}
         </label>
         <Input
@@ -116,7 +116,7 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label className="text-sm font-medium" htmlFor={compact ? 'home-cr-school' : 'cr-school'}>
+          <label className="text-[15px] font-semibold text-ink" htmlFor={compact ? 'home-cr-school' : 'cr-school'}>
             {t('chapterRegister.form.school')}
           </label>
           <Input
@@ -128,7 +128,7 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
           />
         </div>
         <div>
-          <label className="text-sm font-medium" htmlFor={compact ? 'home-cr-city' : 'cr-city'}>
+          <label className="text-[15px] font-semibold text-ink" htmlFor={compact ? 'home-cr-city' : 'cr-city'}>
             {t('chapterRegister.form.cityState')}
           </label>
           <Input
@@ -145,14 +145,14 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
       {!compact && (
         <>
           <div>
-            <label className="text-sm font-medium" htmlFor="cr-website">
+            <label className="text-[15px] font-semibold text-ink" htmlFor="cr-website">
               {t('chapterRegister.form.website')}{' '}
               <span className="font-normal text-muted-foreground">({t('chapterRegister.form.optional')})</span>
             </label>
             <Input id="cr-website" type="url" className="mt-1.5" placeholder="https://" value={form.website} onChange={set('website')} />
           </div>
           <div>
-            <label className="text-sm font-medium" htmlFor="cr-ig">
+            <label className="text-[15px] font-semibold text-ink" htmlFor="cr-ig">
               {t('chapterRegister.form.instagram')}{' '}
               <span className="font-normal text-muted-foreground">({t('chapterRegister.form.optional')})</span>
             </label>
@@ -161,26 +161,25 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
         </>
       )}
 
-      <Button type="submit" className="w-full" size="lg" disabled={status === 'loading' || status === 'success'}>
-        {status === 'loading' ? '…' : t('chapterRegister.form.submit')}
+      <Button type="submit" className="w-full" size="lg" loading={status === 'loading'} disabled={status === 'success'}>
+        {t('chapterRegister.form.submit')}
       </Button>
 
       {msg && (
-        <p
-          className={`text-sm font-medium ${status === 'success' ? 'text-green-700 dark:text-green-400' : 'text-merah'}`}
-          role="status"
+        <div
+          className={status === 'success' ? 'rounded-[14px] bg-teal/10 p-4 text-[15px] font-medium text-ink' : 'rounded-[14px] border border-merah/25 bg-merah/[0.05] p-4 text-[15px] leading-relaxed text-ink'}
+          role={status === 'error' ? 'alert' : 'status'}
         >
-          {msg}
-        </p>
-      )}
-
-      {status === 'error' && (
-        <p className="text-sm text-muted-foreground">
-          {t('chapterRegister.form.fallback')}{' '}
-          <a href={fallbackMailto} className="font-medium text-merah underline-offset-4 hover:underline">
-            {CHAPTER_REGISTER_EMAIL}
-          </a>
-        </p>
+          <p className="font-semibold">{msg}</p>
+          {status === 'error' && (
+            <p className="mt-1 text-muted-foreground">
+              {t('chapterRegister.form.fallback')}{' '}
+              <a href={fallbackMailto} className="font-semibold text-merah underline underline-offset-4">
+                {CHAPTER_REGISTER_EMAIL}
+              </a>
+            </p>
+          )}
+        </div>
       )}
 
       {showBackLink && (

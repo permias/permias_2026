@@ -1,88 +1,79 @@
 import { VisaTimeline } from './VisaTimeline.jsx';
-import { Card } from '../ui/Card.jsx';
 import { Reveal } from '../ui/Reveal.jsx';
-import { sectionImages } from '../../data/siteMedia.js';
-import { cn } from '../../utils/cn.js';
+import { photo } from '../../data/photos.js';
+import { IconArrowUpRight } from '../ui/Icons.jsx';
 
-function cardDescription(card, lang) {
-  if (!card.description) return '';
-  return typeof card.description === 'string' ? card.description : card.description[lang] ?? card.description.en ?? '';
-}
+const text = (v, lang) => (!v ? '' : typeof v === 'string' ? v : (v[lang] ?? v.en ?? ''));
+const host = (u) => u.replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0];
 
-function cardSubtitle(card, lang) {
-  if (!card.subtitle) return '';
-  return typeof card.subtitle === 'string' ? card.subtitle : card.subtitle[lang] ?? card.subtitle.en ?? '';
-}
-
+/** One guide's body: an intro (and the F-1 timeline for visas), then every link as a card with its facts. */
 export function ResourceSectionBody({ sec, lang, t }) {
   return (
     <div>
-      {sec.id === 'visa' && <div id="visaprocess" className="scroll-mt-32" aria-hidden tabIndex={-1} />}
-      {sec.id === 'embassies' && (
-        <p className="mt-4 max-w-3xl text-base leading-relaxed text-ink/80 dark:text-white/80">{t('resources.embassies.intro')}</p>
-      )}
+      {sec.id === 'embassies' && <p className="lede max-w-[62ch]">{t('resources.embassies.intro')}</p>}
       {sec.id === 'visa' && (
         <>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-ink/80 dark:text-white/80">{t('resources.visa.intro')}</p>
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            <img
-              src={sectionImages.mountRushmore}
-              alt=""
-              className="h-48 w-full rounded-2xl border border-ink/10 object-cover shadow-sm md:h-56 dark:border-white/10"
-              loading="lazy"
-            />
-            <img
-              src={sectionImages.visaPassport}
-              alt=""
-              className="h-48 w-full rounded-2xl border border-ink/10 object-cover object-center shadow-sm md:h-56 dark:border-white/10"
-              loading="lazy"
-            />
-          </div>
-          <p className="mt-4 text-sm font-semibold text-ink/90 dark:text-white/90">{t('resources.visa.caption')}</p>
-          <div className="mt-6 rounded-2xl border border-ink/10 bg-neutral-50 p-6 dark:border-white/10 dark:bg-black/30">
+          <div id="visaprocess" className="scroll-mt-32" tabIndex={-1} />
+          <p className="lede max-w-[62ch]">{t('resources.visa.intro')}</p>
+          <div className="mt-8 rounded-[28px] border border-border bg-surface p-6 md:p-8">
             <VisaTimeline />
           </div>
+          <p className="mt-3 text-sm text-muted-foreground">{t('resources.visa.caption')}</p>
         </>
       )}
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
-        {sec.cards.map((card, ci) => (
-          <Reveal key={`${sec.id}-${card.title}-${ci}`} delay={Math.min(ci % 4, 8) * 0.06}>
-            <Card className="h-full overflow-hidden border-ink/10 p-0 dark:border-white/10">
-              {card.image && (
-                <img src={card.image} alt="" className="h-40 w-full object-cover sm:h-44" loading="lazy" />
+      <ul className="mt-10 grid gap-4 md:grid-cols-2">
+        {sec.cards.map((card, ci) => {
+          const p = card.photo ? photo(card.photo) : null;
+          return (
+            <Reveal as="li" key={`${sec.id}-${card.title}-${ci}`} delay={Math.min(ci % 4, 8) * 0.06} className="flex flex-col overflow-hidden rounded-[24px] border border-border bg-surface">
+              {p && (
+                <figure className="relative">
+                  <img src={p.small} alt={p.alt} width="800" height="400" loading="lazy" className="aspect-[2/1] w-full object-cover" />
+                  <figcaption className="absolute bottom-2 right-2 max-w-[80%] truncate rounded-full bg-black/45 px-2 py-0.5 text-[11px] text-white/90 backdrop-blur">
+                    <a href={p.page} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                      {p.artist}, {p.license}
+                    </a>
+                  </figcaption>
+                </figure>
               )}
-              <div className="p-6">
-                {cardSubtitle(card, lang) && (
-                  <p className="text-xs font-bold text-merah">{cardSubtitle(card, lang)}</p>
-                )}
-                <h3 className="mt-1 font-display text-lg font-bold">{card.title}</h3>
-                {cardDescription(card, lang) && (
-                  <p className="mt-2 text-sm text-ink/75 dark:text-white/75">{cardDescription(card, lang)}</p>
-                )}
-                {card.address && (
-                  <p className="mt-2 text-xs text-ink/60 dark:text-white/60">
-                    <span className="font-semibold text-ink/80 dark:text-white/80">{t('resources.card.address')}:</span> {card.address}
-                  </p>
-                )}
-                {card.phone && (
-                  <p className="mt-1 text-xs">
-                    <span className="font-semibold text-ink/80 dark:text-white/80">{t('resources.card.contact')}:</span>{' '}
-                    <span className="font-semibold text-merah">{card.phone}</span>
-                  </p>
+              <div className="flex flex-1 flex-col p-6">
+                {text(card.subtitle, lang) && <p className="text-sm font-semibold text-merah">{text(card.subtitle, lang)}</p>}
+                <h3 className="font-sans mt-1 text-[19px] font-semibold leading-snug text-ink">{card.title}</h3>
+                {text(card.description, lang) && <p className="mt-2 text-[16px] leading-relaxed text-muted-foreground">{text(card.description, lang)}</p>}
+                {(card.address || card.phone) && (
+                  <dl className="mt-4 grid gap-2 border-t border-border pt-4 text-[15px]">
+                    {card.address && (
+                      <div className="grid grid-cols-[88px_minmax(0,1fr)] gap-3">
+                        <dt className="text-muted-foreground">{t('resources.card.address')}</dt>
+                        <dd className="text-ink">{card.address}</dd>
+                      </div>
+                    )}
+                    {card.phone && (
+                      <div className="grid grid-cols-[88px_minmax(0,1fr)] gap-3">
+                        <dt className="text-muted-foreground">{t('resources.card.contact')}</dt>
+                        <dd>
+                          <a href={`tel:${card.phone.replace(/[^+\d]/g, '')}`} className="link-quiet font-semibold text-ink tabular">
+                            {card.phone}
+                          </a>
+                        </dd>
+                      </div>
+                    )}
+                  </dl>
                 )}
                 <a
                   href={card.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={cn('mt-4 inline-flex text-sm font-bold text-merah underline-offset-4 hover:underline')}
+                  className="group mt-auto inline-flex min-h-[44px] items-center gap-2 self-start pt-5 text-[15px] font-semibold text-ink"
                 >
-                  {t('resources.card.website')}: {card.href.replace(/^https?:\/\//, '').split('/')[0]} ↗
+                  <span className="underline decoration-ink/25 underline-offset-4 transition-colors group-hover:decoration-merah">{host(card.href)}</span>
+                  <IconArrowUpRight className="h-4 w-4 text-merah transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </a>
               </div>
-            </Card>
-          </Reveal>
-        ))}
-      </div>
+            </Reveal>
+          );
+        })}
+      </ul>
     </div>
   );
 }

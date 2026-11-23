@@ -255,7 +255,7 @@ export function ChapterMap({
         {(hover || selChapter) && (
           <motion.div
             key={hover ? hover.id + hover.items.length : selChapter.id}
-            className="pointer-events-none absolute z-10"
+            className={cn('pointer-events-none absolute z-10', !hover && 'hidden md:block')}
             style={hover ? pct(hover.x, hover.y) : pct(selChapter.mapX, selChapter.mapY)}
             initial={{ opacity: 0, scale: motionTokens.scale.press }}
             animate={{ opacity: 1, scale: 1, transition: { duration: motionTokens.duration.fast, ease: motionTokens.easing.smooth, delay: hover ? 0 : motionTokens.duration.crawl * 0.9 } }}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo } from '../components/Seo.jsx';
 import { pageTabTitle } from '../utils/seo.js';
@@ -7,57 +8,46 @@ import { Input } from '../components/ui/Input.jsx';
 import { PAGE_PHOTOS } from '../data/photos.js';
 import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { Reveal } from '../components/ui/Reveal.jsx';
+import { SectionHead } from '../components/ui/Section.jsx';
 import { AccordionItem } from '../components/ui/Accordion.jsx';
-import { sectionImages } from '../data/siteMedia.js';
+import { SocialIcon } from '../components/ui/SocialIcon.jsx';
+import { IconArrowUpRight, IconCheck, IconMail } from '../components/ui/Icons.jsx';
 import { SUPPORT_EMAIL } from '../data/contactEmails.js';
+import { motionTokens } from '../lib/motion.js';
 
 const API_BASE = (import.meta.env.VITE_API_BASE || '').replace(/\/$/, '');
 
 const socials = [
-  {
-    href: 'https://groups.google.com/g/permias-nasional',
-    label: 'Google Groups',
-    handle: 'groups.google.com/g/permias-nasional',
-    followers: 'Mailing list',
-  },
-  { href: 'https://www.instagram.com/permias.nasional/', label: 'Instagram', handle: '@permias.nasional', followers: '48.2k followers' },
-  { href: 'https://www.facebook.com/permias.nasional', label: 'Facebook', handle: 'PERMIAS Nasional', followers: '12.4k followers' },
-  { href: 'https://www.linkedin.com/company/permiasnasional', label: 'LinkedIn', handle: 'PERMIAS Nasional', followers: '6.7k followers' },
-  { href: 'https://www.youtube.com/channel/UCHjEGs027y3g--ZH5BCS7tw', label: 'YouTube', handle: 'PERMIAS Nasional', followers: '3.1k subscribers' },
+  { id: 'instagram', href: 'https://www.instagram.com/permias.nasional/', label: 'Instagram', handle: '@permias.nasional' },
+  { id: 'google-groups', href: 'https://groups.google.com/g/permias-nasional', label: 'Google Groups', handle: 'permias-nasional' },
+  { id: 'linkedin', href: 'https://www.linkedin.com/company/permiasnasional', label: 'LinkedIn', handle: 'PERMIAS Nasional' },
+  { id: 'facebook', href: 'https://www.facebook.com/permias.nasional', label: 'Facebook', handle: 'PERMIAS Nasional' },
+  { id: 'youtube', href: 'https://www.youtube.com/channel/UCHjEGs027y3g--ZH5BCS7tw', label: 'YouTube', handle: 'PERMIAS Nasional' },
 ];
 
 const faqKeys = [1, 2, 3, 4, 5, 6].map((n) => ({ q: `faq.q${n}`, a: `faq.a${n}` }));
 
-export function Contact() {
-  const { t } = useLanguage();
-  const [status, setStatus] = useState('idle');
-  const [msg, setMsg] = useState('');
-  const [form, setForm] = useState({ name: '', email: '', subject: 'general', message: '' });
+const field = 'mt-1.5 w-full rounded-control border border-border bg-card px-4 text-base text-foreground outline-none transition-[border-color,box-shadow] duration-150 focus:border-merah/50 focus:shadow-[0_0_0_4px_rgb(var(--merah)/0.12)]';
 
-  const fallbackMailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(t('contact.form.fallbackSubject'))}`;
+/** Contact: a form with honest states (the local API may be offline, so email is always offered), channels and FAQ. */
+export function Contact() {
+  const { t, pick } = useLanguage();
+  const [status, setStatus] = useState('idle');
+  const [form, setForm] = useState({ name: '', email: '', subject: 'general', message: '' });
+  const set = (k) => (e) => setForm({ ...form, [k]: e.target.value });
+
+  const mailto = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(t('contact.form.fallbackSubject'))}&body=${encodeURIComponent(form.message)}`;
 
   const submit = async (e) => {
     e.preventDefault();
     setStatus('loading');
-    setMsg('');
     try {
-      const res = await fetch(`${API_BASE}/api/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        setStatus('error');
-        setMsg(data.error || t('contact.form.error'));
-        return;
-      }
+      const res = await fetch(`${API_BASE}/api/contact`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) });
+      if (!res.ok) throw new Error(String(res.status));
       setStatus('success');
-      setMsg(t('contact.form.success'));
       setForm({ name: '', email: '', subject: 'general', message: '' });
     } catch {
       setStatus('error');
-      setMsg(t('contact.form.error'));
     }
   };
 
@@ -66,129 +56,132 @@ export function Contact() {
       <Seo title={pageTabTitle('Contact')} description="Reach the PERMIAS Nasional board for partnerships, media, and chapter support." path="/contact" />
       <PageHeader image={PAGE_PHOTOS.contact} title={t('contact.title')} description={t('contact.sub')} />
 
-      <div className="mx-auto max-w-content px-4 py-10 sm:px-6 lg:px-8">
+      <section className="container-x mt-16 grid gap-12 md:mt-24 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16" aria-labelledby="ct-form">
         <Reveal>
-          <h2 className="text-center font-display text-2xl font-bold">{t('contact.channels.title')}</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-center text-ink/80 dark:text-white/80">{t('contact.channels.intro')}</p>
-          <img
-            src={sectionImages.contactCards}
-            alt=""
-            className="mx-auto mt-8 w-full max-w-3xl rounded-2xl border border-ink/10 object-cover shadow-lg dark:border-white/10"
-            loading="lazy"
-          />
-        </Reveal>
-      </div>
-
-      <div className="mx-auto grid max-w-content gap-12 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <Reveal>
-          <form onSubmit={submit} className="surface-card space-y-4 p-6 sm:p-8">
-            <div>
-              <label className="text-sm font-semibold" htmlFor="c-name">
-                {t('contact.form.name')}
-              </label>
-              <Input id="c-name" className="mt-1" required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+          <p className="font-display text-xl italic text-merah" lang="id">
+            Tulis kepada kami
+          </p>
+          <h2 id="ct-form" className="display-md mt-2 text-ink">
+            {pick({ en: 'Send the board a message', id: 'Kirim pesan ke pengurus' })}
+          </h2>
+          <form onSubmit={submit} className="mt-8 rounded-[28px] border border-border bg-surface p-6 shadow-[0_30px_70px_-50px_rgba(19,35,63,.5)] sm:p-8" noValidate={false}>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label className="text-[15px] font-semibold text-ink" htmlFor="c-name">
+                  {t('contact.form.name')}
+                </label>
+                <Input id="c-name" className="mt-1.5" required autoComplete="name" value={form.name} onChange={set('name')} />
+              </div>
+              <div>
+                <label className="text-[15px] font-semibold text-ink" htmlFor="c-email">
+                  {t('contact.form.email')}
+                </label>
+                <Input id="c-email" type="email" className="mt-1.5" required autoComplete="email" value={form.email} onChange={set('email')} />
+              </div>
             </div>
-            <div>
-              <label className="text-sm font-semibold" htmlFor="c-email">
-                {t('contact.form.email')}
-              </label>
-              <Input id="c-email" type="email" className="mt-1" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
-            </div>
-            <div>
-              <label className="text-sm font-semibold" htmlFor="c-subject">
+            <div className="mt-5">
+              <label className="text-[15px] font-semibold text-ink" htmlFor="c-subject">
                 {t('contact.form.subject')}
               </label>
-              <select
-                id="c-subject"
-                className="mt-1 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-sm dark:border-white/15 dark:bg-surface-dark dark:text-white"
-                value={form.subject}
-                onChange={(e) => setForm({ ...form, subject: e.target.value })}
-              >
+              <select id="c-subject" className={`${field} min-h-[48px]`} value={form.subject} onChange={set('subject')}>
                 <option value="general">{t('contact.subject.general')}</option>
                 <option value="chapter">{t('contact.subject.chapter')}</option>
                 <option value="media">{t('contact.subject.media')}</option>
                 <option value="partner">{t('contact.subject.partner')}</option>
               </select>
             </div>
-            <div>
-              <label className="text-sm font-semibold" htmlFor="c-msg">
+            <div className="mt-5">
+              <label className="text-[15px] font-semibold text-ink" htmlFor="c-msg">
                 {t('contact.form.message')}
               </label>
-              <textarea
-                id="c-msg"
-                required
-                rows={5}
-                className="mt-1 w-full rounded-xl border border-ink/15 bg-white px-4 py-3 text-sm outline-none dark:border-white/15 dark:bg-surface-dark dark:text-white"
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-              />
+              <textarea id="c-msg" required rows={6} className={`${field} py-3`} value={form.message} onChange={set('message')} />
             </div>
-            <Button type="submit" disabled={status === 'loading'}>
-              {status === 'loading' ? '…' : t('contact.form.submit')}
-            </Button>
-            {msg && (
-              <p
-                className={`text-sm font-semibold ${status === 'success' ? 'text-green-700 dark:text-green-400' : 'text-merah dark:text-white'}`}
-                role="status"
-              >
-                {msg}
-              </p>
-            )}
-
-            <div
-              className={`rounded-xl border p-4 text-sm leading-relaxed ${
-                status === 'error'
-                  ? 'border-merah/30 bg-merah/5 text-ink dark:border-merah/40 dark:bg-merah/10 dark:text-white'
-                  : 'border-ink/10 bg-white text-ink/75 dark:border-white/10 dark:bg-surface-dark dark:text-white/75'
-              }`}
-            >
-              <p>
-                {t('contact.form.fallback')}{' '}
-                <a href={fallbackMailto} className="font-bold text-merah underline-offset-4 hover:underline">
-                  {SUPPORT_EMAIL}
-                </a>
-                .
-              </p>
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <Button type="submit" loading={status === 'loading'}>
+                {t('contact.form.submit')}
+              </Button>
+              <a href={mailto} className="link-quiet text-[15px] font-semibold text-ink">
+                {pick({ en: 'Or write an email instead', id: 'Atau kirim email saja' })}
+              </a>
             </div>
+            <AnimatePresence mode="wait">
+              {(status === 'success' || status === 'error') && (
+                <motion.div
+                  key={status}
+                  initial={{ opacity: 0, y: motionTokens.distance.xs }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, transition: { duration: motionTokens.duration.exit } }}
+                  role={status === 'error' ? 'alert' : 'status'}
+                  className={
+                    status === 'success'
+                      ? 'mt-6 flex items-start gap-3 rounded-[16px] bg-teal/10 p-4 text-[15px] text-ink'
+                      : 'mt-6 rounded-[16px] border border-merah/25 bg-merah/[0.05] p-4 text-[15px] leading-relaxed text-ink'
+                  }
+                >
+                  {status === 'success' ? (
+                    <>
+                      <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-teal" />
+                      {t('contact.form.success')}
+                    </>
+                  ) : (
+                    <>
+                      <p className="font-semibold">{pick({ en: 'The message service is not reachable right now.', id: 'Layanan pesan sedang tidak dapat dihubungi.' })}</p>
+                      <p className="mt-1 text-muted-foreground">
+                        {pick({ en: 'Your text is still in the form. Send it by email and it reaches the same inbox:', id: 'Teks Anda masih ada di formulir. Kirim lewat email, tujuannya sama:' })}{' '}
+                        <a href={mailto} className="font-semibold text-merah underline underline-offset-4">
+                          {SUPPORT_EMAIL}
+                        </a>
+                      </p>
+                    </>
+                  )}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </form>
         </Reveal>
 
-        <div className="space-y-8">
-          <Reveal delay={Math.min(1, 8) * 0.06}>
-            <h2 className="font-display text-xl font-bold">{t('contact.direct')}</h2>
-            <a href={`mailto:${SUPPORT_EMAIL}`} className="mt-2 block text-lg font-bold text-merah underline-offset-4 hover:underline">
-              {SUPPORT_EMAIL}
-            </a>
-            <ul className="mt-6 space-y-4">
-              {socials.map((s) => (
-                <li key={s.href}>
-                  <a
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block rounded-xl border border-ink/10 bg-white p-3 transition hover:border-merah/40 dark:border-white/10 dark:bg-surface"
-                  >
-                    <p className="text-[10px] font-bold text-merah">{s.label}</p>
-                    <p className="text-sm font-semibold">{s.handle}</p>
-                    <p className="text-[11px] text-ink/60 dark:text-white/60">{s.followers}</p>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
+        <Reveal x={24} className="lg:pt-[92px]">
+          <h2 className="font-display text-[28px] leading-tight text-ink">{t('contact.direct')}</h2>
+          <a href={`mailto:${SUPPORT_EMAIL}`} className="group mt-4 flex items-center gap-4 rounded-[20px] bg-[#13233F] p-5 text-white transition-[background-color,transform] duration-150 hover:bg-[#1A2E52] active:scale-[0.99]">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
+              <IconMail className="h-5 w-5" />
+            </span>
+            <span className="min-w-0">
+              <span className="block text-sm text-white/70">{pick({ en: 'Email the board', id: 'Email pengurus' })}</span>
+              <span className="block truncate text-[17px] font-semibold">{SUPPORT_EMAIL}</span>
+            </span>
+          </a>
+          <ul className="mt-6 divide-y divide-border border-y border-border">
+            {socials.map((s) => (
+              <li key={s.href}>
+                <a href={s.href} target="_blank" rel="noopener noreferrer" className="group flex min-h-[64px] items-center gap-4 py-3 transition-colors">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink/[0.05] text-ink transition-colors group-hover:bg-merah group-hover:text-white dark:bg-white/10">
+                    <SocialIcon id={s.id} className="h-[18px] w-[18px]" />
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-[16px] font-semibold text-ink">{s.label}</span>
+                    <span className="block truncate text-sm text-muted-foreground">{s.handle}</span>
+                  </span>
+                  <IconArrowUpRight className="h-4 w-4 text-ink/40 transition-[color,transform] duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-merah" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      </section>
 
-          <Reveal delay={Math.min(2, 8) * 0.06}>
-            <h2 className="font-display text-xl font-bold">{t('contact.faq.title')}</h2>
-            <div className="mt-4 rounded-2xl border border-ink/10 bg-white px-4 dark:border-white/10 dark:bg-surface">
-              {faqKeys.map((f) => (
-                <AccordionItem key={f.q} title={t(f.q)}>
-                  {t(f.a)}
-                </AccordionItem>
-              ))}
-            </div>
+      <section className="container-x page-pad mt-20 md:mt-28" aria-labelledby="ct-faq">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-16">
+          <SectionHead id="ct-faq" word="Tanya jawab" title={pick({ en: 'Questions we hear often', id: 'Pertanyaan yang sering diajukan' })} />
+          <Reveal x={24} className="border-t border-ink/10 dark:border-white/10">
+            {faqKeys.map((f) => (
+              <AccordionItem key={f.q} title={t(f.q)}>
+                {t(f.a)}
+              </AccordionItem>
+            ))}
           </Reveal>
         </div>
-      </div>
+      </section>
     </>
   );
 }

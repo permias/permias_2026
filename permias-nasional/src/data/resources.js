@@ -1,5 +1,4 @@
 /** Flattened cards for search + grouped by section id */
-import { sectionImages } from './siteMedia.js';
 
 export const visaStages = [
   {
@@ -63,7 +62,7 @@ export const resourceSections = [
         address: '2020 Massachusetts Ave NW, Washington, DC 20036',
         phone: '+1 (202) 775-5200',
         href: 'https://www.embassyofindonesia.org',
-        image: sectionImages.borobudur,
+        photo: 'dc-indonesian-embassy',
         keywords: ['embassy', 'dc', 'passport', 'kbri', 'washington'],
       },
       {
@@ -76,7 +75,7 @@ export const resourceSections = [
         address: 'Jl. Medan Merdeka Selatan No. 3–5, Jakarta 10110',
         phone: '+62-21-5083-1000',
         href: 'https://id.usembassy.gov',
-        image: sectionImages.mountRushmore,
+        photo: 'id-monas',
         keywords: ['us embassy', 'jakarta', 'indonesia'],
       },
       {
@@ -89,7 +88,7 @@ export const resourceSections = [
         address: '1111 Columbus Avenue, San Francisco, CA 94133',
         phone: '+1 (415) 875 0793',
         href: 'https://kemlu.go.id/sanfrancisco/id',
-        image: sectionImages.goldenGate,
+        photo: 'golden-gate-sunset',
         keywords: ['san francisco', 'kjri', 'bay area'],
       },
       {
@@ -102,7 +101,7 @@ export const resourceSections = [
         address: '5 E 68th St, New York, NY 10065',
         phone: '+1 (212) 879-0600',
         href: 'https://kjrinewyork.org/',
-        image: sectionImages.statueLiberty,
+        photo: 'us-liberty',
         keywords: ['new york', 'kjri', 'consulate'],
       },
       {
@@ -115,7 +114,7 @@ export const resourceSections = [
         address: '211 N Carpenter St, Chicago, IL 60607',
         phone: '+1 (312) 920 1880',
         href: 'https://kemlu.go.id/chicago',
-        image: sectionImages.chicagoNight,
+        photo: 'chicago-skyline',
         keywords: ['chicago', 'illinois', 'kjri'],
       },
       {
@@ -128,7 +127,7 @@ export const resourceSections = [
         address: '10900 Richmond Avenue, Houston, TX 77042',
         phone: '+1 (713) 785 1691',
         href: 'https://kemlu.go.id/houston/',
-        image: sectionImages.houston,
+        photo: 'houston-night',
         keywords: ['houston', 'texas', 'kjri'],
       },
       {
@@ -141,7 +140,7 @@ export const resourceSections = [
         address: '3457 Wilshire Boulevard, Los Angeles, CA 90010',
         phone: '+1 (213) 387 7041',
         href: 'https://kemlu.go.id/losangeles/',
-        image: sectionImages.santaMonica,
+        photo: 'la-griffith-night',
         keywords: ['los angeles', 'california', 'kjri'],
       },
     ],

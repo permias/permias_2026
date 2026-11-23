@@ -27,7 +27,7 @@ export function Footer() {
       <div className="container-x pb-[calc(var(--dock-h)+56px)] pt-16 md:pt-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div>
-            <p className="font-display text-[clamp(2rem,1.4rem+2vw,3.2rem)] font-bold leading-[1.02] tracking-[-0.035em]">
+            <p className="font-display text-[clamp(2rem,1.4rem+2vw,3.2rem)] leading-[1.04] tracking-[-0.015em]">
               {t('footer.big', { n: chapters.length, s: stateCount })}
             </p>
             <p className="mt-4 max-w-sm text-white/70">{t('footer.tagline')}</p>

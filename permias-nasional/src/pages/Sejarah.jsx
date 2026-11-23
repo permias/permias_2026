@@ -1,129 +1,121 @@
 import { Link } from 'react-router-dom';
-import {
-  sejarahActivities,
-  sejarahFormation,
-  sejarahMission,
-  sejarahVision,
-} from '../data/sejarah.js';
+import { sejarahActivities, sejarahFormation, sejarahMission, sejarahVision } from '../data/sejarah.js';
 import { SUPPORT_EMAIL } from '../data/contactEmails.js';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { Seo } from '../components/Seo.jsx';
-import { PAGE_PHOTOS } from '../data/photos.js';
+import { PAGE_PHOTOS, photo } from '../data/photos.js';
 import { PageHeader } from '../components/layout/PageHeader.jsx';
 import { Reveal } from '../components/ui/Reveal.jsx';
+import { Credit, SectionHead } from '../components/ui/Section.jsx';
+import { IconArrowRight, IconMail } from '../components/ui/Icons.jsx';
 
+const ACTIVITY_PHOTOS = ['dc-indonesian-embassy', 'uw-suzzallo', 'berkeley-glade'];
+
+/** Sejarah: the founding story as an editorial spread, vision and mission, and what PERMIAS runs today. */
 export function Sejarah() {
-  const { lang, t } = useLanguage();
+  const { lang, t, pick } = useLanguage();
 
   return (
     <>
-      <Seo
-        title="Sejarah Kami | PERMIAS Nasional"
-        description="History, vision, mission, and national programming of PERMIAS Nasional since 1961."
-        path="/about/sejarah"
-      />
-
+      <Seo title="Sejarah Kami | PERMIAS Nasional" description="History, vision, mission, and national programming of PERMIAS Nasional since 1961." path="/about/sejarah" />
       <PageHeader image={PAGE_PHOTOS.sejarah} title={t('sejarah.title')} description={t('sejarah.intro')} />
 
-      <section className="border-b border-ink/10 bg-neutral-50 py-14 dark:border-white/10 dark:bg-black/30">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
+      <section className="container-x mt-16 grid gap-10 md:mt-24 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20" aria-labelledby="sj-formation">
+        <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
-            <h2 className="font-display text-2xl font-bold sm:text-3xl">{sejarahFormation.title[lang]}</h2>
-            <p className="mt-2 text-lg font-semibold text-merah">{sejarahFormation.lead[lang]}</p>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-ink/80 dark:text-white/80">
-              {sejarahFormation.paragraphs.map((p) => (
-                <p key={p.en}>{p[lang]}</p>
-              ))}
-            </div>
+            <p className="font-display text-[clamp(5rem,3rem+8vw,10rem)] leading-[0.85] text-merah tabular" aria-hidden="true">
+              1961
+            </p>
+            <h2 id="sj-formation" className="display-md mt-6 text-ink">
+              {sejarahFormation.title[lang]}
+            </h2>
+            <p className="mt-3 font-display text-xl italic text-ink/75">{sejarahFormation.lead[lang]}</p>
           </Reveal>
         </div>
-      </section>
-
-      <section className="mx-auto max-w-content space-y-10 px-4 py-16 sm:px-6 lg:px-8">
-        <Reveal>
-          <h2 className="font-display text-2xl font-bold sm:text-3xl">{t('sejarah.visionMission')}</h2>
-          <p className="mt-2 max-w-3xl text-sm text-ink/65 dark:text-white/65">{t('sejarah.visionMission.sub')}</p>
+        <Reveal x={24} className="prose-kaca text-ink/85">
+          {sejarahFormation.paragraphs.map((p, i) => (
+            <p key={p.en} className={i === 0 ? 'font-display text-[clamp(1.35rem,1.1rem+0.8vw,1.75rem)] leading-[1.4] text-ink' : 'text-[18px]'}>
+              {p[lang]}
+            </p>
+          ))}
         </Reveal>
+      </section>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          <Reveal delay={Math.min(1, 8) * 0.06}>
-            <article className="h-full rounded-2xl border border-ink/10 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-surface">
-              <h3 className="text-xs font-bold text-merah">{sejarahVision.title[lang]}</h3>
-              <ul className="mt-4 space-y-4 text-sm leading-relaxed text-ink/80 dark:text-white/80">
-                {sejarahVision.items.map((item) => (
-                  <li key={item.en} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-merah" aria-hidden />
-                    <span>{item[lang]}</span>
-                  </li>
+      <section className="container-x mt-20 md:mt-28" aria-labelledby="sj-vm">
+        <SectionHead id="sj-vm" word="Visi & misi" title={t('sejarah.visionMission')} intro={t('sejarah.visionMission.sub')} />
+        <div className="mt-10 grid gap-x-16 border-t border-border lg:grid-cols-2">
+          {[sejarahVision, sejarahMission].map((block) => (
+            <Reveal key={block.title.en} className="border-b border-border py-8 lg:border-b-0">
+              <h3 className="font-display text-[32px] leading-tight text-ink">{block.title[lang]}</h3>
+              <div className="mt-5 space-y-4">
+                {block.items.map((item, i) => (
+                  <p key={item.en} className={i === 0 ? 'text-[19px] leading-relaxed text-ink' : 'text-[16px] leading-relaxed text-muted-foreground'}>
+                    {item[lang]}
+                  </p>
                 ))}
-              </ul>
-            </article>
-          </Reveal>
-
-          <Reveal delay={Math.min(2, 8) * 0.06}>
-            <article className="h-full rounded-2xl border border-ink/10 bg-white p-8 shadow-sm dark:border-white/10 dark:bg-surface">
-              <h3 className="text-xs font-bold text-merah">{sejarahMission.title[lang]}</h3>
-              <ul className="mt-4 space-y-4 text-sm leading-relaxed text-ink/80 dark:text-white/80">
-                {sejarahMission.items.map((item) => (
-                  <li key={item.en} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-merah" aria-hidden />
-                    <span>{item[lang]}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          </Reveal>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      <section className="border-t border-ink/10 bg-neutral-50 py-14 dark:border-white/10 dark:bg-black/30">
-        <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <h2 className="font-display text-2xl font-bold sm:text-3xl">{t('sejarah.activities')}</h2>
-            <p className="mt-2 max-w-3xl text-sm text-ink/65 dark:text-white/65">{t('sejarah.activities.sub')}</p>
-          </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {sejarahActivities.map((item, i) => (
-              <Reveal key={item.title.en} delay={Math.min(i, 8) * 0.06}>
-                <article className="h-full rounded-2xl border border-ink/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-surface">
-                  <h3 className="font-display text-lg font-bold">{item.title[lang]}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-ink/75 dark:text-white/75">{item.desc[lang]}</p>
-                </article>
+      <section className="container-x mt-20 md:mt-28" aria-labelledby="sj-act">
+        <SectionHead id="sj-act" word="Kegiatan" title={t('sejarah.activities')} intro={t('sejarah.activities.sub')} />
+        <ul className="mt-10 grid gap-4 md:grid-cols-3">
+          {sejarahActivities.map((item, i) => {
+            const p = photo(ACTIVITY_PHOTOS[i]);
+            return (
+              <Reveal as="li" key={item.title.en} delay={i * 0.07} className="flex flex-col overflow-hidden rounded-[28px] border border-border bg-surface">
+                {p && <img src={p.small} alt={p.alt} width="800" height="533" loading="lazy" className="aspect-[3/2] w-full object-cover" />}
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-display text-[26px] leading-tight text-ink">{item.title[lang]}</h3>
+                  <p className="mt-3 text-[16px] leading-relaxed text-muted-foreground">{item.desc[lang]}</p>
+                  {p && <Credit image={ACTIVITY_PHOTOS[i]} className="mt-auto pt-5" />}
+                </div>
               </Reveal>
-            ))}
-          </div>
-        </div>
+            );
+          })}
+        </ul>
       </section>
 
-      <section className="mx-auto max-w-content px-4 py-14 sm:px-6 lg:px-8">
-        <Reveal>
-          <h2 className="font-display text-2xl font-bold sm:text-3xl">{t('sejarah.partners')}</h2>
-          <p className="mt-3 max-w-2xl text-ink/75 dark:text-white/75">{t('sejarah.partners.sub')}</p>
-          <Link
-            to="/partners"
-            className="mt-6 inline-flex font-bold text-merah underline-offset-4 hover:underline"
-          >
-            {t('sejarah.partners.cta')} →
-          </Link>
-          <ul className="mt-8 space-y-2 text-sm text-ink/80 dark:text-white/80">
-            <li>
-              <span className="font-semibold">{t('sejarah.partners.mailingList')}</span>{' '}
-              <a
-                href="https://groups.google.com/g/permias-nasional"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold text-merah underline-offset-4 hover:underline"
-              >
-                groups.google.com/g/permias-nasional
-              </a>
-            </li>
-            <li>
-              <span className="font-semibold">{t('sejarah.partners.contact')}</span>{' '}
-              <a href={`mailto:${SUPPORT_EMAIL}`} className="font-semibold text-merah underline-offset-4 hover:underline">
-                {SUPPORT_EMAIL}
-              </a>
-            </li>
-          </ul>
+      <section className="container-x page-pad mt-20 md:mt-28" aria-labelledby="sj-partners">
+        <Reveal className="grid gap-8 rounded-[32px] bg-[#13233F] p-8 text-white md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:p-12">
+          <div>
+            <p className="font-display text-xl italic text-[#F2B8C0]" lang="id">
+              Bersama
+            </p>
+            <h2 id="sj-partners" className="display-md mt-2 text-white">
+              {t('sejarah.partners')}
+            </h2>
+            <p className="mt-4 max-w-[52ch] text-[17px] leading-relaxed text-white/80">{t('sejarah.partners.sub')}</p>
+            <Link
+              to="/partners"
+              className="mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-[14px] bg-white px-5 text-[15px] font-semibold text-[#13233F] transition-[background-color,transform] duration-150 hover:bg-white/90 active:scale-[0.97]"
+            >
+              {t('sejarah.partners.cta')}
+              <IconArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <dl className="space-y-6 self-end">
+            <div>
+              <dt className="text-sm text-white/65">{t('sejarah.partners.mailingList')}</dt>
+              <dd className="mt-1">
+                <a href="https://groups.google.com/g/permias-nasional" target="_blank" rel="noopener noreferrer" className="inline-block break-all text-[17px] font-semibold text-white underline decoration-white/35 underline-offset-4 hover:decoration-white">
+                  groups.google.com/g/permias-nasional
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-sm text-white/65">{t('sejarah.partners.contact')}</dt>
+              <dd className="mt-1">
+                <a href={`mailto:${SUPPORT_EMAIL}`} className="inline-flex items-center gap-2 text-[17px] font-semibold text-white underline decoration-white/35 underline-offset-4 hover:decoration-white">
+                  <IconMail className="h-4 w-4" />
+                  {SUPPORT_EMAIL}
+                </a>
+              </dd>
+            </div>
+            <p className="text-sm text-white/60">{pick({ en: 'Content follows the official history page of PERMIAS Nasional.', id: 'Isi mengikuti halaman sejarah resmi PERMIAS Nasional.' })}</p>
+          </dl>
         </Reveal>
       </section>
     </>

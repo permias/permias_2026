@@ -89,6 +89,23 @@ function Gallery({ c, photos }) {
     );
   }
 
+  if (photos.length === 1) {
+    const ph = photos[0];
+    return (
+      <figure className="grid gap-6 md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-end">
+        <img src={ph.src} alt={ph.alt || c.chapterName} width={ph.w} height={ph.h} loading="lazy" className="media-outline max-h-[560px] w-full rounded-[24px] object-cover" />
+        <figcaption className="pb-2">
+          <p className="font-display text-[26px] leading-snug text-ink">{ph.alt}</p>
+          {ph.source && (
+            <a href={ph.source} target="_blank" rel="noopener noreferrer" className="link-quiet mt-3 inline-flex text-[15px] font-semibold text-ink">
+              {pick({ en: 'Posted by the chapter on Instagram', id: 'Diunggah chapter di Instagram' })}
+            </a>
+          )}
+        </figcaption>
+      </figure>
+    );
+  }
+
   return (
     <>
       <ul className="grid auto-rows-[180px] grid-cols-2 gap-3 md:auto-rows-[220px] md:grid-cols-4">
