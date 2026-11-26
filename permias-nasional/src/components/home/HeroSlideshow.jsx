@@ -98,7 +98,7 @@ export function HeroSlideshow() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(18,19,21,.86)_0%,rgba(18,19,21,.62)_38%,rgba(18,19,21,.12)_72%,rgba(18,19,21,0)_100%)]" aria-hidden="true" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-2/5 bg-[linear-gradient(0deg,rgba(18,19,21,.85),rgba(18,19,21,0))]" aria-hidden="true" />
 
-      <div className="container-x flex flex-1 flex-col justify-end pb-[calc(var(--dock-h)+84px)] pt-28 md:pb-36">
+      <div className="container-x flex flex-1 flex-col justify-end pb-[calc(var(--dock-h)+32px)] pt-24 md:pb-36 md:pt-28">
         <div className="max-w-[1000px]">
           <motion.p
             className="text-[15px] font-semibold text-white/80"
@@ -108,7 +108,7 @@ export function HeroSlideshow() {
           >
             {t('hero.welcome')}
           </motion.p>
-          <h1 className="mt-5 text-white display-xl [font-size:clamp(2.9rem,1.4rem+4.6vw,5.6rem)]">
+          <h1 className="mt-4 text-white display-xl [font-size:clamp(2.4rem,1.4rem+4.6vw,5.6rem)] md:mt-5">
             {t('hero.title')
               .split('\n')
               .map((line, k) => (
@@ -124,7 +124,7 @@ export function HeroSlideshow() {
               ))}
           </h1>
           <motion.p
-            className="mt-6 max-w-[54ch] text-[17px] leading-relaxed text-white/90 md:text-[19px]"
+            className="mt-4 max-w-[54ch] text-[15px] leading-relaxed text-white/90 md:mt-6 md:text-[19px]"
             initial={{ opacity: 0, x: -motionTokens.distance.lg }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: motionTokens.duration.slow, ease: motionTokens.easing.smooth, delay: motionTokens.duration.crawl }}
@@ -132,21 +132,21 @@ export function HeroSlideshow() {
             {t('hero.sub', { n: chapters.length, s: stateCount })}
           </motion.p>
           <motion.div
-            className="mt-8 flex flex-wrap gap-3"
+            className="mt-6 flex flex-wrap gap-3 md:mt-8"
             initial={{ opacity: 0, x: -motionTokens.distance.lg }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: motionTokens.duration.slow, ease: motionTokens.easing.smooth, delay: motionTokens.duration.crawl + 0.15 }}
           >
             <a
               href="#cari-chapter"
-              className="inline-flex min-h-[52px] items-center gap-2 rounded-[12px] bg-accent px-6 text-base font-semibold text-on-accent transition-[transform,background-color] duration-150 hover:bg-accent/90 active:scale-[0.97]"
+              className="inline-flex min-h-[48px] items-center gap-2 rounded-[12px] bg-accent px-5 text-[15px] font-semibold text-on-accent transition-[transform,background-color] duration-150 hover:bg-accent/90 active:scale-[0.97] md:min-h-[52px] md:px-6 md:text-base"
             >
               {t('hero.ctaFind')}
               <IconArrowRight className="h-5 w-5" />
             </a>
             <Link
               to="/about"
-              className="inline-flex min-h-[52px] items-center rounded-[12px] border border-white/60 px-6 text-base font-semibold text-white transition-[background-color,transform] duration-150 hover:bg-white/10 active:scale-[0.97]"
+              className="inline-flex min-h-[48px] items-center rounded-[12px] border border-white/60 px-5 text-[15px] font-semibold text-white transition-[background-color,transform] duration-150 hover:bg-white/10 active:scale-[0.97] md:min-h-[52px] md:px-6 md:text-base"
             >
               {t('hero.ctaAbout')}
             </Link>
@@ -154,7 +154,7 @@ export function HeroSlideshow() {
         </div>
 
         {/* caption + controls; one thin line across the top fills over each slide */}
-        <div className="relative mt-12 flex flex-col gap-4 pt-5 md:flex-row md:items-end md:justify-between">
+        <div className="relative mt-8 flex flex-col gap-3 pt-4 md:mt-12 md:flex-row md:items-end md:justify-between md:gap-4 md:pt-5">
           <span className="absolute inset-x-0 top-0 h-px bg-white/20" aria-hidden="true">
             <span
               key={`${i}-${paused}`}
