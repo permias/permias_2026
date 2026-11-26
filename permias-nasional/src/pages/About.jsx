@@ -28,7 +28,7 @@ export function About() {
 
       <section className="container-x mt-16 grid gap-12 md:mt-24 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] lg:gap-20" aria-labelledby="ab-who">
         <Reveal>
-          <p className="font-display text-xl italic text-merah" lang="id">
+          <p className="font-display text-xl italic text-muted-foreground" lang="id">
             Siapa kami
           </p>
           <h2 id="ab-who" className="mt-3 max-w-[22ch] font-display text-[clamp(2rem,1.4rem+2.2vw,3.4rem)] leading-[1.06] text-ink">
@@ -63,7 +63,7 @@ export function About() {
             { label: t('about.vision'), body: t('about.vision.body'), word: 'Visi' },
           ].map((b, i) => (
             <Reveal key={b.label} delay={i * 0.08} className="flex flex-col rounded-[32px] border border-border bg-surface p-8 md:p-12">
-              <h2 className="font-display text-xl italic text-merah" lang="id">
+              <h2 className="font-display text-xl italic text-muted-foreground" lang="id">
                 {b.word}
               </h2>
               <p className="mt-6 font-display text-[clamp(1.5rem,1.2rem+1vw,2.1rem)] leading-[1.2] text-ink">{b.body}</p>
@@ -72,7 +72,7 @@ export function About() {
         </div>
         {wide && (
           <Reveal className="mt-4">
-            <img src={wide.src} srcSet={wide.srcSet} sizes="100vw" alt={wide.alt} width="1600" height="1067" loading="lazy" className="photo-grade media-outline h-[280px] w-full rounded-[32px] object-cover md:h-[420px]" />
+            <img src={wide.src} srcSet={wide.srcSet} sizes="100vw" alt={wide.alt} width={wide.w} height={wide.h} loading="lazy" className="photo-grade media-outline h-[280px] w-full rounded-[32px] object-cover md:h-[420px]" />
             <Credit image="campus-columbia-low" className="mt-2" />
           </Reveal>
         )}
@@ -103,12 +103,12 @@ export function About() {
                 <span className="absolute -top-8 left-1/2 hidden h-8 w-px bg-ink/25 lg:block" aria-hidden="true" />
                 <Link
                   to={`/team?d=${d.id}`}
-                  className="group flex h-full flex-col rounded-[20px] border border-border bg-surface p-5 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-ink/25 hover:shadow-[0_20px_40px_-28px_rgba(19,35,63,.5)] active:scale-[0.99]"
+                  className="group flex h-full flex-col rounded-[20px] border border-border bg-surface p-5 transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-ink/25 active:scale-[0.99]"
                 >
                   <span className="text-[17px] font-semibold leading-snug text-ink">{t(d.titleKey)}</span>
                   <span className="mt-auto pt-4 text-sm text-muted-foreground">
                     {pick({ en: `${d.members.length} members`, id: `${d.members.length} anggota` })}
-                    <span className="ml-1 text-merah transition-transform duration-200 group-hover:translate-x-0.5">›</span>
+                    <span className="ml-1 text-accent transition-transform duration-200 group-hover:translate-x-0.5">›</span>
                   </span>
                 </Link>
               </li>

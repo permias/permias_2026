@@ -23,7 +23,7 @@ export function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="relative mt-24 bg-[#0A1220] text-white">
+    <footer className="relative mt-24 bg-night text-white">
       <div className="container-x pb-[calc(var(--dock-h)+56px)] pt-16 md:pt-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div>
@@ -40,7 +40,7 @@ export function Footer() {
                   className="flex h-11 w-11 items-center justify-center rounded-[14px] bg-white/[0.08] transition-[background-color,transform] duration-150 hover:bg-white/15 active:scale-95"
                   aria-label={t(s.titleKey)}
                 >
-                  <SocialIcon id={s.id} className="h-7 w-7" />
+                  <SocialIcon id={s.id} className="h-5 w-5" />
                 </a>
               ))}
             </div>

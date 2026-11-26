@@ -7,23 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          red: '#CE1126',
-          'red-deep': '#A50D1E',
-          charcoal: '#0F1B2D',
-        },
-        // Kaca palette: ink on mist, flag red, white glass.
+        // Neutral base (ink on white, a few greys) plus ONE accent. The accent is chosen by data-accent on <html> (index.html).
         ink: 'rgb(var(--ink) / <alpha-value>)',
         mist: 'rgb(var(--mist) / <alpha-value>)',
-        merah: 'rgb(var(--merah) / <alpha-value>)',
-        emas: 'rgb(var(--emas) / <alpha-value>)',
-        teal: 'rgb(var(--teal) / <alpha-value>)',
-        navy: 'rgb(var(--navy) / <alpha-value>)',
-        surface: {
-          DEFAULT: 'rgb(var(--surface) / <alpha-value>)',
-          dark: '#0A1220',
-          card: '#111C2E',
-        },
+        accent: 'rgb(var(--accent) / <alpha-value>)',
+        'on-accent': 'rgb(var(--on-accent) / <alpha-value>)',
+        // constant near-black for photo backdrops and the footer (same in light and dark)
+        night: 'rgb(var(--night) / <alpha-value>)',
+        surface: 'rgb(var(--surface) / <alpha-value>)',
         background: 'rgb(var(--background) / <alpha-value>)',
         foreground: 'rgb(var(--foreground) / <alpha-value>)',
         muted: {
@@ -53,24 +44,8 @@ export default {
         sheet: '36px',
       },
       boxShadow: {
-        soft: '0 1px 2px rgba(15,27,45,0.06), 0 8px 24px -12px rgba(15,27,45,0.18)',
-        'soft-lg': '0 2px 4px rgba(15,27,45,0.05), 0 24px 60px -24px rgba(15,27,45,0.35)',
-        lift: '0 30px 80px -30px rgba(15,27,45,0.45)',
-        glass: 'inset 0 1px 0 rgba(255,255,255,0.75), inset 0 -1px 0 rgba(255,255,255,0.15), 0 20px 50px -24px rgba(15,27,45,0.35)',
-      },
-      keyframes: {
-        sheen: {
-          '0%': { transform: 'translateX(-120%) skewX(-20deg)' },
-          '100%': { transform: 'translateX(220%) skewX(-20deg)' },
-        },
-        pageIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-      },
-      animation: {
-        sheen: 'sheen 1.2s cubic-bezier(0.22,1,0.36,1) 1',
-        'page-in': 'pageIn 350ms cubic-bezier(0.22,1,0.36,1) forwards',
+        // the one shadow style: floating panels, menus, popovers
+        soft: '0 1px 2px rgb(0 0 0 / 0.04), 0 16px 40px -20px rgb(0 0 0 / 0.22)',
       },
     },
   },

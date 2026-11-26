@@ -43,7 +43,7 @@ export function ResourceTopic() {
       <div className="container-x page-pad mt-12 grid gap-10 md:mt-16 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-14">
         <aside className="lg:sticky lg:top-28 lg:self-start">
           <nav aria-label={pick({ en: 'All guides', id: 'Semua panduan' })}>
-            <p className="hidden font-display text-xl italic text-merah lg:block" lang="id">
+            <p className="hidden font-display text-xl italic text-muted-foreground lg:block" lang="id">
               Panduan
             </p>
             <ul className="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 lg:mx-0 lg:mt-3 lg:block lg:space-y-0.5 lg:px-0">
@@ -67,7 +67,7 @@ export function ResourceTopic() {
         </aside>
 
         <div className="min-w-0">
-          <div className="mb-10 flex min-h-[52px] max-w-xl items-center gap-2 rounded-[14px] border border-ink/15 bg-surface px-4 focus-within:border-merah/60 focus-within:shadow-[0_0_0_4px_rgb(var(--merah)/0.12)]">
+          <div className="mb-10 flex min-h-[52px] max-w-xl items-center gap-2 rounded-[14px] border border-ink/15 bg-surface px-4 focus-within:border-accent/60 focus-within:ring-4 focus-within:ring-accent/10">
             <IconSearch className="h-5 w-5 shrink-0 text-ink/50" />
             <label htmlFor="topic-q" className="sr-only">
               {t('resources.search')}
@@ -75,9 +75,9 @@ export function ResourceTopic() {
             <input id="topic-q" type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={t('resources.search')} className="min-w-0 flex-1 bg-transparent text-base text-ink outline-none placeholder:text-ink/45" />
           </div>
           {q.trim() && cards.length === 0 ? (
-            <div className="rounded-[24px] border border-dashed border-ink/20 p-10 text-center">
+            <div className="rounded-[24px] border border-border p-10 text-center">
               <p className="font-display text-2xl text-ink">{t('search.empty')}</p>
-              <button type="button" onClick={() => setQ('')} className="mt-4 min-h-[44px] rounded-[12px] px-4 text-[15px] font-semibold text-merah hover:bg-merah/5">
+              <button type="button" onClick={() => setQ('')} className="mt-4 min-h-[44px] rounded-[12px] px-4 text-[15px] font-semibold text-accent hover:bg-accent/5">
                 {pick({ en: 'Clear the filter', id: 'Hapus filter' })}
               </button>
             </div>
@@ -90,7 +90,7 @@ export function ResourceTopic() {
               <span className="block text-sm text-muted-foreground">{pick({ en: 'Next guide', id: 'Panduan berikutnya' })}</span>
               <span className="mt-1 block font-display text-[28px] leading-tight text-ink">{pick(next.title)}</span>
             </span>
-            <IconArrowRight className="h-5 w-5 shrink-0 text-merah transition-transform duration-200 group-hover:translate-x-1" />
+            <IconArrowRight className="h-5 w-5 shrink-0 text-accent transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>
       </div>

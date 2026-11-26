@@ -47,15 +47,15 @@ export function Partners() {
               {g.items.map((p) => (
                 <li key={p.id}>
                   <a href={p.website} target="_blank" rel="noopener noreferrer" className="group grid grid-cols-[56px_minmax(0,1fr)_auto] items-start gap-5 py-6">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-[16px] bg-[#13233F] font-display text-[22px] text-white transition-colors duration-200 group-hover:bg-merah" aria-hidden="true">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-[16px] bg-muted font-display text-[22px] text-ink" aria-hidden="true">
                       {p.initials}
                     </span>
                     <span className="min-w-0">
                       <span className="block font-display text-[26px] leading-tight text-ink">{p.name}</span>
                       <span className="mt-1.5 block max-w-[58ch] text-[16px] leading-relaxed text-muted-foreground">{p.description}</span>
-                      <span className="mt-2 block text-sm font-semibold text-ink/70 group-hover:text-merah">{host(p.website)}</span>
+                      <span className="mt-2 block text-sm font-semibold text-ink/70 group-hover:text-accent">{host(p.website)}</span>
                     </span>
-                    <IconArrowUpRight className="mt-2 h-5 w-5 text-ink/35 transition-[color,transform] duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-merah" />
+                    <IconArrowUpRight className="mt-2 h-5 w-5 text-ink/35 transition-[color,transform] duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
                   </a>
                 </li>
               ))}
@@ -67,7 +67,7 @@ export function Partners() {
       <section className="container-x page-pad mt-20 md:mt-28" aria-labelledby="pt-join">
         <Reveal className="flex flex-col items-start justify-between gap-6 rounded-[32px] border border-border bg-mist/70 p-8 md:flex-row md:items-end md:p-12 dark:bg-white/[0.03]">
           <div>
-            <p className="font-display text-xl italic text-merah" lang="id">
+            <p className="font-display text-xl italic text-muted-foreground" lang="id">
               Bermitra
             </p>
             <h2 id="pt-join" className="display-md mt-2 max-w-[20ch] text-ink">
@@ -77,7 +77,7 @@ export function Partners() {
               {pick({ en: 'Universities, missions and organisations reach Indonesian students across the country through the national board.', id: 'Universitas, perwakilan, dan organisasi menjangkau mahasiswa Indonesia di seluruh negeri melalui pengurus nasional.' })}
             </p>
           </div>
-          <Link to="/contact" className="inline-flex min-h-[48px] shrink-0 items-center gap-2 rounded-[14px] bg-merah px-5 text-[15px] font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,.25),0_10px_24px_-12px_rgb(var(--merah)/0.9)] transition-[background-color,transform] duration-150 hover:bg-[#B50F21] active:scale-[0.97]">
+          <Link to="/contact" className="inline-flex min-h-[48px] shrink-0 items-center gap-2 rounded-[14px] bg-accent px-5 text-[15px] font-semibold text-on-accent transition-[background-color,transform] duration-150 hover:bg-accent/90 active:scale-[0.97]">
             {pick({ en: 'Contact the board', id: 'Hubungi pengurus' })}
             <IconArrowRight className="h-4 w-4" />
           </Link>

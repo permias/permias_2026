@@ -55,13 +55,13 @@ function Portrait({ m, size = 'md', index }) {
             style={{ objectPosition: FOCUS[m.name] ?? 'center 25%' }}
           />
         ) : (
-          <span className="flex h-full w-full items-center justify-center bg-[#13233F] font-display text-6xl text-white" aria-hidden="true">
+          <span className="flex h-full w-full items-center justify-center bg-night font-display text-6xl text-white" aria-hidden="true">
             {initials(m.name)}
           </span>
         )}
       </div>
       <h3 className={cn('mt-4 font-display leading-tight text-ink', size === 'lg' ? 'text-[30px]' : 'text-[24px]')}>{m.name}</h3>
-      <p className="mt-1 text-[16px] font-semibold text-merah">{m.role}</p>
+      <p className="mt-1 text-[16px] font-semibold text-muted-foreground">{m.role}</p>
       {m.education && <p className="mt-1 text-[16px] leading-snug text-muted-foreground">{m.education}</p>}
       {m.hometown && (
         <p className="mt-1 text-[16px] text-muted-foreground">

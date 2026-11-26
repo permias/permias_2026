@@ -25,19 +25,16 @@ const SUGGESTIONS = [
 
 const OFFLINE_LINKS = [...SUGGESTIONS, { to: '/contact', page: { en: 'Email the board', id: 'Email pengurus' } }];
 
-function TypingDots({ label }) {
+function Typing({ label }) {
   return (
     <div className="flex justify-start" role="status" aria-label={label}>
-      <span className="flex items-center gap-1 rounded-[18px] rounded-bl-[6px] bg-white px-4 py-3.5 shadow-[0_1px_2px_rgba(15,27,45,.06)] dark:bg-white/10">
-        {[0, 1, 2].map((i) => (
-          <motion.span
-            key={i}
-            className="h-1.5 w-1.5 rounded-full bg-ink/45"
-            animate={{ opacity: [0.3, 1, 0.3], y: [0, -3, 0] }}
-            transition={{ duration: motionTokens.duration.crawl, repeat: Infinity, ease: 'easeInOut', delay: i * 0.15 }}
-          />
-        ))}
-      </span>
+      <motion.span
+        className="rounded-[18px] rounded-bl-[6px] border border-border bg-surface px-4 py-2.5 text-sm text-muted-foreground"
+        animate={{ opacity: [0.55, 1, 0.55] }}
+        transition={{ duration: motionTokens.duration.crawl * 1.6, repeat: Infinity, ease: 'easeInOut' }}
+      >
+        {label}
+      </motion.span>
     </div>
   );
 }
@@ -57,7 +54,7 @@ function OfflineCard({ pick, onNavigate }) {
           <li key={l.to}>
             <Link to={l.to} onClick={onNavigate} className="group flex min-h-[40px] items-center justify-between gap-3 rounded-[12px] px-2.5 text-[15px] font-semibold text-ink transition-colors hover:bg-ink/[0.05] dark:hover:bg-white/10">
               {pick(l.page)}
-              <IconArrowRight className="h-4 w-4 text-merah transition-transform duration-150 group-hover:translate-x-0.5" />
+              <IconArrowRight className="h-4 w-4 text-accent transition-transform duration-150 group-hover:translate-x-0.5" />
             </Link>
           </li>
         ))}
@@ -174,7 +171,7 @@ export function ChatWidget() {
             key="chat-fab"
             ref={fabRef}
             type="button"
-            className="glass sheen fixed bottom-[max(22px,calc(env(safe-area-inset-bottom)+8px))] right-5 z-[59] hidden h-14 w-14 items-center justify-center rounded-[20px] text-ink transition-[box-shadow] duration-150 hover:shadow-[0_18px_40px_-18px_rgba(15,27,45,.55)] md:flex"
+            className="glass fixed bottom-[max(22px,calc(env(safe-area-inset-bottom)+8px))] right-5 z-[59] hidden h-14 w-14 items-center justify-center rounded-[20px] text-ink transition-[box-shadow] duration-150 md:flex"
             aria-label={t('chat.open')}
             onClick={() => setChatOpen(true)}
             initial={{ opacity: 0, scale: motionTokens.scale.press }}
@@ -197,7 +194,7 @@ export function ChatWidget() {
             aria-labelledby="chat-title"
             aria-busy={loading}
             className={cn(
-              'glass fixed z-[95] flex flex-col overflow-hidden bg-white/[0.86] dark:bg-[#16223A]/[0.9]',
+              'glass fixed z-[95] flex flex-col overflow-hidden bg-white/[0.86] dark:bg-surface/[0.9]',
               fullscreen ? 'inset-2 rounded-[28px] sm:inset-6' : 'inset-x-2 bottom-2 top-[14vh] rounded-[28px] sm:inset-x-auto sm:bottom-6 sm:right-6 sm:top-auto sm:h-[600px] sm:max-h-[calc(100vh-110px)] sm:w-[408px]',
             )}
             style={{ transformOrigin: '100% 100%' }}
@@ -207,15 +204,8 @@ export function ChatWidget() {
           >
             <header className="flex items-center justify-between gap-3 border-b border-ink/10 px-4 py-3 dark:border-white/10">
               <div className="flex min-w-0 items-center gap-3">
-                <span className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-[14px] bg-white shadow-[0_1px_2px_rgba(15,27,45,.12)]">
-                  <img src={publicUrl('/images/brand/emblem-red.png')} alt="" width="24" height="26" className="h-[26px] w-6" />
-                  <span
-                    className={cn(
-                      'absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full border-2 border-white dark:border-[#16223A]',
-                      status === 'online' ? 'bg-emerald-500' : status === 'offline' ? 'bg-amber-500' : 'bg-ink/30',
-                    )}
-                    aria-hidden="true"
-                  />
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[14px] border border-border bg-surface text-accent">
+                  <span className="brand-mark h-[26px] w-6" style={{ '--mark': `url(${publicUrl('/images/brand/emblem-white.png')})` }} aria-hidden="true" />
                 </span>
                 <div className="min-w-0">
                   <h2 id="chat-title" className="truncate font-sans text-[16px] font-semibold text-ink">
@@ -258,7 +248,7 @@ export function ChatWidget() {
                         <button
                           type="button"
                           onClick={() => ask(pick(s.q))}
-                          className="min-h-[40px] rounded-full border border-ink/12 bg-white/70 px-3.5 py-2 text-left text-sm font-medium leading-snug text-ink transition-[background-color,border-color,transform] duration-150 hover:border-merah/40 hover:bg-white active:scale-[0.97] dark:border-white/15 dark:bg-white/[0.06] dark:hover:bg-white/10"
+                          className="min-h-[40px] rounded-full border border-ink/12 bg-white/70 px-3.5 py-2 text-left text-sm font-medium leading-snug text-ink transition-[background-color,border-color,transform] duration-150 hover:border-accent/40 hover:bg-white active:scale-[0.97] dark:border-white/15 dark:bg-white/[0.06] dark:hover:bg-white/10"
                         >
                           {pick(s.q)}
                         </button>
@@ -278,9 +268,9 @@ export function ChatWidget() {
                       className={cn('flex', m.role === 'user' ? 'justify-end' : 'justify-start')}
                     >
                       {m.role === 'offline' ? (
-                        <div className="max-w-[88%] rounded-[18px] rounded-bl-[6px] border border-amber-500/30 bg-amber-50 px-3.5 py-3 text-ink dark:bg-amber-500/10">
+                        <div className="max-w-[88%] rounded-[18px] rounded-bl-[6px] border border-border bg-muted px-3.5 py-3 text-ink">
                           <p>{m.text}</p>
-                          <Link to={m.link.to} onClick={close} className="mt-2 inline-flex min-h-[36px] items-center gap-1.5 font-semibold text-ink underline decoration-merah/50 underline-offset-4 hover:decoration-merah">
+                          <Link to={m.link.to} onClick={close} className="mt-2 inline-flex min-h-[36px] items-center gap-1.5 font-semibold text-ink underline decoration-accent/50 underline-offset-4 hover:decoration-accent">
                             {pick({ en: 'Read', id: 'Baca' })}: {m.link.label}
                           </Link>
                         </div>
@@ -288,7 +278,7 @@ export function ChatWidget() {
                         <p
                           className={cn(
                             'max-w-[85%] whitespace-pre-wrap break-words rounded-[18px] px-3.5 py-2.5',
-                            m.role === 'user' ? 'rounded-br-[6px] bg-merah text-white' : 'rounded-bl-[6px] bg-white text-ink shadow-[0_1px_2px_rgba(15,27,45,.06)] dark:bg-white/10',
+                            m.role === 'user' ? 'rounded-br-[6px] bg-accent text-on-accent' : 'rounded-bl-[6px] border border-border bg-surface text-ink',
                           )}
                         >
                           {m.text}
@@ -297,7 +287,7 @@ export function ChatWidget() {
                     </motion.div>
                   ))}
                 </AnimatePresence>
-                {loading && <TypingDots label={t('chat.thinking')} />}
+                {loading && <Typing label={t('chat.thinking')} />}
               </div>
             </div>
 
@@ -318,12 +308,12 @@ export function ChatWidget() {
                 onChange={(e) => setText(e.target.value)}
                 placeholder={t('chat.placeholder')}
                 autoComplete="off"
-                className="min-h-[48px] min-w-0 flex-1 rounded-control border border-ink/10 bg-white/85 px-4 text-base text-ink outline-none transition-[border-color,box-shadow] duration-150 placeholder:text-ink/45 focus:border-merah/45 focus:shadow-[0_0_0_4px_rgb(var(--merah)/0.12)] dark:bg-white/[0.06]"
+                className="min-h-[48px] min-w-0 flex-1 rounded-control border border-ink/10 bg-white/85 px-4 text-base text-ink outline-none transition-[border-color,box-shadow] duration-150 placeholder:text-ink/45 focus:border-accent/45 focus:ring-4 focus:ring-accent/10 dark:bg-white/[0.06]"
               />
               <button
                 type="submit"
                 disabled={loading || !text.trim()}
-                className="min-h-[48px] shrink-0 rounded-control bg-merah px-4 font-semibold text-white transition-[transform,background-color,opacity] duration-150 hover:bg-[#B50F21] active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-45 disabled:active:scale-100"
+                className="min-h-[48px] shrink-0 rounded-control bg-accent px-4 font-semibold text-on-accent transition-[transform,background-color,opacity] duration-150 hover:bg-accent/90 active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-45 disabled:active:scale-100"
               >
                 {t('chat.send')}
               </button>

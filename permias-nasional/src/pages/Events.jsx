@@ -38,10 +38,10 @@ function TabBar({ tab, setTab, t }) {
           type="button"
           aria-pressed={tab === key}
           onClick={() => setTab(key)}
-          className={cn('relative flex min-h-[44px] items-center rounded-full text-[15px] font-semibold transition-colors duration-150', tab === key ? 'text-[#13233F]' : 'text-white/90 hover:text-white')}
+          className={cn('relative flex min-h-[44px] items-center rounded-full text-[15px] font-semibold transition-colors duration-150', tab === key ? 'text-night' : 'text-white/90 hover:text-white')}
         >
           {tab === key ? (
-            <motion.span layoutId="events-tab" className="flex min-h-[44px] items-center rounded-full bg-white px-5 shadow-[0_6px_16px_-8px_rgba(0,0,0,.5)]" transition={springs.snappy}>
+            <motion.span layoutId="events-tab" className="flex min-h-[44px] items-center rounded-full bg-white px-5 shadow-soft" transition={springs.snappy}>
               {t(`events.tab.${key}`)}
             </motion.span>
           ) : (
@@ -106,18 +106,17 @@ export function Events() {
         <section className="container-x mt-14 md:mt-20" aria-labelledby="ev-feature">
           <Reveal>
             <article className="grid overflow-hidden rounded-[32px] border border-border bg-surface md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-              <div className="relative isolate flex items-center justify-center overflow-hidden bg-[#0A1220] p-6 md:p-10">
-                <img src={feature.imageUrl} alt="" aria-hidden="true" width="560" height="700" className="absolute inset-0 -z-10 h-full w-full scale-110 object-cover opacity-50 blur-2xl" />
+              <div className="flex items-center justify-center bg-muted p-6 md:p-10">
                 <img
                   src={feature.imageUrl}
                   alt={feature.title}
                   width="560"
                   height="700"
-                  className="max-h-[460px] w-auto rounded-[16px] object-contain shadow-[0_30px_60px_-30px_rgba(0,0,0,.8)]"
+                  className="max-h-[460px] w-auto rounded-[16px] object-contain"
                 />
               </div>
               <div className="flex flex-col p-6 md:p-10">
-                <p className="font-display text-xl italic text-merah" lang="id">
+                <p className="font-display text-xl italic text-muted-foreground" lang="id">
                   {featureIsNext ? 'Acara berikutnya' : 'Acara terbaru'}
                 </p>
                 <div className="mt-6 flex items-end gap-4">
@@ -141,7 +140,7 @@ export function Events() {
                       href={feature.externalLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex min-h-[48px] items-center gap-2 rounded-[14px] bg-merah px-5 text-[15px] font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,.25),0_10px_24px_-12px_rgb(var(--merah)/0.9)] transition-[background-color,transform] duration-150 hover:bg-[#B50F21] active:scale-[0.97]"
+                      className="inline-flex min-h-[48px] items-center gap-2 rounded-[14px] bg-accent px-5 text-[15px] font-semibold text-on-accent transition-[background-color,transform] duration-150 hover:bg-accent/90 active:scale-[0.97]"
                     >
                       {t('events.rsvp')}
                       <IconArrowUpRight className="h-4 w-4" />
@@ -166,8 +165,8 @@ export function Events() {
             className="mt-10"
           >
             {groups.length === 0 ? (
-              <div className="rounded-[28px] border border-dashed border-ink/20 p-10 text-center">
-                <IconCalendar className="mx-auto h-8 w-8 text-merah" />
+              <div className="rounded-[28px] border border-border p-10 text-center">
+                <IconCalendar className="mx-auto h-8 w-8 text-muted-foreground" />
                 <p className="mt-4 font-display text-[26px] text-ink">{pick({ en: 'No upcoming events announced yet', id: 'Belum ada acara mendatang yang diumumkan' })}</p>
                 <p className="mx-auto mt-2 max-w-[46ch] text-[16px] text-muted-foreground">
                   {pick({ en: 'New dates are posted on Instagram first. The past programmes below stay available.', id: 'Jadwal baru diumumkan lebih dulu di Instagram. Program sebelumnya tetap bisa dilihat.' })}
@@ -190,7 +189,7 @@ export function Events() {
                             <span className="mt-1 block text-sm capitalize text-muted-foreground">{d.month}</span>
                           </p>
                           <div className="min-w-0">
-                            <p className="text-sm font-semibold text-merah">{t(`badge.${p.type}`)}</p>
+                            <p className="text-sm font-semibold text-muted-foreground">{t(`badge.${p.type}`)}</p>
                             <h4 className="mt-1 font-display text-[24px] leading-[1.15] text-ink">{p.title}</h4>
                             <p className="mt-1.5 flex items-center gap-1.5 text-[16px] text-muted-foreground">
                               <IconPin className="h-4 w-4 shrink-0" />
@@ -219,9 +218,9 @@ export function Events() {
       </section>
 
       <section className="container-x page-pad mt-20 md:mt-28" aria-labelledby="ev-ig">
-        <div className="grid items-center gap-10 rounded-[32px] bg-[#13233F] p-6 text-white md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:p-12">
+        <div className="grid items-center gap-10 rounded-[32px] bg-night p-6 text-white md:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] md:p-12">
           <div>
-            <p className="font-display text-xl italic text-[#F2B8C0]" lang="id">
+            <p className="font-display text-xl italic text-white/70" lang="id">
               Ikuti kami
             </p>
             <h2 id="ev-ig" className="display-md mt-2 text-white">
@@ -231,7 +230,7 @@ export function Events() {
               href="https://www.instagram.com/permias.nasional/"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-[14px] bg-white px-5 text-[15px] font-semibold text-[#13233F] transition-[background-color,transform] duration-150 hover:bg-white/90 active:scale-[0.97]"
+              className="mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-[14px] bg-white px-5 text-[15px] font-semibold text-night transition-[background-color,transform] duration-150 hover:bg-white/90 active:scale-[0.97]"
             >
               <IconInstagram className="h-[18px] w-[18px]" />
               @permias.nasional
@@ -240,7 +239,7 @@ export function Events() {
           <ul className="grid grid-cols-3 gap-3">
             {['post-1', 'post-2', 'post-3'].map((n) => publicUrl(`/images/posts/${n}.png`)).map((src, i) => (
               <li key={src} className={cn(i === 1 && 'translate-y-6')}>
-                <img src={src} alt="" width="300" height="375" loading="lazy" className="aspect-[4/5] w-full rounded-[18px] object-cover shadow-[0_20px_40px_-24px_rgba(0,0,0,.8)]" />
+                <img src={src} alt="" width="300" height="375" loading="lazy" className="aspect-[4/5] w-full rounded-[18px] object-cover" />
               </li>
             ))}
           </ul>

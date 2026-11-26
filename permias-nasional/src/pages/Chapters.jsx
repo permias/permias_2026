@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { useGeolocation } from '../hooks/useGeolocation.js';
 import { chapters, formatDistance, getStatesDropdown, instagramUrl, nearestChapters, REGION_LABELS, REGIONS, stateCount } from '../data/chapters.js';
-import { campusName, isRegional, REGION_TONE } from '../lib/regionTone.js';
+import { campusName, isRegional } from '../lib/campus.js';
 import { motionTokens } from '../lib/motion.js';
 import { projectToMap } from '../utils/mapProjection.js';
 import { buildSearchIndex, searchIndex } from '../utils/searchIndex.js';
@@ -23,7 +23,6 @@ const sorted = [...chapters].sort((a, b) => campusName(a).localeCompare(campusNa
 
 function DetailCard({ c, onClose }) {
   const { t, pick } = useLanguage();
-  const tone = REGION_TONE[c.region];
   return (
     <motion.article
       key={c.id}
@@ -31,13 +30,12 @@ function DetailCard({ c, onClose }) {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, transition: { duration: motionTokens.duration.exit } }}
       transition={{ duration: motionTokens.duration.normal, ease: motionTokens.easing.smooth }}
-      className="rounded-[22px] border border-ink/15 bg-surface p-6 shadow-[0_24px_60px_-36px_rgba(19,35,63,.6)]"
+      className="rounded-[22px] border border-ink/15 bg-surface p-6"
       aria-live="polite"
     >
       <div className="flex items-start justify-between gap-4">
         <ChapterLogo c={c} size={56} />
-        <p className={cn('mr-auto mt-1 flex items-center gap-2 text-sm font-semibold', tone.text)}>
-          <span className={cn('h-2 w-2 rounded-full', tone.dot)} aria-hidden="true" />
+        <p className="mr-auto mt-1 text-sm font-semibold text-muted-foreground">
           {pick(REGION_LABELS[c.region])}
           <span className="text-muted-foreground">/ {isRegional(c) ? t('dir.kindCity') : t('dir.kindCampus')}</span>
         </p>
@@ -56,7 +54,7 @@ function DetailCard({ c, onClose }) {
       <div className="mt-5 flex flex-wrap gap-2">
         <Link
           to={chapterPath(c)}
-          className="inline-flex min-h-[44px] items-center gap-2 rounded-[12px] bg-merah px-4 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,.25)] transition-[background-color,transform] duration-150 hover:bg-[#B50F21] active:scale-[0.97]"
+          className="inline-flex min-h-[44px] items-center gap-2 rounded-[12px] bg-accent px-4 text-sm font-semibold text-on-accent transition-[background-color,transform] duration-150 hover:bg-accent/90 active:scale-[0.97]"
         >
           {t('chapters.openPage')}
           <IconArrowRight className="h-4 w-4" />
@@ -66,7 +64,7 @@ function DetailCard({ c, onClose }) {
             href={instagramUrl(c.instagram)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex min-h-[44px] items-center gap-2 rounded-[12px] bg-ink px-4 text-sm font-semibold text-white transition-[background-color,transform] duration-150 hover:bg-merah active:scale-[0.97] dark:bg-white dark:text-[#0B1424] dark:hover:bg-merah dark:hover:text-white"
+            className="inline-flex min-h-[44px] items-center gap-2 rounded-[12px] bg-ink hover:bg-ink/85 px-4 text-sm font-semibold text-background transition-[background-color,transform] duration-150 active:scale-[0.97]"
           >
             <IconInstagram className="h-4 w-4" />
             {c.instagram}
@@ -167,7 +165,7 @@ export function Chapters() {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:items-start">
           {/* map column */}
           <div className="lg:sticky lg:top-24">
-            <Reveal x={-24} className="rounded-[28px] border border-border bg-surface p-3 shadow-[0_30px_80px_-50px_rgba(19,35,63,.55)] sm:p-5">
+            <Reveal x={-24} className="rounded-[28px] border border-border bg-surface p-3 sm:p-5">
               <div className="flex flex-wrap items-center justify-between gap-3 px-1 pb-3">
                 <p className="font-display text-2xl text-ink" aria-live="polite">
                   {selected ? `${selected.city}, ${selected.state}` : focus ? `“${q.trim()}”` : stateName || t('chapters.allUs')}
@@ -200,10 +198,9 @@ export function Chapters() {
                       onClick={() => set({ region: region === r ? '' : r })}
                       className={cn(
                         'inline-flex min-h-[40px] items-center gap-2 rounded-full border px-3.5 text-sm font-semibold transition-[background-color,border-color,color,transform] duration-150 active:scale-[0.97]',
-                        region === r ? 'border-ink bg-ink text-white dark:border-white dark:bg-white dark:text-[#0B1424]' : 'border-border text-ink/80 hover:border-ink/30 hover:text-ink',
+                        region === r ? 'border-ink bg-ink text-background' : 'border-border text-ink/80 hover:border-ink/30 hover:text-ink',
                       )}
                     >
-                      <span className={cn('h-2 w-2 rounded-full', REGION_TONE[r].dot)} aria-hidden="true" />
                       {pick(REGION_LABELS[r])}
                     </button>
                   </li>
@@ -216,7 +213,7 @@ export function Chapters() {
           {/* directory column */}
           <div ref={listRef} className="scroll-mt-24">
             <div className="grid gap-3">
-              <div className="flex min-h-[54px] items-center gap-2 rounded-[14px] border border-ink/15 bg-surface px-4 focus-within:border-merah/60 focus-within:shadow-[0_0_0_4px_rgb(var(--merah)/0.12)]">
+              <div className="flex min-h-[54px] items-center gap-2 rounded-[14px] border border-ink/15 bg-surface px-4 focus-within:border-accent/60 focus-within:ring-4 focus-within:ring-accent/10">
                 <IconSearch className="h-5 w-5 shrink-0 text-ink/50" />
                 <label htmlFor="chapters-q" className="sr-only">
                   {t('dir.searchLabel')}
@@ -240,13 +237,13 @@ export function Chapters() {
                     id="chapters-state"
                     value={stateId}
                     onChange={(e) => set({ state: e.target.value, chapter: '' })}
-                    className="h-[54px] w-full appearance-none rounded-[14px] border border-ink/15 bg-surface pl-4 pr-10 text-base text-ink outline-none focus:border-merah/60"
+                    className="h-[54px] w-full appearance-none rounded-[14px] border border-ink/15 bg-surface pl-4 pr-10 text-base text-ink outline-none focus:border-accent/60"
                   >
-                    <option value="" className="bg-white text-[#13233F]">
+                    <option value="" className="bg-white text-night">
                       {t('dir.allStates')}
                     </option>
                     {states.map((s) => (
-                      <option key={s.id} value={s.id} className="bg-white text-[#13233F]">
+                      <option key={s.id} value={s.id} className="bg-white text-night">
                         {s.label}
                       </option>
                     ))}
@@ -258,13 +255,13 @@ export function Chapters() {
                   onClick={() => (near ? requestGeo() : set({ near: '1' }))}
                   className="inline-flex h-[54px] items-center gap-2 rounded-[14px] border border-ink/15 px-4 text-[15px] font-semibold text-ink transition-[background-color,transform] duration-150 hover:bg-ink/5 active:scale-[0.97]"
                 >
-                  {geo.status === 'asking' ? <Spinner className="h-5 w-5 text-merah" /> : <IconLocate className="h-5 w-5 text-merah" />}
+                  {geo.status === 'asking' ? <Spinner className="h-5 w-5 text-accent" /> : <IconLocate className="h-5 w-5 text-accent" />}
                   <span className="hidden sm:inline">{geo.status === 'asking' ? t('home.finder.locating') : t('home.finder.near')}</span>
                   <span className="sr-only sm:hidden">{t('home.finder.near')}</span>
                 </button>
               </div>
               {['denied', 'error', 'unavailable'].includes(geo.status) && (
-                <p className="text-sm text-merah" role="alert">
+                <p className="text-sm text-accent" role="alert">
                   {t(`home.finder.geo.${geo.status}`)}
                 </p>
               )}
@@ -275,7 +272,7 @@ export function Chapters() {
                 {t('dir.count', { shown: results.length, n: chapters.length })}
               </p>
               {(q || stateId || region || near) && (
-                <button type="button" onClick={() => setParams({}, { replace: true })} className="min-h-[40px] text-sm font-semibold text-merah hover:underline">
+                <button type="button" onClick={() => setParams({}, { replace: true })} className="min-h-[40px] text-sm font-semibold text-accent hover:underline">
                   {t('dir.reset')}
                 </button>
               )}
@@ -290,7 +287,6 @@ export function Chapters() {
               <ul className="divide-y divide-border">
                 {results.map((c, k) => {
                   const on = c.id === chapterId;
-                  const tone = REGION_TONE[c.region];
                   return (
                     <motion.li
                       key={c.id}
@@ -305,10 +301,10 @@ export function Chapters() {
                         aria-pressed={on}
                         className={cn(
                           'group flex w-full items-center gap-4 rounded-[14px] px-3 py-4 text-left transition-[background-color,transform] duration-150 active:scale-[0.99]',
-                          on ? 'bg-merah/[0.07]' : 'hover:bg-ink/[0.035]',
+                          on ? 'bg-ink/[0.05]' : 'hover:bg-ink/[0.03]',
                         )}
                       >
-                        <span className={cn('h-10 w-1 shrink-0 rounded-full', tone.dot)} aria-hidden="true" />
+                        <span className={cn('h-10 w-0.5 shrink-0 rounded-full', on ? 'bg-accent' : 'bg-transparent')} aria-hidden="true" />
                         <span className="min-w-0 flex-1">
                           <span className="block truncate font-display text-[21px] leading-tight text-ink">{campusName(c)}</span>
                           <span className="block truncate text-sm text-muted-foreground">
@@ -316,7 +312,7 @@ export function Chapters() {
                           </span>
                         </span>
                         {distances && <span className="shrink-0 text-sm font-semibold tabular text-ink/70">{formatDistance(distances[c.id], lang)}</span>}
-                        <IconArrowRight className={cn('h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1', on ? 'text-merah' : 'text-ink/35')} />
+                        <IconArrowRight className={cn('h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1', on ? 'text-accent' : 'text-ink/35')} />
                       </button>
                     </motion.li>
                   );
@@ -327,7 +323,7 @@ export function Chapters() {
             <div className="mt-8 rounded-[22px] bg-ink p-6 text-white dark:bg-white/[0.06]">
               <p className="font-display text-2xl">{t('home.join.title')}</p>
               <p className="mt-2 text-white/75">{t('home.join.sub')}</p>
-              <Link to="/chapters/register" className="mt-4 inline-flex min-h-[48px] items-center gap-2 rounded-[12px] bg-merah px-5 font-semibold text-white transition-[background-color,transform] duration-150 hover:bg-[#a90d26] active:scale-[0.97]">
+              <Link to="/chapters/register" className="mt-4 inline-flex min-h-[48px] items-center gap-2 rounded-[12px] bg-accent px-5 font-semibold text-on-accent transition-[background-color,transform] duration-150 hover:bg-accent/90 active:scale-[0.97]">
                 {t('chapters.register')}
                 <IconArrowRight className="h-5 w-5" />
               </Link>

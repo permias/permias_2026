@@ -26,11 +26,11 @@ export function Button({ as = 'button', className, variant = 'primary', size = '
   };
   const styles = {
     primary:
-      'bg-merah text-white shadow-[inset_0_1px_0_rgba(255,255,255,.25),0_10px_24px_-12px_rgb(var(--merah)/0.9)] hover:bg-[#B50F21] hover:shadow-[inset_0_1px_0_rgba(255,255,255,.25),0_14px_28px_-12px_rgb(var(--merah)/0.95)] dark:hover:bg-[#d8243a]',
+      'bg-accent text-on-accent hover:bg-accent/90',
     dark: 'bg-ink text-mist hover:bg-ink/85',
     glass: 'glass text-ink hover:bg-white/80 dark:hover:bg-white/15',
     'glass-photo': 'glass-photo hover:bg-white/25',
-    light: 'bg-white text-[#13233F] shadow-[0_10px_30px_-12px_rgba(0,0,0,.5)] hover:bg-white/90',
+    light: 'bg-white text-night hover:bg-white/90',
     outline: 'border border-ink/20 bg-transparent text-ink hover:border-ink/45 hover:bg-ink/[0.03]',
     ghost: 'bg-transparent text-ink hover:bg-ink/[0.06]',
   };

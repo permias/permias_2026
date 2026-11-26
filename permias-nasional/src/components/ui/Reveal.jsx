@@ -3,12 +3,12 @@ import { motion } from 'motion/react';
 import { motionTokens } from '../../lib/motion.js';
 
 /*
- * Left-to-right reveal (Preston: "more fade-in, more left-to-right"). Plays once when scrolled into view.
+ * Subtle reveal: a fade with a short left-to-right travel. Plays once when scrolled into view.
  * Under reduced motion MotionConfig drops the x travel and keeps the opacity fade.
  */
 const MOTION_TAGS = { div: motion.div, section: motion.section, li: motion.li, ul: motion.ul, p: motion.p, header: motion.header, article: motion.article, ol: motion.ol };
 
-export function Reveal({ as = 'div', delay = 0, x = -motionTokens.distance.xl, className, children, ...rest }) {
+export function Reveal({ as = 'div', delay = 0, x = -motionTokens.distance.md, className, children, ...rest }) {
   const Tag = MOTION_TAGS[as] || motion.div;
   return createElement(
     Tag,
@@ -29,7 +29,7 @@ const container = {
   shown: { transition: { staggerChildren: motionTokens.stagger.children, delayChildren: motionTokens.stagger.delay } },
 };
 const staggerItem = {
-  hidden: { opacity: 0, x: -motionTokens.distance.lg },
+  hidden: { opacity: 0, x: -motionTokens.distance.md },
   shown: { opacity: 1, x: 0, transition: { duration: motionTokens.duration.slow, ease: motionTokens.easing.smooth } },
 };
 

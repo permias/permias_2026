@@ -35,7 +35,7 @@ function DockItem({ mouseX, active, label, Icon, as: As = 'button', className, a
       className={cn(
         'relative flex h-[52px] min-w-[56px] flex-col items-center justify-center rounded-[20px] px-2.5 text-[11px] font-semibold outline-offset-2 sm:min-w-[64px]',
         accent
-          ? 'mx-1 h-[44px] min-w-[52px] rounded-[17px] bg-merah text-white shadow-[0_8px_20px_-8px_rgb(var(--merah)/0.8),inset_0_1px_0_rgba(255,255,255,.35)] transition-[background-color] duration-150 hover:bg-[#B50F21] sm:min-w-[60px]'
+          ? 'mx-1 h-[44px] min-w-[52px] rounded-[17px] bg-accent text-on-accent transition-[background-color] duration-150 hover:bg-accent/90 sm:min-w-[60px]'
           : active
             ? 'text-ink'
             : 'text-ink/70 hover:text-ink',
@@ -46,7 +46,7 @@ function DockItem({ mouseX, active, label, Icon, as: As = 'button', className, a
       {active && !accent && (
         <motion.span
           layoutId="dock-lens"
-          className="absolute inset-0 rounded-[20px] bg-white shadow-[0_1px_0_rgba(255,255,255,.9)_inset,0_6px_16px_-6px_rgba(15,27,45,.35)] dark:bg-white/15 dark:shadow-[0_1px_0_rgba(255,255,255,.18)_inset]"
+          className="absolute inset-0 rounded-[20px] bg-white shadow-soft dark:bg-white/15"
           transition={springs.snappy}
           aria-hidden="true"
         />
@@ -96,13 +96,8 @@ export function Dock() {
       transition={springs.snappy}
     >
       <div
-        className="glass sheen pointer-events-auto flex items-center gap-0.5 rounded-[26px] p-1.5"
-        onPointerMove={(e) => {
-          onMove(e);
-          const r = e.currentTarget.getBoundingClientRect();
-          e.currentTarget.style.setProperty('--mx', `${((e.clientX - r.left) / r.width) * 100}%`);
-          e.currentTarget.style.setProperty('--my', `${((e.clientY - r.top) / r.height) * 100}%`);
-        }}
+        className="glass pointer-events-auto flex items-center gap-0.5 rounded-[26px] p-1.5"
+        onPointerMove={onMove}
         onPointerLeave={() => mouseX.set(Infinity)}
       >
         {routes.slice(0, 2).map((r) => (

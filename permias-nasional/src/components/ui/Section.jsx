@@ -11,7 +11,7 @@ export function SectionHead({ word, title, intro, id, className, align = 'left',
   return (
     <Reveal className={cn(align === 'center' && 'mx-auto text-center', 'max-w-3xl', className)}>
       {word && (
-        <p className="font-display text-xl italic text-merah" lang="id">
+        <p className="font-display text-xl italic text-muted-foreground" lang="id">
           {word}
         </p>
       )}
@@ -32,7 +32,7 @@ export function PhotoTile({ image, title, sub, to, links = [], className, size =
   return (
     <Wrapper
       {...(to ? { to } : {})}
-      className={cn('group relative isolate flex flex-col justify-end overflow-hidden rounded-[28px] bg-[#0A1220] p-6 text-white md:p-8', tall, className)}
+      className={cn('group relative isolate flex flex-col justify-end overflow-hidden rounded-[28px] bg-night p-6 text-white md:p-8', tall, className)}
     >
       {p && (
         <img
@@ -40,13 +40,13 @@ export function PhotoTile({ image, title, sub, to, links = [], className, size =
           srcSet={p.srcSet}
           sizes={size === 'lg' ? '(min-width: 1024px) 60vw, 100vw' : '(min-width: 1024px) 33vw, 100vw'}
           alt=""
-          width="1600"
-          height="1067"
+          width={p.w}
+          height={p.h}
           loading={priority ? 'eager' : 'lazy'}
           className="photo-grade absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.035]"
         />
       )}
-      <span className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(10,18,32,.05)_25%,rgba(10,18,32,.8)_100%)]" aria-hidden="true" />
+      <span className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,19,21,.05)_25%,rgba(18,19,21,.8)_100%)]" aria-hidden="true" />
       <span className="font-display text-[clamp(1.7rem,1.3rem+1.2vw,2.5rem)] leading-[1.05]">{title}</span>
       {sub && <span className="mt-2 max-w-[44ch] text-[16px] leading-relaxed text-white/85">{sub}</span>}
       {links.length > 0 && (

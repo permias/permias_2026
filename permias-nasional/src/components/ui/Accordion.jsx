@@ -18,7 +18,7 @@ export function AccordionItem({ title, children, defaultOpen = false }) {
           className="flex min-h-[56px] w-full items-center justify-between gap-4 py-3 text-left text-[17px] font-semibold text-ink"
         >
           {title}
-          <IconPlus className={cn('h-5 w-5 shrink-0 text-merah transition-transform duration-300', open && 'rotate-45')} />
+          <IconPlus className={cn('h-5 w-5 shrink-0 text-ink/50 transition-transform duration-300', open && 'rotate-45')} />
         </button>
       </h3>
       <div

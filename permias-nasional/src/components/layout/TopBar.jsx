@@ -9,7 +9,6 @@ import { PAGE_PHOTOS, photo } from '../../data/photos.js';
 import { resourceSections } from '../../data/resources.js';
 import { GUIDE_NOTES } from '../../data/guideNotes.js';
 import { chapterPath } from '../../lib/chapterInfo.js';
-import { REGION_TONE } from '../../lib/regionTone.js';
 import { motionTokens, springs } from '../../lib/motion.js';
 import { publicUrl } from '../../utils/site.js';
 import { cn } from '../../utils/cn.js';
@@ -45,19 +44,21 @@ function Callout({ to, image, title, sub, onNavigate }) {
     <Link
       to={to}
       onClick={onNavigate}
-      className="group relative isolate flex min-h-[244px] flex-col justify-end overflow-hidden rounded-[20px] bg-[#0A1220] p-5 text-white outline-offset-2"
+      className="group relative isolate flex min-h-[244px] flex-col justify-end overflow-hidden rounded-[20px] bg-night p-5 text-white outline-offset-2"
     >
       {p && (
         <img
           src={p.small}
+          srcSet={p.srcSet}
+          sizes="260px"
           alt=""
-          width="800"
-          height="533"
+          width={p.w}
+          height={p.h}
           loading="lazy"
           className="photo-grade absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
         />
       )}
-      <span className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(10,18,32,0)_30%,rgba(10,18,32,.82)_100%)]" aria-hidden="true" />
+      <span className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,19,21,0)_30%,rgba(18,19,21,.82)_100%)]" aria-hidden="true" />
       <span className="font-display text-[26px] leading-[1.05]">{title}</span>
       <span className="mt-1.5 text-sm text-white/80">{sub}</span>
       <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold">
@@ -78,7 +79,7 @@ function MenuLink({ to, title, note, onNavigate, children }) {
       <span className="min-w-0">
         <span className="flex items-center gap-1.5 text-[15px] font-semibold text-ink">
           {title}
-          <IconArrowRight className="h-3.5 w-3.5 -translate-x-1 text-merah opacity-0 transition-[opacity,transform] duration-150 group-hover:translate-x-0 group-hover:opacity-100" />
+          <IconArrowRight className="h-3.5 w-3.5 -translate-x-1 text-accent opacity-0 transition-[opacity,transform] duration-150 group-hover:translate-x-0 group-hover:opacity-100" />
         </span>
         {note && <span className="mt-0.5 block text-[13px] leading-snug text-muted-foreground">{note}</span>}
       </span>
@@ -101,9 +102,7 @@ function ChaptersMenu({ pick, t, onNavigate }) {
         <ul className="mt-2">
           {REGIONS.map((r) => (
             <li key={r}>
-              <MenuLink to={`/chapters?region=${encodeURIComponent(r)}`} onNavigate={onNavigate} title={pick(REGION_LABELS[r])} note={pick({ en: `${regionCount[r]} chapters`, id: `${regionCount[r]} chapter` })}>
-                <span className={cn('mt-2 h-2.5 w-2.5 shrink-0 rounded-full', REGION_TONE[r].dot)} aria-hidden="true" />
-              </MenuLink>
+              <MenuLink to={`/chapters?region=${encodeURIComponent(r)}`} onNavigate={onNavigate} title={pick(REGION_LABELS[r])} note={pick({ en: `${regionCount[r]} chapters`, id: `${regionCount[r]} chapter` })} />
             </li>
           ))}
         </ul>
@@ -121,11 +120,11 @@ function ChaptersMenu({ pick, t, onNavigate }) {
         </ul>
         <div className="mt-3 flex flex-wrap gap-2 px-2.5">
           <Link to="/chapters?near=1" onClick={onNavigate} className="inline-flex min-h-[40px] items-center gap-2 rounded-full border border-border px-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink/30">
-            <IconLocate className="h-4 w-4 text-merah" />
+            <IconLocate className="h-4 w-4 text-accent" />
             {t('home.finder.near')}
           </Link>
           <Link to="/chapters/register" onClick={onNavigate} className="inline-flex min-h-[40px] items-center gap-2 rounded-full border border-border px-3.5 text-sm font-semibold text-ink transition-colors hover:border-ink/30">
-            <IconPlus className="h-4 w-4 text-merah" />
+            <IconPlus className="h-4 w-4 text-accent" />
             {t('chapters.register')}
           </Link>
         </div>
@@ -198,13 +197,13 @@ function LangSwitch({ lang, setLang, label, light }) {
             onClick={() => setLang(o.value)}
             className={cn(
               'relative flex min-h-[36px] items-center justify-center rounded-full text-[13px] font-semibold tracking-wide transition-colors duration-150',
-              on ? (light ? 'text-[#13233F]' : 'text-ink') : light ? 'text-white/85 hover:text-white' : 'text-ink/65 hover:text-ink',
+              on ? (light ? 'text-night' : 'text-ink') : light ? 'text-white/85 hover:text-white' : 'text-ink/65 hover:text-ink',
             )}
           >
             {on ? (
               <motion.span
                 layoutId="lang-thumb"
-                className="flex min-h-[36px] min-w-[38px] items-center justify-center rounded-full bg-white px-2 shadow-[0_2px_8px_-2px_rgba(15,27,45,.35)] sm:min-w-[42px] sm:px-2.5 dark:bg-[#2A3954]"
+                className="flex min-h-[36px] min-w-[38px] items-center justify-center rounded-full bg-white px-2 shadow-soft sm:min-w-[42px] sm:px-2.5 dark:bg-muted"
                 transition={springs.snappy}
               >
                 {o.label}
@@ -302,21 +301,19 @@ export function TopBar() {
       }}
     >
       {/* glass: a soft layer, then a stronger one that fades in with scroll */}
-      <motion.div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-white/60 backdrop-blur-[14px] dark:bg-[#0A1220]/55" style={{ opacity: menu || !isHome ? 1 : softHome }} />
+      <motion.div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 bg-white/60 backdrop-blur-[14px] dark:bg-night/55" style={{ opacity: menu || !isHome ? 1 : softHome }} />
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-white/[0.86] shadow-[0_1px_0_rgb(var(--border)),0_18px_40px_-28px_rgba(19,35,63,.45)] backdrop-blur-[24px] backdrop-saturate-[1.8] dark:bg-[#0A1220]/[0.86] dark:shadow-[0_1px_0_rgba(255,255,255,.08),0_18px_40px_-28px_rgba(0,0,0,.8)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-white/[0.86] shadow-soft backdrop-blur-[24px] backdrop-saturate-[1.8] dark:bg-night/[0.86]"
         style={{ opacity: menu ? 1 : strong }}
       />
 
       <div className="container-x flex h-16 items-center justify-between gap-2 sm:gap-4 md:h-[72px]">
         <Link to="/" className="group flex min-w-0 shrink items-center gap-2 rounded-[12px] sm:gap-3 lg:shrink-0 outline-offset-4" aria-label={t('topbar.homeLabel')}>
-          <img
-            src={publicUrl(light || theme === 'dark' ? '/images/brand/emblem-white.png' : '/images/brand/emblem-red.png')}
-            alt=""
-            width="36"
-            height="40"
-            className="h-9 w-8 transition-transform sm:h-10 sm:w-9 duration-300 ease-out group-hover:-translate-y-0.5"
+          <span
+            aria-hidden="true"
+            className={cn('brand-mark h-9 w-8 sm:h-10 sm:w-9', light ? 'text-white' : 'text-accent')}
+            style={{ '--mark': `url(${publicUrl('/images/brand/emblem-white.png')})` }}
           />
           <span className="flex flex-col leading-none">
             <span className="whitespace-nowrap font-display text-[18px] tracking-[0.01em] sm:text-[21px]">
@@ -379,7 +376,7 @@ export function TopBar() {
                   {active && (
                     <motion.span
                       layoutId="nav-active"
-                      className={cn('absolute inset-x-3.5 -bottom-[3px] h-[2px] rounded-full', light ? 'bg-white' : 'bg-merah')}
+                      className={cn('absolute inset-x-3.5 -bottom-[3px] h-[2px] rounded-full', light ? 'bg-white' : 'bg-accent')}
                       transition={springs.snappy}
                       aria-hidden="true"
                     />
@@ -424,7 +421,7 @@ export function TopBar() {
           </button>
           <Link
             to="/chapters/register"
-            className="ml-1 hidden h-11 items-center whitespace-nowrap rounded-[12px] bg-merah px-4 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,.25),0_8px_20px_-10px_rgb(var(--merah)/0.9)] transition-[transform,background-color,box-shadow] duration-150 hover:bg-[#a90d26] hover:shadow-[inset_0_1px_0_rgba(255,255,255,.25),0_12px_26px_-10px_rgb(var(--merah)/0.95)] active:scale-[0.97] md:flex lg:hidden xl:flex"
+            className="ml-1 hidden h-11 items-center whitespace-nowrap rounded-[12px] bg-accent px-4 text-sm font-semibold text-on-accent transition-[transform,background-color,box-shadow] duration-150 hover:bg-accent/90 active:scale-[0.97] md:flex lg:hidden xl:flex"
           >
             {t('chapters.register')}
           </Link>
@@ -442,7 +439,7 @@ export function TopBar() {
             style={{ transformOrigin: 'top center' }}
             className="absolute inset-x-0 top-full hidden px-4 lg:block"
           >
-            <div className="mx-auto mt-2 max-w-[1080px] rounded-[28px] border border-white/70 bg-white/[0.94] p-4 text-ink shadow-[0_1px_0_rgba(255,255,255,.9)_inset,0_40px_80px_-40px_rgba(15,27,45,.45)] backdrop-blur-2xl backdrop-saturate-150 dark:border-white/10 dark:bg-[#0E1828]/[0.95] dark:shadow-[0_40px_80px_-40px_rgba(0,0,0,.9)]">
+            <div className="mx-auto mt-2 max-w-[1080px] rounded-[28px] border border-border bg-white/[0.96] p-4 text-ink shadow-soft backdrop-blur-2xl backdrop-saturate-150 dark:border-white/10 dark:bg-surface/[0.95]">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={menu}

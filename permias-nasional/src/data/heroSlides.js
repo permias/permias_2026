@@ -16,6 +16,6 @@ export const heroSlides = [
   { slug: 'id-monas', country: 'id', name: { en: 'National Monument (Monas)', id: 'Monumen Nasional (Monas)' }, place: 'Jakarta' },
   { slug: 'campus-stanford', country: 'us', name: { en: 'Main Quad, Stanford University', id: 'Main Quad, Stanford University' }, place: 'Stanford, California', chapters: ['c-stanfordindonesia'] },
   { slug: 'id-tanah-lot', country: 'id', name: { en: 'Pura Tanah Lot', id: 'Pura Tanah Lot' }, place: 'Tabanan, Bali' },
-  { slug: 'berkeley-campanile-sunset', country: 'us', name: { en: 'Sather Tower, UC Berkeley', id: 'Sather Tower, UC Berkeley' }, place: 'Berkeley, California', chapters: ['c-berkeleybisa'] },
+  { slug: 'berkeley-glade', country: 'us', name: { en: 'Memorial Glade and Sather Tower, UC Berkeley', id: 'Memorial Glade dan Sather Tower, UC Berkeley' }, place: 'Berkeley, California', chapters: ['c-berkeleybisa'] },
   { slug: 'id-jam-gadang', country: 'id', name: { en: 'Jam Gadang', id: 'Jam Gadang' }, place: 'Bukittinggi, Sumatera Barat' },
 ];

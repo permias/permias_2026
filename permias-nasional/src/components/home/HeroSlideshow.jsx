@@ -6,7 +6,6 @@ import { chapters, stateCount } from '../../data/chapters.js';
 import { heroSlides } from '../../data/heroSlides.js';
 import { photo } from '../../data/photos.js';
 import { motionTokens, prefersReducedMotion } from '../../lib/motion.js';
-import { cn } from '../../utils/cn.js';
 import { IconArrowRight } from '../ui/Icons.jsx';
 
 const SLIDE_MS = 6500;
@@ -66,7 +65,7 @@ export function HeroSlideshow() {
     <section
       aria-roledescription="carousel"
       aria-label={t('hero.carouselLabel')}
-      className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-[#0B1424]"
+      className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-night"
       onPointerEnter={(e) => e.pointerType === 'mouse' && setHovering(true)}
       onPointerLeave={() => setHovering(false)}
     >
@@ -83,8 +82,8 @@ export function HeroSlideshow() {
             src={p.src}
             srcSet={p.srcSet}
             sizes="100vw"
-            width="1600"
-            height="1067"
+            width={p.w}
+            height={p.h}
             alt={`${pick(slide.name)}, ${slide.place}`}
             className="photo-grade h-full w-full object-cover"
             initial={{ scale: 1.14, x: '-2%' }}
@@ -96,18 +95,17 @@ export function HeroSlideshow() {
       </AnimatePresence>
 
       {/* scrims: strong on the left where the text sits, and along the bottom for the caption */}
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(8,14,28,.86)_0%,rgba(8,14,28,.62)_38%,rgba(8,14,28,.12)_72%,rgba(8,14,28,0)_100%)]" aria-hidden="true" />
-      <div className="absolute inset-x-0 bottom-0 -z-10 h-2/5 bg-[linear-gradient(0deg,rgba(8,14,28,.85),rgba(8,14,28,0))]" aria-hidden="true" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(18,19,21,.86)_0%,rgba(18,19,21,.62)_38%,rgba(18,19,21,.12)_72%,rgba(18,19,21,0)_100%)]" aria-hidden="true" />
+      <div className="absolute inset-x-0 bottom-0 -z-10 h-2/5 bg-[linear-gradient(0deg,rgba(18,19,21,.85),rgba(18,19,21,0))]" aria-hidden="true" />
 
       <div className="container-x flex flex-1 flex-col justify-end pb-[calc(var(--dock-h)+84px)] pt-28 md:pb-36">
         <div className="max-w-[1000px]">
           <motion.p
-            className="flex items-center gap-3 text-[15px] font-semibold text-[#F2C46D]"
+            className="text-[15px] font-semibold text-white/80"
             initial={{ opacity: 0, x: -motionTokens.distance.xl }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: motionTokens.duration.slow, ease: motionTokens.easing.smooth, delay: motionTokens.duration.fast }}
           >
-            <span className="h-px w-10 bg-[#F2C46D]" aria-hidden="true" />
             {t('hero.welcome')}
           </motion.p>
           <h1 className="mt-5 text-white display-xl [font-size:clamp(2.9rem,1.4rem+4.6vw,5.6rem)]">
@@ -141,7 +139,7 @@ export function HeroSlideshow() {
           >
             <a
               href="#cari-chapter"
-              className="inline-flex min-h-[52px] items-center gap-2 rounded-[12px] bg-merah px-6 text-base font-semibold text-white shadow-[0_12px_30px_-12px_rgba(200,16,46,.9)] transition-[transform,background-color] duration-150 hover:bg-[#a90d26] active:scale-[0.97]"
+              className="inline-flex min-h-[52px] items-center gap-2 rounded-[12px] bg-accent px-6 text-base font-semibold text-on-accent transition-[transform,background-color] duration-150 hover:bg-accent/90 active:scale-[0.97]"
             >
               {t('hero.ctaFind')}
               <IconArrowRight className="h-5 w-5" />
@@ -155,81 +153,77 @@ export function HeroSlideshow() {
           </motion.div>
         </div>
 
-        {/* caption + controls */}
-        <div className="mt-12 flex flex-col gap-4">
-          <div className="flex flex-col gap-4 border-t border-white/20 pt-5 md:flex-row md:items-end md:justify-between">
-            <div className="min-h-[64px]" aria-live={paused ? 'polite' : 'off'} aria-atomic="true">
-              <AnimatePresence mode="wait" initial={false}>
-                <motion.div
-                  key={slide.slug}
-                  initial={{ opacity: 0, x: -motionTokens.distance.lg }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: motionTokens.distance.lg, transition: { duration: motionTokens.duration.exit } }}
-                  transition={{ duration: motionTokens.duration.normal, ease: motionTokens.easing.smooth }}
-                >
-                  <p className="flex items-center gap-2 text-[13px] font-semibold text-white/75">
-                    <span className={cn('inline-block h-2.5 w-2.5 rounded-full', slide.country === 'id' ? 'bg-[#E8304A]' : 'bg-[#6FA8FF]')} aria-hidden="true" />
-                    {slide.country === 'id' ? 'Indonesia' : t('hero.usa')}
-                    <span aria-hidden="true">/</span>
-                    <span>{slide.place}</span>
-                  </p>
-                  <p className="mt-1 font-display text-2xl text-white md:text-[28px]">{pick(slide.name)}</p>
-                  {near.length > 0 && (
-                    <p className="mt-1 text-sm text-white/75">
-                      {t('hero.nearby')}{' '}
-                      {near.map((c, k) => (
-                        <span key={c.id}>
-                          {k > 0 && ', '}
-                          <Link to={`/chapters/${c.id.replace(/^c-/, '')}`} className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
-                            {c.chapterName}
-                          </Link>
-                        </span>
-                      ))}
-                    </p>
-                  )}
-                </motion.div>
-              </AnimatePresence>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <p className="text-sm font-semibold text-white/85 tabular sm:hidden" aria-hidden="true">
-                {i + 1} / {n}
-              </p>
-              <div className="hidden items-center sm:flex" role="group" aria-label={t('hero.slides')}>
-                {heroSlides.map((s, k) => (
-                  <button
-                    key={s.slug}
-                    type="button"
-                    onClick={() => go(k)}
-                    aria-label={t('hero.goTo', { n: k + 1, total: n, name: pick(s.name) })}
-                    aria-current={k === i ? 'true' : undefined}
-                    className={cn('group flex h-8 items-center justify-center rounded-full', k === i ? 'min-w-[48px]' : 'min-w-[24px]')}
-                  >
-                    <span className={cn('relative block h-[3px] overflow-hidden rounded-full bg-white/30 transition-colors duration-150', k === i ? 'w-10' : 'w-3 group-hover:bg-white/70')}>
-                      {k === i && (
-                        <span
-                          key={`${i}-${paused}`}
-                          className="absolute inset-0 origin-left rounded-full bg-white"
-                          style={{ animation: paused ? 'none' : `slideProgress ${SLIDE_MS}ms linear forwards`, transform: paused ? 'scaleX(1)' : undefined }}
-                        />
-                      )}
-                    </span>
-                  </button>
-                ))}
-              </div>
-              <button
-                type="button"
-                onClick={() => setUserPaused((v) => !v)}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 text-white transition-[background-color,transform] duration-150 hover:bg-white/15 active:scale-95"
-                aria-label={paused ? t('hero.play') : t('hero.pause')}
-                aria-pressed={userPaused}
+        {/* caption + controls; one thin line across the top fills over each slide */}
+        <div className="relative mt-12 flex flex-col gap-4 pt-5 md:flex-row md:items-end md:justify-between">
+          <span className="absolute inset-x-0 top-0 h-px bg-white/20" aria-hidden="true">
+            <span
+              key={`${i}-${paused}`}
+              className="absolute inset-0 origin-left bg-white/80"
+              style={{ animation: paused ? 'none' : `slideProgress ${SLIDE_MS}ms linear forwards`, transform: paused ? 'scaleX(0)' : undefined }}
+            />
+          </span>
+          <div className="min-h-[64px]" aria-live={paused ? 'polite' : 'off'} aria-atomic="true">
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={slide.slug}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, transition: { duration: motionTokens.duration.exit } }}
+                transition={{ duration: motionTokens.duration.normal, ease: motionTokens.easing.smooth }}
               >
-                <PauseIcon paused={paused} />
-              </button>
-              <a href={p.page} target="_blank" rel="noopener noreferrer" className="hidden max-w-[220px] truncate text-[11px] text-white/60 hover:text-white xl:block">
-                {t('photo.credit', { who: p.artist, lic: p.license })}
-              </a>
-            </div>
+                <p className="text-[13px] font-semibold text-white/70">
+                  {slide.country === 'id' ? 'Indonesia' : t('hero.usa')} / {slide.place}
+                </p>
+                <p className="mt-1 font-display text-2xl text-white md:text-[28px]">{pick(slide.name)}</p>
+                {near.length > 0 && (
+                  <p className="mt-1 text-sm text-white/75">
+                    {t('hero.nearby')}{' '}
+                    {near.map((c, k) => (
+                      <span key={c.id}>
+                        {k > 0 && ', '}
+                        <Link to={`/chapters/${c.id.replace(/^c-/, '')}`} className="font-semibold text-white underline decoration-white/40 underline-offset-4 hover:decoration-white">
+                          {c.chapterName}
+                        </Link>
+                      </span>
+                    ))}
+                  </p>
+                )}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className="flex items-center gap-2" role="group" aria-label={t('hero.slides')}>
+            <p className="mr-2 text-sm font-semibold text-white/80 tabular" aria-hidden="true">
+              {String(i + 1).padStart(2, '0')} / {String(n).padStart(2, '0')}
+            </p>
+            <button
+              type="button"
+              onClick={() => go(i - 1)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-[background-color,transform] duration-150 hover:bg-white/10 active:scale-95"
+              aria-label={t('rail.prev')}
+            >
+              <IconArrowRight className="h-4 w-4 rotate-180" />
+            </button>
+            <button
+              type="button"
+              onClick={() => go(i + 1)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-[background-color,transform] duration-150 hover:bg-white/10 active:scale-95"
+              aria-label={t('rail.next')}
+            >
+              <IconArrowRight className="h-4 w-4" />
+            </button>
+            <button
+              type="button"
+              onClick={() => setUserPaused((v) => !v)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white transition-[background-color,transform] duration-150 hover:bg-white/10 active:scale-95"
+              aria-label={paused ? t('hero.play') : t('hero.pause')}
+              aria-pressed={userPaused}
+            >
+              <PauseIcon paused={paused} />
+            </button>
+            <a href={p.page} target="_blank" rel="noopener noreferrer" className="ml-2 hidden max-w-[220px] truncate text-[11px] text-white/60 hover:text-white xl:block">
+              {t('photo.credit', { who: p.artist, lic: p.license })}
+            </a>
           </div>
         </div>
       </div>

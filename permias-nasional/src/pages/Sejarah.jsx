@@ -23,7 +23,7 @@ export function Sejarah() {
       <section className="container-x mt-16 grid gap-10 md:mt-24 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:gap-20" aria-labelledby="sj-formation">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
-            <p className="font-display text-[clamp(5rem,3rem+8vw,10rem)] leading-[0.85] text-merah tabular" aria-hidden="true">
+            <p className="font-display text-[clamp(5rem,3rem+8vw,10rem)] leading-[0.85] text-ink tabular" aria-hidden="true">
               1961
             </p>
             <h2 id="sj-formation" className="display-md mt-6 text-ink">
@@ -42,7 +42,7 @@ export function Sejarah() {
             href="https://www.youtube.com/watch?v=YXJGqoOUEjc"
             target="_blank"
             rel="noopener noreferrer"
-            className="group mt-10 block overflow-hidden rounded-[24px] border border-border bg-[#0A1220] text-white"
+            className="group mt-10 block overflow-hidden rounded-[24px] border border-border bg-night text-white"
           >
             <span className="relative block aspect-video overflow-hidden">
               <img
@@ -54,7 +54,7 @@ export function Sejarah() {
                 className="h-full w-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-[1.03]"
               />
               <span className="absolute inset-0 flex items-center justify-center">
-                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-merah shadow-[0_12px_30px_-10px_rgba(0,0,0,.6)] transition-transform duration-150 group-hover:scale-105">
+                <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent text-on-accent transition-transform duration-150 group-hover:scale-105">
                   <svg viewBox="0 0 24 24" className="ml-1 h-7 w-7" fill="currentColor" aria-hidden="true">
                     <path d="M8 5v14l11-7z" />
                   </svg>
@@ -62,7 +62,7 @@ export function Sejarah() {
               </span>
             </span>
             <span className="block p-5">
-              <span className="block text-sm text-white/65">{pick({ en: 'Watch on YouTube', id: 'Tonton di YouTube' })} · PERMIAS Nasional</span>
+              <span className="block text-sm text-white/65">{pick({ en: 'Watch on YouTube', id: 'Tonton di YouTube' })} / PERMIAS Nasional</span>
               <span className="mt-1 block text-[17px] font-semibold leading-snug">Why are you proud to be Indonesian? | Ignite Indonesia by PERMIAS Nasional</span>
             </span>
           </a>
@@ -94,7 +94,7 @@ export function Sejarah() {
             const p = photo(ACTIVITY_PHOTOS[i]);
             return (
               <Reveal as="li" key={item.title.en} delay={i * 0.07} className="flex flex-col overflow-hidden rounded-[28px] border border-border bg-surface">
-                {p && <img src={p.small} alt={p.alt} width="800" height="533" loading="lazy" className="photo-grade aspect-[3/2] w-full object-cover" />}
+                {p && <img src={p.small} srcSet={p.srcSet} sizes="(min-width: 768px) 400px, 100vw" alt={p.alt} width={p.w} height={p.h} loading="lazy" className="photo-grade aspect-[3/2] w-full object-cover" />}
                 <div className="flex flex-1 flex-col p-6">
                   <h3 className="font-display text-[26px] leading-tight text-ink">{item.title[lang]}</h3>
                   <p className="mt-3 text-[16px] leading-relaxed text-muted-foreground">{item.desc[lang]}</p>
@@ -107,9 +107,9 @@ export function Sejarah() {
       </section>
 
       <section className="container-x page-pad mt-20 md:mt-28" aria-labelledby="sj-partners">
-        <Reveal className="grid gap-8 rounded-[32px] bg-[#13233F] p-8 text-white md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:p-12">
+        <Reveal className="grid gap-8 rounded-[32px] bg-night p-8 text-white md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:p-12">
           <div>
-            <p className="font-display text-xl italic text-[#F2B8C0]" lang="id">
+            <p className="font-display text-xl italic text-white/70" lang="id">
               Bersama
             </p>
             <h2 id="sj-partners" className="display-md mt-2 text-white">
@@ -118,7 +118,7 @@ export function Sejarah() {
             <p className="mt-4 max-w-[52ch] text-[17px] leading-relaxed text-white/80">{t('sejarah.partners.sub')}</p>
             <Link
               to="/partners"
-              className="mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-[14px] bg-white px-5 text-[15px] font-semibold text-[#13233F] transition-[background-color,transform] duration-150 hover:bg-white/90 active:scale-[0.97]"
+              className="mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-[14px] bg-white px-5 text-[15px] font-semibold text-night transition-[background-color,transform] duration-150 hover:bg-white/90 active:scale-[0.97]"
             >
               {t('sejarah.partners.cta')}
               <IconArrowRight className="h-4 w-4" />

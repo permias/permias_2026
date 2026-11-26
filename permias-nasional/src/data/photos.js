@@ -2,18 +2,26 @@ import credits from './imageCredits.json';
 import { publicUrl } from '../utils/site.js';
 
 /**
- * Free-licensed photos (Wikimedia Commons), optimized to webp at 1600/800 px.
- * Attribution lives in imageCredits.json and public/images/CREDITS.md.
+ * Free-licensed photos (Wikimedia Commons), re-encoded from the originals as WebP at 800/1200/1600/2400 px.
+ * `srcSet` lists every size so the browser picks by viewport and pixel density; `w`/`h` are the intrinsic size
+ * (for width/height attributes). Attribution lives in imageCredits.json and public/images/CREDITS.md.
  */
 export function photo(slug) {
   const c = credits[slug];
   if (!c) return null;
   const files = c.files || {};
+  const widths = Object.keys(files)
+    .map(Number)
+    .sort((a, b) => a - b);
+  const at = (min) => publicUrl(files[String(widths.find((w) => w >= min) ?? widths[widths.length - 1])]);
+  const [w, h] = c.size || [1600, 1067];
   return {
     slug,
-    src: publicUrl(files['1600'] || files['800']),
-    small: publicUrl(files['800'] || files['1600']),
-    srcSet: [files['800'] && `${publicUrl(files['800'])} 800w`, files['1600'] && `${publicUrl(files['1600'])} 1600w`].filter(Boolean).join(', '),
+    src: at(1600),
+    small: at(800),
+    srcSet: widths.map((x) => `${publicUrl(files[String(x)])} ${x}w`).join(', '),
+    w,
+    h,
     alt: c.subject,
     artist: cleanArtist(c.artist),
     license: c.license,

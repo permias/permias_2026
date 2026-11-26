@@ -45,7 +45,7 @@ export function SegmentedToggle({ label, value, options, onChange, className }) 
           onClick={() => onChange(o.value)}
           className={cn(
             'flex min-h-[36px] min-w-[44px] items-center justify-center gap-1.5 rounded-full px-3 text-sm font-semibold transition-[background-color,color] duration-150',
-            value === o.value ? 'bg-white text-ink shadow-[0_2px_8px_-2px_rgba(15,27,45,.3)] dark:bg-white/20' : 'text-ink/70 hover:text-ink',
+            value === o.value ? 'bg-white text-ink shadow-soft dark:bg-white/20' : 'text-ink/70 hover:text-ink',
           )}
         >
           {o.icon}
@@ -98,7 +98,7 @@ export function MoreSheet() {
               onClick={closeOverlay}
               className="flex min-h-[84px] flex-col items-start justify-between rounded-[20px] bg-white/70 p-3 text-sm font-semibold text-ink transition-[background-color,transform] duration-150 hover:bg-white active:scale-[0.97] dark:bg-white/[0.06] dark:hover:bg-white/10"
             >
-              <Icon className="h-5 w-5 text-merah" />
+              <Icon className="h-5 w-5 text-ink/70" />
               <span className="leading-tight">{t(key)}</span>
             </Link>
           ))}

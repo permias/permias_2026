@@ -30,7 +30,7 @@ function RouteProgress({ routeKey }) {
       <motion.span
         key={routeKey}
         aria-hidden="true"
-        className="pointer-events-none fixed inset-x-0 top-0 z-[70] h-[2px] origin-left bg-merah"
+        className="pointer-events-none fixed inset-x-0 top-0 z-[70] h-[2px] origin-left bg-accent"
         initial={{ scaleX: 0, opacity: 1 }}
         animate={{ scaleX: 1, opacity: 0, transition: { scaleX: { duration: motionTokens.duration.slow, ease: motionTokens.easing.smooth }, opacity: { delay: motionTokens.duration.slow, duration: motionTokens.duration.fast } } }}
         exit={{ opacity: 0, transition: { duration: motionTokens.duration.instant } }}
@@ -50,7 +50,7 @@ export function Layout() {
         <div className="relative min-h-screen overflow-x-clip bg-background">
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-control focus:bg-merah focus:px-4 focus:py-3 focus:font-semibold focus:text-white"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-control focus:bg-accent focus:px-4 focus:py-3 focus:font-semibold focus:text-on-accent"
           >
             {t('skip.main')}
           </a>

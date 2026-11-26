@@ -167,14 +167,14 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
 
       {msg && (
         <div
-          className={status === 'success' ? 'rounded-[14px] bg-teal/10 p-4 text-[15px] font-medium text-ink' : 'rounded-[14px] border border-merah/25 bg-merah/[0.05] p-4 text-[15px] leading-relaxed text-ink'}
+          className={status === 'success' ? 'rounded-[14px] border border-border bg-muted p-4 text-[15px] font-medium text-ink' : 'rounded-[14px] border border-accent/25 bg-accent/[0.05] p-4 text-[15px] leading-relaxed text-ink'}
           role={status === 'error' ? 'alert' : 'status'}
         >
           <p className="font-semibold">{msg}</p>
           {status === 'error' && (
             <p className="mt-1 text-muted-foreground">
               {t('chapterRegister.form.fallback')}{' '}
-              <a href={fallbackMailto} className="font-semibold text-merah underline underline-offset-4">
+              <a href={fallbackMailto} className="font-semibold text-accent underline underline-offset-4">
                 {CHAPTER_REGISTER_EMAIL}
               </a>
             </p>
@@ -184,7 +184,7 @@ export function ClubRegisterForm({ compact = false, showBackLink = false }) {
 
       {showBackLink && (
         <p className="text-center text-sm text-muted-foreground">
-          <Link to="/chapters" className="font-medium text-merah underline-offset-4 hover:underline">
+          <Link to="/chapters" className="font-medium text-accent underline-offset-4 hover:underline">
             ← {t('chapterRegister.back')}
           </Link>
         </p>

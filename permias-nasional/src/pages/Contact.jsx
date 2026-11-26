@@ -27,7 +27,7 @@ const socials = [
 
 const faqKeys = [1, 2, 3, 4, 5, 6].map((n) => ({ q: `faq.q${n}`, a: `faq.a${n}` }));
 
-const field = 'mt-1.5 w-full rounded-control border border-border bg-card px-4 text-base text-foreground outline-none transition-[border-color,box-shadow] duration-150 focus:border-merah/50 focus:shadow-[0_0_0_4px_rgb(var(--merah)/0.12)]';
+const field = 'mt-1.5 w-full rounded-control border border-border bg-card px-4 text-base text-foreground outline-none transition-[border-color,box-shadow] duration-150 focus:border-accent/50 focus:ring-4 focus:ring-accent/10';
 
 /** Contact: a form with honest states (the local API may be offline, so email is always offered), channels and FAQ. */
 export function Contact() {
@@ -58,13 +58,13 @@ export function Contact() {
 
       <section className="container-x mt-16 grid gap-12 md:mt-24 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-16" aria-labelledby="ct-form">
         <Reveal>
-          <p className="font-display text-xl italic text-merah" lang="id">
+          <p className="font-display text-xl italic text-muted-foreground" lang="id">
             Tulis kepada kami
           </p>
           <h2 id="ct-form" className="display-md mt-2 text-ink">
             {pick({ en: 'Send the board a message', id: 'Kirim pesan ke pengurus' })}
           </h2>
-          <form onSubmit={submit} className="mt-8 rounded-[28px] border border-border bg-surface p-6 shadow-[0_30px_70px_-50px_rgba(19,35,63,.5)] sm:p-8" noValidate={false}>
+          <form onSubmit={submit} className="mt-8 rounded-[28px] border border-border bg-surface p-6 sm:p-8" noValidate={false}>
             <div className="grid gap-5 sm:grid-cols-2">
               <div>
                 <label className="text-[15px] font-semibold text-ink" htmlFor="c-name">
@@ -114,13 +114,13 @@ export function Contact() {
                   role={status === 'error' ? 'alert' : 'status'}
                   className={
                     status === 'success'
-                      ? 'mt-6 flex items-start gap-3 rounded-[16px] bg-teal/10 p-4 text-[15px] text-ink'
-                      : 'mt-6 rounded-[16px] border border-merah/25 bg-merah/[0.05] p-4 text-[15px] leading-relaxed text-ink'
+                      ? 'mt-6 flex items-start gap-3 rounded-[16px] border border-border bg-muted p-4 text-[15px] text-ink'
+                      : 'mt-6 rounded-[16px] border border-accent/25 bg-accent/[0.05] p-4 text-[15px] leading-relaxed text-ink'
                   }
                 >
                   {status === 'success' ? (
                     <>
-                      <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-teal" />
+                      <IconCheck className="mt-0.5 h-5 w-5 shrink-0 text-ink" />
                       {t('contact.form.success')}
                     </>
                   ) : (
@@ -128,7 +128,7 @@ export function Contact() {
                       <p className="font-semibold">{pick({ en: 'The message service is not reachable right now.', id: 'Layanan pesan sedang tidak dapat dihubungi.' })}</p>
                       <p className="mt-1 text-muted-foreground">
                         {pick({ en: 'Your text is still in the form. You can send it by email instead:', id: 'Teks Anda masih ada di formulir. Anda bisa mengirimnya lewat email:' })}{' '}
-                        <a href={mailto} className="font-semibold text-merah underline underline-offset-4">
+                        <a href={mailto} className="font-semibold text-accent underline underline-offset-4">
                           {SUPPORT_EMAIL}
                         </a>
                       </p>
@@ -142,7 +142,7 @@ export function Contact() {
 
         <Reveal x={24} className="lg:pt-[92px]">
           <h2 className="font-display text-[28px] leading-tight text-ink">{t('contact.direct')}</h2>
-          <a href={`mailto:${SUPPORT_EMAIL}`} className="group mt-4 flex items-center gap-4 rounded-[20px] bg-[#13233F] p-5 text-white transition-[background-color,transform] duration-150 hover:bg-[#1A2E52] active:scale-[0.99]">
+          <a href={`mailto:${SUPPORT_EMAIL}`} className="group mt-4 flex items-center gap-4 rounded-[20px] bg-night p-5 text-white transition-[background-color,transform] duration-150 hover:bg-night/90 active:scale-[0.99]">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10">
               <IconMail className="h-5 w-5" />
             </span>
@@ -155,14 +155,14 @@ export function Contact() {
             {socials.map((s) => (
               <li key={s.href}>
                 <a href={s.href} target="_blank" rel="noopener noreferrer" className="group flex min-h-[64px] items-center gap-4 py-3 transition-colors">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink/[0.05] text-ink transition-colors group-hover:bg-merah group-hover:text-white dark:bg-white/10">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink/[0.05] text-ink transition-colors group-hover:bg-ink group-hover:text-background dark:bg-white/10">
                     <SocialIcon id={s.id} className="h-[18px] w-[18px]" />
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block text-[16px] font-semibold text-ink">{s.label}</span>
                     <span className="block truncate text-sm text-muted-foreground">{s.handle}</span>
                   </span>
-                  <IconArrowUpRight className="h-4 w-4 text-ink/40 transition-[color,transform] duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-merah" />
+                  <IconArrowUpRight className="h-4 w-4 text-ink/40 transition-[color,transform] duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent" />
                 </a>
               </li>
             ))}

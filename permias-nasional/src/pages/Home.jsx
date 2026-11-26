@@ -3,7 +3,7 @@ import { Seo } from '../components/Seo.jsx';
 import { DEFAULT_TAB_TITLE } from '../utils/seo.js';
 import { HeroSlideshow } from '../components/home/HeroSlideshow.jsx';
 import { ChapterDirectory } from '../components/home/ChapterDirectory.jsx';
-import { Bersama, CampusMarquee, Pengurus } from '../components/home/Institutional.jsx';
+import { Bersama, Pengurus } from '../components/home/Institutional.jsx';
 import { MapAct } from '../components/home/MapAct.jsx';
 import { EventsRail, JoinBand, Moments, PartnersIndex, WhatWeDo } from '../components/home/HomeSections.jsx';
 import { SITE_ORIGIN } from '../utils/site.js';
@@ -37,7 +37,6 @@ export function Home() {
       </Helmet>
       <HeroSlideshow />
       <ChapterDirectory />
-      <CampusMarquee />
       <Bersama />
       <MapAct />
       <WhatWeDo />

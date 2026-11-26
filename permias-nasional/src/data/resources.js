@@ -140,7 +140,7 @@ export const resourceSections = [
         address: '3457 Wilshire Boulevard, Los Angeles, CA 90010',
         phone: '+1 (213) 387 7041',
         href: 'https://kemlu.go.id/losangeles/',
-        photo: 'la-griffith-night',
+        photo: 'la-skyline',
         keywords: ['los angeles', 'california', 'kjri'],
       },
     ],

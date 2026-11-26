@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { chapters, formatDistance, instagramUrl, REGION_LABELS } from '../data/chapters.js';
-import { chapterBySlug, chapterMedia, chapterPath, heroImage, nearbyChapters, placePhoto } from '../lib/chapterInfo.js';
-import { campusName, isRegional, REGION_TONE } from '../lib/regionTone.js';
-import { motionTokens, springs } from '../lib/motion.js';
+import { cardPhoto, chapterBySlug, chapterMedia, chapterPath, heroImage, nearbyChapters, placePhoto } from '../lib/chapterInfo.js';
+import { campusName, isRegional } from '../lib/campus.js';
+import { motionTokens } from '../lib/motion.js';
 import { pageTabTitle } from '../utils/seo.js';
 import { cn } from '../utils/cn.js';
 import { Seo } from '../components/Seo.jsx';
@@ -76,7 +76,7 @@ function Gallery({ c, photos }) {
         </div>
         {p?.src && (
           <figure>
-            <img src={p.small} srcSet={p.srcSet} sizes="(min-width: 768px) 560px, 100vw" alt={p.alt} width="800" height="533" loading="lazy" className="media-outline aspect-[3/2] w-full rounded-[20px] object-cover" />
+            <img src={p.small} srcSet={p.srcSet} sizes="(min-width: 768px) 560px, 100vw" alt={p.alt} width={p.w} height={p.h} loading="lazy" className="media-outline aspect-[3/2] w-full rounded-[20px] object-cover" />
             <figcaption className="mt-2 text-xs text-muted-foreground">
               {p.alt}.{' '}
               <a href={p.page} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-ink">
@@ -126,7 +126,7 @@ function Gallery({ c, photos }) {
         ref={ref}
         onClose={() => setOpen(null)}
         onClick={(e) => e.target === ref.current && setOpen(null)}
-        className="m-auto max-h-[92vh] max-w-[min(1100px,94vw)] overflow-visible rounded-[24px] bg-transparent p-0 backdrop:bg-[#0A1220]/80 backdrop:backdrop-blur-sm"
+        className="m-auto max-h-[92vh] max-w-[min(1100px,94vw)] overflow-visible rounded-[24px] bg-transparent p-0 backdrop:bg-night/80 backdrop:backdrop-blur-sm"
         aria-label={c.chapterName}
       >
         {open != null && photos[open] && (
@@ -160,17 +160,12 @@ export function ChapterPage() {
   const { slug } = useParams();
   const { t, pick, lang } = useLanguage();
   const c = chapterBySlug(slug);
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
-  const imgScale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
-  const imgY = useTransform(scrollYProgress, [0, 1], [0, 50]);
 
   const near = useMemo(() => (c ? nearbyChapters(c, 4) : []), [c]);
   if (!c) return <Navigate to="/chapters" replace />;
 
   const media = chapterMedia(c);
   const hero = heroImage(c);
-  const tone = REGION_TONE[c.region];
   const idx = alpha.findIndex((x) => x.id === c.id);
   const prev = alpha[(idx - 1 + alpha.length) % alpha.length];
   const next = alpha[(idx + 1) % alpha.length];
@@ -193,24 +188,25 @@ export function ChapterPage() {
     <>
       <Seo title={pageTabTitle(c.chapterName)} description={pick(c.description) || `${c.chapterName}, ${c.city}`} path={chapterPath(c)} />
 
-      <section ref={ref} className="px-2 pt-2 sm:px-3 sm:pt-3">
-        <div className="relative isolate flex min-h-[520px] overflow-hidden rounded-sheet bg-[#0A1220] md:min-h-[min(74vh,660px)]">
-          <motion.div className="absolute inset-0 -z-10" style={{ scale: imgScale, y: imgY }}>
+      <section className="px-2 pt-2 sm:px-3 sm:pt-3">
+        <div className="relative isolate flex min-h-[520px] overflow-hidden rounded-sheet bg-night md:min-h-[min(74vh,660px)]">
+          <div className="absolute inset-0 -z-10">
             <motion.img
               src={hero.src}
               srcSet={hero.srcSet}
               sizes="100vw"
               alt=""
-              width="1600"
-              height="1067"
+              width={hero.w}
+              height={hero.h}
               fetchPriority="high"
               className="photo-grade h-full w-full object-cover"
-              initial={{ scale: 1.08 }}
+              initial={{ scale: 1.04 }}
               animate={{ scale: 1 }}
               transition={{ duration: motionTokens.duration.crawl * 1.6, ease: motionTokens.easing.smooth }}
             />
-          </motion.div>
-          <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(10,18,32,.5)_0%,rgba(10,18,32,.05)_38%,rgba(10,18,32,.78)_100%)]" aria-hidden="true" />
+          </div>
+          <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(18,19,21,.45)_0%,rgba(18,19,21,.1)_32%,rgba(18,19,21,.85)_100%)]" aria-hidden="true" />
+          <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(18,19,21,.55)_0%,rgba(18,19,21,0)_65%)]" aria-hidden="true" />
 
           <div className="container-x flex flex-col justify-end pb-8 pt-28 text-white md:pb-12">
             <nav aria-label={pick({ en: 'Breadcrumb', id: 'Navigasi remah' })} className="mb-6 text-sm text-white/80">
@@ -230,12 +226,11 @@ export function ChapterPage() {
             </nav>
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div className="flex items-end gap-5">
-                <motion.span initial={{ opacity: 0, scale: motionTokens.scale.press }} animate={{ opacity: 1, scale: 1 }} transition={springs.gentle} className="hidden rounded-full p-1 ring-1 ring-white/40 backdrop-blur sm:block">
-                  <ChapterLogo c={c} size={96} ring={false} className="ring-[3px] ring-white" />
-                </motion.span>
+                <span className="hidden sm:block">
+                  <ChapterLogo c={c} size={72} ring={false} className="ring-2 ring-white" />
+                </span>
                 <div>
-                  <p className="flex items-center gap-2 text-sm font-semibold text-white/90">
-                    <span className={cn('h-2 w-2 rounded-full', tone.dot)} aria-hidden="true" />
+                  <p className="text-sm font-semibold text-white/90">
                     {c.officialRegion || pick(REGION_LABELS[c.region])}
                     <span className="text-white/60">/ {isRegional(c) ? t('dir.kindCity') : t('dir.kindCampus')}</span>
                   </p>
@@ -251,7 +246,7 @@ export function ChapterPage() {
                     href={instagramUrl(c.instagram)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-h-[48px] items-center gap-2 rounded-[14px] bg-white px-5 text-[15px] font-semibold text-[#13233F] shadow-[0_10px_30px_-12px_rgba(0,0,0,.5)] transition-[background-color,transform] duration-150 hover:bg-white/90 active:scale-[0.97]"
+                    className="inline-flex min-h-[48px] items-center gap-2 rounded-[14px] bg-white px-5 text-[15px] font-semibold text-night transition-[background-color,transform] duration-150 hover:bg-white/90 active:scale-[0.97]"
                   >
                     <IconInstagram className="h-[18px] w-[18px]" />
                     {c.instagram}
@@ -281,7 +276,7 @@ export function ChapterPage() {
 
       <section className="container-x mt-14 grid gap-10 md:mt-20 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-16">
         <Reveal>
-          <p className="font-display text-xl italic text-merah">{pick({ en: 'Tentang chapter', id: 'Tentang chapter' })}</p>
+          <p className="font-display text-xl italic text-muted-foreground">{pick({ en: 'Tentang chapter', id: 'Tentang chapter' })}</p>
           <p className="mt-4 max-w-[34ch] font-display text-[clamp(1.6rem,1.2rem+1.4vw,2.4rem)] leading-[1.15] text-ink">{pick(c.description)}</p>
           <dl className="mt-10 grid gap-x-8 sm:grid-cols-2">
             {facts.map((f) => (
@@ -311,7 +306,7 @@ export function ChapterPage() {
         </Reveal>
 
         <Reveal x={24} className="lg:pt-2">
-          <div className="rounded-[28px] border border-border bg-surface p-3 shadow-[0_30px_80px_-50px_rgba(19,35,63,.55)] sm:p-4">
+          <div className="rounded-[28px] border border-border bg-surface p-3 sm:p-4">
             <div className="flex items-center justify-between gap-3 px-2 pb-2 pt-1">
               <p className="font-display text-xl text-ink">{c.state}</p>
               <Link to={`/chapters?state=${c.stateId}&chapter=${c.id}`} className="inline-flex min-h-[40px] items-center gap-1.5 rounded-full border border-ink/15 px-3.5 text-sm font-semibold text-ink transition-[background-color,transform] duration-150 hover:bg-ink/5 active:scale-[0.97]">
@@ -319,7 +314,7 @@ export function ChapterPage() {
                 {t('dir.fullMap')}
               </Link>
             </div>
-            <ChapterMap selectedState={c.stateId} selectedChapter={c.id} reveal={false} label={pick({ en: `Map: ${c.chapterName} in ${c.state}`, id: `Peta: ${c.chapterName} di ${c.state}` })} />
+            <ChapterMap selectedState={c.stateId} selectedChapter={c.id} label={pick({ en: `Map: ${c.chapterName} in ${c.state}`, id: `Peta: ${c.chapterName} di ${c.state}` })} />
           </div>
         </Reveal>
       </section>
@@ -345,12 +340,11 @@ export function ChapterPage() {
           </div>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {near.map((n) => {
-              const p = placePhoto(n);
               return (
                 <li key={n.id}>
-                  <Link to={chapterPath(n)} className="group block h-full overflow-hidden rounded-[22px] border border-border bg-surface transition-[border-color,box-shadow,transform] duration-200 hover:-translate-y-0.5 hover:border-ink/25 hover:shadow-[0_24px_50px_-30px_rgba(19,35,63,.5)] active:scale-[0.99]">
-                    <span className="relative block h-28 overflow-hidden bg-[#0A1220]">
-                      {p?.small && <img src={chapterMedia(n).photos[0]?.src || p.small} alt="" width="400" height="112" loading="lazy" className="h-full w-full object-cover opacity-90 transition-transform duration-500 ease-out group-hover:scale-[1.05]" />}
+                  <Link to={chapterPath(n)} className="group block h-full overflow-hidden rounded-[22px] border border-border bg-surface transition-colors duration-200 hover:border-ink/25">
+                    <span className="relative block h-28 overflow-hidden bg-night">
+                      <img src={cardPhoto(n)} alt="" width="400" height="112" loading="lazy" className="photo-grade h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]" />
                       <span className="absolute -bottom-5 left-4 rounded-full ring-[3px] ring-surface">
                         <ChapterLogo c={n} size={44} ring={false} />
                       </span>
@@ -390,7 +384,7 @@ export function ChapterPage() {
                 <li key={u} className="flex gap-4 py-3.5">
                   <span className="w-6 shrink-0 pt-0.5 text-sm tabular text-muted-foreground">{i + 1}</span>
                   <span className="min-w-0">
-                    <a href={u} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-1 break-all text-[15px] font-semibold text-ink hover:text-merah">
+                    <a href={u} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-1 break-all text-[15px] font-semibold text-ink hover:text-accent">
                       {host(u)}
                       <IconArrowUpRight className="h-3.5 w-3.5 shrink-0 opacity-50 transition-opacity group-hover:opacity-100" />
                     </a>
@@ -415,7 +409,7 @@ export function ChapterPage() {
               <span className="block text-sm text-muted-foreground">{label}</span>
               <span className="mt-1 inline-flex items-center gap-2 font-display text-2xl text-ink">
                 {campusName(x)}
-                <IconArrowRight className="h-4 w-4 text-merah transition-transform duration-200 group-hover:translate-x-1" />
+                <IconArrowRight className="h-4 w-4 text-accent transition-transform duration-200 group-hover:translate-x-1" />
               </span>
             </Link>
           ))}

@@ -497,7 +497,6 @@ export const phrases = {
   'hero.usa': { en: 'United States', id: 'Amerika Serikat' },
   'hero.nearby': { en: 'Chapters nearby:', id: 'Chapter terdekat:' },
   'hero.slides': { en: 'Choose a slide', id: 'Pilih slide' },
-  'hero.goTo': { en: 'Slide {n} of {total}: {name}', id: 'Slide {n} dari {total}: {name}' },
   'hero.play': { en: 'Play slideshow', id: 'Putar slide' },
   'hero.pause': { en: 'Pause slideshow', id: 'Jeda slide' },
   'dir.word': { en: 'Direktori chapter', id: 'Direktori chapter' },
@@ -524,10 +523,6 @@ export const phrases = {
   'dir.showAll': { en: 'Show all {n}', id: 'Tampilkan semua ({n})' },
   'dir.showLess': { en: 'Show fewer', id: 'Tampilkan lebih sedikit' },
   'dir.fullMap': { en: 'Open the full map', id: 'Buka peta lengkap' },
-  'marquee.word': { en: 'Kampus kita', id: 'Kampus kita' },
-  'marquee.title': { en: '{n} campuses and cities, one network.', id: '{n} kampus dan kota, satu jaringan.' },
-  'marquee.cta': { en: 'Browse all chapters', id: 'Lihat semua chapter' },
-  'marquee.listLabel': { en: 'Campuses and cities with a PERMIAS chapter', id: 'Kampus dan kota yang memiliki chapter PERMIAS' },
   'bersama.gloss': { en: '“Together” in Indonesian', id: 'Bersama, satu keluarga' },
   'bersama.title': { en: 'The national home of Indonesian student associations in the US.', id: 'Wadah nasional bagi perhimpunan mahasiswa Indonesia di AS.' },
   'bersama.sub': {

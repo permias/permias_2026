@@ -1,12 +1,12 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
-import { AnimatePresence, motion, useInView } from 'motion/react';
+import { useMemo, useRef, useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import usaMap from '@svg-maps/usa';
 import { svgPathBbox } from 'svg-path-bbox';
 import { chapters, chaptersByStateId } from '../../data/chapters.js';
 import { useLanguage } from '../../context/LanguageContext.jsx';
-import { motionTokens, springs } from '../../lib/motion.js';
+import { motionTokens } from '../../lib/motion.js';
 import { cn } from '../../utils/cn.js';
-import { chapterMedia, placePhoto } from '../../lib/chapterInfo.js';
+import { cardPhoto } from '../../lib/chapterInfo.js';
 import { ChapterLogo } from './ChapterLogo.jsx';
 
 const BASE = usaMap.viewBox.split(' ').map(Number); // [x, y, w, h]
@@ -14,8 +14,6 @@ const ASPECT = BASE[2] / BASE[3];
 const BBOX = Object.fromEntries(usaMap.locations.map((l) => [l.id, svgPathBbox(l.path)]));
 const BY_STATE = chaptersByStateId();
 const PINNED = chapters.filter((c) => c.mapX != null);
-const MIN_X = Math.min(...PINNED.map((c) => c.mapX));
-const SPAN_X = Math.max(...PINNED.map((c) => c.mapX)) - MIN_X;
 
 /** viewBox that frames a state (padded, base aspect ratio, never zooms past ~8x). */
 function stateViewBox(stateId) {
@@ -72,14 +70,12 @@ function PinCard({ items }) {
     );
   }
   const c = items[0];
-  const own = chapterMedia(c).photos[0];
-  const img = own ? own.src : placePhoto(c).small;
+  const img = cardPhoto(c);
   return (
     <div className="w-[248px] overflow-hidden">
-      <div className="relative h-[108px] bg-[#0A1220]">
+      <div className="relative h-[108px] bg-night">
         {img && <img src={img} alt="" width="248" height="108" className="h-full w-full object-cover" />}
-        <span className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent" aria-hidden="true" />
-        <span className="absolute -bottom-5 left-3 rounded-full ring-[3px] ring-white dark:ring-[#16223A]">
+        <span className="absolute -bottom-5 left-3 rounded-full ring-[3px] ring-white dark:ring-surface">
           <ChapterLogo c={c} size={44} ring={false} />
         </span>
       </div>
@@ -119,14 +115,11 @@ export function ChapterMap({
   onSelectState,
   onSelectCluster, // (chapters[]) => void
   zoom = true,
-  reveal = true,
   className,
   label,
 }) {
   const { t } = useLanguage();
   const wrapRef = useRef(null);
-  const inView = useInView(wrapRef, { once: true, margin: '-80px' });
-  const visible = useInView(wrapRef, { margin: '80px' }); // ambient pin pulse pauses off-screen
   const [hover, setHover] = useState(null); // { x, y, items }
   const [hoverState, setHoverState] = useState(null);
 
@@ -136,16 +129,8 @@ export function ChapterMap({
   const focusVb = useMemo(() => (focus && focus.length ? pointsViewBox(focus) : null), [focusKey]);
   const vb = !zoom ? BASE : focusVb || (selectedState ? stateViewBox(selectedState) : BASE);
   const k = BASE[2] / vb[2];
-  const r = 7 / Math.pow(k, 0.8);
+  const r = 5 / Math.pow(k, 0.8);
   const groups = useMemo(() => cluster(PINNED, 15 / k), [k]);
-  const shown = !reveal || inView;
-  // the west-to-east sweep plays once; later re-clusters (zoom) appear without delay
-  const [settled, setSettled] = useState(!reveal);
-  useEffect(() => {
-    if (!inView || settled) return undefined;
-    const id = setTimeout(() => setSettled(true), (motionTokens.duration.normal + motionTokens.duration.crawl * 1.6) * 1000);
-    return () => clearTimeout(id);
-  }, [inView, settled]);
 
   // keep the card inside the map: flip below pins near the top, shift sideways near the edges
   const tipPlace = (x, y) => {
@@ -158,7 +143,7 @@ export function ChapterMap({
   const smallList = focus ? [] : SMALL_STATES.map((id) => ({ loc: usaMap.locations.find((l) => l.id === id), n: BY_STATE[id]?.length || 0 })).filter((x) => x.loc && x.n);
 
   return (
-    <div ref={wrapRef} className={cn('relative select-none', className)} onPointerLeave={() => setHover(null)} data-offscreen={visible ? undefined : true}>
+    <div ref={wrapRef} className={cn('relative select-none', className)} onPointerLeave={() => setHover(null)}>
       <motion.svg
         viewBox={BASE.join(' ')}
         animate={{ viewBox: vb.join(' ') }}
@@ -186,8 +171,8 @@ export function ChapterMap({
               className={cn(
                 'outline-none transition-[fill,stroke] duration-200',
                 pick ? 'cursor-pointer' : '',
-                active ? 'fill-merah/15 stroke-merah' : hov ? 'fill-land-on stroke-white dark:stroke-[#0A1220]' : n ? 'fill-land-on/80 stroke-white dark:stroke-[#0A1220]' : 'fill-land stroke-white dark:stroke-[#0A1220]',
-                'focus-visible:stroke-merah focus-visible:[stroke-width:3px]',
+                active ? 'fill-accent/10 stroke-accent' : hov ? 'fill-land-on stroke-white dark:stroke-surface' : n ? 'fill-land-on/70 stroke-white dark:stroke-surface' : 'fill-land stroke-white dark:stroke-surface',
+                'focus-visible:stroke-accent focus-visible:[stroke-width:3px]',
               )}
               onPointerEnter={() => n && setHoverState(loc.id)}
               onPointerLeave={() => setHoverState(null)}
@@ -208,51 +193,37 @@ export function ChapterMap({
           const lit = !highlight || g.items.some((c) => highlight.has(c.id));
           const sel = g.items.some((c) => c.id === selectedChapter);
           const count = g.items.length;
-          const delay = reveal && !settled ? motionTokens.duration.normal + ((g.x - MIN_X) / SPAN_X) * motionTokens.duration.crawl * 1.3 : 0;
-          const rr = count > 1 ? r * 1.35 : r;
+          const rr = count > 1 ? r * 1.5 : r;
           return (
-            <motion.g
+            <g
               key={g.id + count}
-              initial={reveal ? { opacity: 0, scale: 0.2 } : false}
-              animate={shown ? { opacity: lit ? 1 : 0.22, scale: 1 } : { opacity: 0, scale: 0.2 }}
-              transition={{ ...springs.snappy, delay: shown && reveal ? delay : 0 }}
-              style={{ transformBox: 'fill-box', transformOrigin: 'center' }}
+              opacity={lit ? 1 : 0.25}
               className="cursor-pointer"
               onPointerEnter={() => setHover(g)}
               onPointerLeave={() => setHover(null)}
               onClick={() => onSelectCluster?.(g.items)}
             >
-              {settled && lit && !sel && (
-                <circle
-                  cx={g.x}
-                  cy={g.y}
-                  r={rr}
-                  className="pin-pulse pointer-events-none fill-merah/45"
-                  style={{ animationDelay: `${((g.x - MIN_X) / SPAN_X) * 2.8}s` }}
-                />
-              )}
-              {sel && <circle cx={g.x} cy={g.y} r={rr * 2} className="fill-merah/20" />}
-              <circle cx={g.x} cy={g.y} r={rr} className="fill-merah stroke-white dark:stroke-[#0A1220]" strokeWidth={rr * 0.36} />
+              {sel && <circle cx={g.x} cy={g.y} r={rr * 1.9} className="fill-none stroke-accent" strokeWidth={rr * 0.3} />}
+              <circle cx={g.x} cy={g.y} r={rr} className={cn(sel ? 'fill-accent' : 'fill-ink', 'stroke-white dark:stroke-surface')} strokeWidth={rr * 0.3} />
               {count > 1 && (
                 <text
                   x={g.x}
                   y={g.y}
                   dy="0.35em"
                   textAnchor="middle"
-                  className="pointer-events-none fill-white font-sans font-bold"
+                  className={cn('pointer-events-none font-sans font-bold', sel ? 'fill-on-accent' : 'fill-background')}
                   style={{ fontSize: rr * 1.15 }}
                 >
                   {count}
                 </text>
               )}
-            </motion.g>
+            </g>
           );
         })}
 
         {userPoint && (
           <g>
-            <circle cx={userPoint.mapX} cy={userPoint.mapY} r={r * 1.9} className="fill-amber-400/25" />
-            <circle cx={userPoint.mapX} cy={userPoint.mapY} r={r * 0.95} className="fill-amber-400 stroke-white" strokeWidth={r * 0.4} />
+            <circle cx={userPoint.mapX} cy={userPoint.mapY} r={r * 1.1} className="fill-surface stroke-ink" strokeWidth={r * 0.45} />
           </g>
         )}
       </motion.svg>
@@ -277,11 +248,11 @@ export function ChapterMap({
                   onPointerLeave={() => setHoverState(null)}
                   className={cn(
                     'flex min-h-[32px] items-center gap-2 rounded-full border px-3 text-[13px] font-semibold transition-colors duration-150',
-                    active ? 'border-merah bg-merah text-white' : 'border-border bg-surface/90 text-ink hover:border-merah/50',
+                    active ? 'border-ink bg-ink text-background' : 'border-border bg-surface text-ink hover:border-ink/30',
                   )}
                 >
                   <span>{loc.id.toUpperCase()}</span>
-                  <span className={cn('tabular', active ? 'text-white/85' : 'text-muted-foreground')}>{n}</span>
+                  <span className={cn('tabular', active ? 'opacity-75' : 'text-muted-foreground')}>{n}</span>
                 </button>
               </li>
             );
@@ -302,7 +273,7 @@ export function ChapterMap({
           >
             <div
               className={cn(
-                'absolute left-0 overflow-hidden rounded-[18px] border border-white/70 bg-white/[0.94] shadow-[0_24px_50px_-20px_rgba(15,27,45,.55)] backdrop-blur-xl dark:border-white/10 dark:bg-[#16223A]/[0.96]',
+                'absolute left-0 overflow-hidden rounded-[18px] border border-border bg-surface shadow-soft',
                 tipPlace(hover ? hover.x : selChapter.mapX, hover ? hover.y : selChapter.mapY),
               )}
             >

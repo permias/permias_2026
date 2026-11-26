@@ -52,7 +52,7 @@ export function NewsletterForm({ className = '', tone = 'light' }) {
         {t('home.newsletter.submit')}
       </Button>
       {message && (
-        <p className={cn('w-full text-sm font-medium', tone === 'dark' ? 'text-white/85' : status === 'error' ? 'text-merah' : 'text-ink')} role="status">
+        <p className={cn('w-full text-sm font-medium', tone === 'dark' ? 'text-white/85' : status === 'error' ? 'text-accent' : 'text-ink')} role="status">
           {message}
           {status === 'error' && (
             <>

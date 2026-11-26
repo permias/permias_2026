@@ -54,11 +54,11 @@ export function ResourcesIndex() {
           {resourceSections.map((s) => (
             <li key={s.id}>
               <Link to={`/resources/${s.id}`} className="group grid items-baseline gap-2 py-5 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] sm:gap-8">
-                <span className="font-display text-[26px] leading-tight text-ink transition-colors group-hover:text-merah">{pick(s.title)}</span>
+                <span className="font-display text-[26px] leading-tight text-ink transition-colors group-hover:text-accent">{pick(s.title)}</span>
                 <span className="text-[16px] text-muted-foreground">{pick(GUIDE_NOTES[s.id])}</span>
                 <span className="hidden items-center gap-2 text-sm font-semibold text-ink/70 sm:inline-flex">
                   {count(s)}
-                  <IconArrowRight className="h-4 w-4 text-merah transition-transform duration-200 group-hover:translate-x-1" />
+                  <IconArrowRight className="h-4 w-4 text-accent transition-transform duration-200 group-hover:translate-x-1" />
                 </span>
               </Link>
             </li>

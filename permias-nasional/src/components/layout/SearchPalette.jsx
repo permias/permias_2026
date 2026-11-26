@@ -23,7 +23,7 @@ function Highlighted({ text, ranges }) {
   ranges.forEach(([a, b], k) => {
     if (a > i) parts.push(text.slice(i, a));
     parts.push(
-      <mark key={k} className="rounded-[4px] bg-merah/15 px-0.5 text-inherit">
+      <mark key={k} className="rounded-[4px] bg-accent/15 px-0.5 text-inherit">
         {text.slice(a, b)}
       </mark>,
     );
@@ -145,7 +145,7 @@ function SearchBody({ seed, t, lang, onClose }) {
               onClick={() => go('/chapters?near=1')}
               className="flex w-full items-center gap-3 rounded-[18px] bg-white/70 p-3 text-left transition-colors hover:bg-white dark:bg-white/5 dark:hover:bg-white/10"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-merah text-white">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-on-accent">
                 <IconLocate className="h-5 w-5" />
               </span>
               <span>
@@ -198,10 +198,10 @@ function SearchBody({ seed, t, lang, onClose }) {
                           onClick={() => go(r.href)}
                           className={cn(
                             'flex cursor-pointer items-center gap-3 rounded-[16px] px-3 py-2.5',
-                            isActive ? 'bg-white shadow-[0_4px_14px_-6px_rgba(15,27,45,.25)] dark:bg-white/10' : '',
+                            isActive ? 'bg-white shadow-soft dark:bg-white/10' : '',
                           )}
                         >
-                          <span className={cn('flex h-9 w-9 shrink-0 items-center justify-center rounded-[12px]', isActive ? 'bg-merah text-white' : 'bg-ink/[0.06] text-ink/70 dark:bg-white/10')}>
+                          <span className={cn('flex h-9 w-9 shrink-0 items-center justify-center rounded-[12px]', isActive ? 'bg-accent text-on-accent' : 'bg-ink/[0.06] text-ink/70 dark:bg-white/10')}>
                             <GIcon className="h-[18px] w-[18px]" />
                           </span>
                           <span className="min-w-0 flex-1">

@@ -28,7 +28,7 @@ export function ResourceSectionBody({ sec, lang, t }) {
             <Reveal as="li" key={`${sec.id}-${card.title}-${ci}`} delay={Math.min(ci % 4, 8) * 0.06} className="flex flex-col overflow-hidden rounded-[24px] border border-border bg-surface">
               {p && (
                 <figure className="relative">
-                  <img src={p.small} alt={p.alt} width="800" height="400" loading="lazy" className="photo-grade aspect-[2/1] w-full object-cover" />
+                  <img src={p.small} srcSet={p.srcSet} sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw" alt={p.alt} width={p.w} height={p.h} loading="lazy" className="photo-grade aspect-[2/1] w-full object-cover" />
                   <figcaption className="absolute bottom-2 right-2 max-w-[80%] truncate rounded-full bg-black/45 px-2 py-0.5 text-[11px] text-white/90 backdrop-blur">
                     <a href={p.page} target="_blank" rel="noopener noreferrer" className="hover:text-white">
                       {p.artist}, {p.license}
@@ -37,7 +37,7 @@ export function ResourceSectionBody({ sec, lang, t }) {
                 </figure>
               )}
               <div className="flex flex-1 flex-col p-6">
-                {text(card.subtitle, lang) && <p className="text-sm font-semibold text-merah">{text(card.subtitle, lang)}</p>}
+                {text(card.subtitle, lang) && <p className="text-sm font-semibold text-muted-foreground">{text(card.subtitle, lang)}</p>}
                 <h3 className="font-sans mt-1 text-[19px] font-semibold leading-snug text-ink">{card.title}</h3>
                 {text(card.description, lang) && <p className="mt-2 text-[16px] leading-relaxed text-muted-foreground">{text(card.description, lang)}</p>}
                 {(card.address || card.phone) && (
@@ -66,8 +66,8 @@ export function ResourceSectionBody({ sec, lang, t }) {
                   rel="noopener noreferrer"
                   className="group mt-auto inline-flex min-h-[44px] items-center gap-2 self-start pt-5 text-[15px] font-semibold text-ink"
                 >
-                  <span className="underline decoration-ink/25 underline-offset-4 transition-colors group-hover:decoration-merah">{host(card.href)}</span>
-                  <IconArrowUpRight className="h-4 w-4 text-merah transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  <span className="underline decoration-ink/25 underline-offset-4 transition-colors group-hover:decoration-accent">{host(card.href)}</span>
+                  <IconArrowUpRight className="h-4 w-4 text-accent transition-transform duration-150 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </a>
               </div>
             </Reveal>

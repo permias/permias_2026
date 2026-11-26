@@ -7,61 +7,72 @@
 @tailwind utilities;
 
 /*
- * Kaca design system
- * ink #0F1B2D on mist #F3F5F8, flag red #CE1126, white glass.
- * Dark: ink-white on night #0A1220.
- * Glass is reserved for surfaces that sit over real content: campus photos, the chapter map, page content under the dock.
+ * Kaca design system, one colour.
+ * Neutral base: ink #141518 on white / off-white, a few greys. Exactly one accent for buttons, active states and key links.
+ * The accent is picked by data-accent on <html> in index.html ("red" = PERMIAS deep red, "navy" = deep ink-blue).
+ * Glass is reserved for surfaces that sit over real content: photos, the page under the dock.
  */
 @layer base {
   :root {
-    --ink: 19 35 63;
-    --mist: 245 246 248;
-    --merah: 200 16 46;
-    --emas: 196 132 29;
-    --teal: 15 118 110;
-    --navy: 19 35 63;
+    --ink: 20 21 24;
+    --mist: 247 247 246;
+    --night: 18 19 21;
     --surface: 255 255 255;
     --background: 255 255 255;
-    --foreground: 15 27 45;
-    --muted: 232 236 242;
-    --muted-foreground: 71 85 105;
-    --border: 218 225 234;
+    --foreground: 20 21 24;
+    --muted: 241 241 240;
+    --muted-foreground: 96 97 102;
+    --border: 228 228 226;
     --card: 255 255 255;
-    --ring: 206 17 38;
-    --land: 222 228 236;
-    --land-on: 196 207 221;
+    --land: 230 230 228;
+    --land-on: 200 201 204;
     --glass-bg: 255 255 255;
-    --glass-alpha: 0.62;
-    --glass-edge: rgba(255, 255, 255, 0.8);
-    --glass-shadow: 0 1px 0 rgba(255, 255, 255, 0.85) inset, 0 -1px 0 rgba(255, 255, 255, 0.2) inset,
-      0 24px 60px -28px rgba(15, 27, 45, 0.45);
+    --glass-alpha: 0.72;
+    --glass-edge: rgba(0, 0, 0, 0.06);
+    --glass-shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 16px 40px -20px rgb(0 0 0 / 0.22);
     --dock-h: 64px;
     color-scheme: light;
   }
 
   .dark {
-    --ink: 236 241 247;
-    --mist: 10 18 32;
-    --merah: 239 68 86;
-    --emas: 232 176 74;
-    --teal: 45 190 175;
-    --navy: 19 35 63;
-    --surface: 17 28 46;
-    --background: 10 18 32;
-    --foreground: 236 241 247;
-    --muted: 24 37 58;
-    --muted-foreground: 160 174 194;
-    --border: 38 54 80;
-    --card: 17 28 46;
-    --ring: 239 59 78;
-    --land: 30 45 68;
-    --land-on: 52 72 102;
-    --glass-bg: 22 34 54;
-    --glass-alpha: 0.58;
-    --glass-edge: rgba(255, 255, 255, 0.14);
-    --glass-shadow: 0 1px 0 rgba(255, 255, 255, 0.12) inset, 0 -1px 0 rgba(255, 255, 255, 0.04) inset,
-      0 24px 60px -28px rgba(0, 0, 0, 0.7);
+    --ink: 236 236 234;
+    --mist: 23 24 27;
+    --surface: 27 28 31;
+    --background: 17 18 20;
+    --foreground: 236 236 234;
+    --muted: 36 37 40;
+    --muted-foreground: 160 161 166;
+    --border: 46 47 51;
+    --card: 27 28 31;
+    --land: 42 43 47;
+    --land-on: 70 71 76;
+    --glass-bg: 27 28 31;
+    --glass-alpha: 0.72;
+    --glass-edge: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 1px 2px rgb(0 0 0 / 0.2), 0 16px 40px -20px rgb(0 0 0 / 0.6);
     color-scheme: dark;
+  }
+
+  /* The one accent. Light: deep, muted; dark: lifted so it reads on near-black, with dark text on fills. */
+  [data-accent='red'] {
+    --accent: 168 34 44;
+    --on-accent: 255 255 255;
+  }
+  .dark[data-accent='red'] {
+    --accent: 226 92 100;
+    --on-accent: 18 18 20;
+  }
+  [data-accent='navy'] {
+    --accent: 30 50 90;
+    --on-accent: 255 255 255;
+  }
+  .dark[data-accent='navy'] {
+    --accent: 157 180 218;
+    --on-accent: 18 18 20;
+  }
+
+  :root {
+    --ring: var(--accent);
   }
 
   html {
@@ -128,55 +139,22 @@
 }
 
 @layer components {
-  /* Frosted glass over page content / map / photos */
+  /* Frosted glass for the header and dock over page content */
   .glass {
     background-color: rgb(var(--glass-bg) / var(--glass-alpha));
     border: 1px solid var(--glass-edge);
     box-shadow: var(--glass-shadow);
-    -webkit-backdrop-filter: blur(22px) saturate(1.7);
-    backdrop-filter: blur(22px) saturate(1.7);
+    -webkit-backdrop-filter: blur(20px) saturate(1.2);
+    backdrop-filter: blur(20px) saturate(1.2);
   }
 
   /* Clear glass over photography: always light text */
   .glass-photo {
-    background-color: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.34);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 0 rgba(255, 255, 255, 0.12),
-      0 30px 80px -30px rgba(0, 0, 0, 0.6);
-    -webkit-backdrop-filter: blur(26px) saturate(1.5);
-    backdrop-filter: blur(26px) saturate(1.5);
+    background-color: rgba(18, 19, 21, 0.32);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     color: #fff;
-  }
-
-  .glass-photo-dark {
-    background-color: rgba(10, 18, 32, 0.42);
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 30px 80px -30px rgba(0, 0, 0, 0.6);
-    -webkit-backdrop-filter: blur(26px) saturate(1.5);
-    backdrop-filter: blur(26px) saturate(1.5);
-    color: #fff;
-  }
-
-  /* Mirror sheen: a pointer-following highlight. Set --mx/--my (percent) from JS. */
-  .sheen {
-    position: relative;
-    isolation: isolate;
-  }
-  .sheen::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    background: radial-gradient(
-      360px circle at var(--mx, 30%) var(--my, 0%),
-      rgba(255, 255, 255, 0.38),
-      rgba(255, 255, 255, 0) 62%
-    );
-    opacity: var(--sheen-o, 0.9);
-    mix-blend-mode: soft-light;
-    transition: opacity 350ms ease-out;
-    z-index: 1;
   }
 
   /* Solid surfaces: cards on the page */
@@ -191,7 +169,6 @@
     background-color: rgb(var(--card));
     border: 1px solid rgb(var(--border));
     border-radius: 28px;
-    box-shadow: 0 30px 70px -50px rgba(19, 35, 63, 0.5);
   }
 
   .page-pad {
@@ -277,23 +254,31 @@
     transition: text-decoration-color 150ms ease-out;
   }
   .link-quiet:hover {
-    text-decoration-color: rgb(var(--merah));
+    text-decoration-color: rgb(var(--accent));
   }
 
-  /* One grade for every landscape/campus photo, so Commons photos from different cameras sit together */
+  /* One light, natural grade for every landscape/campus photo (no tint), so photos from different cameras sit together */
   .photo-grade {
-    filter: saturate(0.92) contrast(1.05) brightness(0.98);
+    filter: contrast(1.02);
   }
   .dark .photo-grade {
-    filter: saturate(0.88) contrast(1.06) brightness(0.9);
+    filter: contrast(1.02) brightness(0.92);
+  }
+
+  /* The PERMIAS emblem drawn in one colour (currentColor) from its alpha mask */
+  .brand-mark {
+    display: inline-block;
+    background-color: currentColor;
+    -webkit-mask: var(--mark) center / contain no-repeat;
+    mask: var(--mark) center / contain no-repeat;
   }
 
   .media-outline {
-    outline: 1px solid rgba(15, 27, 45, 0.08);
+    outline: 1px solid rgba(0, 0, 0, 0.06);
     outline-offset: -1px;
   }
   .dark .media-outline {
-    outline-color: rgba(255, 255, 255, 0.1);
+    outline-color: rgba(255, 255, 255, 0.08);
   }
 
   /* Long-form reading text: never on glass */
@@ -323,68 +308,8 @@
   }
 }
 
-/* ---- Ambient motion (runs while idle; transform/opacity only; paused off-screen and under reduced motion) ---- */
+/* Hero slideshow: one thin line fills over the slide's duration */
 @keyframes slideProgress {
   from { transform: scaleX(0); }
   to { transform: scaleX(1); }
-}
-@keyframes marquee {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
-}
-.marquee-row {
-  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-}
-.marquee-track {
-  animation: marquee 90s linear infinite;
-}
-.marquee-reverse {
-  animation-direction: reverse;
-  animation-duration: 110s;
-}
-.marquee:hover .marquee-track,
-[data-offscreen] .marquee-track {
-  animation-play-state: paused;
-}
-
-@keyframes driftA {
-  0%, 100% { transform: translate3d(-6%, -4%, 0) scale(1); }
-  50% { transform: translate3d(8%, 6%, 0) scale(1.12); }
-}
-@keyframes driftB {
-  0%, 100% { transform: translate3d(5%, 4%, 0) scale(1.08); }
-  50% { transform: translate3d(-7%, -5%, 0) scale(0.96); }
-}
-.ambient > span {
-  position: absolute;
-  width: 46vmax;
-  height: 46vmax;
-  border-radius: 9999px;
-  filter: blur(70px);
-  opacity: 0.22;
-  will-change: transform;
-}
-.ambient-a { left: -12vmax; top: -10vmax; background: rgb(var(--merah)); animation: driftA 28s ease-in-out infinite; }
-.ambient-b { right: -14vmax; top: 10%; background: rgb(var(--emas)); animation: driftB 34s ease-in-out infinite; }
-.ambient-c { left: 30%; bottom: -22vmax; background: rgb(var(--teal)); animation: driftA 40s ease-in-out infinite reverse; }
-.dark .ambient > span { opacity: 0.16; }
-[data-offscreen] .ambient > span { animation-play-state: paused; }
-
-@keyframes pinPulse {
-  0% { transform: scale(1); opacity: 0.55; }
-  80%, 100% { transform: scale(2.6); opacity: 0; }
-}
-.pin-pulse {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: pinPulse 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-}
-[data-offscreen] .pin-pulse { animation-play-state: paused; }
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; flex-wrap: wrap; width: auto; }
-  .marquee-track [aria-hidden='true'] { display: none; }
-  .marquee-row { mask-image: none; }
-  .ambient > span, .pin-pulse { animation: none; }
-  .pin-pulse { opacity: 0; }
 }

@@ -1,68 +1,53 @@
-/** Recognizable brand marks for social links */
+/** Social marks drawn in one colour (currentColor), so they follow the surrounding text instead of each brand's palette. */
 export function SocialIcon({ id, className = 'h-5 w-5' }) {
+  const line = { fill: 'none', stroke: 'currentColor', strokeWidth: 1.7, strokeLinecap: 'round', strokeLinejoin: 'round' };
   switch (id) {
     case 'instagram':
       return (
         <svg className={className} viewBox="0 0 24 24" aria-hidden>
-          <defs>
-            <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#feda75" />
-              <stop offset="25%" stopColor="#fa7e1e" />
-              <stop offset="50%" stopColor="#d62976" />
-              <stop offset="75%" stopColor="#962fbf" />
-              <stop offset="100%" stopColor="#4f5bd5" />
-            </linearGradient>
-          </defs>
-          <rect width="24" height="24" rx="6" fill="url(#ig-grad)" />
-          <circle cx="12" cy="12" r="4.2" fill="none" stroke="#fff" strokeWidth="1.8" />
-          <circle cx="17.4" cy="6.6" r="1.1" fill="#fff" />
+          <rect x="3.5" y="3.5" width="17" height="17" rx="5" {...line} />
+          <circle cx="12" cy="12" r="3.9" {...line} />
+          <circle cx="17" cy="7" r="1" fill="currentColor" />
         </svg>
       );
     case 'facebook':
       return (
         <svg className={className} viewBox="0 0 24 24" aria-hidden>
-          <rect width="24" height="24" rx="6" fill="#1877F2" />
           <path
-            fill="#fff"
-            d="M15.12 8.5H13.5c-.55 0-.72.28-.72.68v1.32h2.44l-.32 2.58h-2.12V20h-2.66v-6.92H8.5v-2.58h1.7V8.78c0-1.68 1.03-2.6 2.53-2.6 1.02 0 1.58.08 1.84.12v2.2z"
+            fill="currentColor"
+            d="M13.6 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.9v3h2.6V21h3.1z"
           />
         </svg>
       );
     case 'linkedin':
       return (
         <svg className={className} viewBox="0 0 24 24" aria-hidden>
-          <rect width="24" height="24" rx="4" fill="#0A66C2" />
           <path
-            fill="#fff"
-            d="M7.2 9.5h2.2V20H7.2V9.5zM8.3 5a1.27 1.27 0 1 1 0 2.54A1.27 1.27 0 0 1 8.3 5zM12 9.5h2.1v1.43h.03c.29-.55 1-1.13 2.06-1.13 2.2 0 2.6 1.45 2.6 3.33V20h-2.2v-5.6c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94V20H12V9.5z"
+            fill="currentColor"
+            d="M5.3 9h3v10.5h-3V9zm1.5-4.8a1.7 1.7 0 1 1 0 3.5 1.7 1.7 0 0 1 0-3.5zM10.2 9h2.9v1.4h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v6.06h-3v-5.37c0-1.28-.02-2.93-1.79-2.93-1.79 0-2.06 1.4-2.06 2.84v5.46h-3V9z"
           />
         </svg>
       );
     case 'youtube':
       return (
         <svg className={className} viewBox="0 0 24 24" aria-hidden>
-          <rect width="24" height="24" rx="6" fill="#FF0000" />
-          <path fill="#fff" d="M10 8.5l5.5 3.5L10 15.5V8.5z" />
+          <rect x="2.75" y="5.5" width="18.5" height="13" rx="4" {...line} />
+          <path fill="currentColor" d="M10.2 9.2 15 12l-4.8 2.8V9.2z" />
         </svg>
       );
     case 'google-groups':
       return (
         <svg className={className} viewBox="0 0 24 24" aria-hidden>
-          <rect width="24" height="24" rx="6" fill="#fff" stroke="#dadce0" />
-          <circle cx="9" cy="10" r="2.5" fill="#1a73e8" />
-          <circle cx="15.5" cy="10" r="2.5" fill="#34a853" />
-          <path d="M6 16.5c0-1.8 1.8-3 3-3s3 1.2 3 3" fill="none" stroke="#1a73e8" strokeWidth="1.5" />
-          <path d="M12.5 16.5c0-1.8 1.5-3 3-3s3 1.2 3 3" fill="none" stroke="#34a853" strokeWidth="1.5" />
+          <circle cx="9" cy="9" r="2.6" {...line} />
+          <circle cx="16" cy="9.5" r="2.2" {...line} />
+          <path d="M4 18.5c0-2.6 2.2-4.4 5-4.4s5 1.8 5 4.4M14.5 14.3c.5-.2 1-.3 1.5-.3 2.3 0 4 1.5 4 3.8" {...line} />
         </svg>
       );
     case 'email':
       return (
         <svg className={className} viewBox="0 0 24 24" aria-hidden>
-          <rect width="24" height="24" rx="6" fill="#CE1126" />
-          <path
-            fill="#fff"
-            d="M5 8.5 12 13l7-4.5V8a1 1 0 0 0-1-1H6a1 1 0 0 0-1 1v.5zm0 2.2V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5.3L12 14.8 5 10.7z"
-          />
+          <rect x="3.5" y="5.5" width="17" height="13" rx="2.5" {...line} />
+          <path d="m4.5 7.5 7.5 5.5 7.5-5.5" {...line} />
         </svg>
       );
     default:
